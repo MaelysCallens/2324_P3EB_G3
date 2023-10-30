@@ -1,0 +1,13 @@
+uuid: 3052d423-1f3f-4174-a6fd-252aadaf2f91
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
+name: 'Eenvoudige pagina'
+type: page
+description: "Gebruik <em>eenvoudige pagina's</em> voor vaste inhoud, zoals een 'Over ons'-pagina."
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: nl
+uuid: 80d488a3-e049-4a64-9a15-bf51d426e20e
+name: 'MVP Padel'
+mail: jamie.vanschuerbeek@student.hogent.be
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: nl

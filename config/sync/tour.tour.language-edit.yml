@@ -1,0 +1,48 @@
+uuid: 596f229d-90c6-4620-8b22-1fc95e1b6e38
+langcode: nl
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: gjYvYwMqulNsq7VmScWKOqEUxar9AX0TvG8vfCCguUQ
+id: language-edit
+label: 'Talen bewerken'
+module: language
+routes:
+  -
+    route_name: entity.configurable_language.edit_form
+tips:
+  language-edit-overview:
+    id: language-edit-overview
+    plugin: text
+    label: 'Talen bewerken'
+    weight: 1
+    body: '<p> Deze pagina biedt de mogelijkheid om een taal te bewerken op uw site, inclusief aangepaste talen. </p>'
+  language-edit-langcode:
+    id: language-edit-langcode
+    plugin: text
+    label: Taalcode
+    weight: 2
+    selector: '#edit-langcode-view'
+    body: '<p>U kunt de taalcode niet aanpassen op de site omdat deze gebruikt wordt door het systeem om de taal te identificeren.</p>'
+  language-edit-label:
+    id: language-edit-label
+    plugin: text
+    label: Taalnaam
+    weight: 3
+    selector: '#edit-label'
+    body: '<p>De naam van de taal wordt site-breed gebruikt voor alle gebruikers en wordt in het Engels weergegeven. Namen van ingebouwde talen kunnen vertaald worden met de Interface Translation-module en namen van zowel ingebouwde als aangepaste talen kunnen met de Configuration Translation-module vertaald worden.</p>'
+  language-edit-direction:
+    id: language-edit-direction
+    plugin: text
+    label: Taalrichting
+    weight: 4
+    selector: '#edit-direction--wrapper--description'
+    body: "<p>Kies of de schrijfrichting van de taal 'links naar rechts' of 'rechts naar links' is.</p><p>Merk op dat niet alle thema's 'rechts naar links' lay-outs ondersteunen dus test het thema bij het gebruik van 'rechts naar links\".</p>"
+  language-edit-continue:
+    id: language-edit-continue
+    plugin: text
+    label: 'Wordt vervolgd op'
+    weight: 5
+    body: '<p>Na het overzicht van de ''Taal bewerken''-feature, kunt u verder gaan met:<ul><li>Een taal bewerken</li><li><a href="[site:url]admin/config/regional/language">Ingestelde talen bekijken</a></li></ul></p>'

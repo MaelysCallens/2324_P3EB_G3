@@ -1,0 +1,69 @@
+uuid: 0bb15b0d-3dbb-4f99-9330-23305f550441
+langcode: nl
+status: true
+dependencies:
+  module:
+    - locale
+_core:
+  default_config_hash: Kcx1PIw-KgGbTo5_tOkbI6TWJiP_0Sr7t5T9SuMV2hA
+id: locale
+label: Vertaling
+module: locale
+routes:
+  -
+    route_name: locale.translate_page
+tips:
+  locale-overview:
+    id: locale-overview
+    plugin: text
+    label: Gebruikersinterface-vertaling
+    weight: 1
+    body: 'Deze pagina maakt het mogelijk om de gebruikersinterface te vertalen of bestaande vertalingen aan te passen. Als u de site in eerste instantie in het Engels heeft geïnstalleerd, dan moet u eerst een andere taal toevoegen op de  <a href="[site:url]admin/config/regional/language">Talen pagina</a>, om deze pagina te kunnen gebruiken.'
+  locale-language:
+    id: locale-language
+    plugin: text
+    label: Vertalingstaal
+    weight: 2
+    selector: '#edit-langcode'
+    body: 'Kies de taal die u wilt vertalen.'
+  locale-search:
+    id: locale-search
+    plugin: text
+    label: Zoeken
+    weight: 3
+    selector: '#edit-string'
+    body: 'Geef het specifieke woord of zin op dat u wilt vertalen. U kunt ook alleen een deel van een woord opgeven.'
+  locale-filter:
+    id: locale-filter
+    plugin: text
+    label: 'Zoekresultaten filteren'
+    weight: 4
+    selector: '#edit-translation'
+    body: 'U kunt zoeken op onvertaalde tekenreeksen als u iets wilt vertalen dat nog niet is vertaald. Als u een bestaande vertaling wilt aanpassen, dan kunt u ook alleen zoeken op vertaalde tekenreeksen.'
+  locale-submit:
+    id: locale-submit
+    plugin: text
+    label: 'De zoekcriteria toepassen'
+    weight: 5
+    selector: '#edit-submit'
+    body: 'Klik op de <em>Filter</em>-knop om de zoekcriteria toe te passen.'
+  locale-translate:
+    id: locale-translate
+    plugin: text
+    label: Vertalen
+    weight: 6
+    selector: .js-form-type-textarea
+    body: 'U kunt uw eigen vertaling in de tekstvelden van de rechter kolom schrijven. U kunt het beste proberen te achterhalen in welke context de tekst wordt gebruikt om de meest passende vertaling te geven.'
+  locale-validate:
+    id: locale-validate
+    plugin: text
+    label: 'De vertaling valideren'
+    weight: 7
+    selector: '#edit-submit--2'
+    body: 'Als u klaar bent met de vertaling klikt u op de knop <em>Vertalingen opslaan</em>. U moet de vertaling opslaan voordat u de pagina wisselt of een nieuwe zoekopdracht uitvoert.'
+  locale-continue:
+    id: locale-continue
+    plugin: text
+    label: 'Wordt vervolgd op'
+    weight: 8
+    body: 'De vertalingen die u hier heeft gedaan worden gebruikt in de gebruikersinterface van de site. Als u ze op een andere site wilt gebruiken of met een externe vertaaleditor wilt aanpassen dan kunt u deze <a href="[site:url]admin/config/regional/translate/export">exporteren</a> naar een .po-bestand en ze later weer <a href="[site:url]admin/config/regional/translate/import">importeren</a>.'

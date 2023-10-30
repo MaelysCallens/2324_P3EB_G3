@@ -1,0 +1,23 @@
+uuid: ea998bcc-7791-4db4-8e5e-dead99797a65
+langcode: nl
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - olivero
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: olivero_search_form_narrow
+theme: olivero
+region: primary_menu
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Zoekformulier (smal)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

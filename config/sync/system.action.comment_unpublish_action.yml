@@ -1,0 +1,13 @@
+uuid: 4bdc6cd8-069b-45ab-b7c8-54f11af89523
+langcode: nl
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: tWOIjSMobEWOFZddMkNqb9JySbOVwE1diC6NRqcfLTk
+id: comment_unpublish_action
+label: 'Reactie depubliceren'
+type: comment
+plugin: 'entity:unpublish_action:comment'
+configuration: {  }

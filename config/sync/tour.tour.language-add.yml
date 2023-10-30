@@ -1,0 +1,34 @@
+uuid: 0eaa1ccf-2e26-4dcc-831b-8839c4852746
+langcode: nl
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: vcDd9H0uIlyOQGoVAJuD3ADMnQeRR_X3B-ojyb8Cbnc
+id: language-add
+label: 'Talen toevoegen'
+module: language
+routes:
+  -
+    route_name: language.add
+tips:
+  language-add-overview:
+    id: language-add-overview
+    plugin: text
+    label: 'Talen toevoegen'
+    weight: 1
+    body: '<p>Deze pagina biedt de mogelijkheid om algemene talen toe te voegen aan de site.</p><p>Als de gewenste taal niet beschikbaar is kunt u een aangepaste taal toevoegen.</p>'
+  language-add-choose:
+    id: language-add-choose
+    plugin: text
+    label: 'Taal selecteren'
+    weight: 2
+    selector: '#edit-predefined-langcode'
+    body: "<p>Kies een taal uit de lijst, of kies 'Aangepaste taal...' aan het eind van de lijst.</p><p>Klik op de knop 'Taal toevoegen' als u een taal hebt gekozen.</p><p>Als u een aangepaste taal toevoegd, krijg u een extra formulier waar de naam, taalcode en leesinrichting van de taal kunt invullen.</p>"
+  language-add-continue:
+    id: language-add-continue
+    plugin: text
+    label: 'Wordt vervolgd op'
+    weight: 3
+    body: '<p>Na het overzicht van de ''Talen toevoegen''-feature, kunt u verder gaan met:<ul><li>Een taal toevoegen</li><li>Een aangepaste taal toevoegen</li><li><a href="[site:url]admin/config/regional/language">Ingestelde talen bekijken</a></li></ul></p>'

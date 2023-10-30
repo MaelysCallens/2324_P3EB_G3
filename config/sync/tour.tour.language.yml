@@ -1,0 +1,55 @@
+uuid: 659a9aea-b718-4379-806c-702330bfa680
+langcode: nl
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: Okz8QMYRGvq95nqLGYjp8gLiy93DKoMEzEVZVwEeg4M
+id: language
+label: Taal
+module: language
+routes:
+  -
+    route_name: entity.configurable_language.collection
+tips:
+  language-overview:
+    id: language-overview
+    plugin: text
+    label: Talen
+    weight: 1
+    body: '<p>De "Talen" pagina stelt u in staat talen toe te voegen, te wijzigen, te verwijderen of te rangschikken voor de site.</p>'
+  language-add:
+    id: language-add
+    plugin: text
+    label: 'Talen toevoegen'
+    weight: 2
+    selector: .button-action
+    body: '<p>Om meer talen aan de site toe te voegen, klikt u op de "Voeg talen toe" knop.</p><p>Toegevoegde talen worden in de talenlijst weergegeven en kunnen worden bewerkt of verwijderd.</p>'
+  language-reorder:
+    id: language-reorder
+    plugin: text
+    label: 'Talen herschikken'
+    weight: 3
+    selector: .draggable
+    body: '<p>Gebruik de sleep-iconen naast de talen om de talen op uw site te rangschikken.</p><p>De volgorde die hier getoond wordt is de weergavevolgorde van talen op de site zoals in de taalkeuze blokken van de Interface Translation-module en de Content Translation-module.</p><p>Als u klaar bent met het rangschikken van de talen klikt u op "Instellingen opslaan" om de wijzigingen door te voeren.</p>'
+  language-default:
+    id: language-default
+    plugin: text
+    label: 'Een taal als standaard instellen'
+    weight: 4
+    selector: .js-form-item-site-default-language
+    body: '<p>U kunt de standaardtaal van de site wijzigen door een van de geconfigureerde talen te kiezen als standaard. De site gebruikt de standaardtaal daar waar geen keuze is gemaakt voor een taal maar wel een taal verwacht wordt, bijvoorbeeld de taal van de weergegeven interface.</p>'
+  language-operations:
+    id: language-operations
+    plugin: text
+    label: 'Talen aanpassen'
+    weight: 5
+    selector: .dropbutton-wrapper
+    body: '<p>Bewerkingen zijn beschikbaar om talen te wijzigen of te verwijderen.</p><p>U kunt de naam en schrijfrichting van een taal wijzigen.</p><p>Verwijderde talen kunnen later weer toegevoegd worden. Een taal verwijderen zal ook alle interfacevertalingen verwijderen die bij deze taal horen, en inhoud in deze taal wordt "taal-neutraal" gezet. De standaardtaal van de site kan niet verwijderd kan worden.</p>'
+  language-continue:
+    id: language-continue
+    plugin: text
+    label: 'Wordt vervolgd op'
+    weight: 6
+    body: '<p>Nu u een beeld heeft van de "Talen" pagina kunt u verder gaan door:<ul><li><a href="[site:url]admin/config/regional/language/add">Een taal toevoegen</a></li><li>Herschikken talen</li><li>Een taal aanpassen</li><li>Een taal verwijderen</li></ul></p>'

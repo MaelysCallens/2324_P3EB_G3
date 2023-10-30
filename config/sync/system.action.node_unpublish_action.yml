@@ -1,0 +1,13 @@
+uuid: 305091be-4cac-43b9-bda7-c97985b36044
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: C7X8h9FWlwkQ9y5mnU2JzgaZICAdc6HFbPVbhvjlAYE
+id: node_unpublish_action
+label: 'Publicatie ongedaan maken'
+type: node
+plugin: 'entity:unpublish_action:node'
+configuration: {  }

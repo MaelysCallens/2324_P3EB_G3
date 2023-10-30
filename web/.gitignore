@@ -40,3 +40,6 @@ sites/simpletest
 
 # Ignore multi-site test environment.
 # simpletest
+
+# Mac osx files
+.DS_Store

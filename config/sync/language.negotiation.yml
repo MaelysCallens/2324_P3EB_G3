@@ -6,7 +6,9 @@ session:
 url:
   source: path_prefix
   prefixes:
-    nl: ''
+    nl: nl
+    en: en
   domains:
     nl: ''
+    en: ''
 selected_langcode: site_default

@@ -17,10 +17,13 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/commerce": "^2.36",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
-        "drush/drush": "^12.4"
+        "drupal/devel": "^5.1",
+        "drupal/inline_entity_form": "^1.0-RC9",
+        "drush/drush": "*"
     },
     "conflict": {
         "drupal/drupal": "*"

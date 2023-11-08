@@ -1,0 +1,15 @@
+uuid: 685debf8-8232-433a-8379-52b36494c174
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+  enforced:
+    module:
+      - commerce_order
+_core:
+  default_config_hash: yeGwCxbA5dBAS_3eBkfaVrbxkASEM357dkjPZShKiR4
+id: profile.billing
+label: Billing
+targetEntityType: profile
+cache: true

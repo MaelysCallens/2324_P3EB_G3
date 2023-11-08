@@ -6,6 +6,8 @@ dependencies:
     - filter.format.restricted_html
   module:
     - comment
+    - commerce_checkout
+    - commerce_product
     - contact
     - filter
     - search
@@ -13,12 +15,14 @@ dependencies:
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
-label: 'Anonieme gebruiker'
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'access checkout'
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view commerce_product'

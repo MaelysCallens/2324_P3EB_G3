@@ -1,0 +1,14 @@
+label: 'Block Layout Page'
+tips:
+  block-layout:
+    label: 'Block Layout'
+    body: 'Blocks are boxes of content rendered into an area, or region, of a web page that can be displayed in regions (such as footer or sidebar) on your page.'
+  place-block:
+    label: 'Place Blocks'
+    body: 'Any custom or contributed block can be added to a particular region by clicking on a button Place block. A new block can also be created by clicking on Place Block'
+  block-region:
+    label: 'Block Region'
+    body: 'Assign or change the region of a block by clicking here. A dropdown list with all the regions will appear. You can place one block in multiple regions.'
+  configure-block:
+    label: 'Configure Block'
+    body: 'By Clicking on "Configure" you can go ahead and edit the contents of the block, deal with the visibility settings and even change the placement of where it is on your theme.'

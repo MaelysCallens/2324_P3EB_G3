@@ -12,6 +12,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: ''
+  path: 'public://LogoMVP.png'
   url: ''
-  use_default: true
+  use_default: false

@@ -1,0 +1,12 @@
+uuid: f8a6734c-a10a-49e9-8dfe-e022eb2b338e
+langcode: en
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+recipients:
+  - jamie.vanschuerbeek@student.hogent.be
+reply: ''
+weight: 0
+message: ''
+redirect: ''

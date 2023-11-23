@@ -1,0 +1,24 @@
+uuid: feca6ca3-90be-4836-9625-1f3cc717048c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.banner_content
+  module:
+    - text
+id: node.banner_content.body
+field_name: body
+entity_type: node
+bundle: banner_content
+label: Banner-text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

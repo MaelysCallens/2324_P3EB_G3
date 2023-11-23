@@ -1,0 +1,25 @@
+uuid: dfd33667-a4ba-40f2-87ae-0ba0e0882573
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2ffd2b41-f57b-4fbc-ab77-ed99c5c1c04c'
+  module:
+    - block_content
+  theme:
+    - belgrade
+id: belgrade_onzegegevens
+theme: belgrade
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:2ffd2b41-f57b-4fbc-ab77-ed99c5c1c04c'
+settings:
+  id: 'block_content:2ffd2b41-f57b-4fbc-ab77-ed99c5c1c04c'
+  label: 'Onze gegevens'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

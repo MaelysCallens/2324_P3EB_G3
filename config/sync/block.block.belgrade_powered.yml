@@ -11,7 +11,7 @@ _core:
 id: belgrade_powered
 theme: belgrade
 region: footer
-weight: -7
+weight: -5
 provider: null
 plugin: system_powered_by_block
 settings:

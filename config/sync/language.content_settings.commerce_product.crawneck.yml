@@ -1,0 +1,11 @@
+uuid: 1389c896-bb1f-43f3-a08b-59fa778a45d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.crawneck
+id: commerce_product.crawneck
+target_entity_type_id: commerce_product
+target_bundle: crawneck
+default_langcode: site_default
+language_alterable: false

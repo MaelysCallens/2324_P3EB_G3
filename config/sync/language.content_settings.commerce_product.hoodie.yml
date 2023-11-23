@@ -1,0 +1,11 @@
+uuid: 61da1542-fea8-4313-a020-f430eda33260
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hoodie
+id: commerce_product.hoodie
+target_entity_type_id: commerce_product
+target_bundle: hoodie
+default_langcode: site_default
+language_alterable: false

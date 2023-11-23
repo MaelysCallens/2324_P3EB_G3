@@ -1,0 +1,24 @@
+uuid: 4d3252f5-2d05-4101-9d68-d58f6d85a239
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.crawneck
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.crawneck.body
+field_name: body
+entity_type: commerce_product
+bundle: crawneck
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

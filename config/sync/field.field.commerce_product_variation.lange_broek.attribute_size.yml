@@ -1,0 +1,24 @@
+uuid: 44d7c687-5be2-4748-9c64-58bd23b734af
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.size
+    - commerce_product.commerce_product_variation_type.lange_broek
+    - field.storage.commerce_product_variation.attribute_size
+id: commerce_product_variation.lange_broek.attribute_size
+field_name: attribute_size
+entity_type: commerce_product_variation
+bundle: lange_broek
+label: Size
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_attribute_value'
+  handler_settings:
+    target_bundles:
+      - size
+field_type: entity_reference

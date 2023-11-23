@@ -1,0 +1,14 @@
+uuid: e801b41f-1807-4cca-8a5e-55c0a0f4f511
+langcode: en
+status: true
+dependencies: {  }
+id: lange_broek
+label: 'Lange broek'
+traits: {  }
+locked: false
+description: ''
+variationType: lange_broek
+variationTypes:
+  - lange_broek
+multipleVariations: true
+injectVariationFields: true

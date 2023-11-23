@@ -1,0 +1,10 @@
+uuid: 36a2d029-37f4-4ffe-b823-2217928acdfd
+langcode: en
+status: true
+dependencies: {  }
+id: lange_broek
+label: 'Lange broek'
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

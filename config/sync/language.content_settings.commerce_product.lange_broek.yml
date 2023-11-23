@@ -1,0 +1,11 @@
+uuid: 8093dbda-28f7-4c94-95c0-67007af5b282
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.lange_broek
+id: commerce_product.lange_broek
+target_entity_type_id: commerce_product
+target_bundle: lange_broek
+default_langcode: site_default
+language_alterable: false

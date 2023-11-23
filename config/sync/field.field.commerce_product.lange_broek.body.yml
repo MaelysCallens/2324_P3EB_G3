@@ -1,0 +1,24 @@
+uuid: c07926eb-e58d-4cbe-9119-a462e842d2be
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.lange_broek
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.lange_broek.body
+field_name: body
+entity_type: commerce_product
+bundle: lange_broek
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

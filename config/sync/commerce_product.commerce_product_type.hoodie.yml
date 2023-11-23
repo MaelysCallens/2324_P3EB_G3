@@ -1,0 +1,14 @@
+uuid: 2f22bffa-5f1c-4220-9188-27fda1bba1ab
+langcode: en
+status: true
+dependencies: {  }
+id: hoodie
+label: Hoodie
+traits: {  }
+locked: false
+description: ''
+variationType: hoodie
+variationTypes:
+  - hoodie
+multipleVariations: true
+injectVariationFields: true

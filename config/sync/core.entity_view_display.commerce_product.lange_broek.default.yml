@@ -1,0 +1,43 @@
+uuid: 770d0d93-318f-4c7f-8b04-c016c534ec69
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.lange_broek
+    - field.field.commerce_product.lange_broek.body
+  module:
+    - commerce_product
+    - text
+id: commerce_product.lange_broek.default
+targetEntityType: commerce_product
+bundle: lange_broek
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  langcode: true
+  stores: true
+  uid: true

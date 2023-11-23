@@ -1,0 +1,25 @@
+uuid: 5c7b3b10-5468-4983-a8bf-4e4149c42945
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5cfe4bb0-2d32-43db-b635-b46a1c068bce'
+  module:
+    - block_content
+  theme:
+    - belgrade
+id: belgrade_hebjevragenoveronzewerkingneemnucontactop
+theme: belgrade
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:5cfe4bb0-2d32-43db-b635-b46a1c068bce'
+settings:
+  id: 'block_content:5cfe4bb0-2d32-43db-b635-b46a1c068bce'
+  label: 'HEB JE VRAGEN OVER ONZE WERKING? NEEM NU CONTACT OP'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

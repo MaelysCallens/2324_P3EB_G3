@@ -1,0 +1,25 @@
+uuid: f1350497-71fe-4822-8232-79c36a819a5f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+  module:
+    - block_content
+  theme:
+    - belgrade
+id: belgrade_openingsuren
+theme: belgrade
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+settings:
+  id: 'block_content:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+  label: Openingsuren
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: 3cdbc90d-06ac-4f97-bcdb-ab83f2e9edde
+langcode: en
+status: true
+dependencies: {  }
+id: crawneck
+label: Crewneck
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: false

@@ -1,0 +1,14 @@
+uuid: 506454fc-8c1c-4006-82aa-c11779a9a462
+langcode: en
+status: true
+dependencies: {  }
+id: crawneck
+label: Crawneck
+traits: {  }
+locked: false
+description: ''
+variationType: crawneck
+variationTypes:
+  - crawneck
+multipleVariations: true
+injectVariationFields: true

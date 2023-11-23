@@ -1,0 +1,43 @@
+uuid: 5c9e8673-3b83-4ba6-ac79-6c69cdfb4e2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hoodie
+    - field.field.commerce_product.hoodie.body
+  module:
+    - commerce_product
+    - text
+id: commerce_product.hoodie.default
+targetEntityType: commerce_product
+bundle: hoodie
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  langcode: true
+  stores: true
+  uid: true

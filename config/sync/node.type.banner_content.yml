@@ -1,0 +1,17 @@
+uuid: b34c0a8d-652a-49f3-869b-574001da8348
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Banner Content'
+type: banner_content
+description: 'Use this content type to add a front page banner'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

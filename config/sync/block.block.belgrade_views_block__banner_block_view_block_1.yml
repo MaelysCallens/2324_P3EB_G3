@@ -1,0 +1,24 @@
+uuid: ce1a3b6c-fdad-4c3e-8ba9-4099f40e4790
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.banner_block_view
+  module:
+    - views
+  theme:
+    - belgrade
+id: belgrade_views_block__banner_block_view_block_1
+theme: belgrade
+region: highlighted
+weight: 0
+provider: null
+plugin: 'views_block:banner_block_view-block_1'
+settings:
+  id: 'views_block:banner_block_view-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

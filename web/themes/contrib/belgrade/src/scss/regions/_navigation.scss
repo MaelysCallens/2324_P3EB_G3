@@ -1,0 +1,78 @@
+//
+// Navigation
+// ----------------------------
+$offnav-link-font-size: 1.2rem;
+
+$offnav-vertical-logo-spacing: $spacer * 2.5;
+$offnav-vertical-menu-social-spacing: $spacer * 2;
+
+.region-navigation {
+
+  .site-logo svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .block-menu {
+    .nav-item {
+      .nav-link {
+        font-size: $offnav-link-font-size;
+      }
+    }
+  }
+
+  // Social menu
+  .menu--social {
+    margin-top: $spacer;
+  }
+
+  // Vertical navigation.
+  &.offcanvas-start,
+  &.offcanvas-end {
+
+    > div:first-child {
+      margin-top: $top-bar-height;
+    }
+
+    // Logo spacing.
+    .site-logo {
+      margin-top: $offnav-vertical-logo-spacing;
+    }
+
+    .block-menu:not(.menu--social) {
+      .nav-item {
+        display: block;
+        width: 100%;
+
+        .nav-link {
+          // reset padding for spacing.
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    // Social menu
+    .menu--social {
+      margin-top: $offnav-vertical-menu-social-spacing;
+    }
+  }
+
+  // Horizontal navigation.
+  &.offcanvas-bottom {
+    .offcanvas-header,
+    .nav {
+      justify-content: center;
+    }
+    // Adjust header-spacing
+    .offcanvas-header {
+      padding-bottom: 0;
+    }
+    // Adjust close btn
+    .btn-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}

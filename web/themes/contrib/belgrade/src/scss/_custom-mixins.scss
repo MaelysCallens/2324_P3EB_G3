@@ -1,0 +1,113 @@
+//
+// Custom mixins
+//
+
+// Icons
+@mixin icon($size, $path, $color: false, $hover-color: false) {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: $size;
+  height: $size;
+  mask-image: svg-load($path);
+  mask-size: $size;
+  overflow: hidden;
+  text-indent: 9999px;
+  @if ($color) {
+    background-color: $color;
+  }
+  @if ($hover-color) {
+    &:hover {
+      background-image: svg-load($path, fill=#{$hover-color});
+    }
+  }
+}
+
+@mixin btn-icon($size, $path, $color: $white, $hover-color: false) {
+  padding-left: $btn-padding-x + ($size / 2);
+  background-position: $size center;
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-image: svg-load($path, fill=#{$color});
+  @if ($hover-color) {
+    &:hover {
+      background-image: svg-load($path, fill=#{$hover-color});
+    }
+  }
+}
+
+@mixin btn-icon-only($size, $path, $color: $white) {
+  width: $size;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-image: svg-load($path, fill=#{$color});
+  overflow: hidden;
+  text-indent: 9999px;
+}
+
+ // Cover Object - Mostly usable for images.
+@mixin object-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+// Opacify links - Lower link opacity on hover.
+@mixin opacify-links {
+  a:not(.btn) {
+    transition: $transition-fade;
+    color: currentColor;
+    &:hover {
+      opacity: 0.6;
+      color: currentColor;
+    }
+  }
+}
+
+// Font smoothing.
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Underline
+@mixin underline {
+  position: relative;
+  &:not(.nav-link) {
+    padding-bottom: $spacer;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: $underline-width;
+    height: $underline-height;
+    left: 50%;
+    bottom: $underline-height;
+    background-color: $underline-bg;
+    margin-left: -$underline-width / 2;
+  }
+
+  &.hover {
+    &:before {
+      transition: $transition-base;
+      transform: scale(0);
+    }
+    &:hover:before {
+      visibility: visible;
+      background-color: currentColor;
+      transform: scale(1);
+    }
+  }
+
+  .text-white &:before {
+    background-color: currentColor;
+  }
+}

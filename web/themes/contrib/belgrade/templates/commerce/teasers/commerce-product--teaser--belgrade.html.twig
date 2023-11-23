@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('belgrade/product-teaser.belgrade') }}
+
+{% import "@belgrade/macros.twig" as svg %}
+
+{%
+  set classes = [
+    'product',
+    'position-relative',
+    'mb-3'
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="product-image position-relative text-white bg-primary">
+    <div class="product-hover d-flex flex-column align-items-center justify-content-center position-absolute top-0 w-100 h-100">
+      {{ svg.getIcon('eye-fill', 34, 34, 'mb-2') }}
+      <div class="fs-md">{{ 'View product' }}</div>
+    </div>
+    {{- product.images -}}
+    {{- product.variation_images -}}
+  </div>
+  <div class="product-info d-flex align-items-center justify-content-between">
+    <div class="product-title fw-bold">{{ product.title }}</div>
+    <a href="{{ product_url }}" class="stretched-link"></a>
+    {{- product|without('title', 'variation_attributes', 'images', 'variation_images') -}}
+  </div>
+</article>

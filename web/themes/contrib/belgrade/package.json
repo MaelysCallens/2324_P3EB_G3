@@ -1,0 +1,46 @@
+{
+  "name": "belgrade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production",
+    "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest . --symbol-sprite dist/images/belgrade-icons.svg src/icons/*.svg"
+  },
+  "keywords": [
+    "drupal8",
+    "theme",
+    "bootstrap",
+    "bootstrap icons"
+  ],
+  "repository": "git@git.drupal.org:project/belgrade.git",
+  "author": "majmunbog <ivan@centarro.io>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ibuisic/belgrade/issues"
+  },
+  "homepage": "https://github.com/ibuisic/source#readme",
+  "devDependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.8.1",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^10.0.0",
+    "laravel-mix": "^6.0.27",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.3.6",
+    "postcss-inline-svg": "^5.0.0",
+    "resolve-url-loader": "^3.1.4",
+    "sass": "^1.32.12",
+    "sass-loader": "^12.6.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "laravel-mix-copy-watched": "^3.0.0",
+    "svg-sprite": "^2.0.2"
+  }
+}

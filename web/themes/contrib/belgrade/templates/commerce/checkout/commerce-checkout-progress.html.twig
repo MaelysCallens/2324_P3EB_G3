@@ -1,0 +1,42 @@
+{% import "@belgrade/macros.twig" as svg %}
+
+{#
+/**
+ * @file
+ * Default theme implementation for the checkout progress.
+ *
+ * Available variables:
+ * - steps: An array of steps, where each step has the following keys:
+ *   - id: The step ID.
+ *   - label: The step label.
+ *   - position: 'previous', 'current' or 'next'.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="checkout-progress row justify-content-center text-align-center text-primary my-4">
+  {% for step in steps %}
+
+    {% set stepDefaultIcon = 'basket' %}
+
+    {% set stepIcon =
+      step.id == 'login' ? 'info-circle' :
+      step.id == 'order_information' ? 'clipboard-data' :
+      step.id == 'review' ? 'clipboard-check' :
+      step.id == 'complete' ? 'gift' : stepDefaultIcon
+    %}
+
+    <div class="checkout-progress--step checkout-progress--step__{{ step.position }} position-relative col col-md-3 col-lg-2 mb-3">
+      <div class="mb-2 pb-1 position-relative">
+        {{ svg.getIcon(stepIcon, 42, 42) }}
+        {% if step.position == 'previous' %}
+          {{ svg.getIcon('check-circle-fill', 16, 16, 'position-absolute bottom-0') }}
+        {% endif %}
+      </div>
+      <div class="d-none d-sm-block fw-bold">
+        {{- step.label -}}
+      </div>
+    </div>
+
+  {% endfor %}
+</div>

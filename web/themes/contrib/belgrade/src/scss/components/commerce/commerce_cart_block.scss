@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Belgrade theme implementation for Commerce Cart components
+ *
+ */
+@import "../../global";
+
+// Cart Block
+$cart-block-width: 320px;
+$cart-block-height: 300px;
+
+.cart-block--contents {
+  width: $cart-block-width;
+  &__inner {
+    padding: 10px;
+  }
+  &__items {
+    overflow-y: auto;
+    max-height: $cart-block-height;
+  }
+}
+
+.cart--cart-block li.cart-block--contents__item {
+  margin-bottom: 10px;
+  border-bottom: 1px #eaeaea solid;
+}

@@ -1,0 +1,26 @@
+uuid: f7834167-2503-4f74-9e06-c68b54d5c67a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - belgrade
+_core:
+  default_config_hash: o9654zFbOpjd88E5j5l4Cby3t-WwUuTfQ6xcKSLsodg
+id: belgrade_breadcrumbs
+theme: belgrade
+region: highlighted
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/cart*\r\n/checkout*\r\n<front>"

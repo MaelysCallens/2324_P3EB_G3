@@ -1,0 +1,1 @@
+.image-item{cursor:pointer}.image-item img{border:1px solid #dee2e6;-o-object-fit:contain;object-fit:contain;opacity:.5;transition:opacity .15s linear}.image-item.active img,.image-item:hover img{opacity:1}.image-item.active{cursor:default}

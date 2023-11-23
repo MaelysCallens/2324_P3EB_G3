@@ -1,0 +1,19 @@
+//
+// Header
+// ----------------------------
+
+// Hide header menu on screen size bellow the breakpoint.
+$header-nav-hide: 'xl';
+
+.region-header {
+  // Hide nav on smaller screens
+  .nav {
+    @include media-breakpoint-down($header-nav-hide) {
+      display: none;
+    }
+    > .nav-item:not(.dropdown) > .nav-link {
+      @extend .underline, .hover;
+    }
+  }
+}
+

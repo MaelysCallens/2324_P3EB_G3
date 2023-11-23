@@ -1,0 +1,30 @@
+{% import "@belgrade/macros.twig" as svg %}
+
+<div{{ attributes }}>
+  <div class="cart-block--summary">
+    <a class="cart-block--link__expand" href="{{ url }}">
+      <span class="cart-block--summary__icon">
+        {{ svg.getIcon('basket', 18, 18, 'me-1') }}
+      </span>
+      <span class="cart-block--summary__count">{{ count_text }}</span>
+    </a>
+  </div>
+  {% if content %}
+  <div class="cart-block--contents bg-primary text-white mt-3">
+    <div class="cart-block--contents__inner p-4">
+      <div class="fw-bold mb-3">{{ 'Shopping bag'|t }} / {{ count_text }}</div>
+      <div class="cart-block--contents__items">
+        {{ content }}
+      </div>
+      <div class="cart-block--contents__links mt-3">
+        {% for link in links %}
+          {{ link|merge({ '#attributes': { 'class': [ 'btn', 'btn-outline-white', 'w-100'] } }) }}
+        {% endfor %}
+      </div>
+    </div>
+    <a type="button" class="cart-block--link__expand m-3 mt-4 position-absolute top-0 end-0" href="{{ url }}" aria-label="Close">
+      {{ svg.getIcon('x', 20, 20) }}
+    </a>
+  </div>
+  {% endif %}
+</div>

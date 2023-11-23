@@ -1,0 +1,118 @@
+//
+// Commerce Kickstart Layout builder - Slideshow.
+// ----------------------------
+//
+@import "../../global";
+
+$cklb-slideshow-min-height: 500px;
+$cklb-slideshow-spacer: $spacer * 1.5;
+$cklb-slideshow-arrow-size: 2rem;
+$cklb-slideshow-dot-size: 0.875rem;
+
+
+.cklb-slideshow {
+  opacity: 0;
+  transition: $transition-fade;
+
+  // Hero.
+  &.layout-builder__region,
+  &.slick-initialized {
+    opacity: 1;
+    .cklb-hero {
+      .content {
+        position: relative;
+        z-index: 2;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  // Slideshow container.
+  .block-layout-builder>.content {
+    @include make-container();
+    padding-top: $cklb-slideshow-spacer;
+    padding-bottom: $cklb-slideshow-spacer;
+
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      align-content: center;
+      min-height: $cklb-slideshow-min-height;
+      width: map-get($container-max-widths, "lg");
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: map-get($container-max-widths, "xl");
+    }
+    @include media-breakpoint-up(xxl) {
+      width: map-get($container-max-widths, "xxl");
+    }
+  }
+}
+
+// Slick overrides
+// - Same height slides.
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit;
+  > div,
+  .cklb-hero {
+    height: 100%;
+  }
+}
+
+// - dots
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.slick-dots {
+  bottom: $cklb-slideshow-spacer;
+  li button:before {
+    font-size: $cklb-slideshow-dot-size;
+  }
+}
+
+// - arrows
+.slick-arrow {
+  width: $cklb-slideshow-arrow-size;
+  height: $cklb-slideshow-arrow-size;
+  color: currentColor;
+  z-index: 55;
+
+  &::before {
+    font-size: $cklb-slideshow-arrow-size;
+    color: currentColor;
+    opacity: 1;
+  }
+
+  @include media-breakpoint-down(lg) {
+    top: auto;
+    bottom: $cklb-slideshow-spacer / 2;
+  }
+}
+
+.slick-next {
+  right: $cklb-slideshow-spacer;
+}
+
+.slick-prev {
+  left: $cklb-slideshow-spacer;
+}
+
+.slick-next:focus,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-prev:hover {
+  color: currentColor;
+}

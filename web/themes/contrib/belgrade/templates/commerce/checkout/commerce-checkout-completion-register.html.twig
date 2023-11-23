@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * A layout for the checkout registration form
+ *
+ * Available variables:
+ * - form: The form.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="commerce-checkout-completion-register col-lg-6 offset-lg-3 mt-3 mb-5 p-3 p-md-4 bg-light">
+  <div class="commerce-checkout-completion-register__text">
+    <h3>{%trans%}Create your account{%endtrans%}</h3>
+    <p>{%trans%}Set a password to save your details for next time.{%endtrans%}</p>
+  </div>
+  <div class="commerce-checkout-completion-register__form">
+    {{ form }}
+  </div>
+</div>

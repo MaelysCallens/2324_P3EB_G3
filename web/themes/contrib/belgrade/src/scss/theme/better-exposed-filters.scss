@@ -1,0 +1,24 @@
+//
+// Better exposed filters
+// ----------------------------
+@import "../global";
+
+$bef-form-margin-bottom:  1.5rem;
+$bef-label-font-size:     1rem;
+$bef-label-font-weight:   $form-label-font-weight;
+$bef-links-margin-bottom: 0.4rem;
+
+.bef-exposed-form {
+  margin-bottom: $bef-form-margin-bottom;
+  .fieldset-legend {
+    font-size: $bef-label-font-size;
+    font-weight: $bef-label-font-weight;
+    -webkit-appearance: none;
+  }
+}
+
+.bef-links {
+  li {
+    margin-bottom: $bef-links-margin-bottom;
+  }
+}

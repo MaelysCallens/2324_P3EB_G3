@@ -1,0 +1,60 @@
+/**
+ * @file
+ * Belgrade styles for the address book.
+ */
+.address-book {
+  &__profiles {
+    @include make-row();
+    margin-top: 2rem;
+  }
+
+  &__profile {
+    @include make-col-ready();
+    > .profile {
+      padding: 1rem;
+    }
+    .address {
+      margin-bottom: 0;
+    }
+    &:not(.address-book__profile--default) .profile {
+      border: 1px solid $gray-300;
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+    }
+  }
+
+  &__empty-text {
+    margin: 0.75em;
+  }
+
+  // Operations
+  &__operations {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__set-default-link,
+  &__add-link {
+    @extend .btn;
+  }
+  &__add-link {
+    @extend .btn-success;
+  }
+
+  &__edit-link,
+  &__delete-link {
+    margin: 1rem 10px 1rem 0;
+  }
+
+  &__set-default-link {
+    order: -1;
+    margin-right: 0;
+    width: 100%;
+    @extend .btn-sm, .btn-secondary;
+  }
+}

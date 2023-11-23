@@ -1,0 +1,25 @@
+uuid: a7e842f4-db08-470c-a579-7796fd30e6d7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:751292c2-7663-48ea-a33b-b59f5e1dc2f8'
+  module:
+    - block_content
+  theme:
+    - olivero
+id: olivero_padel
+theme: olivero
+region: footer_top
+weight: -8
+provider: null
+plugin: 'block_content:751292c2-7663-48ea-a33b-b59f5e1dc2f8'
+settings:
+  id: 'block_content:751292c2-7663-48ea-a33b-b59f5e1dc2f8'
+  label: Padel
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

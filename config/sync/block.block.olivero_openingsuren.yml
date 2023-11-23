@@ -1,0 +1,25 @@
+uuid: 556fb07e-fb2c-4f4b-be0a-02a205561303
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+  module:
+    - block_content
+  theme:
+    - olivero
+id: olivero_openingsuren
+theme: olivero
+region: footer_top
+weight: -6
+provider: null
+plugin: 'block_content:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+settings:
+  id: 'block_content:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+  label: Openingsuren
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

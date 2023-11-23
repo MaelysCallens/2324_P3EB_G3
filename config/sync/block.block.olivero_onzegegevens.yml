@@ -1,0 +1,25 @@
+uuid: 439b29b5-1b15-4491-94ff-bfc60d37262a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2ffd2b41-f57b-4fbc-ab77-ed99c5c1c04c'
+  module:
+    - block_content
+  theme:
+    - olivero
+id: olivero_onzegegevens
+theme: olivero
+region: footer_top
+weight: -7
+provider: null
+plugin: 'block_content:2ffd2b41-f57b-4fbc-ab77-ed99c5c1c04c'
+settings:
+  id: 'block_content:2ffd2b41-f57b-4fbc-ab77-ed99c5c1c04c'
+  label: 'Onze gegevens'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

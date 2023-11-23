@@ -1,0 +1,86 @@
+{#
+/**
+ * @file
+ * Template for orders in the 'user' view mode.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - order: The rendered order fields.
+ *   Use 'order' to print them all, or print a subset such as
+ *   'order.order_number'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ order|without('order_number') }}
+ *   @endcode
+ * - order_entity: The order entity.
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass(['row', 'g-5']) }}>
+  <div class="customer-information col-md-3 mb-4 order-last">
+    <div class="p-4 bg-light">
+      {{ order.mail }}
+    </div>
+    <div class="accordion accordion-flush my-3" id="orderUser">
+      {% if order.shipping_information %}
+        <div class="accordion-item">
+          <div class="customer-information__shipping bg-light">
+            <h2 class="accordion-header" id="orderUser-shippingtitle">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#orderUser-shipping" aria-expanded="true" aria-controls="orderUser-shipping">
+                {{ 'Shipping information'|t }}
+              </button>
+            </h2>
+            <div id="orderUser-shipping" class="accordion-collapse collapse show" aria-labelledby="orderUser-shippingtitle">
+              <div class="accordion-body">
+                {{ order.shipping_information }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if order.billing_information %}
+        <div class="accordion-item mt-3">
+          <div class="customer-information__billing bg-light">
+            <h2 class="accordion-header" id="orderUser-billingtitle">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#orderUser-billing" aria-expanded="true" aria-controls="orderUser-billing">
+                {{ 'Billing information'|t }}
+              </button>
+            </h2>
+            <div id="orderUser-billing" class="accordion-collapse collapse show" aria-labelledby="orderUser-billingtitle">
+              <div class="accordion-body">
+                {{ order.billing_information }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="order-information col-md-9">
+    <div class="row row-cols-auto mb-4">
+      {% if order.completed|render is not empty %}
+        <div class="col">
+          {{ order.completed }}
+        </div>
+      {% endif %}
+      {% if order.placed|render is not empty  %}
+        <div class="col">
+          {{ order.placed }}
+        </div>
+      {% endif %}
+      {% if order.state|render is not empty  %}
+        <div class="col">
+          {{ order.state }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="row">
+      {{ order.order_items }}
+      {{ order.total_price }}
+    </div>
+
+    {{ additional_order_fields }}
+  </div>
+</div>

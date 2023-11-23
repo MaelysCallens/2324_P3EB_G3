@@ -1,0 +1,115 @@
+//
+// Forms
+// ----------------------------
+
+.form-label,
+.fieldset-legend {
+  &.form-required {
+    &:after {
+      display: inline-block;
+      content: "";
+      margin-right: 0.3em;
+      margin-left: 0.3em;
+      vertical-align: super;
+      width: $required-mark-size;
+      height: $required-mark-size;
+      background-size: $required-mark-size;
+      background-image: $required-mark-icon;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.form-item {
+  margin-bottom: $form-item-margin-bottom;
+}
+
+.fieldset-legend:not(.accordion-button) {
+  margin-bottom: $form-fieldset-legend-margin-bottom;
+}
+
+// Errors
+.error {
+  &.form-control {
+    border-color: $danger;
+
+    @if $enable-validation-icons {
+      padding-right: $input-height-inner;
+      background-image: escape-svg($form-feedback-icon-invalid);
+      background-repeat: no-repeat;
+      background-position: right $input-height-inner-quarter center;
+      background-size: $input-height-inner-half $input-height-inner-half;
+    }
+
+    &:focus {
+      border-color: $danger;
+      box-shadow: 0 0 0 $input-focus-width
+        rgba($danger, $input-btn-focus-color-opacity);
+    }
+  }
+
+  &.form-select {
+    border-color: $danger;
+
+    @if $enable-validation-icons {
+      padding-right: $form-select-feedback-icon-padding-end;
+      background-image: escape-svg($form-select-indicator),
+        escape-svg($form-feedback-icon-invalid);
+      background-position: $form-select-bg-position,
+        $form-select-feedback-icon-position;
+      background-size: $form-select-bg-size, $form-select-feedback-icon-size;
+    }
+
+    &:focus {
+      border-color: $danger;
+      box-shadow: 0 0 0 $input-focus-width rgba($danger, 0.25);
+    }
+  }
+
+  &.form-check-input {
+    border-color: $danger;
+
+    &:checked {
+      background-color: $danger;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 $input-focus-width rgba($danger, 0.25);
+    }
+
+    ~ .form-check-label {
+      color: $danger;
+    }
+  }
+  &.form-check-inline .form-check-input {
+    ~ .invalid-feedback {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+// stylelint-disable-next-line selector-no-qualifying-type
+textarea.error.form-control {
+  @if $enable-validation-icons {
+    padding-right: $input-height-inner;
+    background-position: top
+      $input-height-inner-quarter
+      right
+      $input-height-inner-quarter;
+  }
+}
+fieldset.fieldgroup.error .fieldset-legend {
+  color: $danger;
+}
+
+// Form actions buttons.
+.form-actions {
+  .btn.form-submit + a:not(.btn) {
+    margin-left: 0.5rem;
+    font-size: $font-size-sm;
+  }
+  #edit-cancel.button {
+    color: $danger;
+  }
+}
+

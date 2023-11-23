@@ -1,0 +1,154 @@
+/* ---------- Preview Styles ----------- */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+
+.js .color-preview {
+  float: none !important;
+  clear: both;
+}
+
+.color-preview {
+  overflow: hidden;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.color-preview-topbar {
+  background: #272727;
+  padding: 5px 25px;
+}
+
+.color-preview-topbar .menu-link {
+  color: white;
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: left center;
+  font-weight: 300;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2024.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2030%2011%22%20style%3D%22enable-background%3Anew%200%200%2030%2011%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23FFFFFF%3B%7D%0A%3C/style%3E%0A%3Crect%20class%3D%22st0%22%20width%3D%2230%22%20height%3D%222%22/%3E%0A%3Crect%20y%3D%229%22%20class%3D%22st0%22%20width%3D%2230%22%20height%3D%222%22/%3E%0A%3C/svg%3E%0A');
+}
+
+.color-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.color-preview-main-menu {
+  clear: both;
+  padding: 0 15px 3px;
+}
+
+/* Menu links */
+.color-preview-main-menu-links {
+  margin: 0;
+  padding: 0;
+  font-size: 0.929em;
+}
+
+.color-preview-main-menu-links li {
+  position: relative;
+  display: inline;
+  padding: 0.6em 0 0.4em;
+  list-style-type: none;
+}
+
+.color-preview-main-menu-links a {
+  padding: 0.6em 1em 0.4em;
+  cursor: pointer;
+  color: currentColor;
+}
+
+.color-preview-main-menu-links .after{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background-color: #41449f;
+  width: 20px;
+  height: 2px;
+  background-color: transparent;
+  transition: all .2s ease-in-out;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.color-preview-main-menu-links a:hover {
+  text-decoration: none;
+}
+
+
+/* Sidebar */
+.color-preview-sidebar,
+.color-preview-content {
+  position: relative;
+  display: inline;
+  float: left; /* LTR */
+}
+
+[dir="rtl"] .color-preview-sidebar,
+[dir="rtl"] .color-preview-content {
+  float: right;
+}
+.color-preview-sidebar {
+  width: 210px;
+  margin-left: 15px; /* LTR */
+
+}
+[dir="rtl"] .color-preview-sidebar {
+  margin-right: 15px;
+  margin-left: 0;
+}
+.color-preview-content {
+  width: 26.5em;
+  margin-left: 30px; /* LTR */
+}
+[dir="rtl"] .color-preview-content {
+  margin-right: 30px;
+  margin-left: 0;
+}
+.color-preview-sidebar .preview-block {
+  margin: 20px 0;
+  padding: 15px 20px;
+  background-color: #e9e9f2;
+}
+
+.color-preview-sidebar h2 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #babad3;
+  font-weight: normal;
+}
+
+.color-preview .preview-block .preview-content {
+  margin-top: 1em;
+}
+.color-preview .preview-block-menu .preview-content,
+.color-preview .preview-block-menu .preview-content ul {
+  margin-top: 0;
+}
+.color-preview-main {
+  margin: 20px 0;
+}
+.color-preview-page-title {
+  margin: 1em 0 0.5em;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.color-preview-main-color{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%) rotate(45deg);
+  background: #41449f;
+}

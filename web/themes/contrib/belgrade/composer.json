@@ -1,0 +1,7 @@
+{
+  "name": "drupal/belgrade",
+  "type": "drupal-theme",
+  "description": "Belgrade theme for Drupal Commerce.",
+  "homepage": "https://drupal.org/project/belgrade",
+  "license": "GPL-2.0-or-later"
+}

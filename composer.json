@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/belgrade": "^2.0",
         "drupal/commerce": "^2.36",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",

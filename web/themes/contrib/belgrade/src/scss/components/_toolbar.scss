@@ -1,0 +1,33 @@
+$admin-toolbar-size: 39px;
+$admin-tray-size: 39px;
+
+// Toasts.
+.toolbar-oriented .toolbar-bar {
+  z-index: map-get($z-index, toolbar);
+}
+
+// Navigation (Offcanvas).
+body.toolbar-vertical {
+  .region-navigation.offcanvas-start,
+  .region-navigation.offcanvas-end {
+    top: $admin-toolbar-size;
+  }
+}
+
+body.toolbar-horizontal {
+  // Top toast
+  .top-0.toast-container {
+    top: $admin-toolbar-size + $admin-tray-size !important;
+  }
+
+  // Navigation (Offcanvas)
+  .region-navigation.offcanvas-start,
+  .region-navigation.offcanvas-end {
+    top: $admin-toolbar-size;
+  }
+
+  &.toolbar-tray-open .region-navigation.offcanvas-start,
+  &.toolbar-tray-open .region-navigation.offcanvas-end {
+    top: $admin-toolbar-size + $admin-tray-size !important;
+  }
+}

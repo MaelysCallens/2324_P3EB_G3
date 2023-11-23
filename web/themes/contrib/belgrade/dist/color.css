@@ -1,0 +1,60 @@
+:root {
+  --beo-body-bg: #fff;
+  --beo-body-color: #333;
+  --beo-primary: #41449f;
+  --beo-primary-hover: #373a87;
+  --beo-light: #f8f9fa;
+  --beo-dark: #272727;
+}
+body {
+  background-color: var(--beo-body-bg);
+  color: var(--beo-body-color);
+}
+.text-primary {
+  color: #41449f !important;
+}
+.bg-primary {
+  background-color: #41449f !important;
+}
+.text-primary-hover {
+  color: #373a87 !important;
+}
+.bg-primary-hover {
+  background-color: #373a87 !important;
+}
+.text-light {
+  color: #f8f9fa !important;
+}
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+.text-dark {
+  color: #272727 !important;
+}
+.bg-dark {
+  background-color: #272727 !important;
+}
+.btn-primary {
+  --beo-btn-bg: #41449f;
+  --beo-btn-border-color: #41449f;
+  --beo-btn-hover-bg: #373a87;
+  --beo-btn-hover-border-color: #373a87;
+}
+.btn-outline-primary,
+.btn-outline-primary:focus {
+  --beo-btn-color: #41449f;
+  --beo-btn-border-color: #41449f;
+  --beo-btn-hover-color: #fff;
+  --beo-btn-hover-bg: #373a87;
+  --beo-btn-hover-border-color: #373a87;
+}
+.btn-check:focus + .btn-outline-primary,
+.btn-check:focus + .btn-primary,
+.btn-outline-primary:active:focus,
+.btn-outline-primary:focus,
+.btn-primary:active:focus,
+.btn-primary:focus,
+.product--rendered-attribute .form-radio:focus + .btn-outline-primary,
+.product--rendered-attribute .form-radio:focus + .btn-primary {
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
+}

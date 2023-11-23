@@ -1,0 +1,91 @@
+//
+// Product teaser - Card Zoom
+// ----------------------------
+@import "../../global";
+
+$product-card-margin: 22px 0; // vertical spacing
+$product-card-height: 400px;
+$product-card-body-min-size: 140px;
+$product-card-padding: 0 0 $product-card-body-min-size 0;
+
+.product-card {
+  position: relative;
+  margin: $product-card-margin;
+  padding: $product-card-padding;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.3s linear 0s;
+
+  .card-image {
+    height: $product-card-height;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s linear 0s;
+    }
+  }
+
+  .card-body {
+    position: absolute;
+    bottom: 0;
+    color: $dark;
+    background: $white;
+    width: 100%;
+    padding: 28px;
+    min-height: $product-card-body-min-size;
+    a {
+      color: currentColor;
+    }
+  }
+
+  .card-title {
+    background-color: transparent;
+    border: 0;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 8px;
+    font-size: 22px;
+    > a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .card-body {
+    font-size: 13px;
+    max-height: 18px;
+    transition: max-height 0.3s linear;
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // hover
+  &:hover {
+    box-shadow: 0 1px 35px 0 rgba(0, 0, 0, 0.3);
+    .card-body {
+      overflow: auto;
+      p {
+        white-space: normal;
+      }
+    }
+    .card-body {
+      max-height: $product-card-height;
+    }
+    .card-image img {
+      transform: scale(1.1);
+      opacity: 0.6;
+    }
+  }
+}

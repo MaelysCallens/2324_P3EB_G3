@@ -1,0 +1,27 @@
+//
+// Commerce Demo - Front page.
+// ----------------------------
+@import "../../global";
+
+.region-header {
+  position: absolute;
+  margin-top: 0 !important;
+  width: 100%;
+  color: $white;
+  z-index: 5;
+  .nav-link:hover {
+    color: inherit;
+  }
+}
+
+#carouselDemo {
+  img {
+    object-fit: cover;
+    height: 320px;
+    // Opacify the slide images.
+    opacity: 0.54;
+    @include media-breakpoint-up(md) {
+      height: 640px;
+    }
+  }
+}

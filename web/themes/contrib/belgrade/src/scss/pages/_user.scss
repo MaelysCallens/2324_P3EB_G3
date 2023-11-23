@@ -1,0 +1,17 @@
+//
+// User pages
+// ----------------------------
+//
+.user-form,
+.user-login-form,
+.user-pass {
+  max-width: 460px;
+  margin: 3rem auto;
+
+  .form-actions {
+    margin-top: 1.5rem;
+    .form-submit:only-child {
+      width: 100%;
+    }
+  }
+}

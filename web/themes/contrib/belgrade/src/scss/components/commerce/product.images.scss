@@ -1,0 +1,26 @@
+//
+// Product images
+// ----------------------------
+@import "../../global";
+
+$image-border-color: $border-color;
+
+.image-item {
+  cursor: pointer;
+  img {
+    border: 1px solid $image-border-color;
+    opacity: 0.5;
+    transition: $transition-fade;
+    object-fit: contain;
+  }
+  &:hover,
+  &.active {
+    img {
+      opacity: 1;
+    }
+  }
+  // Remove pointer from active item
+  &.active {
+    cursor: default;
+  }
+}

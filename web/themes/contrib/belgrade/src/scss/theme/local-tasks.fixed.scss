@@ -1,0 +1,42 @@
+//
+// Fixed tabs.
+// ----------------------------
+@import "../global";
+
+$nav-tabs-fixed-offset: 220px;
+
+.block-local-tasks-block {
+  padding: 0;
+  top: $nav-tabs-fixed-offset;
+  position: fixed;
+  width: auto;
+  left: 0;
+  z-index: $zindex-modal;
+
+  .nav-tabs {
+    display: flex;
+    border: 1px solid var(--#{$prefix}light);
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  .nav-item + .nav-item {
+    border-top: 1px solid var(--#{$prefix}white);
+  }
+
+  .nav-link {
+    opacity: .9;
+    margin-bottom: 0;
+    background-color: var(--#{$prefix}white);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font-size-sm;
+    border-radius: 0;
+  }
+
+  .nav-link.active {
+    opacity: 1;
+    background-color: var(--#{$prefix}white);
+    border: 0;
+  }
+}

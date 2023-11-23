@@ -1,0 +1,27 @@
+uuid: 0a46e98a-a38b-48fc-a4d2-f12f5f619e68
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - belgrade
+_core:
+  default_config_hash: 63FLrk7BpcLU-5YLZwWVCOtOMozD8mSzBytCiu0Oznc
+id: belgrade_main_menu
+theme: belgrade
+region: top_bar
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

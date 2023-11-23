@@ -1,0 +1,37 @@
+//
+// Footer region
+// ----------------------------
+
+.region-footer {
+  // Columns
+  .menu--catalog,
+  .menu--footer {
+    @include make-col-ready();
+
+    .nav {
+      flex-direction: column;
+
+      &-link {
+        display: inline-block;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+  }
+
+  .block-system-powered-by-block a {
+    font-weight: bold;
+  }
+
+  @include media-breakpoint-down(md) {
+    // Social menu alignment
+    .menu--social .nav {
+      justify-content: center;
+    }
+  }
+}

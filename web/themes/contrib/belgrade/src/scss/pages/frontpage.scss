@@ -1,0 +1,29 @@
+//
+// Frontpage
+// ----------------------------
+//
+@import "../global";
+
+.region-header,
+.region-highlighted {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+
+.region-header {
+  margin-top: 0 !important;
+  color: $white;
+  .nav-link:hover {
+    color: inherit;
+  }
+}
+
+.region-highlighted {
+  margin-top: 110px;
+}
+
+// Compensate first lb block for the fixed header.
+.cklb-slideshow .block-layout-builder>.content {
+  margin-top: 2rem;
+}

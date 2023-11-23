@@ -16,7 +16,7 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Branding van de website'
+  label: 'Site branding'
   label_display: '0'
   provider: system
   use_site_logo: true

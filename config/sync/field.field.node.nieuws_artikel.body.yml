@@ -1,0 +1,24 @@
+uuid: 14973881-e73d-4a2b-9e37-11ffe8b2440d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.nieuws_artikel
+  module:
+    - text
+id: node.nieuws_artikel.body
+field_name: body
+entity_type: node
+bundle: nieuws_artikel
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

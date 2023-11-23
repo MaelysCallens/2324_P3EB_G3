@@ -1,0 +1,11 @@
+uuid: 88ed6844-404b-4d6f-b979-f8f63ad2959e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nieuws_artikel
+id: node.nieuws_artikel
+target_entity_type_id: node
+target_bundle: nieuws_artikel
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,46 @@
+uuid: 9cc31335-2d39-495a-a952-20226f420fea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nieuws_artikel.body
+    - field.field.node.nieuws_artikel.field_artikel_afbeelding
+    - field.field.node.nieuws_artikel.field_artikel_teaser_image
+    - node.type.nieuws_artikel
+  module:
+    - image
+    - text
+    - user
+id: node.nieuws_artikel.teaser
+targetEntityType: node
+bundle: nieuws_artikel
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_artikel_teaser_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_artikel_afbeelding: true
+  langcode: true

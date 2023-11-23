@@ -1,0 +1,17 @@
+uuid: 6fafea74-6ad4-4b8b-bdbe-77dfeabd0f56
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Nieuws Artikel'
+type: nieuws_artikel
+description: 'Nieuwsartikels waar evenementen en info kan worden aangekondigd'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

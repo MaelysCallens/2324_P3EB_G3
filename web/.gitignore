@@ -21,8 +21,15 @@ core
 sites/*/settings*.php
 sites/*/services*.yml
 
-# Ignore paths that contain user-generated content.
-sites/*/files
+Ignore paths that contain user-generated content.
+sites/*/files/styles
+sites/*/files/css
+sites/*/files/js
+sites/*/files/languages
+sites/*/files/php
+sites/*/files/config_*
+sites/*/files/translations
+sites/*/files/.htaccess
 sites/*/private
 
 # Ignore multi-site test environment.

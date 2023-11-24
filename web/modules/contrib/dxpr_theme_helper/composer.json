@@ -1,0 +1,25 @@
+{
+    "name": "dxpr/dxpr_theme_helper",
+    "description": "Helper module  to support DXPR Theme.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "DXPR",
+        "Drupal",
+        "Marketing",
+        "Bootstrap",
+        "Framework",
+        "Theme"
+    ],
+    "support": {
+        "documentation": "https:/.dxpr.com/hc",
+        "issues": "https://dxpr.com/hc/tickets"
+    },
+    "authors": [
+        {
+            "name": "DXPR",
+            "homepage": "https://dxpr.com",
+            "role": "Maintainer"
+        }
+    ]
+}

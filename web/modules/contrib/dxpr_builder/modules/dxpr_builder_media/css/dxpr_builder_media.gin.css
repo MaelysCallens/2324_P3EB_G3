@@ -1,0 +1,10 @@
+/**
+ * @media-entity dxpr_builder_media.gin.css
+ */
+ /**
+ * @media-entity dxpr_builder_media.claro.css
+ */
+ 
+ .entity-browser-form * {
+  border-radius: 0 !important;
+ }

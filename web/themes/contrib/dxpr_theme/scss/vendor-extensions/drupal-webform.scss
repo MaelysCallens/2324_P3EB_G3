@@ -1,0 +1,17 @@
+//
+// Author: Jurriaan Roelofs for DXPR. Copyright DXPR.
+//
+@import "../includes/variables";
+
+.html {
+  .webform-container-inline {
+    input,
+    select,
+    p,
+    label,
+    div {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}

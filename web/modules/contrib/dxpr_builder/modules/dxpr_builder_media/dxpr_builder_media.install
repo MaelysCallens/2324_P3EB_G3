@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install file for media entity browser  module.
+ */
+
+use Drupal\image\Entity\ImageStyle;
+
+/**
+ * Implements hook_install().
+ */
+function dxpr_builder_media_install(): void {
+  Drupal::configFactory()->getEditable('dxpr_builder.settings')->set('media_browser', 'dxpr_builder_media_modal')->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function dxpr_builder_media_uninstall(): void {
+  $imageStyle = ImageStyle::load('dxpr_builder_media_thumbnail');
+  if (!empty($imageStyle)) {
+    $imageStyle->delete();
+  }
+  Drupal::configFactory()->getEditable('dxpr_builder.settings')->set('media_browser', '')->save();
+}

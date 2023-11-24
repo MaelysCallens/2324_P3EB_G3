@@ -1,0 +1,43 @@
+##################################################
+# An override compose file for using bind        #
+# mounts for development                         #
+##################################################
+
+version: "3.7"
+
+services:
+
+  ### Override PHP service for development
+  qa-demo:
+    volumes:
+    - qa-demo-data:$SITE_INSTALLATION_CONTAINER # Use volume mount if you already installed the site on the qa-demo-data volume
+    # - $SITE_INSTALLATION:$SITE_INSTALLATION_CONTAINER # Use bind mount to directly link it to a local site installation
+    - dxpr-builder:$DXPR_BUILDER_CONTAINER
+    - $DXPR_THEME_HOST:$DXPR_THEME_CONTAINER # Bind mount local dxpr_builder repo to the site dxpr_builder module
+
+  ### Override nginx service for development
+  nginx:
+    volumes:
+    - qa-demo-data:$SITE_INSTALLATION_CONTAINER # Use volume mount if you already installed the site on the qa-demo-data volume
+    # - $SITE_INSTALLATION:$SITE_INSTALLATION_CONTAINER # Use bind mount to directly link it to a local site installation
+    - dxpr-builder:$DXPR_BUILDER_CONTAINER
+    - $DXPR_THEME_HOST:$DXPR_THEME_CONTAINER # Bind mount local dxpr_builder repo to the site dxpr_builder module
+
+  ### Build the DXPR Builder bind mounted source
+  dxpr-theme-grunt:
+    image: dxpr/grunt:dxpr-theme
+    container_name: "${PROJECT_NAME}_dxpr_theme_grunt"
+    profiles: ["qa-demo"]
+    networks:
+      - qa-demo
+    build:
+      context: ./grunt
+      args:
+        TARGET_PATH: $DXPR_THEME_CONTAINER
+        ENTRYPOINT_SH: ${DXPR_THEME_ENTRYPOINT:-dxpr-theme-entrypoint.sh}
+    environment:
+      NPM_INSTALL_STAMP: $NPM_INSTALL_STAMP
+      DEMO_HOST: $PROJECT_BASE_URL
+    volumes:
+    - $DXPR_THEME_HOST:$DXPR_THEME_CONTAINER
+    - node_modules:${DXPR_THEME_CONTAINER}/node_modules

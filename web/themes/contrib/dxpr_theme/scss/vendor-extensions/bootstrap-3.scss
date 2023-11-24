@@ -1,0 +1,372 @@
+//
+// Author: Jurriaan Roelofs for DXPR. Copyright DXPR.
+//
+
+// Fixing weird stuff in the bootstrap basetheme
+// @see https://www.drupal.org/node/2559219
+// @see https://www.drupal.org/node/2414935
+@import "../includes/variables";
+
+html body {
+  margin-top: 0;
+}
+
+.row > * {
+  margin-bottom: 30px;
+}
+
+.block:first-child h2.block-title {
+    margin-top: 10px;
+}
+.region-sidebar-second .block:first-child h2.block-title,
+.region-sidebar-first .block:first-child h2.block-title {
+    margin-top: 0;
+}
+p:last-child {
+    margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// This will all users to create multiple full width backgrounds per container
+.container-fluid {
+  padding-left :0;
+  padding-right: 0;
+  .navbar-right,
+  .navbar-left {
+    margin-left: 0; //remove negative margins
+    margin-right: 0;
+  }
+}
+.dxpr-theme-fluid {
+  .navbar-right,
+  .navbar-left {
+    margin-left: 0; //remove negative margins
+    margin-right: 0;
+  }
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.column {
+  margin-bottom: 30px;
+}
+
+// Bootstrap long dropdown multi-column helper
+// @see dxpr-theme.js
+.dropdown-menu {
+  min-width: 160px;
+  li {
+    float: left;
+    min-width: 160px;
+    display: block;
+  }
+}
+
+div.lead {
+  margin-bottom: 0;
+}
+
+.btn-default,
+.btn-group > .btn-default,
+.btn-primary,
+.btn-group > .btn-primary,
+.html .fake-submit {
+  background: $primary;
+  border-color: $primary;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+a.bg-primary:hover,
+a.bg-primary:focus {
+  background-color: $accent1;
+  border-color: $accent1;
+  color: white;
+  a {
+    color: white;
+  }
+}
+a.text-primary:hover,
+a.text-primary:focus {
+  color: $accent1;
+}
+
+
+.text-white {
+  h1, h2, h3, h4, h5, h6, th {
+    color: #fff !important;
+  }
+}
+.text-primary {
+  h1, h2, h3, h4, h5, h6, th {
+    color: $accent1 !important;
+  }
+}
+.text-secondary {
+  h1, h2, h3, h4, h5, h6, th {
+    color: $accent2 !important;
+  }
+}
+
+.wrap-containers .nav {
+  > li {
+    > a.is-active {
+      background-color: #eeeeee;
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+.region-sidebar-first .nav,
+.region-sidebar-second .nav {
+  float: none;
+  > li {
+    float: none;
+    display: block;
+    > a.is-active {
+      display: block;
+    }
+  }
+}
+
+.block .nav > li > a .glyphicon {
+  margin-left: -13px;
+  display: inline-block;
+  font-size: $font-size-small;
+  padding-right: 4px;
+}
+
+.card, .jumbotron {
+  background-color: $card;
+  color: $card-text;
+  a {
+    color: $card-text;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: $card-text;
+  }
+  .nav > li > a {
+    .glyphicon {
+      color: $accent1;
+    }
+  }
+  .nav > li > a:hover,
+  .nav > li > a:focus,
+  .nav > li > a.is-active {
+    color: $silver;
+    background: $primary;
+    .glyphicon {
+      color: $silver;
+    }
+  }
+}
+
+.list-inline {
+  margin: 0;
+  padding: 0;
+  > li {
+    padding-left: 0;
+  }
+  a {
+    color: inherit;
+  }
+}
+.field.list-inline {
+  div {
+    display: inline-block;
+  }
+  .field--item::after {
+    content: ', ';
+  }
+  .field--item:last-child::after {
+    content: '';
+  }
+}
+
+blockquote {
+  border-color: $silver;
+}
+blockquote footer, blockquote small, blockquote .small {
+  color: inherit;
+}
+
+.img-circle, .img-rounded, .img-thumbnail {
+  border: 3px solid $gray-lighter;
+}
+
+.center-block {
+  float: none!important;
+}
+
+// Tabs
+// -------------------------
+
+// Style Tabs as card as override jQuery ui tabs styling
+.html .nav-tabs {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $gray-lighter;
+  margin: 0;
+  padding: 0;
+  > li {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    > a {
+      border: 1px solid transparent;
+      border-radius: 0;
+      margin: 0;
+      padding: 10px 15px;
+      background-color: transparent;
+      &:hover {
+        color: $gray-lighter;
+      }
+      &.active {
+        color: $primary;
+        cursor: pointer;
+        border: 1px solid $gray-lighter;
+        border-bottom-color: $body-background;
+        background-color: transparent;
+        &:hover,
+        &:focus {
+          color: $primary;
+          cursor: default;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+.az-tabs .nav-tabs > li > a.active[role="tab"] {
+  background-color: #ffffff;
+}
+
+.region-content nav.tabs:after {
+  content:" ";
+  display:table;
+  clear:both;
+}
+
+.html .dxpr-theme-mini-tabs-wrapper {
+  pointer-events: none;
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+  .tabs--primary {
+    border: none;
+    box-shadow: 0 3px 10px 0 rgba(50, 50, 50, 0.23);
+    li {
+      margin: 0;
+      padding: 0;
+      border: none;
+      a {
+        background-color: $header-color;
+        color: $header-text-color;
+        padding: 8px;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 0;
+        border: none;
+        pointer-events: auto;
+        line-height: 1.42857143;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+      &.active {
+        bottom: auto !important;
+        a {
+          border: none;
+        }
+      }
+      &.active a {
+        color: $primary;
+      }
+    }
+  }
+}
+.body--primary-tabs-float .region-content nav.tabs:after {
+  display: none;
+}
+.body--primary-tabs-float .dxpr-theme-mini-tabs-wrapper {
+  display:inline-block;
+  float: none;
+  position: absolute;
+  margin-top: 2px;
+  left: 50%;
+  z-index: 470;
+  .tabs--primary {
+    position: relative;
+    left: -50%;
+  }
+}
+.html .tabs--secondary {
+  float: left;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+// Tabbable tabs
+// -------------------------
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+.tabs-left>.tab-content, .tabs-right>.tab-content {
+  padding: 20px;
+}
+
+// Progress Bar
+// -------------------------
+
+.progress {
+  border-radius: 0;
+  height: 3px;
+  margin-top: 2px;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.progress-bar {
+  background-color: $primary;
+  line-height: 4px;
+  box-shadow: none;
+}
+
+// Utilities
+// -------------------------
+
+.bg-light {
+  background-color: $gray-light !important;
+}

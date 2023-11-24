@@ -17,7 +17,7 @@ base_field: fid
 display:
   default:
     id: default
-    display_title: Standaard
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -475,7 +475,7 @@ display:
           admin_label: ''
           entity_type: file
           plugin_id: entity_operations
-          label: Bewerkingen
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -525,26 +525,26 @@ display:
           total_pages: 0
           id: 0
           tags:
-            next: 'Volgende ›'
-            previous: '‹ Vorige'
+            next: 'Next ›'
+            previous: '‹ Previous'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per pagina'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Alle -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Startpunt
+            offset_label: Offset
       exposed_form:
         type: basic
         options:
           submit_button: Filter
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sorteren op'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Oplopend
-          sort_desc_label: Aflopend
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       access:
         type: perm
         options:
@@ -1060,16 +1060,16 @@ display:
           total_pages: 0
           id: 0
           tags:
-            next: 'Volgende ›'
-            previous: '‹ Vorige'
+            next: 'Next ›'
+            previous: '‹ Previous'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per pagina'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Alle -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Startpunt
+            offset_label: Offset
       empty: {  }
       arguments:
         fid:

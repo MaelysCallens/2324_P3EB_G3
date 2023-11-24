@@ -1,0 +1,308 @@
+# DXPR Builder Libraries
+
+core:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/css/dxpr_builder.css: {}
+
+file.upload:
+  version: VERSION
+  js:
+    js/file-upload/js/jquery.iframe-transport.js: {}
+    js/file-upload/js/jquery.fileupload.js: {}
+    js/file-upload/js/jquery.fileupload-process.js: {}
+    js/file-upload/js/jquery.fileupload-validate.js: {}
+  dependencies:
+    - core/jquery
+    - dxpr_builder/jquery.ui-custom
+
+editor.core:
+  version: VERSION
+  css:
+    theme:
+      css/drupal-integration.css: {}
+      dxpr_builder/vendor/unmanaged/et-line-font/et-line-font.css: {}
+      dxpr_builder/vendor/unmanaged/pe-icon-7-stroke/css/pe-icon-7-stroke.css: {}
+  js:
+    js/drupal-integration.js: { weight: -7 }
+    dxpr_builder/vendor/managed/underscore/underscore-min.js: { weight: -10, minified: true }
+    dxpr_builder/vendor/managed/base64-js/base64js.min.js: { minified: true }
+    dxpr_builder/vendor/managed/bootstrap-notify/bootstrap-notify.min.js: { minified: true }
+    dxpr_builder/vendor/managed/sortablejs/Sortable.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/once
+    - dxpr_builder/jquery.ui-custom
+    - dxpr_builder/file.upload
+    - dxpr_builder/string_compression
+    - dxpr_builder/elements.glyphicons_halflings
+    - dxpr_builder/editor.core.styles
+
+string_compression:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/managed/lz-string/libs/lz-string.min.js: { minified: true }
+
+editor.dev:
+  version: VERSION
+  js:
+    dxpr_builder/dxpr_builder_dev.js: { }
+  dependencies:
+    - core/drupal
+    - core/once
+
+editor.frontend:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/managed/underscore/underscore-min.js: { weight: -10, minified: true }
+    dxpr_builder/dxpr_frontend.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/once
+
+editor.frontend_dev:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/managed/underscore/underscore-min.js: { weight: -10, minified: true }
+    dxpr_builder/dxpr_frontend.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/once
+
+bootstrap_3:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/unmanaged/bootstrap/css/bootstrap.min.css: { minified: true, weight: -10 }
+  js:
+    dxpr_builder/vendor/managed/underscore/underscore-min.js: { weight: -10, minified: true }
+    dxpr_builder/vendor/unmanaged/bootstrap/js/bootstrap.min.js: { minified: true, weight: -10 }
+
+bootstrap_4:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/managed/bootstrap-4/dist/css/bootstrap.min.css: { minified: true, weight: -10 }
+  js:
+    dxpr_builder/vendor/managed/bootstrap-4/dist/js/bootstrap.bundle.min.js: { minified: true, weight: -10 }
+
+bootstrap_5:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/managed/bootstrap-5/dist/css/bootstrap.min.css: { minified: true, weight: -10 }
+  js:
+    dxpr_builder/vendor/managed/bootstrap-5/dist/js/bootstrap.bundle.min.js: { minified: true, weight: -10 }
+
+entity_browser_selection:
+  js:
+    js/entity_browser.media_selection.js: {}
+
+# Modal Elements Libraries
+
+elements.waypoints:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/managed/jquery.waypoints/lib/jquery.waypoints.min.js: { minified: true }
+
+elements.animate:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/managed/animate.css/animate.min.css: { minified: true }
+
+elements.owlcarousel:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/unmanaged/owl.carousel/owl-carousel/owl.carousel.css: { minified: false }
+      dxpr_builder/vendor/unmanaged/owl.carousel/owl-carousel/owl.transitions.css: { minified: false }
+      dxpr_builder/css/st-owl-carousel.css: { minified: true }
+  js:
+    dxpr_builder/vendor/unmanaged/owl.carousel/owl-carousel/owl.carousel.js: { minified: true }
+
+elements.icon_helpers:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/css/icon-helpers.css: { minified: true }
+
+elements.glyphicons_halflings:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/unmanaged/glyphicons-halflings/css/halflings-set.css: { minified: true }
+
+elements.et_line_font:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/unmanaged/et-line-font/et-line-font.css: { minified: true }
+
+elements.font_awesome:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/unmanaged/font-awesome/css/font-awesome.min.css: { minified: true }
+
+elements.font_awesome_5_free:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/unmanaged/fontawesome-free/css/all.min.css: { minified: true }
+
+elements.pe_icon_7_stroke:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/unmanaged/pe-icon-7-stroke/css/pe-icon-7-stroke.css: { minified: true }
+
+elements.circliful:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/unmanaged/jquery.circliful/css/jquery.circliful.css: { minified: false }
+  js:
+    dxpr_builder/vendor/unmanaged/jquery.circliful/js/jquery.circliful.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+elements.counteverest:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/vendor/managed/counteverest/css/counteverest.dxpr.css: { minified: false }
+  js:
+    dxpr_builder/vendor/managed/counteverest/js/vendor/jquery.counteverest.min.js: { minified: true }
+
+elements.countto:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/managed/jquery-countTo/jquery.countTo.js: { minified: true }
+
+elements.social_icons:
+  version: VERSION
+  css:
+    theme:
+      dxpr_builder/css/social.css: { minified: true }
+
+
+# Sidebar Elements Libraries
+
+elements.test:
+  version: VERSION
+  css:
+    theme:
+      dxpr_elements/Test Elements//test-1.css: { minified: true }
+  js:
+    dxpr_elements/Test Elements/test-1.js: { minified: true }
+
+elements.cta:
+  version: VERSION
+  css:
+    theme:
+      css/elements/cta.css: { minified: true }
+
+elements.wow:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/managed/WOW/dist/wow.min.js: { minified: true }
+    dxpr_builder/js/dxpr.wow.js: { minified: false }
+
+elements.dropshadow:
+  version: VERSION
+  css:
+    theme:
+      css/elements/dropshadow.css: { minified: true }
+
+elements.iconbox:
+  version: VERSION
+  css:
+    theme:
+      css/elements/iconbox.css: { minified: true }
+
+elements.iconwell:
+  version: VERSION
+  css:
+    theme:
+      css/elements/iconwell.css: { minified: true }
+
+elements.imagebox:
+  version: VERSION
+  css:
+    theme:
+      css/elements/imagebox.css: { minified: true }
+
+elements.pricelisting:
+  version: VERSION
+  css:
+    theme:
+      css/elements/pricelisting.css: { minified: true }
+
+elements.pricingtable:
+  version: VERSION
+  css:
+    theme:
+      css/elements/pricingtable.css: { minified: true }
+
+elements.quoteslider:
+  version: VERSION
+  css:
+    theme:
+      css/elements/quoteslider.css: { minified: true }
+
+elements.teambox:
+  version: VERSION
+  css:
+    theme:
+      css/elements/teambox.css: { minified: true }
+
+elements.timeline:
+  version: VERSION
+  css:
+    theme:
+      css/elements/timeline.css: { minified: true }
+
+configuration.profileform:
+  css:
+    theme:
+      css/profile-form.css: {}
+      dxpr_builder/vendor/unmanaged/ckeditor/skins/moono-lisa/editor.css: {}
+  js:
+    js/profile-form.js: {}
+
+jquery.ui-custom:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/unmanaged/jquery-ui-custom/jquery-ui.min.js: { minified: true }
+  css:
+    component:
+      dxpr_builder/vendor/unmanaged/jquery-ui-custom/jquery-ui.min.css: { minified: true }
+  dependencies:
+    - core/jquery
+
+twig.js:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/managed/twig.js/twig.min.js: { weight: -10 }
+
+editor.validation:
+  version: VERSION
+  js:
+    js/editor_validation.js: { }
+  dependencies:
+    - core/drupalSettings
+    - core/drupal.message
+
+user-licenses:
+  css:
+    component:
+      css/user-licenses.css: {}
+
+underscore:
+  version: VERSION
+  js:
+    dxpr_builder/vendor/managed/underscore/underscore-min.js: { weight: -10, minified: true }

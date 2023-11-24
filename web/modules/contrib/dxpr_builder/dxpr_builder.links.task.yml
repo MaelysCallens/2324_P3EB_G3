@@ -1,0 +1,35 @@
+dxpr_builder.settings:
+  route_name: dxpr_builder.settings
+  title: 'General Settings'
+  base_route: dxpr_builder.settings
+  weight: 0
+
+dxpr_builder.licensed_content:
+  route_name: dxpr_builder.licensed_content
+  title: 'Content Items'
+  base_route: dxpr_builder.settings
+  weight: 1
+
+dxpr_builder.page_template:
+  route_name: entity.dxpr_builder_page_template.collection
+  title: 'Page Templates'
+  base_route: dxpr_builder.settings
+  weight: 2
+
+dxpr_builder.user_licenses:
+  route_name: dxpr_builder.user_licenses
+  title: 'User Licenses'
+  base_route: dxpr_builder.settings
+  weight: 3
+
+dxpr_builder.profile:
+  route_name: entity.dxpr_builder_profile.collection
+  title: 'User Profiles'
+  base_route: dxpr_builder.settings
+  weight: 4
+
+dxpr_builder.user_templates:
+  route_name: entity.dxpr_builder_user_template.collection
+  title: 'User Templates'
+  base_route: dxpr_builder.settings
+  weight: 5

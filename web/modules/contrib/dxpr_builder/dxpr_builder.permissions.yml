@@ -1,0 +1,11 @@
+administer dxpr builder configuration:
+  title: 'Administer DXPR Builder configuration'
+  restrict access: 'TRUE'
+
+edit with dxpr builder:
+  title: 'Edit with DXPR Builder'
+  description: 'edit with dxpr builder. Allows users to build layouts, design beautiful content and add dynamic components.'
+  restrict access: 'TRUE'
+
+administer dxpr_builder_profile:
+  title: 'Administer dxpr builder profile'

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_partner_image
+    - image.style.thumbnail
     - node.type.partner
     - taxonomy.vocabulary.partner_types
   content:
@@ -82,7 +83,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: ''
+            image_style: thumbnail
             image_loading:
               attribute: lazy
           group_column: ''

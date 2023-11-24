@@ -1,0 +1,46 @@
+uuid: 10151730-b54d-4449-816f-c92b274e8f00
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.body_content.body
+    - field.field.node.body_content.field_content_image
+    - field.field.node.body_content.layout_builder__layout
+    - node.type.body_content
+  module:
+    - image
+    - text
+    - user
+id: node.body_content.teaser
+targetEntityType: node
+bundle: body_content
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_content_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true

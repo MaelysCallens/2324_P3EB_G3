@@ -1,0 +1,184 @@
+
+name: Run tests in parallel on BS5 QA Demo installation
+on:
+  repository_dispatch:
+    types: [qa-demo-2x-bs5-tests-command]
+env:
+  DXPR_ACCESS_TOKEN: ${{ secrets.DXPR_ACCESS_TOKEN }}
+  DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
+  DOCKER_HUB_PASS: ${{ secrets.DOCKER_HUB_PASS }}
+  DXPR_ADMIN_PASSWORD: admin
+  DXPR_DEMO: dxpr_qa_demo
+  SITE_INSTALLATION_CONTAINER: /var/www/html:cached
+
+  ### DXPR_BUILDER SETUP
+  ### DXPR Builder image tage to use
+  DXPR_BUILDER_TAG: 2.x
+  # This is where to mount the DXPR Builder volume inside the container
+  DXPR_BUILDER_CONTAINER: /usr/src/dxpr_builder
+  # FOR LOCAL DEVELOPMENT
+  DXPR_BUILDER_HOST: .
+  # Entrypoint script name
+  DXPR_BUILDER_ENTRYPOINT: dxpr-builder-entrypoint.sh
+  # Analytics.
+  DXPR_RECORD_ANALYTICS: false
+  # Builder notifications.
+  DXPR_NOTIFICATIONS: false
+
+  ### DXPR THEME SETUP
+  ### DXPR Theme image tage to use— i.e. production.
+  DXPR_THEME_TAG: 5.x
+  ### This is where to mount the DXPR Theme volume inside the container.
+  DXPR_THEME_CONTAINER: /usr/src/dxpr_theme
+  # DXPR_THEME_ENV={dev, prod}.
+  DXPR_THEME_ENV: prod
+  # FOR LOCAL DEVELOPMENT
+  DXPR_THEME_HOST: /var/www/html/dxpr_theme
+  # Entrypoint script name
+  DXPR_THEME_ENTRYPOINT: dxpr-theme-entrypoint.sh
+
+  # When updated, it should be updated in both .gitignore and prepare_realease_clean_up.list files
+  NPM_INSTALL_STAMP: .npm.installed
+
+  ### DXPR MAVEN SETUP
+  ### A valid git tag or branch
+  DXPR_MAVEN_TAG: latest
+  MAVEN_PROPERTIES: ./src/main/resources/browser-config.properties
+  TEST_SUITE: ./chrome.editor.bs5.parallel.xml
+  TEST_TARGET_BROWSER: chrome
+  DXPR_TARGET_USER: editor
+  DXPR_BOOTSTRAP_VERSION: bs5
+  ENVIRONMENT: prod
+  DRIVERS_POOL_SIZE: 3
+  CHROME_HEADLESS_MODE: true
+  MAVEN_BASE_URL: http://nginx
+  SELENIUM_HUB_URL: http://selenium-hub:4444/wd/hub
+
+  ### PROJECT SETTINGS
+  PROJECT_NAME: dxpr_builder_project
+  PROJECT_BASE_URL: drupal.docker.localhost
+  QA_DEMO_NETWORK: qa-demo
+
+  DB_NAME: drupal
+  DB_USER: drupal
+  DB_PASSWORD: drupal
+  DB_ROOT_PASSWORD: password
+  DB_HOST: mariadb
+  DB_PORT: 3306
+  DB_DRIVER: mysql
+  MARIADB_TAG: 10.5-3.12.1
+
+  DRUPAL_TAG: 9-4.28.0
+
+  PHP_TAG: 7.4-dev-4.24.0
+
+  NGINX_TAG: 1.19-5.13.1
+  NGINX_VHOST_PRESET: drupal9
+  NGINX_BACKEND_HOST: qa-demo
+  NGINX_SERVER_ROOT: /var/www/html/docroot
+
+jobs:
+  chrome-editor-tests-bs5:
+    runs-on: buildjet-4vcpu-ubuntu-2004
+    timeout-minutes: 60
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
+          ref: refs/pull/${{ github.event.client_payload.pull_request.number }}/merge
+
+      - name: get current job log URL
+        uses: Tiryoh/gha-jobid-action@v0
+        id: chrome_editor_tests_bs5
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          job_name: chrome-editor-tests-bs5
+
+      # workaround, see: https://github.com/LouisBrunner/checks-action/issues/18#issuecomment-1314262695
+      - name: Set pending status
+        uses: Sibz/github-status-action@v1
+        with:
+          authToken: ${{secrets.GITHUB_TOKEN}}
+          context: chrome-editor-tests-bs5
+          description: 'In progress...'
+          state: pending
+          sha: ${{ github.event.client_payload.pull_request.head.sha }}
+          target_url: ${{ steps.chrome_editor_tests_bs5.outputs.html_url }}
+
+      - run: echo $DOCKER_HUB_PASS | docker login docker.io -u $DOCKER_HUB_USER --password-stdin
+      - run: DRIVERS_POOL_SIZE=$DRIVERS_POOL_SIZE ./scripts/qa-demo.test.parallel.github-action.sh
+
+      - name: Archive test reports
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: chrome-editor-tests
+          path: |
+            target/reports.*
+            target/screenshots.*
+
+      # workaround, see: https://github.com/LouisBrunner/checks-action/issues/18#issuecomment-1314262695
+      - name: Set complete status
+        uses: Sibz/github-status-action@v1
+        if: always()
+        with:
+          authToken: ${{secrets.GITHUB_TOKEN}}
+          context: chrome-editor-tests-bs5
+          description: 'Completed'
+          state: ${{ job.status }}
+          sha: ${{ github.event.client_payload.pull_request.head.sha }}
+          target_url: ${{ steps.chrome_editor_tests_bs5.outputs.html_url }}
+  chrome-anonymous-tests-bs5:
+    runs-on: buildjet-4vcpu-ubuntu-2004
+    timeout-minutes: 60
+    env:
+      TEST_SUITE: ./chrome.anonymous.bs5.parallel.xml
+      DXPR_TARGET_USER: anonymous
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
+          ref: refs/pull/${{ github.event.client_payload.pull_request.number }}/merge
+
+      - name: get current job log URL
+        uses: Tiryoh/gha-jobid-action@v0
+        id: chrome_anonymous_tests_bs5
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          job_name: chrome-anonymous-tests-bs5
+
+      # workaround, see: https://github.com/LouisBrunner/checks-action/issues/18#issuecomment-1314262695
+      - name: Set pending status
+        uses: Sibz/github-status-action@v1
+        with:
+          authToken: ${{secrets.GITHUB_TOKEN}}
+          context: chrome-anonymous-tests-bs5
+          description: 'In progress...'
+          state: pending
+          sha: ${{ github.event.client_payload.pull_request.head.sha }}
+          target_url: ${{ steps.chrome_anonymous_tests_bs5.outputs.html_url }}
+
+      - run: echo $DOCKER_HUB_PASS | docker login docker.io -u $DOCKER_HUB_USER --password-stdin # I don't think we need this, what is it used for?
+      - run: DRIVERS_POOL_SIZE=$DRIVERS_POOL_SIZE ./scripts/qa-demo.test.parallel.github-action.sh
+
+      - name: Archive test reports
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: chrome-anonymous-tests
+          path: |
+            target/reports.*
+            target/screenshots.*
+
+      # workaround, see: https://github.com/LouisBrunner/checks-action/issues/18#issuecomment-1314262695
+      - name: Set complete status
+        uses: Sibz/github-status-action@v1
+        with:
+          authToken: ${{secrets.GITHUB_TOKEN}}
+          context: chrome-anonymous-tests-bs5
+          description: 'Completed'
+          state: ${{ job.status }}
+          sha: ${{ github.event.client_payload.pull_request.head.sha }}
+          target_url: ${{ steps.chrome_anonymous_tests_bs5.outputs.html_url }}

@@ -1,0 +1,395 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Template\Attribute;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_library_info_alter().
+ *
+ * Replaces style sheets declared in libraries with color-altered style sheets.
+ */
+function dxpr_theme_library_info_alter(&$libraries, $extension) {
+  if ($extension == 'dxpr_theme') {
+    // Manage dxpr_theme themesettings CSS.
+    $current_theme = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+    $key = 'public://dxpr_theme/css/themesettings-' . $current_theme . '.css';
+    if (\Drupal::service('file_system')->realpath($key)) {
+      $libraries['global-styling']['css']['theme'][$key] = [
+        'minified' => FALSE,
+        'weight' => 5,
+      ];
+    }
+    // Subthemes dxpr_theme.css.
+    if ($current_theme !== 'dxpr_theme') {
+      // Subthemes carry their own copy of dxpr_theme.css,
+      // disable dxpr_theme/css/dxpr_theme.css.
+      unset($libraries['global-styling']['css']['theme']['css/dxpr_theme.css']);
+    }
+  }
+}
+
+/**
+ * Prepares variables for the all templates. Theme settings.
+ */
+function dxpr_theme_preprocess(&$variables, $hook, $info) {
+  $theme = \Drupal::theme()
+    ->getActiveTheme()
+    ->getName();
+  $variables['theme']['settings'] = \Drupal::config($theme . '.settings')->get();
+}
+
+/**
+ * Prepares variables for the html template. Adds node object.
+ *
+ * Default template: html.html.twig.
+ *
+ * See the html.html.twig template for the list of variables.
+ */
+function dxpr_theme_preprocess_html(&$variables) {
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $variables['node'] = $node;
+  }
+
+  foreach (\Drupal::routeMatch()->getParameters() as $parameter) {
+    if ($parameter instanceof ContentEntityInterface) {
+      $variables['attributes']['class'][] = Html::getClass('page-' . $parameter->getEntityTypeId() . '-' . $parameter->id());
+      break;
+    }
+  }
+
+  // Body background image.
+  if (array_key_exists('node', $variables)) {
+    $node = $variables['node'];
+
+    if (isset($node) && !is_string($node)) {
+      if ($node->hasField('field_dth_body_background')) {
+        $data = $node->field_dth_body_background->view([
+          'label' => 'hidden',
+          'type' => 'image_url',
+        ]);
+        if (isset($data[0]['#markup'])) {
+          $variables['body_bg_image_path'] = $data[0]['#markup'];
+        }
+      }
+    }
+  }
+
+  // Load Sooper Features Controllers.
+  $dxprThemePath = \Drupal::service('extension.list.theme')->getPath('dxpr_theme');
+  foreach (\Drupal::service('file_system')->scanDirectory($dxprThemePath . '/features', '/controller.inc/i') as $file) {
+    require_once $file->uri;
+    $function_name = basename($file->filename, '.inc');
+    $function_name = str_replace('-', '_', $function_name);
+    if (function_exists($function_name)) {
+      $function_name($variables);
+    }
+  }
+
+  if ($custom_js = theme_get_setting('custom_javascript_site')) {
+    $custom_js = Markup::create($custom_js);
+    $variables['page_bottom']['custom_javascript_site'] = [
+      '#markup' => $custom_js,
+    ];
+  }
+  $variables['page_bottom']['custom_javascript'] = [
+    '#markup' => '<div class="hidden" id="dxpr-theme-js-seed">sfy39587stp18</div>',
+  ];
+
+  if ($breadcrumbs_separator = theme_get_setting('page_title_breadcrumbs_separator')) {
+    $variables['#attached']['drupalSettings']['dxpr_themeSettings']['breadcrumbsSeparator'] = $breadcrumbs_separator;
+  }
+
+  if ($header_height = theme_get_setting('header_top_height')) {
+    $variables['#attached']['drupalSettings']['dxpr_themeSettings']['headerHeight'] = $header_height;
+  }
+
+  if ($header_scroll_offset = theme_get_setting('header_top_height_sticky_offset')) {
+    $variables['#attached']['drupalSettings']['dxpr_themeSettings']['headerOffset'] = $header_scroll_offset;
+  }
+
+  // Fixed mobile header.
+  if ($header_mobile_fixed = theme_get_setting('header_mobile_fixed')) {
+    $variables['#attached']['drupalSettings']['dxpr_themeSettings']['headerMobileFixed'] = $header_mobile_fixed;
+  }
+  // Mobile header height.
+  if ($header_mobile_height = theme_get_setting('header_mobile_height')) {
+    $variables['#attached']['drupalSettings']['dxpr_themeSettings']['headerMobileHeight'] = $header_mobile_height;
+  }
+
+  if ($header_menu_direction = ((theme_get_setting('header_side_direction') !== NULL)) ? theme_get_setting('header_side_direction') : 'left') {
+    $variables['#attached']['drupalSettings']['dxpr_themeSettings']['headerSideDirection'] = $header_menu_direction;
+  }
+
+  // Second header sticky.
+  if ($second_header_sticky = theme_get_setting('second_header_sticky')) {
+    $variables['#attached']['drupalSettings']['dxpr_themeSettings']['secondHeaderSticky'] = $second_header_sticky;
+  }
+
+  // Menu hamburger animation.
+  if ($header_hamburger_animation = theme_get_setting('hamburger_animation')) {
+    $variables['#attached']['drupalSettings']['dxpr_themeSettings']['hamburgerAnimation'] = $header_hamburger_animation;
+  }
+}
+
+/**
+ * Implements template_preprocess_page()
+ */
+function dxpr_theme_preprocess_page(&$variables) {
+  $variables['navbar_attributes'] = [
+    'class' => ['navbar'],
+    'id' => ['navbar'],
+    'role' => ['banner'],
+  ];
+  $variables['navbar_attributes'] = new Attribute($variables['navbar_attributes']);
+
+  $hide_regions = $local_hide = [];
+  if (theme_get_setting('hidden_regions') && !empty(array_keys(array_filter(theme_get_setting('hidden_regions'))))) {
+    $hide_regions = array_keys(array_filter(theme_get_setting('hidden_regions')));
+  }
+  if (!empty($variables['node'])
+    && $variables['node'] instanceof NodeInterface
+    && $variables['node']->hasField('field_dth_hide_regions')) {
+    $local_hide = array_column($variables['node']->get('field_dth_hide_regions')->getValue(), 'value');
+    $hide_regions = array_unique(array_merge($hide_regions, $local_hide));
+  }
+  if (in_array('navigation', $hide_regions)) {
+    $hide_regions[] = 'navigation_collapsible';
+  }
+  if (in_array('header', $hide_regions)) {
+    $hide_regions[] = 'navigation_collapsible';
+    $hide_regions[] = 'navigation';
+  }
+  foreach ($hide_regions as $value) {
+    if (!empty($variables['page'][$value])) {
+      unset($variables['page'][$value]);
+    }
+  }
+
+  // Title background image.
+  if (array_key_exists('node', $variables)) {
+    $node = $variables['node'];
+
+    if (isset($node) && !is_string($node)) {
+      if ($node->hasField('field_dth_page_title_backgrou')) {
+        $data = $node->field_dth_page_title_backgrou->view([
+          'label' => 'hidden',
+          'type' => 'image_url',
+        ]);
+        if (isset($data[0]['#markup'])) {
+          $variables['title_bg_image_path'] = $data[0]['#markup'];
+        }
+      }
+    }
+  }
+
+  // CSS to load on every page.
+  $dxpr_theme_libraries = [
+    // Bootstrap TAILORING.
+    'dxpr_theme/bootstrap-3',
+    'dxpr_theme/bootstrap-theme',
+  // @todo include only if needed.
+    'dxpr_theme/jquery-ui',
+    // DXPR THEME BASE.
+    'dxpr_theme/forms',
+    'dxpr_theme/layout',
+    'dxpr_theme/page-title',
+    'dxpr_theme/typography',
+    // DXPR THEME Components  //@todo: include only if needed.
+    'dxpr_theme/dxpr-theme-header--side',
+    'dxpr_theme/admin',
+    // Overrides   //@todo: include only if needed.
+    'dxpr_theme/drupal-webform',
+    'dxpr_theme/dxpr-theme-builder',
+    // HELPERS.
+    'dxpr_theme/helper-classes',
+  ];
+  foreach ($dxpr_theme_libraries as $dxpr_theme_library) {
+    $variables['#attached']['library'][] = $dxpr_theme_library;
+  }
+}
+
+/**
+ * Implements template_menu_local_tasks()
+ */
+function dxpr_theme_preprocess_menu_local_tasks(&$variables) {
+  if ($variables['secondary']) {
+    // Secondary tabs are styled with bootstrap pager CSS.
+    $variables['#attached']['library'][] = 'dxpr_theme/drupal-pager';
+  }
+}
+
+/**
+ * Implements template_preprocess_block()
+ */
+function dxpr_theme_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $block = Block::load($variables['elements']['#id']);
+    if ($block) {
+      $variables['region'] = $block->getRegion();
+    }
+  }
+  // Include DXPR Theme full search block css library.
+  if ($variables['plugin_id'] === 'full_screen_search') {
+    $variables['#attached']['library'][] = 'dxpr_theme/dxpr-theme-full-screen-search';
+    $variables['#attached']['library'][] = 'dxpr_theme/dxpr-theme-full-screen-search-js';
+  }
+}
+
+/**
+ * Implements template_preprocess_links()
+ */
+function dxpr_theme_preprocess_links__language_block(&$variables) {
+  $variables['attributes']['class'][] = 'nav';
+  $variables['attributes']['class'][] = 'menu';
+}
+
+/**
+ * Implements template_preprocess_region()
+ */
+function dxpr_theme_preprocess_region(&$variables) {
+  switch ($variables['region']) {
+    case 'secondary_header':
+      $variables['#attached']['library'][] = 'dxpr_theme/dxpr-theme-secondary-header';
+    case 'navigation':
+    case 'navigation_collapsible':
+      $variables['#attached']['library'][] = 'dxpr_theme/dxpr-theme-header';
+      $variables['#attached']['library'][] = 'dxpr_theme/dxpr-theme-header--top';
+      $variables['#attached']['library'][] = 'dxpr_theme/dxpr-theme-header--mobile';
+      break;
+
+    case 'footer':
+      $variables['#attached']['library'][] = 'dxpr_theme/footer-menu';
+      break;
+  }
+}
+
+/**
+ * Implements template_preprocess_breadcrumb()
+ */
+function dxpr_theme_preprocess_breadcrumb(&$variables) {
+  // Remove 'Home' from breadcrumb trail.
+  if (count($variables['breadcrumb'])) {
+    array_shift($variables['breadcrumb']);
+  }
+  if (!empty($variables['breadcrumb'])) {
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+    if (!empty($page_title)) {
+      $variables['breadcrumb'][] = [
+        'text' => $page_title,
+        'attributes' => new Attribute(['class' => ['active']]),
+      ];
+    }
+    $variables['#attached']['library'][] = 'dxpr_theme/drupal-breadcrumbs';
+    $variables['#attached']['library'][] = 'dxpr_theme/drupal-breadcrumbs-js';
+  }
+}
+
+/**
+ * Implements template_preprocess_comment()
+ */
+function dxpr_theme_preprocess_comment(&$variables) {
+  if ($variables['elements']['#comment']) {
+    $variables['#attached']['library'][] = 'bootstrap5/indented';
+    $variables['#attached']['library'][] = 'dxpr_theme/drupal-comments';
+  }
+}
+
+/**
+ * Implements template_preprocess_pager()
+ */
+function dxpr_theme_preprocess_pager(&$variables) {
+  $variables['#attached']['library'][] = 'dxpr_theme/drupal-pager';
+}
+
+/**
+ * Implements template_preprocess_views_mini_pager()
+ */
+function dxpr_theme_preprocess_views_mini_pager(&$variables) {
+  $variables['#attached']['library'][] = 'dxpr_theme/drupal-pager';
+}
+
+/**
+ * Implements template_theme_suggestions_form_element_alter()
+ */
+function dxpr_theme_theme_suggestions_form_element_alter(array &$suggestions, array $variables, $hook) {
+  if (isset($variables['element']['#type'])) {
+    $id = str_replace("-", "_", $variables['element']['#type']);
+    $suggestions[] = $hook . '__' . $id;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dxpr_theme_form_search_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['basic']['#attributes']['class'] = [
+    0 => 'form-group',
+    1 => 'input-group',
+  ];
+  $form['basic']['keys']['#placeholder'] = $form['basic']['keys']['#title'];
+  unset($form['basic']['keys']['#title']);
+  $form['basic']['submit']['#icon'] = TRUE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dxpr_theme_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['actions']['#type'] = 'submit';
+  $form['keys']['#placeholder'] = 'Search';
+  $form['actions']['#icon'] = TRUE;
+  unset($form['actions']['submit']);
+}
+
+/**
+ * Implements template_preprocess_input()
+ */
+function dxpr_theme_preprocess_input(&$variables) {
+  $element = $variables['element'];
+  if (isset($element['#icon'])) {
+    $variables['icon'] = $element['#icon'];
+  }
+  if (isset($element['#id'])) {
+    if ($element['#id'] === 'full_screen_search') {
+      $variables['icon'] = TRUE;
+    }
+  }
+  $variables['#attached']['library'][] = 'dxpr_theme/drupal-search';
+}
+
+/**
+ * Implements template_preprocess_status_messages().
+ */
+function dxpr_theme_preprocess_status_messages(&$variables) {
+  $variables['#attached']['library'][] = 'dxpr_theme/drupal-status-message';
+}
+
+/**
+ * Implements template_preprocess_details()
+ */
+function dxpr_theme_preprocess_details(&$variables) {
+  $variables['attributes']['class'][] = 'form-item';
+}
+
+/**
+ * Implements template_theme_suggestions_form_alter()
+ */
+function dxpr_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
+}

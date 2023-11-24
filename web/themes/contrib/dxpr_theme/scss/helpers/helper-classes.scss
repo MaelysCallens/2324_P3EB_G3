@@ -1,0 +1,210 @@
+// DXPR Theme utility classes
+// For Bootstrap core helper classes see http://getbootstrap.com/css/#helper-classes
+
+// Layout helper classes
+@import "../includes/variables";
+
+.dxpr-theme-util-full-width-content .main-container {
+  width: auto;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dxpr-theme-util-full-width-content .col-sm-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dxpr-theme-util-full-height {
+  min-height: 100vh;
+}
+
+.html {
+
+  .inline {
+    display: inline;
+  }
+
+  // Layout helper classes
+  .dxpr-theme-util-clear-both,
+  .clear-both {
+    clear: both;
+  }
+
+  .dxpr-theme-util-clear-left,
+  .clear-left {
+    clear: left;
+  }
+
+  .dxpr-theme-util-clear-right,
+  .clear-right {
+    clear: right;
+  }
+
+  .dxpr-theme-util-float-left {
+    float: left;
+    img {
+      margin: 0 20px 15px 0;
+    }
+  }
+
+  .dxpr-theme-util-float-right {
+    float: right;
+    img {
+      margin: 0 0 15px 20px;
+    }
+  }
+
+  .dxpr-theme-util-columns-5 .col-lg-2,
+  .dxpr-theme-util-columns-5 .col-md-2,
+  .dxpr-theme-util-columns-5 .col-sm-2,
+  .dxpr-theme-util-columns-5 .col-xs-2 {
+    width: 20%;
+  }
+
+  .dxpr-theme-util-no-gutter {
+    margin: 0!important;
+    padding: 0!important;
+    .row {
+      margin: 0!important;
+      padding: 0!important;
+    }
+    > * {
+      padding: 0!important;
+      margin: 0!important;
+    }
+  }
+  .row .dxpr-theme-util-no-gutter .row { margin: 0!important }
+
+  .dxpr-theme-util-no-spacer,
+  .dxpr-theme-util-no-spacer .row {
+    > * {
+      margin-bottom: 0;
+    }
+  }
+
+  .dxpr-theme-util-gutter-bottom {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .dxpr-theme-util-columns-5 .col-lg-2,
+    .dxpr-theme-util-columns-5 .col-md-2,
+    .dxpr-theme-util-columns-5 .col-sm-2,
+    .dxpr-theme-util-columns-5 .col-xs-2 {
+      width: 100%;
+      clear:none;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  // Text shadows
+  .dxpr-theme-util-text-shadow { text-shadow: 1px 1px rgba(0,0,0,1); }
+  .dxpr-theme-util-text-shadow-80 { text-shadow: 1px 1px rgba(0,0,0,0.8); }
+  .dxpr-theme-util-text-shadow-60 { text-shadow: 1px 1px rgba(0,0,0,0.6); }
+  .dxpr-theme-util-text-shadow-40 { text-shadow: 1px 1px rgba(0,0,0,0.4); }
+  .dxpr-theme-util-text-shadow-20 { text-shadow: 1px 1px rgba(0,0,0,0.2); }
+
+  // Text muted with color support
+  .dxpr-theme-util-text-muted { opacity: 0.75; }
+
+  // Text transform
+  .dxpr-theme-util-text-uppercase { text-transform: uppercase; }
+  .dxpr-theme-util-text-bold { font-weight: 700; }
+  .dxpr-theme-util-text-light { font-weight: 300; }
+  .dxpr-theme-util-text-italic { font-style: italic; }
+
+  // Color overlay for background tinting
+  .dxpr-theme-util-overlay-primary,
+  .dxpr-theme-util-overlay-accent1,
+  .dxpr-theme-util-overlay-accent2,
+  .dxpr-theme-util-overlay-black,
+  .dxpr-theme-util-overlay-white,
+  .dxpr-theme-util-overlay-gray {
+    position:relative;
+    z-index: 0;
+    &:after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top:0;
+      left:0;
+      background-color: #000;
+      opacity: 0.90;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+  
+  .YTPOverlay { opacity: 0.9; }
+  .dxpr-theme-util-overlay-primary:after,.dxpr-theme-util-overlay-primary .YTPOverlay { background-color: $primary; }
+  .dxpr-theme-util-overlay-accent1:after,.dxpr-theme-util-overlay-accent1 .YTPOverlay { background-color: $accent1; }
+  .dxpr-theme-util-overlay-accent2:after,.dxpr-theme-util-overlay-accent2 .YTPOverlay { background-color: $accent2; }
+  .dxpr-theme-util-overlay-black:after,.dxpr-theme-util-overlay-black .YTPOverlay { background-color: #000; }
+  .dxpr-theme-util-overlay-white:after,.dxpr-theme-util-overlay-white .YTPOverlay { background-color: white; }
+  .dxpr-theme-util-overlay-gray:after,.dxpr-theme-util-overlay-gray .YTPOverlay { background-color: $text; }
+
+  // Color helper classes
+  .dxpr-theme-util-background-body { background-color: $body-background; }
+  .dxpr-theme-util-background-gray { background-color: $text; }
+  .dxpr-theme-util-background-primary, .bg-primary { background-color: $primary !important; }
+  .dxpr-theme-util-background-accent1 { background-color: $accent1; }
+  .dxpr-theme-util-background-accent2 { background-color: $accent2; }
+  .dxpr-theme-util-background-card { background-color: $card; }
+  .dxpr-theme-util-background-card-text { background-color: $card-text; }
+  .dxpr-theme-util-background-white { background-color: white; }
+  .dxpr-theme-util-background-black { background-color: #000; }
+  .dxpr-theme-util-background-silver { background-color: $silver; }
+  .dxpr-theme-util-border-primary { border-color: $primary; }
+  .dxpr-theme-util-border-accent1 { border-color: $accent1; }
+  .dxpr-theme-util-border-accent2 { border-color: $accent2; }
+  .dxpr-theme-util-border-primary-gray { border-color: $text; }
+  .dxpr-theme-util-border-white { border-color: white; }
+  .dxpr-theme-util-border-black { border-color: #000; }
+  .dxpr-theme-util-border-silver { border-color: $silver; }
+  .dxpr-theme-util-color-gray * { color: $text; }
+  .dxpr-theme-util-color-primary,.text-primary * { color: $primary; }
+  .dxpr-theme-util-color-accent1 * { color: $accent1; }
+  .dxpr-theme-util-color-accent2 * { color: $accent2; }
+  .dxpr-theme-util-color-card * { color: $card; }
+  .dxpr-theme-util-color-card-text * { color: $card-text; }
+  .dxpr-theme-util-color-white * { color: white; }
+  .dxpr-theme-util-color-black * { color: #000; }
+  .dxpr-theme-util-color-silver * { color: $silver; }
+  .dxpr-theme-util-hover-background-primary:hover { background-color: $primary; }
+  .dxpr-theme-util-hover-background-white:hover { background-color: white; }
+  .dxpr-theme-util-hover-background-black:hover { background-color: #000; }
+  .dxpr-theme-util-hover-border-primary:hover { border-color: $primary; }
+  .dxpr-theme-util-hover-border-white:hover { border-color: white; }
+  .dxpr-theme-util-hover-border-black:hover { border-color: #000; }
+  .dxpr-theme-util-hover-border-silver:hover { border-color: $silver; }
+  .dxpr-theme-util-hover-color-primary:hover { color: $primary; }
+  .dxpr-theme-util-hover-color-white:hover { color: white; }
+  .dxpr-theme-util-hover-color-black:hover { color: #000; }
+  .dxpr-theme-util-hover-color-silver:hover { color: $silver; }
+
+  // Form Helper Classes
+  .dxpr-theme-form-inline {
+    .form-item,
+    .form-actions,
+    .webform-elements {
+      display: block;
+      float:left;
+      clear: none;
+      margin-right: 20px;
+    }
+    .btn {
+      padding: 12px 18px;
+    }
+  }
+
+  .dxpr-theme-util-vcenter {
+    display: flex;
+    align-items: center;
+  }
+
+}

@@ -18,7 +18,7 @@ base_field: cid
 display:
   default:
     id: default
-    display_title: Standaard
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -131,8 +131,8 @@ display:
           hide_alter_empty: true
           type: timestamp_ago
           settings:
-            future_format: '@interval vanaf nu'
-            past_format: '@interval geleden'
+            future_format: '@interval hence'
+            past_format: '@interval ago'
             granularity: 2
       pager:
         type: some

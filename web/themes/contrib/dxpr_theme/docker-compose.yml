@@ -1,0 +1,155 @@
+version: '3.7'
+
+networks:
+  qa-demo:
+    name: ${PROJECT_NAME:-dxpr_builder_project}_${QA_DEMO_NETWORK:-qa-demo}
+
+volumes:
+  ### Holding the qa-demo src code
+  qa-demo-data:
+
+  ### qa-demo database volume
+  qa-demo-db:
+
+  ### qa-demo dxpr_builder module volume
+  dxpr-builder:
+
+  ### qa-demo dxpr_theme module volume
+  dxpr-theme:
+
+  ### cache npm installs
+  node_modules:
+
+services:
+
+  ### services router
+  traefik:
+    image: traefik:v2.0
+    container_name: "${PROJECT_NAME}_traefik"
+    profiles: ["qa-demo"]
+    command: --api.insecure=true --providers.docker
+    ports:
+    - '${PROJECT_PORT:-8000}:80'
+    # - '8080:8080' # Dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - qa-demo
+
+  ### Database service
+  mariadb:
+    image: wodby/mariadb:$MARIADB_TAG
+    container_name: "${PROJECT_NAME}_mariadb"
+    profiles: ["qa-demo"]
+    stop_grace_period: 30s
+    environment:
+      MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
+    volumes:
+    #  - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
+    - qa-demo-db:/var/lib/mysql # Persist data using volumes
+    # - /var/lib/mysql:/var/lib/mysql # Persist data using bind mounts
+    networks:
+      - qa-demo
+
+  ### PHP service with a drupal demo installed
+  qa-demo:
+    image: wodby/drupal-php:$PHP_TAG
+    container_name: "${PROJECT_NAME}_qa_demo"
+    profiles: ["qa-demo"]
+    depends_on:
+    - mariadb
+    environment:
+      PHP_MEMORY_LIMIT: 1024M
+    networks:
+      - qa-demo
+
+  ### Web server
+  nginx:
+    image: wodby/nginx:$NGINX_TAG
+    container_name: "${PROJECT_NAME}_nginx"
+    profiles: ["qa-demo"]
+    depends_on:
+    - qa-demo
+    environment:
+      NGINX_STATIC_OPEN_FILE_CACHE: "off"
+      NGINX_ERROR_LOG_LEVEL: debug
+      NGINX_BACKEND_HOST: $NGINX_BACKEND_HOST
+      NGINX_SERVER_ROOT: $NGINX_SERVER_ROOT
+      NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
+    labels:
+    - "traefik.enable=true"
+    - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`)"
+    networks:
+      - qa-demo
+
+  # to watch and build files, use:
+  # DEV_WATCH=true docker-compose up -d dev && docker-compose logs -f dev
+  dev:
+    image: ${NODE_IMAGE:-node:14}
+    profiles: ["lint"]
+    working_dir: /src
+    command: bash -c "./scripts/run_dev.sh"
+    environment:
+      WATCH: ${DEV_WATCH:-false}
+      NPM_INSTALL_STAMP: ${NPM_INSTALL_STAMP:-.npm.installed}
+    volumes:
+      - .:/src
+      - node_modules:/src/node_modules
+
+  eslint:
+    image: ${NODE_IMAGE:-node:14}
+    profiles: ["lint"]
+    working_dir: /src
+    command: bash -c "./scripts/run_eslint.sh"
+    environment:
+      REPORT_ENABLED: ${REPORT_ENABLED:-false}
+    volumes:
+      - .:/src
+      - node_modules:/src/node_modules
+    depends_on:
+      - dev
+
+  eslint-auto-fix:
+    image: ${NODE_IMAGE:-node:14}
+    profiles: ["lint"]
+    working_dir: /src
+    command: bash -c "./scripts/run_eslint-auto-fix.sh"
+    volumes:
+      - .:/src
+      - node_modules:/src/node_modules
+    depends_on:
+      - dev
+
+  drupal-lint:
+    image: ${COMPOSER_IMAGE:-composer:2.1}
+    profiles: ["lint"]
+    working_dir: /src
+    command: bash -c "./scripts/run_drupal-lint.sh"
+    environment:
+      TARGET_DRUPAL_CORE_VERSION: ${TARGET_DRUPAL_CORE_VERSION:-8}
+    volumes:
+      - .:/src
+
+  drupal-lint-auto-fix:
+    image: ${COMPOSER_IMAGE:-composer:2.1}
+    profiles: ["lint"]
+    working_dir: /src
+    command: bash -c "./scripts/run_drupal-lint-auto-fix.sh"
+    environment:
+      TARGET_DRUPAL_CORE_VERSION: ${TARGET_DRUPAL_CORE_VERSION:-8}
+    volumes:
+      - .:/src
+
+  drupal-check:
+    image: ${COMPOSER_IMAGE:-composer:2.1}
+    profiles: ["lint"]
+    working_dir: /
+    command: bash -c "/src/scripts/run_drupal-check.sh"
+    tty: true
+    environment:
+      DRUPAL_RECOMMENDED_PROJECT: ${DRUPAL_RECOMMENDED_PROJECT:-8.8.x-dev}
+    volumes:
+      - .:/src

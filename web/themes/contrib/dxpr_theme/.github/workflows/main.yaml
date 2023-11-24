@@ -1,0 +1,82 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '1.x'
+      - '2.x'
+
+env:
+  TARGET_DRUPAL_CORE_VERSION: 8
+
+jobs:
+# just check and send reports for now because too many errors
+
+  drupal-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Lint Drupal
+      run: |
+        TARGET_DRUPAL_CORE_VERSION=$TARGET_DRUPAL_CORE_VERSION docker-compose run --rm drupal-lint
+
+  drupal-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Drupal Deprecations and Analysis Check
+      run: |
+        docker-compose run --rm drupal-check
+    env:
+      DRUPAL_RECOMMENDED_PROJECT: ${{ secrets.DRUPAL_RECOMMENDED_PROJECT }}
+
+  eslint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Lint with eslint
+      run: |
+        REPORT_ENABLED=true docker-compose run --rm eslint
+
+    - name: Archive eslint html report
+      uses: actions/upload-artifact@v1
+      if: always()
+      with:
+        name: eslint-report
+        path: out/eslint-report.html
+
+  publish-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build artifacts
+      run: |
+        docker-compose run --rm dev
+
+        BRANCH_NAME=$(echo ${GITHUB_REF} | sed -e "s/refs\/heads\///g")
+        echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+
+      # only on feature branch (not on tag)
+    - name: Git commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        # add built artifacts
+        git add -f css
+        git add -f js
+        git commit -m "automated built artifacts updates from CI" || true # ok if no changes
+      if: env.BRANCH_NAME != '8.x'
+
+    - name: Git push changes
+      uses: ad-m/github-push-action@v0.5.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ env.BRANCH_NAME }}
+      if: env.BRANCH_NAME != '8.x'

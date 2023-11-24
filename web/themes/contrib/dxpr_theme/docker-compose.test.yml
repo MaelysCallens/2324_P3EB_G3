@@ -1,0 +1,58 @@
+version: "3.7"
+
+services:
+  
+  ### Standalone chrome node
+  chrome:
+    image: selenium/node-chrome:4.1.2-20220317
+    profiles: ["test"]
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    ports:
+      - "5900"
+    networks:
+      - qa-demo
+
+  ### Selenium grid
+  selenium-hub:
+    image: selenium/hub:4.1.2-20220317
+    container_name: "${PROJECT_NAME}_selenium_hub"
+    profiles: ["test"]
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"
+    networks:
+      - qa-demo
+
+  ### Java selenium tests
+  maven:
+    image: dxpr/maven:$DXPR_MAVEN_TAG
+    profiles: ["test"]
+    container_name: "${PROJECT_NAME}_maven"
+    depends_on:
+    - chrome
+    environment:
+      DEMO_HOST: $PROJECT_BASE_URL
+      TEST_SUITE: $TEST_SUITE
+      MAVEN_PROPERTIES: $MAVEN_PROPERTIES
+      MAVEN_BASE_URL: $MAVEN_BASE_URL
+      SELENIUM_HUB_URL: $SELENIUM_HUB_URL
+      ENVIRONMENT: $ENVIRONMENT
+      DRIVERS_POOL_SIZE: $DRIVERS_POOL_SIZE
+      CHROME_HEADLESS_MODE: $CHROME_HEADLESS_MODE
+      TEST_TARGET_BROWSER: $TEST_TARGET_BROWSER
+      DXPR_TARGET_USER: $DXPR_TARGET_USER
+      DXPR_BOOTSTRAP_VERSION: $DXPR_BOOTSTRAP_VERSION
+    volumes:
+      - ./target:/usr/src/app/target # need to mount here to access target directory for test reports
+      - ./images/diffimages:/usr/src/app/images/diffimages
+      - ./images/screenshots:/usr/src/app/images/screenshots
+    networks:
+      - qa-demo

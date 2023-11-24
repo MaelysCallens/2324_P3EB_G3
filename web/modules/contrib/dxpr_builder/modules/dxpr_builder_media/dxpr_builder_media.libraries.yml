@@ -1,0 +1,16 @@
+view:
+  js:
+    js/dxpr_builder_media.view.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+claro_style:
+  css:
+    theme:
+      css/dxpr_builder_media.claro.css: {}
+
+gin_style:
+  css:
+    theme:
+      css/dxpr_builder_media.gin.css: {}

@@ -11,6 +11,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  color: 0
   comment: 0
   commerce: 0
   commerce_cart: 0
@@ -28,11 +29,16 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
+  dxpr_builder: 0
+  dxpr_builder_block: 0
+  dxpr_builder_page: 0
+  dxpr_theme_helper: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
   entity_reference_revisions: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -41,6 +47,8 @@ module:
   image: 0
   inline_entity_form: 0
   language: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   locale: 0
   menu_link_content: 0
@@ -70,4 +78,7 @@ theme:
   olivero: 0
   claro: 0
   belgrade: 0
+  stable9: 0
+  bootstrap5: 0
+  dxpr_theme: 0
 profile: standard

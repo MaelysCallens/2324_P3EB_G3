@@ -1,0 +1,20 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        uid:
+          exception:
+            title: Alle
+        type:
+          exception:
+            title: Alle
+        status:
+          exception:
+            title: Alle

@@ -1,0 +1,28 @@
+name: DXPR Builder Drag and Drop Page
+description: Content type with DXPR Builder drag and drop solution
+type: module
+core_version_requirement: '>=9.3'
+package: DXPR
+dependencies:
+  - drupal:field_group
+  - drupal:text
+  - drupal:node
+  - dxpr_builder:dxpr_builder
+config:
+  install:
+    - core.entity_form_display.node.drag_and_drop_page.default
+    - core.entity_view_display.node.drag_and_drop_page.default
+    - core.entity_view_display.node.drag_and_drop_page.teaser
+    - field.field.node.drag_and_drop_page.field_body
+    - node.type.drag_and_drop_page
+  optional:
+    - field.field.node.drag_and_drop_page.field_dth_hide_regions
+    - field.field.node.drag_and_drop_page.field_dth_main_content_width
+    - field.field.node.drag_and_drop_page.field_dth_page_layout
+# project: 'dxpr_builder'
+# version: '2.5.4'
+
+# Information added by Drupal.org packaging script on 2023-10-11
+version: '2.5.4'
+project: 'dxpr_builder'
+datestamp: 1697031222

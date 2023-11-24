@@ -17,7 +17,7 @@ base_field: cid
 display:
   default:
     id: default
-    display_title: Standaard
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -422,7 +422,7 @@ display:
           admin_label: ''
           entity_type: comment
           plugin_id: entity_operations
-          label: Bewerkingen
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -543,12 +543,12 @@ display:
             last: 'laatste »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per pagina'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Alle -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Startpunt
+            offset_label: Offset
           quantity: 9
       exposed_form:
         type: basic
@@ -556,10 +556,10 @@ display:
           submit_button: Filter
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sorteren op'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Oplopend
-          sort_desc_label: Aflopend
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       access:
         type: perm
         options:
@@ -859,7 +859,7 @@ display:
       show_admin_links: true
       use_more: false
       use_more_always: true
-      use_more_text: meer
+      use_more_text: more
       header: {  }
       footer: {  }
       hide_attachment_summary: false
@@ -1309,7 +1309,7 @@ display:
           admin_label: ''
           entity_type: comment
           plugin_id: entity_operations
-          label: Bewerkingen
+          label: Operations
           exclude: false
           alter:
             alter_text: false

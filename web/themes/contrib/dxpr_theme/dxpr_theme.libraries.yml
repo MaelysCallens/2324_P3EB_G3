@@ -1,0 +1,181 @@
+global-styling:
+  js:
+    vendor/classie.js: {}
+    js/minified/dxpr-theme-multilevel-mobile-nav.min.js: { minified: true }
+    js/minified/dxpr-theme-header.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/modernizr
+
+bootstrap-3:
+  css:
+    theme:
+      css/vendor-extensions/bootstrap-3.css: { minified: true }
+
+bootstrap-theme:
+  css:
+    theme:
+      css/vendor-extensions/bootstrap-theme.css: { minified: true }
+
+jquery-ui:
+  css:
+    theme:
+      css/vendor-extensions/jquery-ui.css: { minified: true }
+
+footer-menu:
+  css:
+    theme:
+      css/base/footer-menu.css: { minified: true }
+
+forms:
+  css:
+    theme:
+      css/base/forms.css: { minified: true }
+
+layout:
+  css:
+    theme:
+      css/base/layout.css: { minified: true }
+
+page-title:
+  css:
+    theme:
+      css/base/page-title.css: { minified: true }
+
+typography:
+  css:
+    theme:
+      css/base/typography.css: { minified: true }
+
+dxpr-theme-full-screen-search:
+  css:
+    theme:
+      css/components/dxpr-theme-full-screen-search.css: { minified: true }
+
+dxpr-theme-full-screen-search-js:
+  js:
+    js/minified/dxpr-theme-full-screen-search.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/once
+
+dxpr-theme-header:
+  css:
+    theme:
+      css/components/dxpr-theme-header.css: { minified: true }
+
+dxpr-theme-header--top:
+  css:
+    theme:
+      css/components/dxpr-theme-header--top.css: { minified: true }
+
+dxpr-theme-header--side:
+  css:
+    theme:
+      css/components/dxpr-theme-header--side.css: { minified: true }
+
+dxpr-theme-header--mobile:
+  css:
+    theme:
+      css/components/dxpr-theme-header--mobile.css: { minified: true }
+
+dxpr-theme-secondary-header:
+  css:
+    theme:
+      css/components/dxpr-theme-secondary-header.css: { minified: true }
+
+dxpr-theme-admin:
+  css:
+    theme:
+      css/dxpr-theme-admin.css: { minified: true }
+
+drupal-breadcrumbs:
+  css:
+    theme:
+      css/vendor-extensions/drupal-breadcrumbs.css: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/once
+
+drupal-breadcrumbs-js:
+  js:
+    js/minified/dxpr-theme-breadcrumbs.min.js: { minified: true }
+
+drupal-comments:
+  css:
+    theme:
+      css/vendor-extensions/drupal-comments.css: { minified: true }
+
+drupal-pager:
+  css:
+    theme:
+      css/vendor-extensions/drupal-pager.css: { minified: true }
+
+drupal-webform:
+  css:
+    theme:
+      css/vendor-extensions/drupal-webform.css: { minified: true }
+
+drupal-search:
+  css:
+    theme:
+      css/vendor-extensions/drupal-search.css: { minified: true }
+
+drupal-status-message:
+  css:
+    theme:
+      css/vendor-extensions/drupal-status-message.css: { minified: true }
+
+dxpr-theme-builder:
+  css:
+    theme:
+      css/vendor-extensions/dxpr-theme-builder.css: { minified: true }
+
+helper-classes:
+  css:
+    theme:
+      css/helpers/helper-classes.css: { minified: true }
+
+bootstrap3:
+  css:
+    theme:
+      vendor/bootstrap3/css/bootstrap.min.css: { minified: true, weight: -18 }
+  js:
+    vendor/bootstrap3/js/bootstrap.min.js: { minified: true, weight: -20 }
+  dependencies:
+    - core/jquery
+
+# Admin interface , styling theme settings form
+# Depends on DXPR Theme Helper module being installed
+admin:
+  css:
+    component:
+      css/dxpr-theme.admin.css: {}
+
+admin.themesettings:
+  js:
+    vendor/bootstrap-switch/bootstrap-switch.min.js: {}
+    vendor/bootstrap-slider/bootstrap-slider.min.js: {}
+    js/minified/dxpr-theme-settings.admin.min.js: {}
+  css:
+    component:
+      vendor/bootstrap-switch/bootstrap-switch.min.css: {}
+      vendor/bootstrap-slider/bootstrap-slider.min.css: {}
+      css/dxpr-theme.admin.themesettings.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+
+dxpr-theme-animatecss-custom:
+  css:
+    component:
+      vendor/animate.css/animate.min.css: { minified: true }
+
+gin_toolbar:
+  version: 1.x
+  css:
+    theme:
+      css/vendor-extensions/gin-toolbar.css: {}

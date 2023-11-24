@@ -1,0 +1,106 @@
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  jquery.mb.components
+
+  file: demo_multi_domElement.html
+  last modified: 10/25/18 8:00 PM
+  Version:  {{ version }}
+  Build:  {{ buildnum }}
+
+  Open Lab s.r.l., Florence - Italy
+  email:  matteo@open-lab.com
+  blog: 	http://pupunzi.open-lab.com
+  site: 	http://pupunzi.com
+  	http://open-lab.com
+
+  Licences: MIT, GPL
+  http://www.opensource.org/licenses/mit-license.php
+  http://www.gnu.org/licenses/gpl.html
+
+  Copyright (c) 2001-2018. Matteo Bicocchi (Pupunzi)
+  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>youtube Chromeless Player - mb.YTPlayer</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lekton|Lobster' rel='stylesheet' type='text/css'>
+    <link href="../dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../dist/jquery.mb.YTPlayer.js"></script>
+    <script src="assets/apikey.js"></script>
+    <style>
+
+        body {
+            background: #003e50;
+        }
+
+        .video {
+            display: block;
+            height: 600px;
+        }
+
+        .gap {
+            display: block;
+            width: 100%;
+            height: 250px;
+            background-color: red;
+        }
+
+        #wp {
+            position: fixed;
+            z-index: 10;
+            min-width: 300px;
+            background: rgba(0, 0, 0, 0.55);
+            /*background: #ffb200;*/
+            color: #fff;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 20px;
+            bottom: 60px;
+            cursor: pointer;
+            text-align: left;
+            border-radius: 10px;
+            font-family: 'Lobster', cursive;
+        }
+
+        #wp:hover {
+            background: #000000;
+        }
+
+        #wp img {
+            width: 60px;
+            margin-right: 20px;
+        }
+    </style>
+
+    <script>
+        var myPlayer;
+        $(function () {
+            myPlayer = $('.video').YTPlayer({playOnlyIfVisible: true});
+        });
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <a href='https://pupunzi.com/#mb.components/components.html' style='position:absolute;top:0;z-index:1000'><img id='logo' border='0' src='https://pupunzi.com/images/logo.png' alt='mb.ideas.repository'></a>
+
+    <div id="container-1" class="video" data-property="{videoURL:'UJQmV8aPNao',containment:'self',autoPlay:true, mute:true, startAt:0, opacity:1}"></div>
+    <div class="gap"></div>
+    <div id="container-2" class="video" data-property="{videoURL:'3ovA7zeviRo',containment:'self',autoPlay:true, mute:true, startAt:5, opacity:1}"></div>
+    <div class="gap"></div>
+    <div id="container-3" class="video" data-property="{videoURL:'u9k1FaMIYTs',containment:'self',autoPlay:true, mute:true, startAt:5, opacity:1}"></div>
+    <a style="position: fixed;bottom:40px;right: 30px;" href="http://pupunzi.open-lab.com/consider-a-donation/" target="_blank">
+        <img border="0" alt="PayPal" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" class="alignright">
+    </a>
+    <div id="wp" onclick="self.location.href='https://pupunzi.com/wpPlus/go-plus.php?plugin_prefix=YTPL'">
+        <img src="https://pupunzi.com/wpPlus/images/YTPL.svg" style="float: left">
+        <span>Get the <br><b>Wordpress</b> Plug-in!</span>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,834 @@
+
+
+
+
+
+
+
+Drupal.t('Animation start');
+Drupal.t('Animation');
+Drupal.t('No animation');
+Drupal.t('On appear');
+Drupal.t('On hover');
+Drupal.t('On click');
+Drupal.t('On trigger');
+Drupal.t('Animation in');
+Drupal.t('Animation');
+Drupal.t('Animation out');
+Drupal.t('Animation');
+Drupal.t('Hidden');
+Drupal.t('Animation');
+Drupal.t("Before in-animation");
+Drupal.t("After in-animation");
+Drupal.t('Infinite');
+Drupal.t('Animation');
+Drupal.t("Yes");
+Drupal.t('Appear Boundary');
+Drupal.t('Animation');
+Drupal.t('In percent. (50% is center, 100% is bottom of screen)');
+Drupal.t('Duration');
+Drupal.t('Animation');
+Drupal.t('In milliseconds.');
+Drupal.t('In-delay');
+Drupal.t('Animation');
+Drupal.t('In milliseconds.');
+Drupal.t('Out-delay');
+Drupal.t('Animation');
+Drupal.t('In milliseconds.');
+Drupal.t('Parent number');
+Drupal.t('Animation');
+Drupal.t(          'Define the number of Parent Containers the animation should attempt to break away from.');
+Drupal.t('Name for animations')
+Drupal.t('Saved field');
+Drupal.t('Server error: Unable to save field');
+Drupal.t('Server error: Unable to save field');
+Drupal.t('Saved template');
+Drupal.t('A template with the name ');
+Drupal.t(' already exists. Please choose another name.')
+Drupal.t('HTML ID');
+Drupal.t('HTML classes');
+Drupal.t('Style');
+Drupal.t('Style options.');
+Drupal.t('Style');
+Drupal.t('Drop shadow');
+Drupal.t('Style');
+Drupal.t('Hover style');
+Drupal.t('Hover style options.');
+Drupal.t('Hover style');
+Drupal.t('Drop shadow');
+Drupal.t('Hover style');
+Drupal.t('Left');
+Drupal.t('Placement');
+Drupal.t('Right');
+Drupal.t('Placement');
+Drupal.t('Top');
+Drupal.t('Placement');
+Drupal.t('Bottom');
+Drupal.t('Placement');
+Drupal.t('Width');
+Drupal.t('Placement');
+Drupal.t('Height');
+Drupal.t('Placement');
+Drupal.t('Z-index');
+Drupal.t('Placement');
+Drupal.t('Global template');
+Drupal.t('Template name');
+Drupal.t('Save');
+Drupal.t('Save template');
+Drupal.t('Cancel')
+
+Drupal.t("Column");
+Drupal.t('Column with');
+Drupal.t('Vertical Centering');
+Drupal.t('Yes')
+Drupal.t("DXPR Container");
+Drupal.t('DXPR Builder Container');
+Drupal.t('Layout');
+Drupal.t('Or add elements using the +');
+Drupal.t("Don\'t forget to save your work");
+Drupal.t('Basic Controls Video');
+Drupal.t('Documentation');
+Drupal.t('Support Desk');
+Drupal.t('Field');
+Drupal.t('might have unsaved changes');
+Drupal.t('Confirm');
+Drupal.t('Action confirmation');
+Drupal.t('Failed to save history state, cannot undo and redo actions because the content item is too big.')
+Drupal.t("Row");
+Drupal.t('Layout');
+Drupal.t('Device break point');
+Drupal.t('Bootstrap responsive grid breakpoints');
+Drupal.t('Equal Height Columns');
+Drupal.t("Yes");
+Drupal.t('Mirror Row');
+Drupal.t("Yes");
+Drupal.t('Bootstrap grid layout');
+Drupal.t('Ex: 1/2 + 1/2.');
+Drupal.t('Save');
+Drupal.t('Custom layout')
+Drupal.t("Section");
+Drupal.t('Layout');
+Drupal.t('Full Width');
+Drupal.t("Yes");
+Drupal.t('100% Height');
+Drupal.t("Yes");
+Drupal.t('Vertical Centering');
+Drupal.t('Yes');
+Drupal.t('Background Effect');
+Drupal.t('Background Effects');
+Drupal.t('Simple Image');
+Drupal.t('Fixed Image');
+Drupal.t('Parallax Image');
+Drupal.t('Gradient');
+Drupal.t('YouTube Video');
+Drupal.t('Parallax speed');
+Drupal.t('Background Effects');
+Drupal.t('Parallax Mode');
+Drupal.t('Background Effects');
+Drupal.t('Fixed');
+Drupal.t('Local');
+Drupal.t('Disable on Mobile');
+Drupal.t('Background Effects');
+Drupal.t("On");
+Drupal.t('Start Color');
+Drupal.t('Background Effects');
+Drupal.t('End Color');
+Drupal.t('Background Effects');
+Drupal.t('Gradient Direction');
+Drupal.t('Background Effects');
+Drupal.t('Start Position');
+Drupal.t('Background Effects');
+Drupal.t('End Position');
+Drupal.t('Background Effects');
+Drupal.t('Video Play Options');
+Drupal.t('Background Effects');
+Drupal.t("Disable on mobile devices");
+Drupal.t("Loop");
+Drupal.t("Unmute (Not reliable when auto-playing due to recent browser policy updates)");
+Drupal.t("Disable cropping out player");
+Drupal.t("Resize section to match video");
+Drupal.t("Show controls");
+Drupal.t('YouTube Video URL');
+Drupal.t('Background Effects');
+Drupal.t('Enter the YouTube video URL.');
+Drupal.t('Start Time in seconds');
+Drupal.t('Background Effects');
+Drupal.t('Enter time in seconds from where video start to play.');
+Drupal.t('Stop Time in seconds');
+Drupal.t('Background Effects');
+Drupal.t('Enter time in seconds where video ends.')
+Drupal.t("Slide");
+Drupal.t(' add a new slide.')
+Drupal.t("Tab");
+Drupal.t('Tab title');
+Drupal.t('Title');
+Drupal.t(' add a new tab. Drag tab headers to change order.')
+Drupal.t("Tabs");
+Drupal.t('Layout');
+Drupal.t('Tab direction');
+Drupal.t('Default');
+Drupal.t('Left');
+Drupal.t('Right');
+Drupal.t('Mobile friendly');
+Drupal.t("Display as a collapsible in small screens.");
+Drupal.t("Yes")
+Drupal.t("Toggle");
+Drupal.t('Toggle title');
+Drupal.t('Title');
+Drupal.t(' add a new toggle.')
+Drupal.t('Element Not Found.')
+
+Drupal.t("Type");
+Drupal.t("Name")
+Drupal.t('');
+Drupal.t('Settings');
+Drupal.t('Exposed filters enabled but ajax turned off. Please enable Ajax on this display in order to show exposed filters here.');
+Drupal.t('Show title');
+Drupal.t('Yes');
+Drupal.t('Items to display');
+Drupal.t('The number of items to display. Enter 0 for no limit.');
+Drupal.t('Show exposed filters');
+Drupal.t('Yes');
+Drupal.t('Items to display:');
+Drupal.t('The number of items to display. Enter 0 for no limit.');
+Drupal.t('Items per page:');
+Drupal.t('The number to display per page. Enter 0 for no limit.');
+Drupal.t('Show title');
+Drupal.t('Yes');
+Drupal.t('Override pager');
+Drupal.t('No');
+Drupal.t('Yes');
+Drupal.t('Pager Offset');
+Drupal.t('The number of items to skip.');
+Drupal.t('Contextual filter:');
+Drupal.t('Field settings');
+Drupal.t('Toggle Fields');
+Drupal.t('Element cannot be added because you can only nest rows 3 levels deep.');
+Drupal.t('Content');
+Drupal.t("Saved Templates");
+Drupal.t('Filter by tag');
+Drupal.t('Filter by user');
+Drupal.t('show all');
+Drupal.t("Layouts")
+Drupal.t(              'Generate HTML and JS for all elements which placed in current container element.')
+
+Drupal.t('Select from predefined options');
+Drupal.t("Edit as text");
+Drupal.t('Select from predefined options');
+Drupal.t("Edit as text");
+Drupal.t("Select");
+Drupal.t('Close');
+Drupal.t('Drop Shadows');
+Drupal.t('Curved Horizontal Drop Shadow');
+Drupal.t('Curved Horizontal Double Drop Shadow');
+Drupal.t('Curved vertical double shadow');
+Drupal.t('Lifted Drop Shadow');
+Drupal.t('Perspective Drop Shadow');
+Drupal.t('Raised Drop Shadow');
+Drupal.t('Bootstrap classes');
+Drupal.t('Background default style');
+Drupal.t('Background primary style');
+Drupal.t('Background success style');
+Drupal.t('Clear floated elements');
+Drupal.t('Text Lead style');
+Drupal.t('Text default style');
+Drupal.t('Text primary style');
+Drupal.t('Text success style');
+Drupal.t('Text muted style');
+Drupal.t('Text align center');
+Drupal.t('Visible on large devices, desktops (≥1200px)');
+Drupal.t('Visible on medium devices, desktops (≥992px)');
+Drupal.t('Visible on small devices, tablets (≥768px)');
+Drupal.t('Visible on extra small devices, phones (<768px)');
+Drupal.t('Hidden on large devices, desktops (≥1200px)');
+Drupal.t('Hidden on medium devices, desktops (≥992px)');
+Drupal.t('Hidden on small devices, tablets (≥768px)');
+Drupal.t('Hidden on extra small devices, phones (<768px)');
+Drupal.t('Pull left');
+Drupal.t('Pull right');
+Drupal.t('Text align justify');
+Drupal.t('Text align left');
+Drupal.t('Text align right');
+Drupal.t('Block align center');
+Drupal.t('Text small style');
+Drupal.t('Well');
+Drupal.t('Visible on extra large devices, large desktops (≥1200px)');
+Drupal.t('Visible on large devices, desktops (≥992px)');
+Drupal.t('Visible on medium devices, desktops (≥768px)');
+Drupal.t('Visible on small devices, tablets (≥576px)');
+Drupal.t('Visible on extra small devices, phones (<576px)');
+Drupal.t('Hidden on extra large devices, large desktops (≥1200px)');
+Drupal.t('Hidden on large devices, desktops (≥992px)');
+Drupal.t('Hidden on medium devices, desktops (≥768px)');
+Drupal.t('Hidden on small devices, tablets (≥576px)');
+Drupal.t('Hidden on extra small devices, phones (<576px)');
+Drupal.t('Float left');
+Drupal.t('Float right');
+Drupal.t('Text align justify');
+Drupal.t('Text align left');
+Drupal.t('Text align right');
+Drupal.t('Card');
+Drupal.t('Visible on XX large devices, larger desktops (≥1400px)');
+Drupal.t('Visible on X large devices, large desktops (≥1200px)');
+Drupal.t('Visible on large devices, desktops (≥992px)');
+Drupal.t('Visible on medium devices, desktops (≥768px)');
+Drupal.t('Visible on small devices, tablets (≥576px)');
+Drupal.t('Visible on extra small devices, phones (<576px)');
+Drupal.t('Hidden on XX large devices, larger desktops (≥1400px)');
+Drupal.t('Hidden on X large devices, large desktops (≥1200px)');
+Drupal.t('Hidden on large devices, desktops (≥992px)');
+Drupal.t('Hidden on medium devices, desktops (≥768px)');
+Drupal.t('Hidden on small devices, tablets (≥576px)');
+Drupal.t('Hidden on extra small devices, phones (<576px)');
+Drupal.t('Float start');
+Drupal.t('Float end');
+Drupal.t('Text align left');
+Drupal.t('Text align right');
+Drupal.t('Card')
+
+
+
+Drupal.t("Cancel");
+Drupal.t("Save changes")
+Drupal.t('Drag and drop element.');
+Drupal.t('Add new element.');
+Drupal.t('Open settings.');
+Drupal.t('Paste element.');
+Drupal.t('Copy element to clipboard.');
+Drupal.t('Clone element.');
+Drupal.t('Delete element');
+Drupal.t('Save element as template.');
+Drupal.t('Save container.');
+Drupal.t('No animation');
+Drupal.t('bounce');
+Drupal.t('float');
+Drupal.t('floatSmall');
+Drupal.t('floatLarge');
+Drupal.t('pulse');
+Drupal.t('shake');
+Drupal.t('wobble');
+Drupal.t('jello');
+Drupal.t('fadeIn');
+Drupal.t('fadeInDown');
+Drupal.t('fadeInDownBig');
+Drupal.t('fadeInLeft');
+Drupal.t('fadeInLeftBig');
+Drupal.t('fadeInRight');
+Drupal.t('fadeInRightBig');
+Drupal.t('fadeInUp');
+Drupal.t('fadeInUpBig');
+Drupal.t('fadeOut');
+Drupal.t('fadeOutDown');
+Drupal.t('fadeOutDownBig');
+Drupal.t('fadeOutLeft');
+Drupal.t('fadeOutLeftBig');
+Drupal.t('fadeOutRight');
+Drupal.t('fadeOutRightBig');
+Drupal.t('fadeOutUp');
+Drupal.t('fadeOutUpBig');
+Drupal.t('flipInX');
+Drupal.t('flipInY');
+Drupal.t('zoomIn');
+Drupal.t('zoomInDown');
+Drupal.t('zoomInLeft');
+Drupal.t('zoomInRight');
+Drupal.t('zoomInUp');
+Drupal.t('zoomOut');
+Drupal.t('zoomOutDown');
+Drupal.t('zoomOutLeft');
+Drupal.t('zoomOutRight');
+Drupal.t('zoomOutUp');
+Drupal.t('slideInDown');
+Drupal.t('slideInLeft');
+Drupal.t('slideInRight');
+Drupal.t('slideInUp');
+Drupal.t('slideOutDown');
+Drupal.t('slideOutLeft');
+Drupal.t('slideOutRight');
+Drupal.t('slideOutUp')
+Drupal.t("Collapse Panel");
+Drupal.t("Layout");
+Drupal.t("Collapsed?");
+Drupal.t("Yes");
+Drupal.t("Expand Icon");
+Drupal.t("None");
+Drupal.t("+");
+Drupal.t("﹀");
+Drupal.t(            "Add toggle"          )
+Drupal.t("Alert");
+Drupal.t("Message");
+Drupal.t(          "This is a placeholder text. Your actual content will go here. Edit this to include your own information."        );
+Drupal.t("Type");
+Drupal.t("Select message type.");
+Drupal.t("Success");
+Drupal.t("Info");
+Drupal.t("Warning");
+Drupal.t("Danger")
+Drupal.t("Block quote");
+Drupal.t("Text");
+Drupal.t(          "This is a placeholder text. Your actual content will go here. Edit this to include your own information."        );
+Drupal.t("Cite");
+Drupal.t("Reverse?");
+Drupal.t("Yes")
+Drupal.t("Title");
+Drupal.t("Text on the button");
+Drupal.t("Link");
+Drupal.t("Button link (url).");
+Drupal.t("Link target");
+Drupal.t("Select where to open link.");
+Drupal.t("Type");
+Drupal.t("Block button");
+Drupal.t("Yes");
+Drupal.t("Outline style");
+Drupal.t("Yes");
+Drupal.t("Size");
+Drupal.t("Normal");
+Drupal.t("Large");
+Drupal.t("Small");
+Drupal.t("Normal");
+Drupal.t("Large");
+Drupal.t("Small");
+Drupal.t("Extra small");
+Drupal.t("Button")
+Drupal.t("Card");
+Drupal.t("Header");
+Drupal.t("Title");
+Drupal.t("Type");
+Drupal.t("Select card style.");
+Drupal.t("Default");
+Drupal.t("Primary");
+Drupal.t("Secondary");
+Drupal.t("Success");
+Drupal.t("Info");
+Drupal.t("Warning");
+Drupal.t("Danger");
+Drupal.t("Dark");
+Drupal.t("Light")
+Drupal.t("Carousel");
+Drupal.t("Layout");
+Drupal.t("Frames per slide");
+Drupal.t("Disable Auto Play");
+Drupal.t("Yes");
+Drupal.t("Dots Navigation");
+Drupal.t("On");
+Drupal.t("Dots Orientation");
+Drupal.t("Outside Slider");
+Drupal.t("Inside Slider");
+Drupal.t("Shape");
+Drupal.t("Circle");
+Drupal.t("Square");
+Drupal.t("Triangle");
+Drupal.t("Bar");
+Drupal.t("Transform Active");
+Drupal.t("None");
+Drupal.t("Grow Taller");
+Drupal.t("Grow Wider");
+Drupal.t("Scale up");
+Drupal.t("Dots Color");
+Drupal.t("Active Dot Color");
+Drupal.t("Next/Previous");
+Drupal.t("On");
+Drupal.t("Orientation");
+Drupal.t("Outside Slider");
+Drupal.t("Inside Slider");
+Drupal.t("Shape");
+Drupal.t("No Background");
+Drupal.t("Circle");
+Drupal.t("Square");
+Drupal.t("Bar");
+Drupal.t("Icon Color");
+Drupal.t("Icon Hover Color");
+Drupal.t("Background Color");
+Drupal.t("Background Hover");
+Drupal.t("Icon Thickness");
+Drupal.t("Outside Navigation Position");
+Drupal.t("Adjacent");
+Drupal.t("Top Center");
+Drupal.t("Top Left");
+Drupal.t("Top Right");
+Drupal.t("Bottom Center");
+Drupal.t("Bottom Left");
+Drupal.t("Bottom Right");
+Drupal.t("Auto Play Interval");
+Drupal.t("Transition style");
+Drupal.t("Default");
+Drupal.t("fade");
+Drupal.t("backSlide");
+Drupal.t("goDown");
+Drupal.t("fadeUp");
+Drupal.t("Stop on Hover");
+Drupal.t("On");
+Drupal.t("Options");
+Drupal.t("Navigation");
+Drupal.t("Auto play");
+Drupal.t("Mouse drag");
+Drupal.t("Touch drag");
+Drupal.t("Add slide");
+Drupal.t("Add slide")
+Drupal.t("Circle counter");
+Drupal.t("Foreground color");
+Drupal.t("Background color");
+Drupal.t("Fill");
+Drupal.t("Percent");
+Drupal.t("Dimension");
+Drupal.t("Text");
+Drupal.t("Circle content");
+Drupal.t("Font size");
+Drupal.t("Circle content");
+Drupal.t("Info");
+Drupal.t("Circle content");
+Drupal.t("Background width");
+Drupal.t("Foreground width");
+Drupal.t("Circle style");
+Drupal.t("Default");
+Drupal.t("Inline");
+Drupal.t("Outline");
+Drupal.t("Half Circle");
+Drupal.t("Yes");
+Drupal.t("Icon");
+Drupal.t("Icon");
+Drupal.t("Icon size");
+Drupal.t("Will set the font size of the icon.");
+Drupal.t("Icon");
+Drupal.t("Icon color");
+Drupal.t("Will set the font color of the icon.");
+Drupal.t("Icon")
+Drupal.t("Countdown Timer");
+Drupal.t("Countdown style");
+Drupal.t("Plain");
+Drupal.t("Grid");
+Drupal.t("3D Flip");
+Drupal.t("Disc");
+Drupal.t("Airport Style");
+Drupal.t("Transparent");
+Drupal.t("Date / Time Limitations");
+Drupal.t("Specify Date Only");
+Drupal.t("Specify Date and Time");
+Drupal.t("Specify Time Only (repeating on every day)");
+Drupal.t(            "Resetting Counter (set interval up to 24 hours)"          );
+Drupal.t("Date");
+Drupal.t("Date / Time");
+Drupal.t("Time");
+Drupal.t("Reset in Hours");
+Drupal.t("Reset in Minutes");
+Drupal.t("Reset in Seconds");
+Drupal.t("Page Referrer");
+Drupal.t(          "Provide an optional link to another site/page to be opened after countdown expires."        );
+Drupal.t("Automatic Restart");
+Drupal.t("Yes");
+Drupal.t("Display Options");
+Drupal.t("Show Remaining Years");
+Drupal.t("Show Remaining Days");
+Drupal.t("Show Remaining Hours");
+Drupal.t("Show Remaining Minutes");
+Drupal.t("Show Remaining Seconds");
+Drupal.t("Years");
+Drupal.t("Year");
+Drupal.t("Days");
+Drupal.t("Day");
+Drupal.t("Hours");
+Drupal.t("Hour");
+Drupal.t("Minutes");
+Drupal.t("Minute");
+Drupal.t("Seconds");
+Drupal.t("Second");
+Drupal.t("Deciseconds");
+Drupal.t("Decisecond");
+Drupal.t("Milliseconds");
+Drupal.t("Millisecond")
+Drupal.t("Number Counter");
+Drupal.t("Start");
+Drupal.t("Enter the number to start counting from.");
+Drupal.t("End");
+Drupal.t("Enter the number to count up to.");
+Drupal.t("Font Size");
+Drupal.t("Select the font size for the counter number.");
+Drupal.t("Speed");
+Drupal.t(          "Select the speed in ms for the counter to finish."        );
+Drupal.t("Thousand Separator");
+Drupal.t(          "Select a character to separate thousands in the end number."        );
+Drupal.t("None");
+Drupal.t("Comma");
+Drupal.t("Dot");
+Drupal.t("Space");
+Drupal.t("Prefix");
+Drupal.t(          "Enter any character to be shown before the number (i.e. $)."        );
+Drupal.t("Suffix");
+Drupal.t(          "Enter any character to be shown after the number (i.e. %)."        )
+Drupal.t("HTML");
+Drupal.t("Raw html");
+Drupal.t("Enter your HTML content.");
+Drupal.t("<p>Click the edit button to change this HTML</p>")
+Drupal.t("Icon");
+Drupal.t("Icon");
+Drupal.t("Size");
+Drupal.t("Large");
+Drupal.t("Normal");
+Drupal.t("2x");
+Drupal.t("3x");
+Drupal.t("4x");
+Drupal.t("5x");
+Drupal.t("Style");
+Drupal.t("None");
+Drupal.t("Rounded");
+Drupal.t("Circle");
+Drupal.t("Square");
+Drupal.t("Icon Utilities");
+Drupal.t("Icon Animation");
+Drupal.t("No");
+Drupal.t("Spin");
+Drupal.t("Pulse");
+Drupal.t("Icon Utilities");
+Drupal.t("Icon Orientation");
+Drupal.t("Normal");
+Drupal.t("Rotate 90");
+Drupal.t("Rotate 180");
+Drupal.t("Rotate 270");
+Drupal.t("Flip Horizontal");
+Drupal.t("Flip Vertical");
+Drupal.t("Icon Utilities");
+Drupal.t("Link");
+Drupal.t("Icon link (url).");
+Drupal.t("Link target");
+Drupal.t("Select where to open link.")
+Drupal.t("Image");
+Drupal.t("Image");
+Drupal.t("Image width");
+Drupal.t("For example 100px, or 50%.");
+Drupal.t("Image height");
+Drupal.t("For example 100px.");
+Drupal.t("Image link");
+Drupal.t("Image link target");
+Drupal.t("Select where to open link.");
+Drupal.t("Alt attribute");
+Drupal.t("Image description");
+Drupal.t("SEO");
+Drupal.t("Title attribute");
+Drupal.t("Additional information about the image");
+Drupal.t("SEO")
+Drupal.t("Image carousel");
+Drupal.t("Images");
+Drupal.t("Interval");
+Drupal.t("Hide");
+Drupal.t("Hide pagination control");
+Drupal.t("Hide prev/next buttons");
+Drupal.t("Alt attribute");
+Drupal.t("Topic of image carousel");
+Drupal.t("SEO");
+Drupal.t("Title attribute");
+Drupal.t("Additional information about the images");
+Drupal.t("SEO")
+Drupal.t("Jumbotron")
+Drupal.t("Positioned Layers");
+Drupal.t("Free Positioning");
+Drupal.t("Layout");
+Drupal.t("Width");
+Drupal.t("For example 100px, or 50%.");
+Drupal.t("Height");
+Drupal.t("Responsive?");
+Drupal.t("Yes");
+Drupal.t("Original width");
+Drupal.t("Move positioned item:");
+Drupal.t("100% width");
+Drupal.t("100% width for positioned item :");
+Drupal.t("100% height");
+Drupal.t("100% height for positioned item :");
+Drupal.t("Bring forward");
+Drupal.t("Bring forward for positioned item :");
+Drupal.t("Send backward");
+Drupal.t("Send backward for positioned item :")
+Drupal.t("Link");
+Drupal.t("Link");
+Drupal.t("Content link (url).");
+Drupal.t("Link target");
+Drupal.t("Select where to open link.");
+Drupal.t("Title attribute");
+Drupal.t("Content link (title attribute).");
+Drupal.t("SEO");
+Drupal.t("Tell search engines not to follow");
+Drupal.t("Yes");
+Drupal.t("SEO")
+Drupal.t("Map");
+Drupal.t("Address");
+Drupal.t("1865 Winchester Blvd #202 Campbell, CA 95008");
+Drupal.t("Map width");
+Drupal.t("For example 100px, or 50%.");
+Drupal.t("Map Height");
+Drupal.t("For example 100px.")
+Drupal.t("Panel");
+Drupal.t("Title");
+Drupal.t("Type");
+Drupal.t("Select message type.");
+Drupal.t("DXPR");
+Drupal.t("Default");
+Drupal.t("Primary");
+Drupal.t("Success");
+Drupal.t("Info");
+Drupal.t("Warning");
+Drupal.t("Danger")
+Drupal.t("Progress Bar");
+Drupal.t("Label");
+Drupal.t("Progress");
+Drupal.t("Bar height");
+Drupal.t("Back Color");
+Drupal.t("Front Color");
+Drupal.t("Type");
+Drupal.t("Default");
+Drupal.t("Success");
+Drupal.t("Info");
+Drupal.t("Warning");
+Drupal.t("Danger");
+Drupal.t("Options");
+Drupal.t("Add Stripes?");
+Drupal.t("Add animation? Will be visible with striped bars.")
+Drupal.t("Divider");
+Drupal.t("Color");
+Drupal.t("Thickness");
+Drupal.t("Theme Default");
+Drupal.t("Custom Thickness");
+Drupal.t("Thickness");
+Drupal.t("Length");
+Drupal.t("Theme Default");
+Drupal.t("Custom Width");
+Drupal.t("Width");
+Drupal.t("Select where to open link.");
+Drupal.t("Align");
+Drupal.t("Left");
+Drupal.t("Center");
+Drupal.t("Right")
+Drupal.t("Text");
+Drupal.t("Text");
+Drupal.t("Edit text")
+Drupal.t("Local video");
+Drupal.t("Video");
+Drupal.t("Start playing automatically");
+Drupal.t("Yes");
+Drupal.t("Muted");
+Drupal.t("Yes");
+Drupal.t("Controls");
+Drupal.t("Yes");
+Drupal.t("Loop");
+Drupal.t("Yes");
+Drupal.t("Video width");
+Drupal.t("For example 100px, or 50%.");
+Drupal.t("Image")
+Drupal.t("Video");
+Drupal.t("Video link");
+Drupal.t("Link Youtube or Vimeo video");
+Drupal.t("Video width");
+Drupal.t("For example 100px, or 50%.");
+Drupal.t("Image");
+Drupal.t("Themed Play Button");
+Drupal.t("Yes")
+Drupal.t("Well");
+Drupal.t("Type");
+Drupal.t("Default");
+Drupal.t("Large");
+Drupal.t("Small")
+Drupal.t("Social links");
+Drupal.t("Social links");
+Drupal.t("Layout");
+Drupal.t("Inline");
+Drupal.t("Stacked");
+Drupal.t("Style");
+Drupal.t("None");
+Drupal.t("Rounded");
+Drupal.t("Circle");
+Drupal.t("Square");
+Drupal.t("Size");
+Drupal.t("Large");
+Drupal.t("Small");
+Drupal.t("2x");
+Drupal.t("3x");
+Drupal.t("4x");
+Drupal.t("5x");
+Drupal.t("Color");
+Drupal.t("Icon Colors");
+Drupal.t("Color");
+Drupal.t("Icon Colors");
+Drupal.t("Background Color");
+Drupal.t("Icon Colors");
+Drupal.t("Background Color");
+Drupal.t("Icon Colors");
+Drupal.t("CSS3 Hover Effects");
+Drupal.t(          "Setting a CSS3 Hover effect will automatically make the icon a circle-style icon."        );
+Drupal.t("None");
+Drupal.t("Disc");
+Drupal.t("Pulse")
+Drupal.t("Same window");
+Drupal.t("New window");
+Drupal.t("Brand color");
+Drupal.t("Custom");
+Drupal.t("Inherit")
+
+Drupal.t("Extra large (≥1200px)");
+Drupal.t("Extra large (≥1200px)");
+Drupal.t("Extra extra large (≥1400px)")
+
+
+
+Drupal.t("On");
+Drupal.t("Off");
+Drupal.t("On");
+Drupal.t("Off")
+
+
+
+
+Drupal.t("None");
+Drupal.t("None");
+Drupal.t("Rounded");
+Drupal.t("Circle");
+Drupal.t("Square")
+
+Drupal.t(              "Search"            );
+Drupal.t("All Icon Sets")
+
+
+
+
+
+
+
+Drupal.t("Margin");
+Drupal.t("Border");
+Drupal.t("Padding");
+Drupal.t("✖");
+Drupal.t(        "Font color"      );
+Drupal.t(        "Border color"      );
+Drupal.t(        "Background"      );
+Drupal.t(        "Background style"      );
+Drupal.t("Theme defaults");
+Drupal.t("Cover");
+Drupal.t("Contain");
+Drupal.t("No Repeat");
+Drupal.t("Repeat");
+Drupal.t(        "Background position"      );
+Drupal.t("Theme defaults");
+Drupal.t("Center  Center");
+Drupal.t("Left Top");
+Drupal.t("Left Center");
+Drupal.t("Left Bottom");
+Drupal.t("Right Top");
+Drupal.t("Right Center");
+Drupal.t("Right Bottom");
+Drupal.t("Center Bottom");
+Drupal.t("Center Top");
+Drupal.t(        "Border style"      );
+Drupal.t("Theme defaults");
+Drupal.t("Solid");
+Drupal.t("Dotted");
+Drupal.t("Dashed");
+Drupal.t("None");
+Drupal.t(        "Font size"      );
+Drupal.t(        "Border radius"      );
+Drupal.t(        "Opacity"      )
+
+
+
+Drupal.t("Select from predefined options");
+Drupal.t(        "Edit as text"      );
+Drupal.t("Clear");
+Drupal.t("Default");
+Drupal.t("Select Color");
+Drupal.t("Current Color")

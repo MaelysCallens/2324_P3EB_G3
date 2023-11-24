@@ -1,0 +1,84 @@
+services:
+  dxpr_builder.handler.block:
+    class: Drupal\dxpr_builder\Service\Handler\BlockHandler
+    arguments:
+      - '@entity_type.manager'
+      - '@plugin.manager.block'
+      - '@current_user'
+      - '@renderer'
+      - '@entity.repository'
+
+  dxpr_builder.handler.view:
+    class: Drupal\dxpr_builder\Service\Handler\ViewHandler
+    arguments:
+      - '@renderer'
+
+  dxpr_builder.service:
+    class: Drupal\dxpr_builder\Service\DxprBuilderService
+    arguments:
+      - '@request_stack'
+      - '@config.factory'
+      - '@file_system'
+      - '@file_url_generator'
+      - '@current_user'
+      - '@module_handler'
+      - '@dxpr_builder.handler.block'
+      - '@dxpr_builder.handler.view'
+      - '@cache.default'
+      - '@entity_field.manager'
+      - '@entity_type.manager'
+      - '@theme_handler'
+      - '@language_manager'
+      - '@plugin.manager.block'
+      - '@csrf_token'
+      - '@messenger'
+      - '@extension.list.module'
+      - '@extension.list.theme'
+      - '@logger.factory'
+
+  dxpr_builder.file.upload:
+    class: Drupal\dxpr_builder\Service\UploadHandler
+
+  dxpr_builder.license_service:
+    class: Drupal\dxpr_builder\Service\DxprBuilderLicenseService
+    arguments:
+      - '@request_stack'
+      - '@entity_type.manager'
+      - '@database'
+      - '@http_client'
+      - '@config.factory'
+      - '@extension.list.module'
+      - '@state'
+      - '@cache.default'
+      - '@queue'
+      - '@current_user'
+      - '@messenger'
+      - '@datetime.time'
+      - '@logger.factory'
+    tags:
+      - {name: event_subscriber}
+
+  dxpr_builder.profile_handler:
+    class: Drupal\dxpr_builder\Service\Handler\ProfileHandler
+    arguments: ['@context.repository', '@plugin.manager.block']
+
+  access_check.dxpr_builder_profile.add:
+    class: Drupal\dxpr_builder\Access\DxprBuilderProfileAddAccessCheck
+    arguments: ['@entity_type.manager', '@module_handler']
+    tags:
+      - { name: access_check, applies_to: _dxpr_builder_profile_add_access }
+
+  access_check.dxpr_builder_billable_user:
+    class: Drupal\dxpr_builder\Access\DxprBuilderBillableUserAccessCheck
+    arguments: ['@dxpr_builder.license_service']
+    tags:
+      - { name: access_check, applies_to: _dxpr_builder_billable_user }
+
+  dxpr_builder.jwt_decoder:
+    class: Drupal\dxpr_builder\Service\DxprBuilderJWTDecoder
+    arguments:
+      - '@cache.default'
+
+  dxpr_builder.content_lock:
+    class: Drupal\dxpr_builder\Service\ContentLock
+    arguments: ['@database', '@entity_type.manager', '@current_user']

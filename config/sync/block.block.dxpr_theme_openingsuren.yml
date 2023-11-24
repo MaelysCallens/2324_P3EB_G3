@@ -1,0 +1,25 @@
+uuid: d18cd842-4034-4896-b4a5-7cac08c5e4d0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+  module:
+    - block_content
+  theme:
+    - dxpr_theme
+id: dxpr_theme_openingsuren
+theme: dxpr_theme
+region: footer
+weight: -2
+provider: null
+plugin: 'block_content:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+settings:
+  id: 'block_content:feb2c3ca-48b0-4a91-b933-ebb1991f69bb'
+  label: Openingsuren
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,1668 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version:DXPR Theme | Drupal Theme | Low-code Drupal 10 Bootstrap Theme (all releases)"
+"POT-Creation-Date:2023-07-11 09:18+0200"
+"PO-Revision-Date:YYYY-mm-DD HH:MM+ZZZZ"
+"Language-Team:Dutch"
+"MIME-Version:1.0"
+"Content-Type:text/plain; charset=utf-8"
+"Content-Transfer-Encoding:8bit"
+"Plural-Forms:nplurals=2; plural=(n!=1);"
+
+#: templates/block--system-branding-block.html.twig:23,24,28,22,27;
+#: templates/page.tpl.php:103,104,109
+msgid "Home"
+msgstr "Thuis"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:43
+msgid "Previous"
+msgstr "Vorig"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:49
+msgid "Next"
+msgstr "Volgende"
+#: features/sooper-layout/layout-theme-settings.inc:242,296,241,302;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Content"
+msgstr "Inhoud"
+#: templates/node--cms-blog.html.twig:11
+msgid "Comments"
+msgstr "Opmerkingen"
+#: features/sooper-block-design/block-design-theme-settings.inc:61,51;
+#: features/sooper-header/header-theme-settings.inc:456
+msgid "None"
+msgstr "Geen"
+#: features/sooper-fonts/fonts-theme-settings-controller.inc:126,138,114
+msgid "default"
+msgstr "standaard"
+#: features/sooper-block-design/block-design-theme-settings.inc:173,260,163,250;
+#: features/sooper-header/header-theme-settings.inc:419,409,414;
+#: features/sooper-page-title/page_title-theme-settings.inc:36,70,25,59;
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "Center"
+msgstr "Centrum"
+#: templates/pager.html.twig:49; templates/views-mini-pager.html.twig:19
+msgid "Go to previous page"
+msgstr "Ga naar de vorige pagina"
+#: templates/pager.html.twig:86; templates/views-mini-pager.html.twig:27
+msgid "Go to next page"
+msgstr "Ga naar de volgende pagina"
+#: config/optional/block.block.dxpr_theme_help.yml:0;
+#: features/sooper-block-design/block-design-theme-settings.inc:391,381;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Help"
+msgstr "Hulp"
+#: features/sooper-layout/layout-theme-settings.inc:113,102;
+#: features/sooper-page-title/page_title-theme-settings.inc:116,86
+msgid "Background Image"
+msgstr "Achtergrond afbeelding"
+#: features/sooper-header/header-theme-settings.inc:495,503,506,514,501,521,510
+msgid "Top"
+msgstr "Bovenkant"
+#: features/sooper-header/header-theme-settings.inc:44,34;
+#: features/sooper-layout/layout-theme-settings.inc:18,8
+msgid "Layout"
+msgstr "Lay-out"
+#: config/optional/block.block.dxpr_theme_page_title.yml:0
+msgid "Page title"
+msgstr "Pagina titel"
+#: features/sooper-header/header-theme-settings.inc:496,504,507,515,502,522,511
+msgid "Bottom"
+msgstr "Onderkant"
+#: features/sooper-fonts/fonts-theme-settings.inc:72,76,74
+msgid "Site name"
+msgstr "Site naam"
+#: features/sooper-layout/layout-theme-settings.inc:294,300
+msgid "Header"
+msgstr "Koptekst"
+#: features/sooper-block-design/block-design-theme-settings.inc:397,387;
+#: features/sooper-layout/layout-theme-settings.inc:244,300,243,306;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Footer"
+msgstr "Voettekst"
+#: features/sooper-block-design/block-design-theme-settings.inc:40,29
+msgid "Custom"
+msgstr "Aangepast"
+#: features/sooper-header/header-theme-settings.inc:64,462,54,471,473,482,468,488,477;
+#: features/sooper-layout/layout-theme-settings.inc:165,164;
+#: features/sooper-page-title/page_title-theme-settings.inc:161,141;
+#: features/sooper-fonts/fonts-theme-settings.inc:12
+msgid "Normal"
+msgstr "Normaal"
+#: features/sooper-page-title/page_title-theme-settings.inc:103
+msgid "Flash"
+msgstr "Flash"
+#: features/sooper-header/header-theme-settings.inc:426,416,421
+msgid "Width"
+msgstr "Breedte"
+#: features/sooper-header/header-theme-settings.inc:81,172,586,71,162,595,597,606,167,592,612,601;
+#: features/sooper-page-title/page_title-theme-settings.inc:89,78
+msgid "Height"
+msgstr "Hoogte"
+#: features/sooper-fonts/fonts-theme-settings.inc:13
+msgid "Medium"
+msgstr "Medium"
+#: includes/dxpr_theme_preprocess_node.inc:29,31
+msgid "By"
+msgstr "Door"
+#: theme-settings.php:46,73
+msgid "Colors"
+msgstr "Kleuren"
+#: features/sooper-header/header-theme-settings.inc:477,486,488,497,483,503,492
+msgid "Border"
+msgstr "Grens"
+#: color/color.inc:15,69,68; dxpr_theme_STARTERKIT/color/color.inc:15,68,67;
+#: color.inc:15
+msgid "Text color"
+msgstr "Tekst kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:387,377;
+#: features/sooper-fonts/fonts-theme-settings.inc:59,63,61; dxpr_theme.info:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0; dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Navigation"
+msgstr "Navigatie"
+#: features/sooper-layout/layout-theme-settings.inc:140,139;
+#: features/sooper-page-title/page_title-theme-settings.inc:152,132
+msgid "Repeat"
+msgstr "Herhalen"
+#: js/dist/dxpr-theme.admin.js:0
+msgid "Theme Settings"
+msgstr "Thema instellingen"
+#: includes/dxpr_theme_preprocess_comment.inc:18
+msgid "said"
+msgstr "gezegd"
+#: templates/status-messages.html.twig:58
+msgid "Close"
+msgstr "Dichtbij"
+#: includes/dxpr_theme_preprocess_comment.inc:22
+msgid " ago"
+msgstr "geleden"
+#: features/sooper-page-title/page_title-theme-settings.inc:26,15
+msgid "Show Breadcrumbs"
+msgstr "Broodkruimels weergeven"
+#: features/sooper-block-design/block-design-theme-settings.inc:389,379;
+#: features/sooper-layout/layout-theme-settings.inc:240,292,239,298;
+#: features/sooper-page-title/page_title-theme-settings.inc:18,8;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Page Title"
+msgstr "Pagina titel"
+#: features/sooper-block-design/block-design-theme-settings.inc:394,384;
+#: features/sooper-layout/layout-theme-settings.inc:241,295,240,301;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Content Top"
+msgstr "Inhoud bovenaan"
+#: features/sooper-block-design/block-design-theme-settings.inc:395,385;
+#: features/sooper-layout/layout-theme-settings.inc:243,297,242,303;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Content Bottom"
+msgstr "Inhoud bodem"
+#: features/sooper-fonts/fonts-theme-settings.inc:40,44,42
+msgid "CSS Selector"
+msgstr "CSS-kiezer"
+#: features/sooper-block-design/block-design-theme-settings.inc:172,259,162,249;
+#: features/sooper-header/header-theme-settings.inc:418,408,413;
+#: features/sooper-page-title/page_title-theme-settings.inc:35,69,24,58;
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "Left"
+msgstr "Links"
+#: features/sooper-block-design/block-design-theme-settings.inc:174,261,164,251;
+#: features/sooper-header/header-theme-settings.inc:420,410,415;
+#: features/sooper-page-title/page_title-theme-settings.inc:37,71,26,60;
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "Right"
+msgstr "Rechts"
+#: theme-settings.php:250,156,256,162,257,258,299
+msgid "White"
+msgstr "Wit"
+#: color/color.inc:12,66,65; dxpr_theme_STARTERKIT/color/color.inc:12,65,64;
+#: color.inc:12
+msgid "Link color"
+msgstr "Link kleur"
+#: features/sooper-header/header-theme-settings.inc:245,235,240
+msgid "Block Text"
+msgstr "Tekst blokkeren"
+#: features/sooper-page-title/page_title-theme-settings.inc:105
+msgid "Fade in"
+msgstr "Infaden"
+#: config/optional/block.block.dxpr_theme_local_tasks.yml:0
+msgid "Tabs"
+msgstr "Tabbladen"
+#: templates/pager.html.twig:87; templates/views-mini-pager.html.twig:28
+msgid "Next page"
+msgstr "Volgende bladzijde"
+#: features/sooper-fonts/fonts-theme-settings-controller.inc:126,138,114
+msgid "@message"
+msgstr "@bericht"
+#: templates/pager.html.twig:40
+msgid "Go to first page"
+msgstr "Ga naar de eerste pagina"
+#: templates/pager.html.twig:95
+msgid "Go to last page"
+msgstr "Ga naar de laatste pagina"
+#: features/sooper-header/header-theme-settings.inc:464,473,475,484,470,490,479;
+#: features/sooper-page-title/page_title-theme-settings.inc:82,71;
+#: features/sooper-fonts/fonts-theme-settings.inc:15
+msgid "Bold"
+msgstr "Vetgedrukt"
+#: color/color.inc:31,85,84; dxpr_theme_STARTERKIT/color/color.inc:31,84,83;
+#: color.inc:31
+msgid "Silver"
+msgstr "Zilver"
+#: features/sooper-header/header-theme-settings.inc:551,559,562,570,557,577,566
+msgid "Border Color"
+msgstr "Rand kleur"
+#: features/sooper-page-title/page_title-theme-settings.inc:83,72
+msgid "Italic"
+msgstr "Cursief"
+#: features/sooper-header/header-theme-settings.inc:463,472,474,483,469,489,478;
+#: features/sooper-page-title/page_title-theme-settings.inc:81,70
+msgid "Uppercase"
+msgstr "Hoofdletters"
+#: features/sooper-header/header-theme-settings.inc:502,510,513,521,508,528,517;
+#: features/sooper-page-title/page_title-theme-settings.inc:98
+msgid "Animation"
+msgstr "Animatie"
+#: features/sooper-header/header-theme-settings.inc:65,55
+msgid "Overlay"
+msgstr "Overlay"
+#: features/sooper-fonts/fonts-theme-settings.inc:85,89,87
+msgid "Blockquote"
+msgstr "Blokkeer citaat"
+#: features/sooper-fonts/fonts-theme-settings.inc:17
+msgid "Black"
+msgstr "Zwart"
+#: templates/html.html.twig:94; templates/html.tpl.php:74
+msgid "Skip to main content"
+msgstr "Spring naar de hoofdinhoud"
+#: features/sooper-block-design/block-design-theme-settings.inc:163,153
+msgid "Paragraph"
+msgstr "Paragraaf"
+#: features/sooper-block-design/block-design-theme-settings.inc:383,373
+msgid "Regions"
+msgstr "Regio's"
+#: features/sooper-header/header-theme-settings.inc:474,483,485,494,480,500,489
+msgid "Opacity"
+msgstr "ondoorzichtigheid"
+#: features/sooper-fonts/fonts-theme-settings.inc:21,25,23
+msgid "Fonts"
+msgstr "lettertypen"
+#: features/sooper-block-design/block-design-theme-settings.inc:396,386
+msgid "Main Content"
+msgstr "Belangrijkste inhoud"
+#: includes/dxpr_theme_status_message.inc:33
+msgid "Error message"
+msgstr "Foutmelding"
+#: config/optional/block.block.dxpr_theme_main_menu.yml:0
+msgid "Main navigation"
+msgstr "Hoofdnavigatie"
+#: features/sooper-header/header-theme-settings.inc:439,506,429,514,517,525,434,512,532,521
+msgid "Left to Right"
+msgstr "Van links naar rechts"
+#: features/sooper-header/header-theme-settings.inc:440,507,430,515,518,526,435,513,533,522
+msgid "Right to Left"
+msgstr "Rechts naar links"
+#: includes/dxpr_theme_status_message.inc:34
+msgid "Warning message"
+msgstr "Waarschuwingsbericht"
+#: templates/menu-local-tasks.html.twig:20
+msgid "Primary tabs"
+msgstr "Primaire tabbladen"
+#: templates/menu-local-tasks.html.twig:26,25
+msgid "Secondary tabs"
+msgstr "Secundaire tabbladen"
+#: features/sooper-fonts/fonts-theme-settings.inc:11
+msgid "Light"
+msgstr "Licht"
+#: color/color.inc:65,64; dxpr_theme_STARTERKIT/color/color.inc:64,63
+msgid "Primary color"
+msgstr "Primaire kleur"
+#: features/sooper-layout/layout-theme-settings.inc:137,136;
+#: features/sooper-page-title/page_title-theme-settings.inc:149,129
+msgid "Cover"
+msgstr "Omslag"
+#: includes/dxpr_theme_preprocess_node.inc:52,54
+msgid "Spaces"
+msgstr "Ruimtes"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "Top Header"
+msgstr "Bovenste kop"
+#: features/sooper-fonts/fonts-theme-settings.inc:9
+msgid "100"
+msgstr "100"
+#: features/sooper-fonts/fonts-theme-settings.inc:10
+msgid "200"
+msgstr "200"
+#: features/sooper-fonts/fonts-theme-settings.inc:11
+msgid "300"
+msgstr "300"
+#: features/sooper-fonts/fonts-theme-settings.inc:12
+msgid "400"
+msgstr "400"
+#: features/sooper-fonts/fonts-theme-settings.inc:13
+msgid "500"
+msgstr "500"
+#: features/sooper-layout/layout-theme-settings.inc:298,304;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Primary"
+msgstr "Primair"
+#: features/sooper-header/header-theme-settings.inc:459,468,470,479,465,485,474;
+#: features/sooper-page-title/page_title-theme-settings.inc:78,67
+msgid "Font Style"
+msgstr "Lettertype"
+#: features/sooper-layout/layout-theme-settings.inc:299,305;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Secondary"
+msgstr "Ondergeschikt"
+#: features/sooper-block-design/block-design-theme-settings.inc:62
+msgid "Card"
+msgstr "Kaart"
+#: features/sooper-block-design/block-design-theme-settings.inc:159,149
+msgid "h1"
+msgstr "h1"
+#: features/sooper-block-design/block-design-theme-settings.inc:160,150
+msgid "h2"
+msgstr "h2"
+#: features/sooper-block-design/block-design-theme-settings.inc:161,151
+msgid "h3"
+msgstr "h3"
+#: features/sooper-block-design/block-design-theme-settings.inc:162,152
+msgid "h4"
+msgstr "h4"
+#: templates/pager.html.twig:35; templates/views-mini-pager.html.twig:15
+msgid "Pagination"
+msgstr "Paginering"
+#: color/color.inc:32,86,85; dxpr_theme_STARTERKIT/color/color.inc:32,85,84;
+#: features/sooper-layout/layout-theme-settings.inc:115; color.inc:32
+msgid "Body Background"
+msgstr "Lichaamsachtergrond"
+#: config/optional/block.block.dxpr_theme_breadcrumbs.yml:0
+msgid "Breadcrumbs"
+msgstr "Paneermeel"
+#: theme-settings.php:251,157,257,163,258,259,300
+msgid "Custom Color"
+msgstr "Aangepaste kleur"
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Page top"
+msgstr "Pagina bovenaan"
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Page bottom"
+msgstr "Pagina onderaan"
+#: features/sooper-block-design/block-design-theme-settings.inc:392,382;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0
+msgid "Sidebar First"
+msgstr "Zijbalk eerst"
+#: config/optional/block.block.dxpr_theme_messages.yml:0
+msgid "Status messages"
+msgstr "Statusberichten"
+#: features/sooper-demo-import/demo-import-theme-settings.inc:65
+msgid "Import/Export"
+msgstr "Importeren/exporteren"
+#: color/color.inc:20,74,73; dxpr_theme_STARTERKIT/color/color.inc:20,73,72;
+#: color.inc:20
+msgid "Footer text"
+msgstr "Voettekst"
+#: features/sooper-layout/layout-theme-settings.inc:153,152;
+#: features/sooper-page-title/page_title-theme-settings.inc:175,155
+msgid "Right Top"
+msgstr "Rechtsboven"
+#: features/sooper-layout/layout-theme-settings.inc:150,149;
+#: features/sooper-page-title/page_title-theme-settings.inc:172,152
+msgid "Left Top"
+msgstr "Bovenaan links"
+#: features/sooper-layout/layout-theme-settings.inc:155,154;
+#: features/sooper-page-title/page_title-theme-settings.inc:177,157
+msgid "Right Bottom"
+msgstr "Rechts beneden"
+#: features/sooper-layout/layout-theme-settings.inc:152,151;
+#: features/sooper-page-title/page_title-theme-settings.inc:174,154
+msgid "Left Bottom"
+msgstr "Links onderaan"
+#: features/sooper-layout/layout-theme-settings.inc:154,153;
+#: features/sooper-page-title/page_title-theme-settings.inc:176,156
+msgid "Right Center"
+msgstr "Rechts midden"
+#: features/sooper-layout/layout-theme-settings.inc:151,150;
+#: features/sooper-page-title/page_title-theme-settings.inc:173,153
+msgid "Left Center"
+msgstr "Links midden"
+#: features/sooper-typography/typography-theme-settings.inc:18,8
+msgid "Typography"
+msgstr "Typografie"
+#: config/optional/block.block.dxpr_theme_content.yml:0
+msgid "Main page content"
+msgstr "Hoofdpagina inhoud"
+#: includes/dxpr_theme_status_message.inc:32
+msgid "Status message"
+msgstr "Status bericht"
+#: theme-settings.php:102,148,253,108,154,262,149,195
+msgid "The logo could not be uploaded."
+msgstr "Het logo kon niet worden geüpload."
+#: theme-settings.php:125,262,131,271,172
+msgid "The custom logo path is invalid."
+msgstr "Het aangepaste logopad is ongeldig."
+#: features/sooper-block-design/block-design-theme-settings.inc:156,146
+msgid "Title Font Size"
+msgstr "Lettergrootte titel"
+#: features/sooper-header/header-theme-settings.inc:543,551,554,562,549,569,558
+msgid "Border Thickness"
+msgstr "Grens Dikte"
+#: features/sooper-demo-import/demo-import-theme-settings.inc:73
+msgid "Export Theme Settings"
+msgstr "Exporteer thema-instellingen"
+#: features/sooper-block-design/block-design-theme-settings.inc:390,380;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0
+msgid "Highlighted"
+msgstr "Gemarkeerd"
+#: color/color.inc:19,73,72; dxpr_theme_STARTERKIT/color/color.inc:19,72,71;
+#: color.inc:19
+msgid "Footer background"
+msgstr "Voettekst achtergrond"
+#: templates/pager.html.twig:50; templates/views-mini-pager.html.twig:20
+msgid "Previous page"
+msgstr "Vorige bladzijde"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "Crumbs"
+msgstr "Kruimels"
+#: features/sooper-layout/layout-theme-settings.inc:139,138;
+#: features/sooper-page-title/page_title-theme-settings.inc:151,131
+msgid "No Repeat"
+msgstr "Geen herhaling"
+#: features/sooper-block-design/block-design-theme-settings.inc:393,383;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0
+msgid "Sidebar Second"
+msgstr "Zijbalk tweede"
+#: color/color.inc:16,70,69; dxpr_theme_STARTERKIT/color/color.inc:16,69,68;
+#: color.inc:16
+msgid "Headings color"
+msgstr "Koppen kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:87,137,194,244,318,77,127,184,234,308;
+#: features/sooper-header/header-theme-settings.inc:558,566,569,577,564,584,573;
+#: features/sooper-typography/typography-theme-settings.inc:259,250,267
+msgid "Custom Value"
+msgstr "Aangepaste waarde"
+#: features/sooper-fonts/fonts-theme-settings.inc:14
+msgid "600"
+msgstr "600"
+#: features/sooper-fonts/fonts-theme-settings.inc:15
+msgid "700"
+msgstr "700"
+#: features/sooper-fonts/fonts-theme-settings.inc:16
+msgid "800"
+msgstr "800"
+#: features/sooper-fonts/fonts-theme-settings.inc:17
+msgid "900"
+msgstr "900"
+#: features/sooper-layout/layout-theme-settings.inc:56,45
+msgid "Grid Settings"
+msgstr "Raster instellingen"
+#: features/sooper-header/header-theme-settings.inc:60,50
+msgid "Header Style"
+msgstr "Kopstijl"
+#: features/sooper-fonts/fonts-theme-settings.inc:46,50,48
+msgid "Headings"
+msgstr "Koppen"
+#: features/sooper-page-title/page_title-theme-settings.inc:104
+msgid "Pulse"
+msgstr "Puls"
+#: dxpr_theme_callbacks.inc:153,122,167,166,136,170,174
+msgid ""
+"Cannot write theme-settings file, please check your file system. (See status"
+" report page)"
+msgstr ""
+"Kan thema-instellingenbestand niet schrijven, controleer uw bestandssysteem."
+" (Zie statusrapport pagina)"
+#: features/sooper-fonts/fonts-theme-settings.inc:32,36,34
+msgid "Base font"
+msgstr "Basis lettertype"
+#: features/sooper-fonts/fonts-theme-settings.inc:125,180,141,187,142
+msgid ""
+"Cannot read font files, please check permissions on the fonts folder in the "
+"theme."
+msgstr ""
+"Kan lettertypebestanden niet lezen. Controleer de machtigingen in de map met"
+" lettertypen in het thema."
+#: features/sooper-block-design/block-design-theme-settings.inc:80,70;
+#: features/sooper-header/header-theme-settings.inc:227,217,222
+msgid "Block Background"
+msgstr "Blok achtergrond"
+#: templates/pager.html.twig:96
+msgid "Last page"
+msgstr "Laatste pagina"
+#: features/sooper-page-title/page_title-theme-settings.inc:102
+msgid "Bounce"
+msgstr "Stuiteren"
+#: features/sooper-layout/layout-theme-settings.inc:138,137;
+#: features/sooper-page-title/page_title-theme-settings.inc:150,130
+msgid "Contain"
+msgstr "Bevatten"
+#: features/sooper-header/header-theme-settings.inc:457
+msgid "Cross"
+msgstr "Kruis"
+#: theme-settings.php:116,122,163
+msgid "The background image could not be uploaded."
+msgstr "De achtergrondafbeelding kon niet worden geüpload."
+#: theme-settings.php:131,137,178
+msgid "The custom background image path is invalid."
+msgstr "Het pad naar de aangepaste achtergrondafbeelding is ongeldig."
+#: features/sooper-layout/layout-theme-settings.inc:149,148;
+#: features/sooper-page-title/page_title-theme-settings.inc:171,151
+msgid "Center Center"
+msgstr "Centrum Centrum"
+#: features/sooper-layout/layout-theme-settings.inc:156,155;
+#: features/sooper-page-title/page_title-theme-settings.inc:178,158
+msgid "Center Bottom"
+msgstr "Midden onder"
+#: includes/dxpr_theme_status_message.inc:35
+msgid "Informative message"
+msgstr "Informatief bericht"
+#: theme-settings.php:25
+msgid "Override Global Settings"
+msgstr "Negeer algemene instellingen"
+#: features/sooper-layout/layout-theme-settings.inc:146,145;
+#: features/sooper-page-title/page_title-theme-settings.inc:168,148
+msgid "Background Position"
+msgstr "Achtergrond positie"
+#: config/optional/block.block.dxpr_theme_branding.yml:0
+msgid "Site branding"
+msgstr "Website-branding"
+#: color/color.inc:11; dxpr_theme_STARTERKIT/color/color.inc:11; color.inc:11
+msgid "Primary Color"
+msgstr "Primaire kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:62,52
+msgid "Well"
+msgstr "Goed"
+#: includes/dxpr_theme_preprocess_node.inc:33,35
+msgid "Posted on !datetime"
+msgstr "Geplaatst op !datetime"
+#: features/sooper-demo-import/demo-import-theme-settings.inc:80
+msgid "Export for the theme's .info file"
+msgstr "Exporteren voor het .info-bestand van het thema"
+#: templates/pager.html.twig:41
+msgid "First page"
+msgstr "Eerste pagina"
+#: templates/node.html.twig:99
+msgid "Submitted by @author_name on @date"
+msgstr "Ingezonden door @author_name op @date"
+#: config/optional/block.block.dxpr_theme_local_actions.yml:0
+msgid "Primary admin actions"
+msgstr "Primaire beheerdersacties"
+#: includes/dxpr_theme_preprocess_comment.inc:15
+msgid "replied"
+msgstr "antwoordde"
+#: includes/dxpr_theme_preprocess_node.inc:46,47,48,49
+msgid "No limit set"
+msgstr "Geen limiet ingesteld"
+#: includes/dxpr_theme_preprocess_node.inc:53,55
+msgid "Available spaces"
+msgstr "Beschikbare plaatsen"
+#: features/sooper-block-design/block-design-theme-settings.inc:388,378;
+#: features/sooper-layout/layout-theme-settings.inc:293,299;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Hero Region"
+msgstr "Hero-regio"
+#: color/color.inc:13,67,66; dxpr_theme_STARTERKIT/color/color.inc:13,66,65;
+#: color.inc:13
+msgid "Accent color 1"
+msgstr "Accentkleur 1"
+#: color/color.inc:14,68,67; dxpr_theme_STARTERKIT/color/color.inc:14,67,66;
+#: color.inc:14
+msgid "Accent color 2"
+msgstr "Accentkleur 2"
+#: color/color.inc:17,71,70; dxpr_theme_STARTERKIT/color/color.inc:17,70,69
+msgid "Well color"
+msgstr "Wel kleur"
+#: color/color.inc:18,72,71; dxpr_theme_STARTERKIT/color/color.inc:18,71,70
+msgid "Well text"
+msgstr "Wel tekst"
+#: color/color.inc:23,77,76; dxpr_theme_STARTERKIT/color/color.inc:23,76,75;
+#: color.inc:23
+msgid "Top Header background"
+msgstr "Bovenste koptekst achtergrond"
+#: color/color.inc:24,78,77; dxpr_theme_STARTERKIT/color/color.inc:24,77,76;
+#: color.inc:24
+msgid "Top Header text"
+msgstr "Koptekst bovenaan"
+#: color/color.inc:27,81,80; dxpr_theme_STARTERKIT/color/color.inc:27,80,79;
+#: color.inc:27
+msgid "Page Title background"
+msgstr "Achtergrond van paginatitel"
+#: color/color.inc:28,82,81; dxpr_theme_STARTERKIT/color/color.inc:28,81,80;
+#: color.inc:28
+msgid "Page Title text"
+msgstr "Tekst paginatitel"
+#: color/color.inc:29,83,82; dxpr_theme_STARTERKIT/color/color.inc:29,82,81;
+#: color.inc:29
+msgid "Gray Light"
+msgstr "Grijs licht"
+#: color/color.inc:30,84,83; dxpr_theme_STARTERKIT/color/color.inc:30,83,82;
+#: color.inc:30
+msgid "Gray Lighter"
+msgstr "Grijze aansteker"
+#: features/sooper-custom-css/custom-css-theme-settings.inc:30,14,29
+msgid "Sitewide CSS"
+msgstr "CSS voor de hele site"
+#: features/sooper-layout/layout-theme-settings.inc:33,22
+msgid "Sticky Footer"
+msgstr "Kleverige voettekst"
+#: features/sooper-layout/layout-theme-settings.inc:171,170
+msgid "Mobile view"
+msgstr "Mobiele weergave"
+#: features/sooper-header/header-theme-settings.inc:471,492,480,500,482,503,491,511,477,498,497,518,486,507
+msgid "Hover Style"
+msgstr "Zweefstijl"
+#: features/sooper-header/header-theme-settings.inc:475,484,486,495,481,501,490
+msgid "Colored Background"
+msgstr "Gekleurde achtergrond"
+#: features/sooper-header/header-theme-settings.inc:476,485,487,496,482,502,491
+msgid "Colored text"
+msgstr "Gekleurde tekst"
+#: features/sooper-header/header-theme-settings.inc:465,474,476,485,471,491,480
+msgid "Lead text"
+msgstr "Lopende tekst"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "@menu"
+msgstr "@menu"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "@scheme"
+msgstr "@schema"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "@layoutWidth"
+msgstr "@layoutWidth"
+#: features/sooper-block-design/block-design-theme-settings.inc:386,376;
+#: features/sooper-layout/layout-theme-settings.inc:206,238,291,237,297;
+#: dxpr_theme.info:0; dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0;
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Secondary Header"
+msgstr "Secundaire kop"
+#: color/color.inc:22,76,75; dxpr_theme_STARTERKIT/color/color.inc:22,75,74;
+#: color.inc:22
+msgid "Secondary Header text"
+msgstr "Secundaire koptekst"
+#: dxpr_theme_STARTERKIT/config/schema/dxpr_theme_STARTERKIT.schema.yml:0
+msgid "THEMETITLE settings"
+msgstr "THEMETILE instellingen"
+#: features/sooper-header/header-theme-settings.inc:187,177,182
+msgid "Background Opacity"
+msgstr "Achtergronddekking"
+#: features/sooper-block-design/block-design-theme-settings.inc:38,27;
+#: features/sooper-typography/typography-theme-settings.inc:213,205,221
+msgid "Divider"
+msgstr "Verdeler"
+#: dxpr_theme.info:0
+msgid "SooperThemes Premium Framework Theme."
+msgstr "SooperThemes Premium Framework-thema."
+#: color/color.inc:25,79,78; dxpr_theme_STARTERKIT/color/color.inc:25,78,77;
+#: color.inc:25
+msgid "Side Header/Mobile Menu background"
+msgstr "Achtergrond koptekst/mobiel menu"
+#: color/color.inc:26,80,79; dxpr_theme_STARTERKIT/color/color.inc:26,79,78;
+#: color.inc:26
+msgid "Side Header/Mobile Menu text"
+msgstr "Koptekst zijkant/Mobiele menutekst"
+#: features/sooper-fonts/fonts-theme-settings.inc:9
+msgid "Thin"
+msgstr "Dun"
+#: theme-settings.php:249,155,255,161,256,257,298
+msgid "None (Theme Default)"
+msgstr "Geen (standaard thema)"
+#: color/color.inc:21,75,74; dxpr_theme_STARTERKIT/color/color.inc:21,74,73;
+#: color.inc:21
+msgid "Secondary Header bg"
+msgstr "Secundaire kop bg"
+#: features/sooper-block-design/block-design-theme-settings.inc:18,8
+msgid "Block Design"
+msgstr "Blok ontwerp"
+#: features/sooper-custom-css/custom-css-theme-settings.inc:21,5
+msgid ""
+"This CSS will be attached after the theme and allows you to customize your "
+"site without needing the additional complexity of a subtheme."
+msgstr ""
+"Deze CSS wordt na het thema toegevoegd en stelt u in staat uw site aan te "
+"passen zonder de extra complexiteit van een subthema."
+#: features/sooper-custom-css/custom-css-theme-settings.inc:37,21,36
+msgid "Sitewide Javascript (include script tags)"
+msgstr "Javascript voor de hele site (inclusief scripttags)"
+#: features/sooper-layout/layout-theme-settings.inc:28,17
+msgid ""
+"By default containers and their backgrounds are full-width. Boxed containers"
+" will squeeze all container backgrounds into a centered column."
+msgstr ""
+"Standaard zijn containers en hun achtergronden over de volledige breedte. "
+"Boxed containers persen alle containerachtergronden in een gecentreerde "
+"kolom."
+#: features/sooper-layout/layout-theme-settings.inc:45,34
+msgid "Box Background"
+msgstr "Vak Achtergrond"
+#: features/sooper-layout/layout-theme-settings.inc:47,36
+msgid "Background color for main content while in boxed mode"
+msgstr "Achtergrondkleur voor hoofdinhoud in boxed-modus"
+#: features/sooper-layout/layout-theme-settings.inc:64,53
+msgid "Boxed Container Max-width"
+msgstr "Boxed Container Max-breedte"
+#: features/sooper-layout/layout-theme-settings.inc:68,57
+msgid ""
+"Width of the boxed layout container. Should be higher than content width."
+msgstr ""
+"Breedte van de boxed layout-container. Moet hoger zijn dan de breedte van de"
+" inhoud."
+#: features/sooper-layout/layout-theme-settings.inc:78,67
+msgid "Content Max-width"
+msgstr "Inhoud Max-breedte"
+#: features/sooper-layout/layout-theme-settings.inc:87,179,76,178
+msgid "Space between columns"
+msgstr "Ruimte tussen kolommen"
+#: features/sooper-layout/layout-theme-settings.inc:91,100,201,80,89,200
+msgid "Default is 30px."
+msgstr "Standaard is 30px."
+#: features/sooper-layout/layout-theme-settings.inc:96,188,85,187
+msgid "Space between rows"
+msgstr "Ruimte tussen rijen"
+#: features/sooper-layout/layout-theme-settings.inc:116
+msgid ""
+"The default page title image can also be changed per node, using the Body "
+"image field in the node form."
+msgstr ""
+"De standaard afbeelding van de paginatitel kan ook per knooppunt worden "
+"gewijzigd, met behulp van het veld Body-afbeelding in het "
+"knooppuntformulier."
+#: features/sooper-layout/layout-theme-settings.inc:225,224
+msgid "Full Width Regions and Content Types"
+msgstr "Regio's over de volledige breedte en inhoudstypen"
+#: features/sooper-layout/layout-theme-settings.inc:234,233
+msgid "Full width regions"
+msgstr "Regio's over de volledige breedte"
+#: features/sooper-layout/layout-theme-settings.inc:235,234
+msgid ""
+"Full width content regions have 2 use cases: creating blocks that span "
+"across the whole browser and creating layouts with full screen backgrounds "
+"within your content. If you want all content to be full width, don't use "
+"these settings but instead set the \"Layout Max-width\" setting to the "
+"maximum value."
+msgstr ""
+"Inhoudsregio's met volledige breedte hebben 2 gebruiksscenario's: het maken "
+"van blokken die zich over de hele browser uitstrekken en het maken van lay-"
+"outs met achtergronden op volledig scherm binnen uw inhoud. Als u wilt dat "
+"alle inhoud de volledige breedte heeft, gebruikt u deze instellingen niet, "
+"maar stelt u in plaats daarvan de instelling \"Layout Max-width\" in op de "
+"maximale waarde."
+#: features/sooper-layout/layout-theme-settings.inc:239,238
+msgid "Header / Navigation"
+msgstr "Koptekst / Navigatie"
+#: features/sooper-layout/layout-theme-settings.inc:259,258
+msgid "Full width content types"
+msgstr "Inhoudstypen op volledige breedte"
+#: features/sooper-layout/layout-theme-settings.inc:260,259
+msgid ""
+"If you want to create Drag and Drop pages with full-width sections you need "
+"this setting. This only works if the pages have no sidebar blocks. When you "
+"enable sidebar blocks alongside your full-width content pages they will "
+"simply squish into fixed containers to make room for the sidebar."
+msgstr ""
+"Als u pagina's met slepen en neerzetten met secties over de volledige "
+"breedte wilt maken, hebt u deze instelling nodig. Dit werkt alleen als de "
+"pagina's geen zijbalkblokken hebben. Wanneer u zijbalkblokken naast uw "
+"inhoudspagina's over de volledige breedte inschakelt, worden ze eenvoudig in"
+" vaste containers geperst om ruimte te maken voor de zijbalk."
+#: features/sooper-layout/layout-theme-settings.inc:35,24
+msgid ""
+"Makes footer stick to the bottom of the browser on short pages. (Does not "
+"work with boxed layout)"
+msgstr ""
+"Zorgt ervoor dat de voettekst aan de onderkant van de browser blijft hangen "
+"op korte pagina's. (Werkt niet met boxed layout)"
+#: features/sooper-demo-import/demo-import-theme-settings.inc:81
+msgid "For import in Theme Settings form or for your  subtheme's .info file"
+msgstr ""
+"Om te importeren in het formulier Thema-instellingen of voor het .info-"
+"bestand van uw subthema"
+#: features/sooper-demo-import/demo-import-theme-settings.inc:86
+msgid "Import Theme Settings"
+msgstr "Thema-instellingen importeren"
+#: features/sooper-demo-import/demo-import-theme-settings.inc:94
+msgid ""
+"Enter settings in .info file format. Any settings you enter here will "
+"override your current theme settings. This cannot be undone."
+msgstr ""
+"Geef instellingen op in de bestandsindeling .info. Alle instellingen die u "
+"hier invoert, overschrijven uw huidige thema-instellingen. Dit kan niet "
+"ongedaan gemaakt worden."
+#: features/sooper-fonts/fonts-theme-settings.inc:8
+msgid "Theme defaults"
+msgstr "Thema standaarden"
+#: features/sooper-fonts/fonts-theme-settings.inc:10
+msgid "UltraLight"
+msgstr "Ultralicht"
+#: features/sooper-fonts/fonts-theme-settings.inc:14
+msgid "SemiBold"
+msgstr "halfvet"
+#: features/sooper-fonts/fonts-theme-settings.inc:16
+msgid "ExtraBold"
+msgstr "ExtraBold"
+#: features/sooper-fonts/fonts-theme-settings.inc:18
+msgid "ExtraBlack"
+msgstr "ExtraZwart"
+#: features/sooper-fonts/fonts-theme-settings.inc:18
+msgid "950"
+msgstr "950"
+#: features/sooper-fonts/fonts-theme-settings.inc:97,101,104,108,99
+msgid "Browse & View Fonts"
+msgstr "Blader en bekijk lettertypen"
+#: features/sooper-header/header-theme-settings.inc:18,8
+msgid "Header & Main Menu"
+msgstr "Koptekst en hoofdmenu"
+#: features/sooper-layout/layout-theme-settings.inc:26,15
+msgid "Boxed Layout"
+msgstr "Indeling in dozen"
+#: features/sooper-layout/layout-theme-settings.inc:105,94
+msgid "Container Space"
+msgstr "Container ruimte"
+#: features/sooper-layout/layout-theme-settings.inc:109,98
+msgid "Default is 60px."
+msgstr "Standaard is 60px."
+#: features/sooper-layout/layout-theme-settings.inc:134,133;
+#: features/sooper-page-title/page_title-theme-settings.inc:146,126
+msgid "Background Style"
+msgstr "Achtergrondstijl"
+#: features/sooper-layout/layout-theme-settings.inc:197,196
+msgid "Mobile Container space"
+msgstr "Mobiele containerruimte"
+#: features/sooper-layout/layout-theme-settings.inc:275
+msgid "Pagers"
+msgstr "Piepers"
+#: features/sooper-page-title/page_title-theme-settings.inc:60,49
+msgid "Hide on Homepage"
+msgstr "Verbergen op startpagina"
+#: features/sooper-page-title/page_title-theme-settings.inc:66,55
+msgid "Align Title"
+msgstr "Titel uitlijnen"
+#: features/sooper-page-title/page_title-theme-settings.inc:73,62
+msgid "Choose position of Page Title within page title header."
+msgstr "Kies de positie van de paginatitel binnen de kop van de paginatitel."
+#: features/sooper-page-title/page_title-theme-settings.inc:93,82
+msgid "height of the header. 50px - 500px. Default is 120px."
+msgstr "hoogte van de kop. 50px - 500px. Standaard is 120px."
+#: features/sooper-header/header-theme-settings.inc:505,513,516,524,511,531,520;
+#: features/sooper-page-title/page_title-theme-settings.inc:101
+msgid "No Animation"
+msgstr "Geen animatie"
+#: features/sooper-page-title/page_title-theme-settings.inc:106
+msgid "Bounce in down"
+msgstr "Spring naar beneden"
+#: features/sooper-page-title/page_title-theme-settings.inc:107
+msgid "Bounce in up"
+msgstr "Spring omhoog"
+#: features/sooper-page-title/page_title-theme-settings.inc:108
+msgid "Fade in down"
+msgstr "Fade-in naar beneden"
+#: features/sooper-page-title/page_title-theme-settings.inc:109
+msgid "Fade in up"
+msgstr "Vervaag omhoog"
+#: features/sooper-page-title/page_title-theme-settings.inc:112
+msgid ""
+"Choose <a target=\"_blank\" href=\"@animatecss\">animate.css</a> appear "
+"animation"
+msgstr ""
+"Kies <a target=\"_blank\" href=\"@animatecss\">animate.css</a> animatie "
+"weergeven"
+#: features/sooper-page-title/page_title-theme-settings.inc:99
+msgid "Default Background"
+msgstr "Standaard achtergrond"
+#: features/sooper-layout/layout-theme-settings.inc:129;
+#: features/sooper-page-title/page_title-theme-settings.inc:132,100
+msgid ""
+"The default page title image can also be changed per node, using the Header "
+"image field in the node form."
+msgstr ""
+"De standaard afbeelding van de paginatitel kan ook per knooppunt worden "
+"gewijzigd, met behulp van het veld Koptekstafbeelding in het "
+"knooppuntformulier."
+#: features/sooper-page-title/page_title-theme-settings.inc:137,117
+msgid "Backound Image Opacity"
+msgstr "Dekking van de achtergrondafbeelding"
+#: features/sooper-page-title/page_title-theme-settings.inc:141,121
+msgid ""
+"Use this to blend the background image with a color. 0 is fully transparent "
+"and 1 is fully opaque."
+msgstr ""
+"Gebruik dit om de achtergrondafbeelding met een kleur te laten overvloeien. "
+"0 is volledig transparant en 1 is volledig ondoorzichtig."
+#: features/sooper-layout/layout-theme-settings.inc:162,161;
+#: features/sooper-page-title/page_title-theme-settings.inc:158,138
+msgid "Background Mode"
+msgstr "Achtergrondmodus"
+#: features/sooper-layout/layout-theme-settings.inc:166,165;
+#: features/sooper-page-title/page_title-theme-settings.inc:162,142
+msgid "Fixed (Parallax)"
+msgstr "Vast (parallax)"
+#: features/sooper-typography/typography-theme-settings.inc:26,16
+msgid "Body Line Height"
+msgstr "Lichaamslijn Hoogte"
+#: features/sooper-typography/typography-theme-settings.inc:35,153,25,145,161
+msgid "Body Font Size"
+msgstr "Hoofdlettergrootte"
+#: features/sooper-typography/typography-theme-settings.inc:43,33
+msgid "Main menu Font Size"
+msgstr "Hoofdmenu Lettergrootte"
+#: features/sooper-typography/typography-theme-settings.inc:51,41
+msgid "Headings Line Height"
+msgstr "Koppen Lijnhoogte"
+#: features/sooper-typography/typography-theme-settings.inc:60,50
+msgid "Typography Scale Factor"
+msgstr "Typografie Schaalfactor"
+#: features/sooper-typography/typography-theme-settings.inc:60,50
+msgid "(This overrides advanced type controls)"
+msgstr "(Dit heft geavanceerde typecontroles op)"
+#: features/sooper-typography/typography-theme-settings.inc:67,57
+msgid "Advanced Type Controls"
+msgstr "Geavanceerde typecontroles"
+#: features/sooper-typography/typography-theme-settings.inc:76,169,67,161,177
+msgid "H1 Font Size (Page Title)"
+msgstr "H1 Lettergrootte (Paginatitel)"
+#: features/sooper-typography/typography-theme-settings.inc:85,178,76,170,186
+msgid "H2 Font Size"
+msgstr "H2 Lettergrootte"
+#: features/sooper-typography/typography-theme-settings.inc:94,187,85,179,195
+msgid "H3 Font Size"
+msgstr "H3 Lettergrootte"
+#: features/sooper-typography/typography-theme-settings.inc:103,196,94,188,204
+msgid "H4 Font Size"
+msgstr "H4 Lettergrootte"
+#: features/sooper-typography/typography-theme-settings.inc:112,205,103,197,213
+msgid "Blockquote Font Size"
+msgstr "Blockquote lettergrootte"
+#: features/sooper-typography/typography-theme-settings.inc:121,112
+msgid "Blockquote Line Height"
+msgstr "Blockquote regelhoogte"
+#: features/sooper-typography/typography-theme-settings.inc:130,121
+msgid "Headings Letter Spacing"
+msgstr "Koppen Letterafstand"
+#: features/sooper-typography/typography-theme-settings.inc:138,129
+msgid "Headings Uppercase"
+msgstr "Koppen Hoofdletters"
+#: features/sooper-typography/typography-theme-settings.inc:145,137,153
+msgid "Mobile Type Controls"
+msgstr "Mobiele Type Controles"
+#: features/sooper-typography/typography-theme-settings.inc:161,153,169
+msgid "Nav Font Size"
+msgstr "Nav-lettertypegrootte"
+#: features/sooper-block-design/block-design-theme-settings.inc:331,321;
+#: features/sooper-typography/typography-theme-settings.inc:222,213,230
+msgid "Divider Thickness"
+msgstr "Scheidingsdikte"
+#: features/sooper-block-design/block-design-theme-settings.inc:345,335;
+#: features/sooper-typography/typography-theme-settings.inc:230,221,238
+msgid "Divider Length"
+msgstr "Scheidingslijn lengte"
+#: features/sooper-typography/typography-theme-settings.inc:230,221,238
+msgid "(0 = full width)"
+msgstr "(0 = volledige breedte)"
+#: features/sooper-typography/typography-theme-settings.inc:238,229,246
+msgid "Divider Position"
+msgstr "Scheidingspositie"
+#: features/sooper-block-design/block-design-theme-settings.inc:305,295;
+#: features/sooper-typography/typography-theme-settings.inc:252,243,260
+msgid "Divider Color"
+msgstr "Scheidingskleur"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "Align @align"
+msgstr "Uitlijnen @uitlijnen"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "@animate"
+msgstr "@animate"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "No Crumbs"
+msgstr "Geen kruimels"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "Base: @typography"
+msgstr "Basis: @typography"
+#: features/sooper-header/header-theme-settings.inc:335,325,330
+msgid "Dropdown Background"
+msgstr "Dropdown-achtergrond"
+#: features/sooper-header/header-theme-settings.inc:371,361,366
+msgid "Dropdown Hover Background"
+msgstr "Vervolgkeuzelijst met zwevende achtergrond"
+#: features/sooper-header/header-theme-settings.inc:389,379,384
+msgid "Dropdown Hover Text"
+msgstr "Dropdown-zweeftekst"
+#: features/sooper-header/header-theme-settings.inc:353,343,348
+msgid "Dropdown Text"
+msgstr "Dropdown-tekst"
+#: features/sooper-layout/layout-theme-settings.inc:276,285,282,291
+msgid "Hide Regions"
+msgstr "Regio's verbergen"
+#: features/sooper-header/header-theme-settings.inc:263,253,258
+msgid "Menu Background"
+msgstr "Menu-achtergrond"
+#: features/sooper-header/header-theme-settings.inc:299,289,294
+msgid "Menu Hover Background"
+msgstr "Menu zweven achtergrond"
+#: features/sooper-header/header-theme-settings.inc:317,307,312
+msgid "Menu Hover Text"
+msgstr "Menu zweeftekst"
+#: features/sooper-header/header-theme-settings.inc:281,271,276
+msgid "Menu Text"
+msgstr "Menutekst"
+#: features/sooper-header/header-theme-settings.inc:209,199,204
+msgid "Navbar Background"
+msgstr "Navigatiebalk Achtergrond"
+#: js/dist/dxpr-theme-settings.admin.js:0
+msgid "Side Header"
+msgstr "Zijkop"
+#: features/sooper-page-title/page_title-theme-settings.inc:48,37
+msgid "Breadcrumbs separator"
+msgstr "Broodkruimelscheider"
+#: features/sooper-header/header-theme-settings.inc:97,87
+msgid "Sticky Header"
+msgstr "Kleverige kop"
+#: color/color.inc:253; color.inc:253;
+#: dxpr_theme_STARTERKIT/color/color.inc:253
+msgid "Dark Mode"
+msgstr "Donkere modus"
+#: features/sooper-header/header-theme-settings.inc:31,21
+msgid "Top Header Options"
+msgstr "Opties voor kopteksten"
+# Suggestion on the localization server:
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+#, fuzzy
+msgid "DXPR"
+msgstr "DXPR"
+#: features/sooper-header/header-theme-settings.inc:414,404,409
+msgid "Align Content"
+msgstr "Inhoud uitlijnen"
+#: dxpr_theme_callbacks.inc:148,119,162,161,133,165,169
+msgid "DXPR Theme CSS file cache built for %theme"
+msgstr "DXPR Theme CSS-bestandscache gebouwd voor %theme"
+#: dxpr_theme.info.yml:0; dxpr_theme_callbacks.inc:119,133; dxpr_theme.info:0
+msgid "DXPR Theme"
+msgstr "DXPR-thema"
+#: dxpr_theme.info.yml:0
+msgid "Premium framework theme by DXPR."
+msgstr "Premium framework-thema door DXPR."
+#: color/color.inc:37; dxpr_theme_STARTERKIT/color/color.inc:37; color.inc:37
+msgid "DXPR Theme Default"
+msgstr "Standaard DXPR-thema"
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "THEMETITLE"
+msgstr "THEMETITEL"
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid ""
+"Use this STARTERKIT example if you need to build extra css files and "
+"templates on top of DXPR Theme."
+msgstr ""
+"Gebruik dit STARTERKIT-voorbeeld als u extra css-bestanden en sjablonen "
+"bovenop het DXPR-thema moet bouwen."
+#: features/sooper-block-design/block-design-theme-settings.inc:26,15
+msgid "Block Design Preset"
+msgstr "Voorinstelling blokontwerp"
+#: features/sooper-block-design/block-design-theme-settings.inc:29,18
+msgid "None (Theme Defaults)"
+msgstr "Geen (Themastandaarden)"
+#: features/sooper-block-design/block-design-theme-settings.inc:30,19
+msgid "Block Boxed"
+msgstr "Blokkade"
+#: features/sooper-block-design/block-design-theme-settings.inc:31,20
+msgid "Block Outline"
+msgstr "Blok overzicht"
+#: features/sooper-block-design/block-design-theme-settings.inc:32,73,21,63
+msgid "Block Well Style"
+msgstr "Block Well-stijl"
+#: features/sooper-block-design/block-design-theme-settings.inc:33,22
+msgid "Title Inverted"
+msgstr "Titel omgekeerd"
+#: features/sooper-block-design/block-design-theme-settings.inc:34,23
+msgid "Title Inverted Pill"
+msgstr "Titel omgekeerde pil"
+#: features/sooper-block-design/block-design-theme-settings.inc:35,24
+msgid "Title Sticker"
+msgstr "Titel sticker"
+#: features/sooper-block-design/block-design-theme-settings.inc:36,25
+msgid "Title Sticker Colored"
+msgstr "Titelsticker gekleurd"
+#: features/sooper-block-design/block-design-theme-settings.inc:37,26
+msgid "Title Outline"
+msgstr "Titel Overzicht"
+#: features/sooper-block-design/block-design-theme-settings.inc:39,28
+msgid "Hairline Divider"
+msgstr "Haarlijn Divider"
+#: features/sooper-block-design/block-design-theme-settings.inc:46,35
+msgid "Customize Design"
+msgstr "Ontwerp aanpassen"
+#: features/sooper-block-design/block-design-theme-settings.inc:54,43
+msgid "Block Element"
+msgstr "Blokelement"
+#: features/sooper-block-design/block-design-theme-settings.inc:63,53
+msgid "Well DXPR Theme Primary Color"
+msgstr "Goed DXPR Thema Primaire Kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:64,54
+msgid "Well Accent 1 Color"
+msgstr "Goed Accent 1 Kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:65,55
+msgid "Well Accent 2 Color"
+msgstr "Goed Accent 2 Kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:66,56
+msgid "Well Black"
+msgstr "Wel zwart"
+#: features/sooper-block-design/block-design-theme-settings.inc:67,57
+msgid "Well White"
+msgstr "Wel wit"
+#: features/sooper-block-design/block-design-theme-settings.inc:68,58
+msgid "Well Gray"
+msgstr "Wel grijs"
+#: features/sooper-block-design/block-design-theme-settings.inc:98,88
+msgid "Block padding"
+msgstr "Blok vulling"
+#: features/sooper-block-design/block-design-theme-settings.inc:107,97
+msgid "Block Border Radius"
+msgstr "Grensstraal blokkeren"
+#: features/sooper-block-design/block-design-theme-settings.inc:116,106
+msgid "Block Border"
+msgstr "Grens blokkeren"
+#: features/sooper-block-design/block-design-theme-settings.inc:125,115
+msgid "Block Border Color"
+msgstr "Randkleur blokkeren"
+#: features/sooper-block-design/block-design-theme-settings.inc:148,138
+msgid "Block Title Element"
+msgstr "Titelelement blokkeren"
+#: features/sooper-block-design/block-design-theme-settings.inc:169,256,159,246
+msgid "Title Align"
+msgstr "Titel uitlijnen"
+#: features/sooper-block-design/block-design-theme-settings.inc:180,170
+msgid "Title Well Style"
+msgstr "Titel Well Style"
+#: features/sooper-block-design/block-design-theme-settings.inc:187,177
+msgid "Title Background"
+msgstr "Titel Achtergrond"
+#: features/sooper-block-design/block-design-theme-settings.inc:205,195
+msgid "Title padding"
+msgstr "Titel opvulling"
+#: features/sooper-block-design/block-design-theme-settings.inc:214,204
+msgid "Title Border"
+msgstr "Titelrand"
+#: features/sooper-block-design/block-design-theme-settings.inc:223,213
+msgid "Title Border Radius"
+msgstr "Titelrandstraal"
+#: features/sooper-block-design/block-design-theme-settings.inc:232,222
+msgid "Title Border Color"
+msgstr "Titelrandkleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:272,262
+msgid "Title Sticker Mode"
+msgstr "Titelsticker-modus"
+#: features/sooper-block-design/block-design-theme-settings.inc:274
+msgid ""
+"In Sticker mode the title's width is flexible. By default the title takes "
+"the full width of the block"
+msgstr ""
+"In Sticker-modus is de breedte van de titel flexibel. Standaard neemt de "
+"titel de volledige breedte van het blok in beslag"
+#: features/sooper-block-design/block-design-theme-settings.inc:279,269
+msgid "Divider Element"
+msgstr "Scheidingselement"
+#: features/sooper-block-design/block-design-theme-settings.inc:287,277
+msgid "Add Divider to Block"
+msgstr "Voeg scheidingslijn toe aan blok"
+#: features/sooper-block-design/block-design-theme-settings.inc:293,283
+msgid "Customize Divider"
+msgstr "Scheidingslijn aanpassen"
+#: features/sooper-block-design/block-design-theme-settings.inc:294,284
+msgid ""
+"Turn on to customize block divider specifically. To customize the divider "
+"default styling globally across the website find the Divider settings in the"
+" Typography tab."
+msgstr ""
+"Schakel in om de blokverdeler specifiek aan te passen. Om de standaardstijl "
+"van de scheidingslijn globaal op de website aan te passen, gaat u naar de "
+"instellingen van de scheidingslijn op het tabblad Typografie."
+#: features/sooper-block-design/block-design-theme-settings.inc:359,349
+msgid "Divider Spacing"
+msgstr "Scheidingsafstand"
+#: features/sooper-block-design/block-design-theme-settings.inc:372,362
+msgid "Choose Regions"
+msgstr "Kies Regio's"
+#: features/sooper-block-design/block-design-theme-settings.inc:376,366
+msgid "The custom block design only applies to selected regions."
+msgstr ""
+"Het aangepaste blokontwerp is alleen van toepassing op geselecteerde "
+"regio's."
+#: features/sooper-custom-css/custom-css-theme-settings.inc:18,3
+msgid "Custom CSS & JS"
+msgstr "Aangepaste CSS en JS"
+#: features/sooper-custom-css/custom-css-theme-settings.inc:44,43
+msgid "DXPR attribution homeopage link in footer."
+msgstr "DXPR-toeschrijving homepagina-link in voettekst."
+#: features/sooper-custom-css/custom-css-theme-settings.inc:45,44
+msgid "DXPR Link"
+msgstr "DXPR-link"
+#: features/sooper-fonts/fonts-theme-settings.inc:35,39,37
+msgid "Choose from @count webfonts"
+msgstr "Kies uit @count webfonts"
+#: features/sooper-header/header-theme-settings.inc:26,16
+msgid "Side-Header"
+msgstr "Zijkop"
+#: features/sooper-header/header-theme-settings.inc:45,35
+msgid "Different header layouts give a different view at your menu and logo."
+msgstr ""
+"Verschillende header layouts geven een andere kijk op je menu en logo."
+#: features/sooper-header/header-theme-settings.inc:48,38
+msgid "Normal (Logo left, Menu Right)"
+msgstr "Normaal (Logo links, Menu Rechts)"
+#: features/sooper-header/header-theme-settings.inc:49,39
+msgid "Centered (stacked)"
+msgstr "Gecentreerd (gestapeld)"
+#: features/sooper-header/header-theme-settings.inc:50,40
+msgid "Centered (inline)"
+msgstr "Gecentreerd (inline)"
+#: features/sooper-header/header-theme-settings.inc:51,41
+msgid "Logo Left, Menu Left"
+msgstr "Logo Links, Menu Links"
+#: features/sooper-header/header-theme-settings.inc:52,42
+msgid "Logo Center, Menu Left"
+msgstr "Logo midden, menu links"
+#: features/sooper-header/header-theme-settings.inc:53,43
+msgid "Logo Center, Menu Right"
+msgstr "Logo Center, menu rechts"
+#: features/sooper-header/header-theme-settings.inc:54,44
+msgid "Logo Right, Menu Left"
+msgstr "Logo rechts, menu links"
+#: features/sooper-header/header-theme-settings.inc:61,51
+msgid ""
+"Create transparent headers and free floating navbars. Overlays the header "
+"over the page title and content."
+msgstr ""
+"Maak transparante headers en vrij zwevende navigatiebalken. Plaatst de "
+"koptekst over de paginatitel en inhoud."
+#: features/sooper-header/header-theme-settings.inc:66,56
+msgid "Pull-down Navbar"
+msgstr "Neerklapbare navigatiebalk"
+#: features/sooper-header/header-theme-settings.inc:72,62
+msgid "Header Opacity"
+msgstr "Dekking van koptekst"
+#: features/sooper-header/header-theme-settings.inc:76,191,66,181,186
+msgid ""
+"Creates RGBa translucent background color. 0 is fully transparent and 1 is "
+"fully opaque."
+msgstr ""
+"Creëert RGBa doorschijnende achtergrondkleur. 0 is volledig transparant en 1"
+" is volledig ondoorzichtig."
+#: features/sooper-header/header-theme-settings.inc:85,75
+msgid "Initial height of the header. 10px - 200px. Default is 100."
+msgstr "Beginhoogte van de kop. 10px - 200px. Standaard is 100."
+#: features/sooper-header/header-theme-settings.inc:90,595,80,604,606,615,601,621,610
+msgid "Fixed Position"
+msgstr "Vaste Positie"
+#: features/sooper-header/header-theme-settings.inc:92,597,82,606,608,617,603,623,612
+msgid "A Fixed header stays in the top of the browser when a user scrolls."
+msgstr ""
+"Een vaste koptekst blijft bovenaan de browser staan ​​wanneer een gebruiker "
+"scrolt."
+#: features/sooper-header/header-theme-settings.inc:99,111,89
+msgid ""
+"A sticky can first be positioned at a distance from the top edge of the "
+"window and when the user scrolls past a certain point it will stick to the "
+"top of the window."
+msgstr ""
+"Een sticky kan eerst op een afstand van de bovenrand van het venster worden "
+"geplaatst en wanneer de gebruiker voorbij een bepaald punt scrolt, blijft "
+"deze aan de bovenkant van het venster plakken."
+#: features/sooper-header/header-theme-settings.inc:109,99
+msgid "Sticky Second Header"
+msgstr "Kleverige tweede koptekst"
+#: features/sooper-header/header-theme-settings.inc:121,111
+msgid "Sticky Header Options"
+msgstr "Sticky Header-opties"
+#: features/sooper-header/header-theme-settings.inc:135,125
+msgid "Hide before Scrolling"
+msgstr "Verbergen voor scrollen"
+#: features/sooper-header/header-theme-settings.inc:138,128
+msgid "Always Show"
+msgstr "Altijd laten zien"
+#: features/sooper-header/header-theme-settings.inc:139,129
+msgid "Hide initially. Show after scroll offset"
+msgstr "In eerste instantie verbergen. Weergeven na scroll-offset"
+#: features/sooper-header/header-theme-settings.inc:141,131
+msgid ""
+"Hide menu before or after scrolling. Turn on \"Overlay Mode\" to prevent "
+"your menu creating an empty space at the top of your layout."
+msgstr ""
+"Menu verbergen voor of na scrollen. Schakel \"Overlay-modus\" in om te "
+"voorkomen dat uw menu een lege ruimte creëert bovenaan uw lay-out."
+#: features/sooper-header/header-theme-settings.inc:157,147,152
+msgid "Scroll offset"
+msgstr "Scroll-offset"
+#: features/sooper-header/header-theme-settings.inc:161,151,156
+msgid ""
+"Scroll distance before header jumps to its fixed position at the top of "
+"page. 0 - 2096px. Default is 60."
+msgstr ""
+"Scrolafstand voordat de kop naar de vaste positie bovenaan de pagina "
+"springt. 0 - 2096px. Standaard is 60."
+#: features/sooper-header/header-theme-settings.inc:176,166,171
+msgid "Header height after scrolling past scroll offset. Default is 50."
+msgstr "Headerhoogte na scrollen voorbij scroll-offset. Standaard is 50."
+#: features/sooper-header/header-theme-settings.inc:201,191,196
+msgid "Customize Navigation Colors"
+msgstr "Navigatiekleuren aanpassen"
+#: features/sooper-header/header-theme-settings.inc:216,206,211
+msgid "Custom Navbar Background"
+msgstr "Aangepaste navigatiebalkachtergrond"
+#: features/sooper-header/header-theme-settings.inc:234,224,229
+msgid "Custom Block Background"
+msgstr "Aangepaste blokachtergrond"
+#: features/sooper-header/header-theme-settings.inc:252,242,247
+msgid "Custom Block Text Color"
+msgstr "Aangepaste bloktekstkleur"
+#: features/sooper-header/header-theme-settings.inc:270,260,265
+msgid "Custom Menu Background"
+msgstr "Aangepaste menu-achtergrond"
+#: features/sooper-header/header-theme-settings.inc:288,278,283
+msgid "Custom Menu Text Color"
+msgstr "Aangepaste menutekstkleur"
+#: features/sooper-header/header-theme-settings.inc:306,296,301
+msgid "Custom Menu Hover Background"
+msgstr "Aangepast menu Zweefachtergrond"
+#: features/sooper-header/header-theme-settings.inc:324,314,319
+msgid "Custom Menu Hover Text Color"
+msgstr "Aangepast menu Beweeg tekstkleur"
+#: features/sooper-header/header-theme-settings.inc:342,332,337
+msgid "Custom Dropdown Background"
+msgstr "Aangepaste dropdown-achtergrond"
+#: features/sooper-header/header-theme-settings.inc:360,350,355
+msgid "Custom Dropdown Text Color"
+msgstr "Aangepaste dropdown-tekstkleur"
+#: features/sooper-header/header-theme-settings.inc:378,368,373
+msgid "Custom Dropdown Hover Background"
+msgstr "Aangepaste vervolgkeuzelijst met zwevende achtergrond"
+#: features/sooper-header/header-theme-settings.inc:396,386,391
+msgid "Custom Dropdown Hover Text Color"
+msgstr "Aangepaste vervolgkeuzelijst met zwevende tekstkleur"
+#: features/sooper-header/header-theme-settings.inc:406,396,401
+msgid "Side Header & Mobile Menu Options"
+msgstr "Side Header & mobiele menu-opties"
+#: features/sooper-header/header-theme-settings.inc:415,405,410
+msgid "Different header aligns give a different view at your menu and logo."
+msgstr ""
+"Verschillende koptekstuitlijningen geven een andere weergave van uw menu en "
+"logo."
+#: features/sooper-header/header-theme-settings.inc:430,420,425
+msgid "Width of the side-header. Default is 300."
+msgstr "Breedte van de zijkoptekst. Standaard is 300."
+#: features/sooper-header/header-theme-settings.inc:435,425,430
+msgid "Mobile menu open direction"
+msgstr "Mobiel menu open richting"
+#: features/sooper-header/header-theme-settings.inc:437,427,432
+msgid "Open menu from the right"
+msgstr "Menu van rechts openen"
+#: features/sooper-header/header-theme-settings.inc:445,435,456,446,451,462
+msgid "Main Menu Links"
+msgstr "Hoofdmenukoppelingen"
+#: features/sooper-header/header-theme-settings.inc:453,462,464,473,459,470
+msgid "Mark items with children"
+msgstr "Markeer items met kinderen"
+#: features/sooper-header/header-theme-settings.inc:484,492,495,503,490,510,499
+msgid "Customize Menu Border"
+msgstr "Menurand aanpassen"
+#: features/sooper-header/header-theme-settings.inc:508,516,519,527,514,534,523
+msgid "Middle Out"
+msgstr "Midden uit"
+#: features/sooper-header/header-theme-settings.inc:509,517,520,528,515,535,524
+msgid "Fade in from Top"
+msgstr "Fade-in van bovenaf"
+#: features/sooper-header/header-theme-settings.inc:515,523,526,534,521,541,530
+msgid "Position Offset"
+msgstr "Positie offset"
+#: features/sooper-header/header-theme-settings.inc:528,536,539,547,534,554,543
+msgid "Position Offset for Sticky Header"
+msgstr "Positieverschuiving voor plakkerige koptekst"
+#: features/sooper-header/header-theme-settings.inc:569,578,580,589,575,595,584
+msgid "Mobile Header"
+msgstr "Mobiele kop"
+#: features/sooper-header/header-theme-settings.inc:577,586,588,597,583,603,592
+msgid "Mobile Breakpoint"
+msgstr "Mobiel breekpunt"
+#: features/sooper-header/header-theme-settings.inc:581,590,592,601,587,607,596
+msgid ""
+"Point below where DXPR Theme switches to mobile header and navigation. If "
+"you set this to the maximum value (4100) the desktop style will never show. "
+"Default is 1200."
+msgstr ""
+"Punt hieronder waar het DXPR-thema overschakelt naar mobiele koptekst en "
+"navigatie. Als u dit instelt op de maximale waarde (4100), zal de "
+"bureaubladstijl nooit worden weergegeven. Standaard is 1200."
+#: features/sooper-header/header-theme-settings.inc:590,599,601,610,596,616,605
+msgid "Height of header in mobile view. 10px - 200px. Default is 60."
+msgstr ""
+"Hoogte van koptekst in mobiele weergave. 10px - 200px. Standaard is 60."
+#: features/sooper-layout/layout-theme-settings.inc:82,71
+msgid ""
+"Max width of the website container. 480px - 4100px. Default is 1280px. With "
+"Side-Header enabled we typically use 980px."
+msgstr ""
+"Maximale breedte van de websitecontainer. 480px - 4100px. Standaard is "
+"1280px. Als Side-Header is ingeschakeld, gebruiken we meestal 980px."
+#: features/sooper-layout/layout-theme-settings.inc:122
+msgid "Path to  background image"
+msgstr "Pad naar achtergrondafbeelding"
+#: features/sooper-layout/layout-theme-settings.inc:124;
+#: features/sooper-page-title/page_title-theme-settings.inc:127
+msgid ""
+"The path to the file you would like to use as your page title background "
+"image. If you upload a file below it will automatically populate this text "
+"field"
+msgstr ""
+"Het pad naar het bestand dat u als achtergrondafbeelding voor uw paginatitel"
+" wilt gebruiken. Als u hieronder een bestand uploadt, wordt dit tekstveld "
+"automatisch ingevuld"
+#: features/sooper-layout/layout-theme-settings.inc:128;
+#: features/sooper-page-title/page_title-theme-settings.inc:131
+msgid "Upload Background"
+msgstr "Achtergrond uploaden"
+#: features/sooper-layout/layout-theme-settings.inc:183,182
+msgid ""
+"Width of the horizontal gutter in DXPR Theme mobile view (<1200px). 0 - "
+"100px. Default is 30."
+msgstr ""
+"Breedte van de horizontale goot in DXPR Theme mobiele weergave (<1200px). 0 "
+"- 100px. Standaard is 30."
+#: features/sooper-layout/layout-theme-settings.inc:192,191
+msgid ""
+"Width of the vertical gutter in DXPR Theme mobile view (<1200px). 0 - 100px."
+" Default is 30px."
+msgstr ""
+"Breedte van de verticale goot in DXPR Theme mobiele weergave (<1200px). 0 - "
+"100px. Standaard is 30px."
+#: features/sooper-layout/layout-theme-settings.inc:214,213
+msgid "Hide in small devices"
+msgstr "Verbergen in kleine apparaten"
+#: features/sooper-layout/layout-theme-settings.inc:217,216
+msgid "Never hide"
+msgstr "Nooit verbergen"
+#: features/sooper-layout/layout-theme-settings.inc:218,217
+msgid "Extra small devices (<768px)"
+msgstr "Extra kleine apparaten (<768px)"
+#: features/sooper-layout/layout-theme-settings.inc:219,218
+msgid "Small devices (768px)"
+msgstr "Kleine apparaten (768px)"
+#: features/sooper-layout/layout-theme-settings.inc:220,219
+msgid "Medium devices (992px)"
+msgstr "Middelgrote apparaten (992px)"
+#: features/sooper-layout/layout-theme-settings.inc:286,292
+msgid "Globally disables regions."
+msgstr "Schakelt regio's wereldwijd uit."
+#: features/sooper-layout/layout-theme-settings.inc:289,295
+msgid "Navigation (branding)"
+msgstr "Navigatie (branding)"
+#: features/sooper-layout/layout-theme-settings.inc:290,296
+msgid "Navigation Collapsible (menu)"
+msgstr "Navigatie Inklapbaar (menu)"
+#: features/sooper-page-title/page_title-theme-settings.inc:32,21
+msgid "Align Breadcrumbs"
+msgstr "Lijn broodkruimels uit"
+#: features/sooper-page-title/page_title-theme-settings.inc:50,39
+msgid ""
+"Add custom breadcrumbs separator symbol. Leave empty for default separator."
+msgstr ""
+"Voeg een aangepast broodkruimelscheidingsteken toe. Laat leeg voor standaard"
+" scheidingsteken."
+#: features/sooper-page-title/page_title-theme-settings.inc:125
+msgid "Path to background image"
+msgstr "Pad naar achtergrondafbeelding"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:19
+msgid "Previous/Next Links"
+msgstr "Vorige/Volgende koppelingen"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:28
+msgid "Previous / Next Pager"
+msgstr "Vorige / Volgende Pager"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:34
+msgid "Customize Previous/Next Links"
+msgstr "Pas vorige/volgende koppelingen aan"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:42
+msgid "Previous Link Label"
+msgstr "Vorige koppelingslabel"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:48
+msgid "Next Link Label"
+msgstr "Volgende linklabel"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:54
+msgid "Previous Icon (inline SVG)"
+msgstr "Vorig pictogram (inline SVG)"
+#: features/sooper-prevnext/prevnext-theme-settings.inc:61
+msgid "Next Icon (inline SVG)"
+msgstr "Volgend pictogram (inline SVG)"
+#: features/sooper-typography/typography-theme-settings.inc:68,58
+msgid ""
+"If you change the main contorls above these advanced controls are "
+"automatically generated and need might re-adjustment."
+msgstr ""
+"Als u de belangrijkste bedieningselementen hierboven wijzigt, worden deze "
+"geavanceerde bedieningselementen automatisch gegenereerd en moet u deze "
+"mogelijk opnieuw aanpassen."
+#: templates/node--cms-blog.html.twig:17
+msgid "@date By"
+msgstr "@date Door"
+#: templates/node--cms-news.html.twig:6
+msgid "Posted on @date"
+msgstr "Geplaatst op @date"
+#: theme-settings.php:62
+msgid ""
+"Install the DXPR Theme Theme Tools helper module to have a better theme "
+"settings experience"
+msgstr ""
+"Installeer de helpermodule DXPR Theme Theme Tools voor een betere ervaring "
+"met thema-instellingen"
+#: theme-settings.php:159,165
+msgid "DXPR Theme Colors"
+msgstr "DXPR-themakleuren"
+#: color/color.inc:91,90; dxpr_theme_STARTERKIT/color/color.inc:90,89
+msgid "DXPR Theme (Default)"
+msgstr "DXPR-thema (standaard)"
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0
+msgid "DXPR Theme STARTERKIT Example"
+msgstr "DXPR Thema STARTERKIT Voorbeeld"
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0
+msgid ""
+"For basic customization just use DXPR Theme and theme settings. Use this "
+"STARTERKIT example if you need to build extra css files and templates on top"
+" of DXPR Theme Theme."
+msgstr ""
+"Gebruik voor basisaanpassingen gewoon het DXPR-thema en de thema-"
+"instellingen. Gebruik dit STARTERKIT-voorbeeld als u extra css-bestanden en "
+"sjablonen bovenop het DXPR-themathema moet bouwen."
+#: features/sooper-layout/layout-theme-settings.inc:205
+msgid "Hide Secondary Header"
+msgstr "Verberg secundaire koptekst"
+#: theme-settings.php:62
+msgid ""
+"Install the DXPR Theme Tools helper module to have a better theme settings "
+"experience"
+msgstr ""
+"Installeer de helpermodule DXPR Theme Tools voor een betere ervaring met "
+"thema-instellingen"
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info:0
+msgid ""
+"For basic customization just use DXPR Theme and theme settings. Use this "
+"STARTERKIT example if you need to build extra css files and templates on top"
+" of DXPR Theme."
+msgstr ""
+"Gebruik voor basisaanpassingen gewoon het DXPR-thema en de thema-"
+"instellingen. Gebruik dit STARTERKIT-voorbeeld als u extra css-bestanden en "
+"sjablonen bovenop het DXPR-thema moet bouwen."
+#: theme-settings.php:62,68
+msgid ""
+"Install the DXPR Theme Helper module to have a better theme settings "
+"experience"
+msgstr ""
+"Installeer de DXPR Theme Helper-module voor een betere ervaring met thema-"
+"instellingen"
+#: dxpr_theme.info.yml:0; dxpr_theme.info:0
+msgid "Low code framework theme by DXPR."
+msgstr "Low-code framework-thema door DXPR."
+#: features/sooper-header/header-theme-settings.inc:446,436,441
+msgid "Hamburger Menu"
+msgstr "Hamburger Menu"
+#: features/sooper-header/header-theme-settings.inc:447,437,442
+msgid "Hamburger menu."
+msgstr "Hamburgermenu."
+#: features/sooper-header/header-theme-settings.inc:450,440,445
+msgid "Three dash"
+msgstr "Drie streepje"
+#: features/sooper-header/header-theme-settings.inc:451,441,446
+msgid "Two dash"
+msgstr "Twee streepje"
+#: features/sooper-fonts/fonts-theme-settings.inc:98,102
+msgid "Preload local fonts"
+msgstr "Lokale lettertypen vooraf laden"
+#: features/sooper-fonts/fonts-theme-settings.inc:100,104
+msgid "Add preload links to the header for the local fonts."
+msgstr "Voeg preload-links toe aan de koptekst voor de lokale lettertypen."
+#: dxpr_theme.info.yml:0;
+#: dxpr_theme_STARTERKIT/dxpr_theme_STARTERKIT.info.yml:0
+msgid "Navigation (Collapsible)"
+msgstr "Navigatie (inklapbaar)"
+#: theme-settings.php:78
+msgid "Core theme settings"
+msgstr "Instellingen voor kernthema's"
+#: features/sooper-header/header-theme-settings.inc:452
+msgid "Hamburger Animation"
+msgstr "Hamburger-animatie"
+#: features/sooper-header/header-theme-settings.inc:453
+msgid "Hamburger Animation."
+msgstr "Hamburger-animatie."
+#: features/sooper-header/header-theme-settings.inc:476,465
+msgid "Dropdown width"
+msgstr "Dropdown-breedte"
+#: features/sooper-typography/typography-theme-settings.inc:146
+msgid "Headings Bold"
+msgstr "Koppen vetgedrukt"
+#: color/color.inc:17; dxpr_theme_STARTERKIT/color/color.inc:17; color.inc:17
+msgid "Card color"
+msgstr "Kaart kleur"
+#: color/color.inc:18; dxpr_theme_STARTERKIT/color/color.inc:18; color.inc:18
+msgid "Card text"
+msgstr "Kaart tekst"
+#: features/sooper-block-design/block-design-theme-settings.inc:32,73
+msgid "Block Card Style"
+msgstr "Blokkaartstijl"
+#: features/sooper-block-design/block-design-theme-settings.inc:63
+msgid "Card DXPR Theme Primary Color"
+msgstr "Kaart DXPR Thema Primaire Kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:64
+msgid "Card Accent 1 Color"
+msgstr "Kaart Accent 1 Kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:65
+msgid "Card Accent 2 Color"
+msgstr "Kaart Accent 2 Kleur"
+#: features/sooper-block-design/block-design-theme-settings.inc:66
+msgid "Card Black"
+msgstr "Kaart Zwart"
+#: features/sooper-block-design/block-design-theme-settings.inc:67
+msgid "Card White"
+msgstr "Kaart Wit"
+#: features/sooper-block-design/block-design-theme-settings.inc:68
+msgid "Card Gray"
+msgstr "Kaart grijs"
+#: features/sooper-block-design/block-design-theme-settings.inc:180
+msgid "Title Card Style"
+msgstr "Titelkaartstijl"
+#: color/color.inc:64; color.inc:64; dxpr_theme_STARTERKIT/color/color.inc:64
+msgid "Soft & Warm"
+msgstr "Zacht en warm"
+#: color/color.inc:91; color.inc:91; dxpr_theme_STARTERKIT/color/color.inc:91
+msgid "Powerful & Energetic"
+msgstr "Krachtig en energiek"
+#: color/color.inc:118; color.inc:118;
+#: dxpr_theme_STARTERKIT/color/color.inc:118
+msgid "Bright & Healthy"
+msgstr "Helder & Gezond"
+#: color/color.inc:145; color.inc:145;
+#: dxpr_theme_STARTERKIT/color/color.inc:145
+msgid "Calm & Approachable"
+msgstr "Rustig en benaderbaar"
+#: color/color.inc:172; color.inc:172;
+#: dxpr_theme_STARTERKIT/color/color.inc:172
+msgid "Bright & Vibrant Neon"
+msgstr "Helder en levendig neon"
+#: color/color.inc:199; color.inc:199;
+#: dxpr_theme_STARTERKIT/color/color.inc:199
+msgid "Earthy & Natural"
+msgstr "Aards en natuurlijk"
+#: color/color.inc:226; color.inc:226;
+#: dxpr_theme_STARTERKIT/color/color.inc:226
+msgid "Minimalist & Monochrome"
+msgstr "Minimalistisch en monochroom"

@@ -1,0 +1,23 @@
+dxpr_theme_helper.settings:
+  path: '/admin/appearance/settings/{theme}'
+  defaults:
+    _form: '\Drupal\system\Form\ThemeSettingsForm'
+    _title_callback: 'theme_handler:getName'
+  requirements:
+    _permission: 'administer themes'
+
+dxpr_theme_helper.admin.studio:
+  path: '/admin/dxpr_studio'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'DXPR Studio'
+  requirements:
+    _permission: 'administer themes'
+
+dxpr_theme_helper.admin.studio.theme:
+  path: '/admin/dxpr_studio/dxpr_theme'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'DXPR Theme'
+  requirements:
+    _permission: 'administer themes'

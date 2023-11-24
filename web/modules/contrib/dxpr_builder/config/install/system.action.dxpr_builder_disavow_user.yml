@@ -1,0 +1,9 @@
+id: dxpr_builder_disavow_user
+label: 'Disable DXPR Builder editing permission for the selected user(s)'
+status: true
+langcode: en
+type: user
+plugin: dxpr_builder_disavow_user
+dependencies:
+  module:
+    - dxpr_builder

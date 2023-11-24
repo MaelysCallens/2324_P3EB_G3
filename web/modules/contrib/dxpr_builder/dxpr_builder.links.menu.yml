@@ -1,0 +1,59 @@
+dxpr_builder.settings:
+  title: 'DXPR Builder'
+  description: 'Configuration settings for DXPR Builder.'
+  route_name: dxpr_builder.settings
+  parent: system.admin_config_content
+
+dxpr_builder.studio:
+  title: 'DXPR Studio'
+  parent: system.admin
+  route_name: dxpr_builder.admin.studio
+  weight: -4
+
+dxpr_builder.studio_builder:
+  title: 'DXPR Builder'
+  description: 'Configure DXPR Builder.'
+  parent: dxpr_builder.studio
+  route_name: dxpr_builder.admin.studio.builder
+
+dxpr_builder.builder_setings:
+  title: 'General Settings'
+  description: 'Configuration settings for DXPR Builder.'
+  parent: dxpr_builder.studio_builder
+  route_name: dxpr_builder.settings
+  weight: 0
+
+dxpr_builder.builder_licensed_content:
+  title: 'Content items'
+  description: 'View listing of DXPR content items that count towards your license limit.'
+  parent: dxpr_builder.studio_builder
+  route_name: dxpr_builder.licensed_content
+  weight: 1
+
+dxpr_builder.builder_page_templates:
+  title: 'Page Templates'
+  description: 'Configure DXPR Builder Page templates.'
+  parent: dxpr_builder.studio_builder
+  route_name: entity.dxpr_builder_page_template.collection
+  weight: 2
+
+dxpr_builder.builder_user_licenses:
+  title: 'User Licenses'
+  description: 'View DXPR Builder user licenses.'
+  parent: dxpr_builder.studio_builder
+  route_name: dxpr_builder.user_licenses
+  weight: 3
+
+dxpr_builder.builder_user_profiles:
+  title: 'User Profiles'
+  description: 'Configure DXPR Builder User profiles.'
+  parent: dxpr_builder.studio_builder
+  route_name: entity.dxpr_builder_profile.collection
+  weight: 4
+
+dxpr_builder.builder_user_templates:
+  title: 'User Templates'
+  description: 'Configure DXPR Builder User templates.'
+  parent: dxpr_builder.studio_builder
+  route_name: entity.dxpr_builder_user_template.collection
+  weight: 5

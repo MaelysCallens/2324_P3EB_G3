@@ -1,0 +1,17 @@
+dxpr_theme_helper.studio:
+  title: 'DXPR Studio'
+  parent: system.admin
+  route_name: dxpr_theme_helper.admin.studio
+  weight: -4
+
+dxpr_theme_helper.studio_theme:
+  title: 'DXPR Theme'
+  description: 'Change the site-wide settings of your default theme'
+  parent: dxpr_theme_helper.studio
+  route_name: dxpr_theme_helper.admin.studio.theme
+
+dxpr_theme_helper.theme_setings:
+  title: 'Theme Settings'
+  description: 'Site-wide theme settings for DXPR Theme.'
+  parent: dxpr_theme_helper.studio_theme
+  route_name: dxpr_theme_helper.settings

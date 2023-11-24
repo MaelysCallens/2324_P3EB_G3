@@ -1,0 +1,33 @@
+name: DXPR Builder Media
+type: module
+description: 'This module provides a media browser for DXPR Builder.'
+package: DXPR
+core_version_requirement: '>=9.3'
+
+dependencies:
+  - inline_entity_form:inline_entity_form
+  - entity_browser:entity_browser
+  - entity_browser:entity_browser_entity_form
+  - drupal:media
+  - drupal:media_library
+  - drupal:views
+
+test_dependencies:
+  - inline_entity_form (>=8.x-1.x)
+  - entity_browser (>=8.x-2.x)
+  - entity_browser:entity_browser_entity_form (>=8.x-2.x)
+  - video_embed_field:video_embed_field (>=8.x-2.x)
+  - drupal:media (>=8.4)
+  - ctools:ctools
+
+# To export this config, make sure config_devel is installed, cache is rebuilt
+# then run "drush config-devel-export dxpr_builder_media".
+config_devel:
+  - views.view.dxpr_builder_media
+  - image.style.dxpr_builder_media_thumbnail
+  - entity_browser.browser.dxpr_builder_media_modal
+
+# Information added by Drupal.org packaging script on 2023-10-11
+version: '2.5.4'
+project: 'dxpr_builder'
+datestamp: 1697031222

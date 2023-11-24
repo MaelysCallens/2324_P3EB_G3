@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * DXPR License info block.
+ *
+ * Variables:
+ * - used_count: Number of users/entities used.
+ * - total_count: Number in use.
+ * - limit: Number in license.
+ * - total_label: Label for total count.
+ * - used_label: Label for used count.
+ * - block_label: Label for block.
+ * - more_info_link: Link to more info.
+ */
+#}
+<div class="user-licenses">
+  <div class="user-licenses__title">
+    {{ block_label }}
+    {% if more_info_link %}
+      <a class="user-licenses__title--more-link" href="{{more_info_link}}">{{- 'User licenses dashboard'|t -}}</a>
+    {% endif %}
+  </div>
+  <div class="user-licenses__stats">
+    <div class="user-licenses__stats--users">
+      <span class="user-licenses__stats--users-number">{{ total_count }}</span>
+      <span class="user-licenses__stats--users-label">
+          {{ total_label }}
+        </span>
+    </div>
+    <div class="user-licenses__stats--seats">
+      <span class="user-licenses__stats--seats-number">
+        {{ used_count }}/{% if limit %}{{ limit }}{% else %}{{- 'unlimited'|t -}}{% endif %}
+      </span>
+      <span class="user-licenses__stats--seats-label">
+          {{ used_label }}
+        </span>
+    </div>
+  </div>
+</div>

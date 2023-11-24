@@ -1,0 +1,34 @@
+//
+// Author: Jurriaan Roelofs for DXPR. Copyright DXPR.
+//
+
+// Putting dxpr_theme controls above navigation
+@import "../includes/variables";
+
+body.node-type-drag-drop-page.no-sidebars {
+  .page-title-full-width-container {
+    margin-bottom: 0;
+  }
+}
+
+.region-slider {
+  // div.dxpr_theme.az-container > .controls {
+  //   right: 40px;
+  // }
+  div.dxpr_theme.az-container > .controls,
+  div.az-section > .controls {
+    top: 0!important;
+  }
+  .dxpr-theme-editor.dxpr_theme.az-container {
+    margin-top: 0!important;
+  }
+  div.az-section {
+    margin-top: 0!important;
+  }
+}
+
+#az-editor-tabs .fa_icons,
+#az-editor-tabs .line_icons {
+  height: 350px;
+  overflow: scroll;
+}

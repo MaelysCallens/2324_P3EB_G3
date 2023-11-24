@@ -1,0 +1,105 @@
+type: theme
+core_version_requirement: '>=9.3'
+base theme: bootstrap5
+
+name: 'DXPR Theme'
+description: 'Low code framework theme by DXPR.'
+package: DXPR
+
+dependencies:
+  - dxpr_theme_helper:dxpr_theme_helper
+  - drupal:color
+
+regions:
+  secondary_header: 'Secondary Header'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  highlighted: 'Hero Region'
+  page_title: 'Page Title'
+  help: 'Help'
+  content_top: 'Content Top'
+  content: 'Content'
+  content_bottom: 'Content Bottom'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'dxpr_theme/global-styling'
+
+libraries-override:
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: vendor/modernizr-custom-d8-dxpr-theme.js
+  classy/base:
+    css:
+      component:
+        css/components/collapse-processed.css: false
+
+libraries-extend:
+  gin/gin_toolbar:
+    - dxpr_theme/gin_toolbar
+
+config:
+  install:
+    - dxpr_theme.settings
+
+dxpr_builder_classes:
+  dxpr-theme-form-inline: 'Inline Form'
+  dxpr-theme-util-background-accent1: 'Background color: DXPR Theme accent1'
+  dxpr-theme-util-background-accent2: 'Background color: DXPR Theme accent2'
+  dxpr-theme-util-background-black: 'Background color: black'
+  dxpr-theme-util-background-card: 'Background color: DXPR Theme card'
+  dxpr-theme-util-background-card-text: 'Background color: DXPR Theme card-text'
+  dxpr-theme-util-background-gray: 'Background color: DXPR Theme gray'
+  dxpr-theme-util-background-primary: 'Background color: DXPR Theme primary'
+  dxpr-theme-util-background-silver: 'Background color: silver'
+  dxpr-theme-util-background-white: 'Background color: white'
+  dxpr-theme-util-border-accent1: 'Border color: DXPR Theme accent1'
+  dxpr-theme-util-border-accent2: 'Border color: DXPR Theme accent2'
+  dxpr-theme-util-border-black: 'Border color: black'
+  dxpr-theme-util-border-primary-gray: 'Border color: DXPR Theme primary-gray'
+  dxpr-theme-util-border-primary: 'Border color: DXPR Theme primary'
+  dxpr-theme-util-border-silver: 'Border color: silver'
+  dxpr-theme-util-border-white: 'Border color: white'
+  dxpr-theme-util-clear-both: 'Clear Both'
+  dxpr-theme-util-clear-left: 'Clear left'
+  dxpr-theme-util-clear-right: 'Clear Right'
+  dxpr-theme-util-color-accent1: 'Text color: DXPR Theme accent1'
+  dxpr-theme-util-color-accent2: 'Text color: DXPR Theme accent2'
+  dxpr-theme-util-color-black: 'Text color: DXPR Theme black'
+  dxpr-theme-util-color-card: 'Text color: DXPR Theme card'
+  dxpr-theme-util-color-card-text: 'Text color: DXPR Theme card-text'
+  dxpr-theme-util-color-gray: 'Text color: DXPR Theme gray'
+  dxpr-theme-util-color-primary: 'Text color: DXPR Theme primary'
+  dxpr-theme-util-color-silver: 'Text color: DXPR Theme silver'
+  dxpr-theme-util-color-white: 'Text color: DXPR Theme white'
+  dxpr-theme-util-overlay-20: 'Overlay opacity 20%'
+  dxpr-theme-util-overlay-40: 'Overlay opacity 40%'
+  dxpr-theme-util-overlay-60: 'Overlay opacity 60%'
+  dxpr-theme-util-overlay-80: 'Overlay opacity 80%'
+  dxpr-theme-util-overlay-accent1: 'Color overlay: DXPR Theme accent1'
+  dxpr-theme-util-overlay-accent2: 'Color overlay: DXPR Theme accent2'
+  dxpr-theme-util-overlay-black: 'Color overlay black'
+  dxpr-theme-util-overlay-gray: 'Color overlay gray'
+  dxpr-theme-util-overlay-primary: 'Color overlay: DXPR Theme primary'
+  dxpr-theme-util-overlay-white: 'Color overlay white'
+  dxpr-theme-util-single-line: 'Single Line Text with Ellipsis'
+  dxpr-theme-util-text-bold: 'Text Bold'
+  dxpr-theme-util-text-italic: 'Text Italic'
+  dxpr-theme-util-text-light: 'Text Light'
+  dxpr-theme-util-text-muted: 'Text Muted (opacity)'
+  dxpr-theme-util-text-shadow-20: 'Text Shadow 20%'
+  dxpr-theme-util-text-shadow-40: 'Text Shadow 40%'
+  dxpr-theme-util-text-shadow-60: 'Text Shadow 60%'
+  dxpr-theme-util-text-shadow-80: 'Text Shadow 80%'
+  dxpr-theme-util-text-shadow: 'Text Shadow'
+  dxpr-theme-util-text-uppercase: 'Text Uppercase'
+  dxpr-theme-util-vcenter: 'Vertical centering'
+
+# Information added by Drupal.org packaging script on 2023-11-01
+version: '5.2.0'
+project: 'dxpr_theme'
+datestamp: 1698845568

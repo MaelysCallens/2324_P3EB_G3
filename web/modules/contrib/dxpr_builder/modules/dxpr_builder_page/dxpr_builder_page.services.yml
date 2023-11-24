@@ -1,0 +1,8 @@
+services:
+  # Prevents dxpr_builder_page module from being uninstalled
+  # whilst any drag_and_drop_page nodes exist.
+  dxpr_builder_page.uninstall_validator:
+    class: Drupal\dxpr_builder_page\DXPRBuilderPageUninstallValidator
+    tags:
+      - { name: module_install.uninstall_validator }
+    arguments: ['@entity_type.manager', '@string_translation']

@@ -1,0 +1,37 @@
+uuid: 1092ddb8-fc27-4122-9745-460b5948d929
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.drag_and_drop_page.body
+    - field.field.node.drag_and_drop_page.field_dth_hide_regions
+    - field.field.node.drag_and_drop_page.field_dth_main_content_width
+    - field.field.node.drag_and_drop_page.field_dth_page_layout
+    - node.type.drag_and_drop_page
+  module:
+    - dxpr_builder
+    - user
+  enforced:
+    module:
+      - dxpr_builder_page
+_core:
+  default_config_hash: AUiUvPG47ychPEFV1WvMfjhUZgAKbOpv1OVUtE9jPUY
+id: node.drag_and_drop_page.default
+targetEntityType: node
+bundle: drag_and_drop_page
+mode: default
+content:
+  body:
+    type: dxpr_builder_text
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_dth_hide_regions: true
+  field_dth_main_content_width: true
+  field_dth_page_layout: true
+  field_dth_page_title_backgrou: true
+  langcode: true
+  links: true

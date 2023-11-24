@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Install, update, uninstall and schema functions for the module.
+ */
+
+
+/**
+ *  Implements hook_install.
+ */
+function dxpr_theme_helper_install() {
+  // Update previous configs.Adds enforced config dependencies.
+  dxpr_theme_helper_update_8001();
+}
+
+/**
+ *  Adds enforced config dependencies.
+ */
+function dxpr_theme_helper_update_8001() {
+  $config_list = [
+    "field.storage.node.field_dth_body_background",
+    "field.storage.node.field_dth_hide_regions",
+    "field.storage.node.field_dth_main_content_width",
+    "field.storage.node.field_dth_page_layout",
+    "field.storage.node.field_dth_page_title_backgrou",
+  ];
+
+  $config_factory = Drupal::configFactory();
+  $list_all = $config_factory->listAll();
+  $module_name = 'dxpr_theme_helper';
+
+  foreach ($config_list AS $config_name) {
+    if (!in_array($config_name, $list_all)) {
+      continue;
+    }
+    $config = $config_factory->getEditable($config_name);
+    if ($config->isNew()) {
+      continue;
+    }
+    $dependencies = $config->get('dependencies');
+
+    if (!isset($dependencies['enforced']['module'])
+      || !is_array($dependencies['enforced']['module'])
+      || !in_array($module_name, $dependencies['enforced']['module'])) {
+      $dependencies['enforced']['module'][] = $module_name;
+      $config->set('dependencies', $dependencies)
+        ->save();
+    }
+  }
+
+}

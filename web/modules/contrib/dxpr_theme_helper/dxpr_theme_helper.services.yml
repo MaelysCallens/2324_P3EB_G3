@@ -1,0 +1,11 @@
+services:
+  theme.negotiator.dxpr_theme_settings:
+    class: Drupal\dxpr_theme_helper\Theme\DxprThemeSettingsThemeNegotiator
+    tags:
+      - { name: theme_negotiator, priority: 1000 }
+    arguments:
+      - '@entity_field.manager'
+      - '@event_dispatcher'
+      - '@database'
+      - '@config.factory'
+      - '@language_manager'

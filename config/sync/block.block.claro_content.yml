@@ -16,7 +16,7 @@ provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Primaire inhoud van de pagina'
+  label: 'Main page content'
   label_display: '0'
   provider: system
 visibility: {  }

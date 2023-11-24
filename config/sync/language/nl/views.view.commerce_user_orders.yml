@@ -1,0 +1,39 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        order_id:
+          label: ID
+          separator: ', '
+        order_number:
+          separator: ', '
+        placed:
+          label: Datum
+          separator: ', '
+        total_price__number:
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+      arguments:
+        uid:
+          exception:
+            title: Alle

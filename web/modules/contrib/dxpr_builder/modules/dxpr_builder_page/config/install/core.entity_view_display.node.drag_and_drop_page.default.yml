@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.drag_and_drop_page.body
+    - node.type.drag_and_drop_page
+  module:
+    - file
+    - dxpr_builder
+    - user
+  enforced:
+    module:
+      - dxpr_builder_page
+id: node.drag_and_drop_page.default
+targetEntityType: node
+bundle: drag_and_drop_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: dxpr_builder_text
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_dth_hide_regions: true
+  field_dth_main_content_width: true
+  field_dth_page_layout: true
+  field_dth_page_title_backgrou: true
+  links: true

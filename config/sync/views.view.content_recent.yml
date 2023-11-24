@@ -17,7 +17,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Standaard
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
@@ -134,10 +134,10 @@ display:
           submit_button: Toepassen
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sorteren op'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Oplopend
-          sort_desc_label: Aflopend
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       access:
         type: perm
         options:

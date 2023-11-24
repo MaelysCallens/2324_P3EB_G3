@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Module file for dxpr_theme_helper.
+ */
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function dxpr_theme_helper_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'dxpr_theme_helper/dxpr_theme_helper.icons';
+}
+
+/**
+ * Implements hook_menu_links_discovered_alter().
+ */
+function dxpr_theme_helper_menu_links_discovered_alter(&$links) {
+  if (array_key_exists('dxpr_theme_helper.theme_setings', $links)) {
+    $theme_handler = \Drupal::service('theme_handler');
+    $default_theme = $theme_handler->getDefault();
+    $theme_name = $theme_handler->getName($default_theme);
+
+    $links['dxpr_theme_helper.theme_setings']['description'] = 'Site-wide theme settings for ' . $theme_name;
+    $links['dxpr_theme_helper.theme_setings']['route_parameters']['theme'] = $default_theme;
+  }
+}

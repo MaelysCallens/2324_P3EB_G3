@@ -1,0 +1,35 @@
+uuid: e0c1b179-0921-4f87-9cfe-3e41034b8f9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+  enforced:
+    module:
+      - dxpr_theme_helper
+_core:
+  default_config_hash: a_E6RUq96M69shAhy26XTqUvkmlTW_q6N9CfTabqrSU
+id: node.field_dth_body_background
+field_name: field_dth_body_background
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

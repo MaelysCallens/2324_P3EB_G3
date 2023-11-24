@@ -1,0 +1,41 @@
+###############################################
+# An override compose file for using volume   #
+# mounts for either production or cloud tests #
+###############################################
+
+version: "3.7"
+
+services:
+  
+  ### Override PHP service for production
+  qa-demo:
+    volumes:
+      - qa-demo-data:$SITE_INSTALLATION_CONTAINER
+      - dxpr-builder:$DXPR_BUILDER_CONTAINER
+      - dxpr-theme:$DXPR_THEME_CONTAINER
+
+  ### Override nginx service for production
+  nginx:
+    volumes:
+    - qa-demo-data:$SITE_INSTALLATION_CONTAINER
+    - dxpr-builder:$DXPR_BUILDER_CONTAINER
+    - dxpr-theme:$DXPR_THEME_CONTAINER
+
+  ### Populate the dxpr-builder volume
+  dxpr-builder:
+    image: dxpr/dxpr_builder:$DXPR_BUILDER_TAG
+    profiles: ["dxpr-builder"]
+    volumes:
+      - dxpr-builder:$DXPR_BUILDER_CONTAINER
+
+  ### Build and populate the dxpr-theme volume
+  dxpr-theme:
+    image: dxpr/dxpr_theme:$DXPR_THEME_TAG
+    profiles: ["dxpr-theme"]
+    build:
+      context: .
+      args:
+        PHP_TAG: $PHP_TAG
+        DXPR_THEME_CONTAINER: $DXPR_THEME_CONTAINER
+    volumes:
+      - dxpr-theme:$DXPR_THEME_CONTAINER

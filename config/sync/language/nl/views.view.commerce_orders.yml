@@ -1,0 +1,53 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+          tags:
+            previous: '‹ vorige'
+            next: 'volgende ›'
+            first: '« eerste'
+            last: 'laatste »'
+      fields:
+        order_number:
+          separator: ', '
+        placed:
+          label: Datum
+          separator: ', '
+        type:
+          label: Type
+          separator: ', '
+        store_id:
+          separator: ', '
+        uid:
+          separator: ', '
+        mail:
+          label: E-mail
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        total_price__number:
+          separator: ', '
+        operations:
+          label: Operations
+      filters:
+        type:
+          expose:
+            label: Type
+        state:
+          expose:
+            label: Status
+  page_1:
+    display_title: Page

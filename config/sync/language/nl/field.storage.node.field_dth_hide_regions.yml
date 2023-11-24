@@ -1,0 +1,18 @@
+settings:
+  allowed_values:
+    0:
+      label: Navigatie
+    2:
+      label: Paginatitel
+    4:
+      label: Kop
+    6:
+      label: Inhoud
+    7:
+      label: 'Onder inhoud'
+    8:
+      label: Primaire
+    9:
+      label: Secundaire
+    10:
+      label: Voet

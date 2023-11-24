@@ -1,0 +1,198 @@
+dxpr_builder.ajax_callback:
+  path: '/dxpr_builder/ajax'
+  defaults:
+    _controller: 'Drupal\dxpr_builder\Controller\AjaxController::ajaxCallback'
+  requirements:
+    _dxpr_builder_billable_user: 'TRUE'
+    _csrf_token: 'TRUE'
+
+dxpr_builder.csrf_refresh:
+  path: '/dxpr_builder/csrf'
+  defaults:
+    _controller: 'Drupal\dxpr_builder\Controller\AjaxController::ajaxRefresh'
+  requirements:
+    _dxpr_builder_billable_user: 'TRUE'
+
+dxpr_builder.ajax_file_upload_callback:
+  path: '/dxpr_builder/ajax/file_upload'
+  defaults:
+    _controller: 'Drupal\dxpr_builder\Controller\AjaxController::fileUpload'
+  requirements:
+    _dxpr_builder_billable_user: 'TRUE'
+    _csrf_token: 'TRUE'
+  methods: [POST, DELETE]
+
+dxpr_builder.ajax_help_link_validator:
+  path: '/dxpr_builder/ajax/help_link_validator'
+  defaults:
+    _controller: 'Drupal\dxpr_builder\Controller\AjaxController::validateHelpLink'
+  requirements:
+    _dxpr_builder_billable_user: 'TRUE'
+
+dxpr_builder.admin.studio:
+  path: '/admin/dxpr_studio'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'DXPR Studio'
+  requirements:
+    _permission: 'administer dxpr builder configuration'
+
+dxpr_builder.admin.studio.builder:
+  path: '/admin/dxpr_studio/dxpr_builder'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'DXPR Builder'
+  requirements:
+    _permission: 'administer dxpr builder configuration'
+
+dxpr_builder.settings:
+  path: 'admin/dxpr_studio/dxpr_builder/settings'
+  defaults:
+    _title: 'DXPR Builder Settings'
+    _form: '\Drupal\dxpr_builder\Form\DxprBuilderSettingsForm'
+  requirements:
+    _permission: 'administer dxpr builder configuration'
+
+entity.dxpr_builder_user_template.collection:
+  path: '/admin/dxpr_studio/dxpr_builder/user_templates'
+  defaults:
+    _entity_list: 'dxpr_builder_user_template'
+    _title: 'DXPR Builder User Templates Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.dxpr_builder_user_template.add_form:
+  path: '/admin/dxpr_studio/dxpr_builder/user_templates/add'
+  defaults:
+    _entity_form: 'dxpr_builder_user_template.add'
+    _title: 'Add a dxpr builder user template'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.dxpr_builder_user_template.edit_form:
+  path: '/admin/dxpr_studio/dxpr_builder/user_templates/{dxpr_builder_user_template}'
+  defaults:
+    _entity_form: 'dxpr_builder_user_template.edit'
+    _title: 'Edit a dxpr builder user template'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.dxpr_builder_user_template.delete_form:
+  path: '/admin/dxpr_studio/dxpr_builder/user_templates/{dxpr_builder_user_template}/delete'
+  defaults:
+    _entity_form: 'dxpr_builder_user_template.delete'
+    _title: 'Delete a dxpr builder user template'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.dxpr_builder_page_template.collection:
+  path: '/admin/dxpr_studio/dxpr_builder/page_template'
+  defaults:
+    _entity_list: 'dxpr_builder_page_template'
+    _title: 'DXPR Builder Page Templates Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.dxpr_builder_page_template.add_form:
+  path: '/admin/dxpr_studio/dxpr_builder/page_template/add'
+  defaults:
+    _entity_form: 'dxpr_builder_page_template.add'
+    _title: 'Add a dxpr builder page template'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.dxpr_builder_page_template.edit_form:
+  path: '/admin/dxpr_studio/dxpr_builder/page_template/{dxpr_builder_page_template}'
+  defaults:
+    _entity_form: 'dxpr_builder_page_template.edit'
+    _title: 'Edit a dxpr builder page template'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.dxpr_builder_page_template.delete_form:
+  path: '/admin/dxpr_studio/dxpr_builder/page_template/{dxpr_builder_page_template}/delete'
+  defaults:
+    _entity_form: 'dxpr_builder_page_template.delete'
+    _title: 'Delete a dxpr builder page template'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.dxpr_builder_profile.collection:
+  path: '/admin/dxpr_studio/dxpr_builder/profile'
+  defaults:
+    _entity_list: 'dxpr_builder_profile'
+    _title: 'DXPR Builder Profile Configuration'
+  requirements:
+    _permission: 'administer dxpr_builder_profile'
+
+entity.dxpr_builder_profile.add_form:
+  path: '/admin/dxpr_studio/dxpr_builder/profile/add'
+  defaults:
+    _entity_form: 'dxpr_builder_profile.add'
+    _title: 'Add a dxpr builder profile'
+  requirements:
+    _permission: 'administer dxpr_builder_profile'
+
+entity.dxpr_builder_profile.edit_form:
+  path: '/admin/dxpr_studio/dxpr_builder/profile/{dxpr_builder_profile}'
+  defaults:
+    _entity_form: 'dxpr_builder_profile.edit'
+    _title: 'Edit a dxpr builder profile'
+  requirements:
+    _permission: 'administer dxpr_builder_profile'
+
+entity.dxpr_builder_profile.delete_form:
+  path: '/admin/dxpr_studio/dxpr_builder/profile/{dxpr_builder_profile}/delete'
+  defaults:
+    _entity_form: 'dxpr_builder_profile.delete'
+    _title: 'Delete a dxpr builder profile'
+  requirements:
+    _permission: 'administer dxpr_builder_profile'
+
+dxpr_builder.user_licenses:
+  path: '/admin/dxpr_studio/dxpr_builder/user_licenses'
+  defaults:
+    _controller: 'Drupal\dxpr_builder\Controller\PageController::userLicensesPage'
+    _title: 'User Licenses'
+  requirements:
+    _permission: 'administer dxpr builder configuration'
+
+dxpr_builder.user_licenses.sites:
+  path: '/admin/dxpr_studio/dxpr_builder/user_licenses/sites'
+  defaults:
+    _controller: 'Drupal\dxpr_builder\Controller\PageController::userLicensesSitesPage'
+    _title: 'Sites'
+  requirements:
+    _permission: 'administer dxpr builder configuration'
+
+dxpr_builder.licensed_content:
+  path: '/admin/dxpr_studio/dxpr_builder/content'
+  defaults:
+    _controller: 'Drupal\dxpr_builder\Controller\PageController::licensedContentPage'
+    _title: 'Content items'
+  requirements:
+    _permission: 'administer dxpr builder configuration'
+
+dxpr_builder.disavow_user_confirm:
+  path: '/dxpr-builder/disavow-user'
+  defaults:
+    _title: 'Are you sure you want to exclude the user from DXPR editing?'
+    _form: 'Drupal\dxpr_builder\Form\DisavowUserConfirmForm'
+  requirements:
+    _permission: 'administer dxpr builder configuration'
+
+dxpr_builder.delete_stale_user_confirm:
+  path: '/dxpr-builder/delete-stale-user'
+  defaults:
+    _title: 'Are you sure you want to remove the user?'
+    _form: 'Drupal\dxpr_builder\Form\DeleteStaleUserConfirmForm'
+  requirements:
+    _permission: 'administer dxpr builder configuration'
+
+dxpr_builder.create_page_template:
+  path: '/admin/dxpr_studio/dxpr_builder/page_template/create'
+  defaults:
+    _controller: 'Drupal\dxpr_builder\Controller\PageController::createPageTemplate'
+    _title: 'Create Page Template'
+  requirements:
+    _permission: 'administer dxpr builder configuration'

@@ -1,0 +1,119 @@
+dxpr_builder.user_template.*:
+  type: config_entity
+  label: DXPR Builder User Template
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    template:
+      type: string
+      label: Template
+    uid:
+      type: integer
+      label: UID
+    global:
+      type: boolean
+      label: Global
+    uuid:
+      type: string
+      label: UUID
+
+dxpr_builder.page_template.*:
+  type: config_entity
+  label: DXPR Builder Page Template
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    category:
+      type: text
+      label: Category
+    template:
+      type: string
+      label: Template
+    weight:
+      type: integer
+      label: Weight
+    image:
+      type: string
+      label: 'Base-64 encoded image contents'
+    uuid:
+      type: string
+      label: UUID
+
+dxpr_builder.dxpr_builder_profile.*:
+  type: config_entity
+  label: DXPR Builder Profile
+  mapping:
+    id:
+      type: string
+      label: ID
+    label:
+      type: label
+      label: Label
+    uuid:
+      type: string
+      label: UUID
+    sidebar:
+      type: boolean
+      label: Sidebar
+    dxpr_editor:
+      type: boolean
+      label: DXPR Editor State
+    weight:
+      type: integer
+      label: Weight
+    roles:
+      type: sequence
+      label: Roles
+      sequence:
+        type: string
+        label: Role
+    elements:
+      type: sequence
+      label: Elements
+      sequence:
+        type: string
+        label: Element
+    blocks:
+      type: sequence
+      label: Blocks
+      sequence:
+        type: string
+        label: Blocks
+    views:
+      type: sequence
+      label: Views
+      sequence:
+        type: string
+        label: View
+    page_templates:
+      type: sequence
+      label: Page templates
+      sequence:
+        type: string
+        label: Page template
+    user_templates:
+      type: sequence
+      label: Global user templates
+      sequence:
+        type: string
+        label: Global user template
+    inline_buttons:
+      type: sequence
+      label: Inline buttons
+      sequence:
+        type: string
+        label: Button
+    modal_buttons:
+      type: sequence
+      label: Modal buttons
+      sequence:
+        type: string
+        label: Button

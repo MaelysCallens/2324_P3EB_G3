@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Install, update, uninstall and schema functions for the module.
+ */
+
+use Drupal\dxpr_builder\Common\ConfigEnforceDependency;
+
+/**
+ * Implements hook install.
+ */
+function dxpr_builder_page_install(): void {
+  dxpr_builder_page_update_8001();
+}
+
+/**
+ * Adds enforced dependencies to config.
+ */
+function dxpr_builder_page_update_8001(): void {
+  // Previous configuration to be fixed.
+  $config_list = [
+    'core.entity_form_display.node.drag_and_drop_page.default',
+    'core.entity_view_display.node.drag_and_drop_page.default',
+    'field.field.node.drag_and_drop_page.body',
+    'field.field.node.drag_and_drop_page.field_dth_hide_regions',
+    'field.field.node.drag_and_drop_page.field_dth_main_content_width',
+    'field.field.node.drag_and_drop_page.field_dth_page_layout',
+    'node.type.drag_and_drop_page',
+  ];
+
+  (new ConfigEnforceDependency('dxpr_builder_page', $config_list))
+    ->execute();
+
+}

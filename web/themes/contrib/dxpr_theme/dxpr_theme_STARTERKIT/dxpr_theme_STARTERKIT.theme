@@ -1,0 +1,130 @@
+<?php
+
+/**
+ * @file
+ * DXPR Theme sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+// phpcs:disable
+/**
+ * Prepares variables for the html template. Adds node object.
+ *
+ * Default template: html.html.twig.
+ *
+ * See the html.html.twig template for the list of variables.
+ */
+function dxpr_theme_STARTERKIT_preprocess_html(&$variables) {
+  // If bootstrap basetheme is not loading bootstrap from CDN load it locally
+  // This is default behavior starting from DXPR Theme 8.x-1.1.3 and 7.x-2.7.3.
+  $bootstrap_cdn = theme_get_setting('cdn_provider');
+  if (!$bootstrap_cdn) {
+    $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/bootstrap3';
+  }
+}
+
+/**
+ * Implements template_preprocess_page()
+ */
+function dxpr_theme_STARTERKIT_preprocess_page(&$variables) {
+
+  // CSS to load on every page.
+  $dxpr_theme_libraries = [
+    // Bootstrap TAILORING.
+    'dxpr_theme_STARTERKIT/bootstrap-3',
+    'dxpr_theme_STARTERKIT/bootstrap-theme',
+  // TODO: include only if needed.
+    'dxpr_theme_STARTERKIT/jquery-ui',
+    // DXPR THEME BASE.
+    'dxpr_theme_STARTERKIT/forms',
+    'dxpr_theme_STARTERKIT/layout',
+    'dxpr_theme_STARTERKIT/page-title',
+    'dxpr_theme_STARTERKIT/typography',
+    // DXPR THEME Components  //TODO: include only if needed.
+    'dxpr_theme_STARTERKIT/dxpr-theme-header--side',
+    'dxpr_theme_STARTERKIT/admin',
+    // Overrides   //TODO: include only if needed.
+    'dxpr_theme_STARTERKIT/drupal-webform',
+    'dxpr_theme_STARTERKIT/dxpr-theme-builder',
+    // HELPERS.
+    'dxpr_theme_STARTERKIT/helper-classes',
+  ];
+  foreach ($dxpr_theme_libraries as $dxpr_theme_library) {
+    $variables['#attached']['library'][] = $dxpr_theme_library;
+  }
+}
+
+/**
+ * Implements template_menu_local_tasks()
+ */
+function dxpr_theme_STARTERKIT_preprocess_menu_local_tasks(&$variables) {
+  if ($variables['secondary']) {
+    // Secondary tabs are styled with bootstrap pager CSS.
+    $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/drupal-pager';
+  }
+}
+
+/**
+ * Implements template_preprocess_block()
+ */
+function dxpr_theme_STARTERKIT_preprocess_block(&$variables) {
+  // Include DXPR Theme full search block css library.
+  if ($variables['plugin_id'] === 'full_screen_search') {
+    $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/dxpr-theme-full-screen-search';
+  }
+}
+
+/**
+ * Implements template_preprocess_region()
+ */
+function dxpr_theme_STARTERKIT_preprocess_region(&$variables) {
+  switch ($variables['region']) {
+    case 'secondary_header':
+      $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/dxpr-theme-secondary-header';
+    case 'navigation':
+    case 'navigation_collapsible':
+      $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/dxpr-theme-header';
+      $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/dxpr-theme-header--top';
+      $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/dxpr-theme-header--mobile';
+      break;
+
+    case 'footer':
+      $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/footer-menu';
+      break;
+  }
+}
+
+/**
+ * Implements template_preprocess_breadcrumb()
+ */
+function dxpr_theme_STARTERKIT_preprocess_breadcrumb(&$variables) {
+  if ($variables['breadcrumb']) {
+    $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/drupal-breadcrumbs';
+  }
+}
+
+/**
+ * Implements template_preprocess_comment()
+ */
+function dxpr_theme_STARTERKIT_preprocess_comment(&$variables) {
+  if ($variables['elements']['#comment']) {
+    $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/drupal-comments';
+  }
+}
+
+/**
+ * Implements template_preprocess_pager()
+ */
+function dxpr_theme_STARTERKIT_preprocess_pager(&$variables) {
+  $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/drupal-pager';
+}
+
+
+/**
+ * Implements template_preprocess_input()
+ */
+function dxpr_theme_STARTERKIT_preprocess_input(&$variables) {
+  $variables['#attached']['library'][] = 'dxpr_theme_STARTERKIT/drupal-search';
+}
+// phpcs:enable

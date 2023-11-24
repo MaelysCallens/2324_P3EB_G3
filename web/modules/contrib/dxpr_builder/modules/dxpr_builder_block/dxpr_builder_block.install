@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Install, update, uninstall and schema functions for the module.
+ */
+
+use Drupal\dxpr_builder\Common\ConfigEnforceDependency;
+
+/**
+ * Implements hook install.
+ */
+function dxpr_builder_block_install(): void {
+  dxpr_builder_block_update_8001();
+}
+
+/**
+ * Adds enforced dependencies.
+ */
+function dxpr_builder_block_update_8001(): void {
+  // Adds config enforced dependencies.
+  $config_list = [
+    'block_content.type.drag_and_drop_block',
+    'core.entity_form_display.block_content.drag_and_drop_block.default',
+    'core.entity_view_display.block_content.drag_and_drop_block.default',
+    'field.field.block_content.drag_and_drop_block.body',
+  ];
+  // Class in main dependent module.
+  (new ConfigEnforceDependency('dxpr_builder_block', $config_list))
+    ->execute();
+}
+
+/**
+ * Create a new revision by default.
+ */
+function dxpr_builder_block_update_8002(): void {
+  /** @var \Drupal\block_content\BlockContentTypeInterface $block_content_type */
+  $block_content_type = \Drupal::entityTypeManager()->getStorage('block_content_type')
+    ->load('drag_and_drop_block');
+  $block_content_type->set('revision', TRUE);
+  $block_content_type->save();
+}

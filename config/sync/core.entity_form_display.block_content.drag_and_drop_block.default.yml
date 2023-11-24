@@ -1,0 +1,34 @@
+uuid: 999e3edb-733a-4163-9365-8b6f4c85ecf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.drag_and_drop_block
+    - field.field.block_content.drag_and_drop_block.body
+  enforced:
+    module:
+      - dxpr_builder_block
+_core:
+  default_config_hash: siNymWkRW2ykPLzWc3SdRjKk8nZ-tOQTUCDW7jH-cdo
+id: block_content.drag_and_drop_block.default
+targetEntityType: block_content
+bundle: drag_and_drop_block
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  body: true

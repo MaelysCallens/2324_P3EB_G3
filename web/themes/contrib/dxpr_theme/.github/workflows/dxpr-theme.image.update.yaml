@@ -1,0 +1,30 @@
+name: Update dxpr/dxpr_theme docker image
+
+on:
+  push:
+    branches:
+      - '5.x'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Check out the repo
+        uses: actions/checkout@v2
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USER }}
+          password: ${{ secrets.DOCKER_HUB_PASS }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          build-args: |
+            PHP_TAG=7.4-dev-4.24.0
+            DXPR_THEME_CONTAINER=/usr/src/dxpr_theme
+          push: true
+          tags: dxpr/dxpr_theme:5.x

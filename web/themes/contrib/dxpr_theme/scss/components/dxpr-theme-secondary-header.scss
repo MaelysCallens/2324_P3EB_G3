@@ -1,0 +1,41 @@
+// DXPR Theme Secondary Header
+@import "../includes/variables";
+
+#secondary-header {
+  z-index: 405;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1.2em;
+  background: $secondary-header;
+  color: $secondary-header-text;
+  a {
+    color: $secondary-header-text;
+    &:hover,
+    &:focus {
+      color: $secondary-header-text;
+    }
+  }
+  .block,
+  p {
+    margin-bottom: 0;
+  }
+  .secondary-header-container {
+    margin-bottom: 0;
+  }
+  ul.menu {
+    float:right;
+    margin-top: 0;
+    margin-bottom: 0;
+    a {
+      padding: 0 15px;
+      line-height: 1.2em;
+      &:hover,
+      &:focus {
+        background: transparent;
+      }
+    }
+    li {
+      float:left;
+    }
+  }
+}

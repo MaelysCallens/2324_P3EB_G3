@@ -1,0 +1,42 @@
+display:
+  default:
+    display_options:
+      fields:
+        is_default:
+          label: Default
+          separator: ', '
+        name:
+          label: Naam
+          separator: ', '
+        changed:
+          label: Bijgewerkt
+          separator: ', '
+        type:
+          label: Type
+          separator: ', '
+        operations:
+          label: Operations
+      pager:
+        options:
+          tags:
+            next: 'volgende ›'
+            previous: '‹ vorige'
+            first: '« eerste'
+            last: 'laatste »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        type:
+          expose:
+            label: Type
+  page_1:
+    display_title: Page

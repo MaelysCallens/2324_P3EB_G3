@@ -1,0 +1,23 @@
+uuid: 1215876a-33b7-454d-b069-859940ea6a8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+    module:
+      - dxpr_builder_page
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: 1pVVrMiuXj69j4KFCHeEqQWUHXM9AZZvsy4Ef2aOvdU
+name: 'Drag and drop Page'
+type: drag_and_drop_page
+description: 'Page builder page with DXPR Builder visual layout builder'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

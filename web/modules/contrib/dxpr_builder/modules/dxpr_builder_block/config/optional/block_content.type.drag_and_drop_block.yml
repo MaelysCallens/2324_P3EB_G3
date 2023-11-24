@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dxpr_builder_block
+id: drag_and_drop_block
+label: 'Drag and Drop Block'
+revision: 1
+description: 'Advanced page with visual page building tools. Powered by DXPR Builder.'

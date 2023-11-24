@@ -1,0 +1,48 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+          tags:
+            previous: '‹ vorige'
+            next: 'volgende ›'
+            first: '« eerste'
+            last: 'laatste »'
+      fields:
+        title:
+          label: Titel
+          separator: ', '
+        type:
+          label: Type
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_true: Gepubliceerd
+            format_custom_false: 'Niet gepubliceerd'
+          separator: ', '
+        changed:
+          label: Bijgewerkt
+          separator: ', '
+        operations:
+          label: Operations
+      filters:
+        type:
+          expose:
+            label: Type
+        title:
+          expose:
+            label: Titel
+  page_1:
+    display_title: Page

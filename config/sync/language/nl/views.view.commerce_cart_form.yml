@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        purchased_entity:
+          separator: ', '
+        unit_price__number:
+          separator: ', '
+        remove_button:
+          label: Verwijderen
+        total_price__number:
+          separator: ', '
+      arguments:
+        order_id:
+          exception:
+            title: Alle

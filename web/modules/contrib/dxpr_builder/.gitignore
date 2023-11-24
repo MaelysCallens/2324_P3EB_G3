@@ -1,0 +1,23 @@
+.vscode
+.idea
+deploy.sh
+node_modules
+doc
+npm.installed
+.jshintrc
+# SASS Cache
+*.sass-cache*
+
+# OS specific stuff
+.DS_Store
+Thumbs.db
+
+.build-done
+out
+
+.env
+
+### Related to the NPM_INSTALL_STAMP env varialbe. It's also included in the prepare_realease_clean_up.list file
+.npm.installed
+dist
+!dxpr_builder/vendor/*/*/dist

@@ -1,0 +1,17 @@
+entity.dxpr_builder_user_template.add_form:
+  route_name: 'entity.dxpr_builder_user_template.add_form'
+  title: 'Add user template'
+  appears_on:
+    - entity.dxpr_builder_user_template.collection
+
+entity.dxpr_builder_page_template.add_form:
+  route_name: 'entity.dxpr_builder_page_template.add_form'
+  title: 'Add page template'
+  appears_on:
+    - entity.dxpr_builder_page_template.collection
+
+entity.dxpr_builder_profile.add_form:
+  route_name: 'entity.dxpr_builder_profile.add_form'
+  title: 'Add dxpr builder profile'
+  appears_on:
+    - entity.dxpr_builder_profile.collection

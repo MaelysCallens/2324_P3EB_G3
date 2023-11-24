@@ -1,0 +1,38 @@
+{
+  "name": "dxpr_theme",
+  "version": "0.2.0",
+  "devDependencies": {
+    "@babel/core": "^7",
+    "@babel/eslint-parser": "^7",
+    "@babel/preset-env": "^7",
+    "autoprefixer": "^9",
+    "babel-eslint": "^8",
+    "browserslist": "^4",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18",
+    "eslint-config-prettier": "^2",
+    "eslint-detailed-reporter": "^0",
+    "eslint-plugin-babel": "^5",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jquery": "^1.5.1",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-prettier": "^2",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-spellcheck": "0.0.20",
+    "grunt": "^1",
+    "grunt-babel": "^8",
+    "grunt-contrib-concat": "^1",
+    "grunt-contrib-jshint": "^v3",
+    "grunt-contrib-nodeunit": "^1",
+    "grunt-contrib-watch": "^1",
+    "grunt-postcss": "^0",
+    "grunt-sass": "^3",
+    "grunt-terser": "^2",
+    "prettier": "^2",
+    "sass": "^1.66.0",
+    "terser": "^5"
+  },
+  "browserslist": [
+    "> 1%"
+  ]
+}

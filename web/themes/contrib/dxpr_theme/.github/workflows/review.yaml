@@ -1,0 +1,48 @@
+name: Review
+
+on: [pull_request]
+
+env:
+  TARGET_DRUPAL_CORE_VERSION: 8
+
+jobs:
+
+  drupal-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Lint Drupal
+      run: |
+        TARGET_DRUPAL_CORE_VERSION=$TARGET_DRUPAL_CORE_VERSION docker-compose run --rm drupal-lint
+
+  eslint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Lint with eslint
+      run: |
+        REPORT_ENABLED=true docker-compose run --rm eslint
+
+    - name: Archive eslint html report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: eslint-report
+        path: out/eslint-report.html
+
+  # review by commenting on code (experimental)
+  # eslint-review:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+
+  #   - name: Comment on file changes with eslint check
+  #     uses: reviewdog/action-eslint@v1.2.0
+  #     with:
+  #       github_token: ${{ secrets.github_token }}
+  #       reporter: github-pr-review # Change reporter.
+  #       eslint_flags: 'js'

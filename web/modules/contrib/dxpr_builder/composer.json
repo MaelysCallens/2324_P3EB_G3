@@ -1,0 +1,26 @@
+{
+    "name": "dxpr/dxpr_builder",
+    "description": "Drupal Layout Builder for Marketers.",
+    "type": "drupal-module",
+    "license": "https://dxpr.com/legal/terms",
+    "keywords": [
+        "DXPR",
+        "Drupal",
+        "Marketing",
+        "Bootstrap",
+        "Layout",
+        "Builder",
+        "Low-code"
+    ],
+    "support": {
+        "documentation": "https:/.dxpr.com/hc",
+        "issues": "https://dxpr.com/hc/tickets"
+    },
+    "authors": [
+        {
+            "name": "DXPR",
+            "homepage": "https://dxpr.com",
+            "role": "Maintainer"
+        }
+    ]
+}

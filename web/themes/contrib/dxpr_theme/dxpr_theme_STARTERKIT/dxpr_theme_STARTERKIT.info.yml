@@ -1,0 +1,54 @@
+type: theme
+core_version_requirement: ^9.3 || ^10
+base theme: dxpr_theme
+
+name: 'THEMETITLE'
+description: 'Use this STARTERKIT example if you need to build extra css files and templates on top of DXPR Theme.'
+package: DXPR
+
+regions:
+  secondary_header: 'Secondary Header'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  highlighted: 'Hero Region'
+  page_title: 'Page Title'
+  help: 'Help'
+  content_top: 'Content Top'
+  content: 'Content'
+  content_bottom: 'Content Bottom'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'dxpr_theme_STARTERKIT/global-styling'
+
+libraries-override:
+  dxpr_theme/bootstrap-3: false
+  dxpr_theme/bootstrap-theme: false
+  dxpr_theme/jquery-ui: false
+  dxpr_theme/footer-menu: false
+  dxpr_theme/forms: false
+  dxpr_theme/layout: false
+  dxpr_theme/page-title: false
+  dxpr_theme/typography: false
+  dxpr_theme/dxpr-theme-full-screen-search: false
+  dxpr_theme/dxpr-theme-header: false
+  dxpr_theme/dxpr-theme-header--top: false
+  dxpr_theme/dxpr-theme-header--side: false
+  dxpr_theme/dxpr-theme-header--mobile: false
+  dxpr_theme/dxpr-theme-secondary-header: false
+  dxpr_theme/dxpr-theme-admin: false
+  dxpr_theme/drupal-breadcrumbs: false
+  dxpr_theme/drupal-comments: false
+  dxpr_theme/drupal-pager: false
+  dxpr_theme/drupal-webform: false
+  dxpr_theme/dxpr-theme-builder: false
+  dxpr_theme/helper-classes: false
+
+# Information added by Drupal.org packaging script on 2023-11-01
+version: '5.2.0'
+project: 'dxpr_theme'
+datestamp: 1698845568

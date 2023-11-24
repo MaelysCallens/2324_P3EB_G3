@@ -1,0 +1,114 @@
+global-styling:
+  css:
+    theme:
+      css/dxpr_theme_subtheme.css: {weight: 6}
+
+bootstrap-3:
+  css:
+    theme:
+      css/vendor-extensions/bootstrap-3.css: { minified: true }
+
+bootstrap-theme:
+  css:
+    theme:
+      css/vendor-extensions/bootstrap-theme.css: { minified: true }
+
+jquery-ui:
+  css:
+    theme:
+      css/vendor-extensions/jquery-ui.css: { minified: true }
+
+footer-menu:
+  css:
+    theme:
+      css/base/footer-menu.css: { minified: true }
+
+forms:
+  css:
+    theme:
+      css/base/forms.css: { minified: true }
+
+layout:
+  css:
+    theme:
+      css/base/layout.css: { minified: true }
+
+page-title:
+  css:
+    theme:
+      css/base/page-title.css: { minified: true }
+
+typography:
+  css:
+    theme:
+      css/base/typography.css: { minified: true }
+
+dxpr-theme-full-screen-search:
+  css:
+    theme:
+      css/components/dxpr-theme-full-screen-search.css: { minified: true }
+
+dxpr-theme-header:
+  css:
+    theme:
+      css/components/dxpr-theme-header.css: { minified: true }
+
+dxpr-theme-header--top:
+  css:
+    theme:
+      css/components/dxpr-theme-header--top.css: { minified: true }
+
+dxpr-theme-header--side:
+  css:
+    theme:
+      css/components/dxpr-theme-header--side.css: { minified: true }
+
+dxpr-theme-header--mobile:
+  css:
+    theme:
+      css/components/dxpr-theme-header--mobile.css: { minified: true }
+
+dxpr-theme-secondary-header:
+  css:
+    theme:
+      css/components/dxpr-theme-secondary-header.css: { minified: true }
+
+dxpr-theme-admin:
+  css:
+    theme:
+      css/dxpr-theme-admin.css: { minified: true }
+
+drupal-breadcrumbs:
+  css:
+    theme:
+      css/vendor-extensions/drupal-breadcrumbs.css: { minified: true }
+
+drupal-comments:
+  css:
+    theme:
+      css/vendor-extensions/drupal-comments.css: { minified: true }
+
+drupal-pager:
+  css:
+    theme:
+      css/vendor-extensions/drupal-pager.css: { minified: true }
+
+drupal-webform:
+  css:
+    theme:
+      css/vendor-extensions/drupal-webform.css: { minified: true }
+
+dxpr-theme-builder:
+  css:
+    theme:
+      css/vendor-extensions/dxpr-theme-builder.css: { minified: true }
+
+helper-classes:
+  css:
+    theme:
+      css/helpers/helper-classes.css: { minified: true }
+
+drupal-search:
+  css:
+    theme:
+      css/vendor-extensions/drupal-search.css: { minified: true }

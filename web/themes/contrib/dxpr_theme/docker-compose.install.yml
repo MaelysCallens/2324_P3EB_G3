@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+
+  ### Install the qa-demo site and populate the qa-demo-data volume with the site data
+  qa-demo:
+    image: wodby/drupal-php:$PHP_TAG
+    container_name: "${PROJECT_NAME}_qa_demo"
+    environment:
+      PHP_TAG: $PHP_TAG
+      DXPR_DEMO: $DXPR_DEMO
+      DB_USER: $DB_USER
+      DB_PASSWORD: $DB_PASSWORD
+      DB_NAME: $DB_NAME
+      DXPR_ADMIN_PASSWORD: $DXPR_ADMIN_PASSWORD
+      DXPR_ACCESS_TOKEN: $DXPR_ACCESS_TOKEN
+      DXPR_BUILDER_CONTAINER: $DXPR_BUILDER_CONTAINER # Defaults to /usr/src/dxpr_builder
+      DXPR_THEME_CONTAINER: $DXPR_THEME_CONTAINER # Defaults to /usr/src/dxpr_theme
+      DXPR_RECORD_ANALYTICS: $DXPR_RECORD_ANALYTICS
+    volumes:
+    - ./demo-install-init.d:/docker-entrypoint-init.d/

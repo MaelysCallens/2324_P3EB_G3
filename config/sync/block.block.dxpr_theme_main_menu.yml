@@ -13,7 +13,7 @@ _core:
 id: dxpr_theme_main_menu
 theme: dxpr_theme
 region: navigation_collapsible
-weight: 10
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

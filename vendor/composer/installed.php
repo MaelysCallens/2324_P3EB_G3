@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '8c781a6458aa4257a4291e21da4fdf14a46ebfd8',
+        'reference' => 'dd96fabfd69e7c0841e0874949f187bfc813f13b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -469,6 +469,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/google_map_field' => array(
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
+            'reference' => '2.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/google_map_field',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/inline_entity_form' => array(
             'pretty_version' => '1.0.0-rc15',
             'version' => '1.0.0.0-RC15',
@@ -490,7 +499,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '8c781a6458aa4257a4291e21da4fdf14a46ebfd8',
+            'reference' => 'dd96fabfd69e7c0841e0874949f187bfc813f13b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

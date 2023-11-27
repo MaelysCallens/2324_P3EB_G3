@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "612347249d4b740ecadd29e95ea9ec30",
+    "content-hash": "57ea8e1b6f7f8d5fd4ab8f57d81d0434",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2491,6 +2491,68 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/fullcalendar_view",
                 "issues": "http://drupal.org/project/issues/fullcalendar_view"
+            }
+        },
+        {
+            "name": "drupal/google_map_field",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_map_field.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_map_field-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "a37bc6ab1db07db356ff4d87c5db5b881b8ee7aa"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1671969352",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Paulo Gomes",
+                    "homepage": "https://www.drupal.org/u/pauloamgomes",
+                    "email": "pauloamgomes@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Scot Hubbard",
+                    "homepage": "https://www.drupal.org/u/scothubbard",
+                    "email": "scot@scotserve.net",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/1531046/committers"
+                },
+                {
+                    "name": "VVVi",
+                    "homepage": "https://www.drupal.org/user/355825"
+                }
+            ],
+            "description": "Defines a field type for Google Maps.",
+            "homepage": "http://drupal.org/project/google_map_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/google_map_field",
+                "issues": "http://drupal.org/project/google_map_field",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {

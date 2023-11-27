@@ -23,6 +23,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.1",
+        "drupal/fullcalendar_view": "^5.1",
         "drupal/inline_entity_form": "^1.0-RC9",
         "drush/drush": "*"
     },

@@ -1,0 +1,29 @@
+uuid: 62eb3c38-ce71-402f-b511-fe296298e4e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.event_calendar
+  module:
+    - system
+    - views
+  theme:
+    - dxpr_theme
+id: dxpr_theme_views_block__event_calendar_block_1
+theme: dxpr_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:event_calendar-block_1'
+settings:
+  id: 'views_block:event_calendar-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /events

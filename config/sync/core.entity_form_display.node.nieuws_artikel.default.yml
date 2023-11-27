@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.nieuws_artikel.body
     - field.field.node.nieuws_artikel.field_artikel_afbeelding
     - field.field.node.nieuws_artikel.field_artikel_teaser_image
+    - field.field.node.nieuws_artikel.layout_builder__layout
     - image.style.thumbnail
     - node.type.nieuws_artikel
   module:
@@ -92,4 +93,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  layout_builder__layout: true
   uid: true

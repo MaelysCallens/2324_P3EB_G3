@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.nieuws_artikel.body
     - field.field.node.nieuws_artikel.field_artikel_afbeelding
     - field.field.node.nieuws_artikel.field_artikel_teaser_image
+    - field.field.node.nieuws_artikel.layout_builder__layout
     - node.type.nieuws_artikel
   module:
     - image
@@ -44,3 +45,4 @@ content:
 hidden:
   field_artikel_afbeelding: true
   langcode: true
+  layout_builder__layout: true

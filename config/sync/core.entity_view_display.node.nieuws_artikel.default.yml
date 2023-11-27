@@ -9,8 +9,81 @@ dependencies:
     - node.type.nieuws_artikel
   module:
     - image
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          9aa62de5-6007-4023-8750-b6588fcce631:
+            uuid: 9aa62de5-6007-4023-8750-b6588fcce631
+            region: first
+            configuration:
+              id: 'field_block:node:nieuws_artikel:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          03963ed4-73ba-418a-bca2-e7b27d2ef102:
+            uuid: 03963ed4-73ba-418a-bca2-e7b27d2ef102
+            region: second
+            configuration:
+              id: 'field_block:node:nieuws_artikel:field_artikel_afbeelding'
+              label: 'Artikel afbeelding'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: wide
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a6b07c01-fbe5-4fe6-9e4f-e80e6f221cb3:
+            uuid: a6b07c01-fbe5-4fe6-9e4f-e80e6f221cb3
+            region: first
+            configuration:
+              id: 'field_block:node:nieuws_artikel:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+        third_party_settings: {  }
 id: node.nieuws_artikel.default
 targetEntityType: node
 bundle: nieuws_artikel
@@ -18,7 +91,7 @@ mode: default
 content:
   body:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 2

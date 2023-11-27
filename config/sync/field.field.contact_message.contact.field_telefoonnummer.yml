@@ -1,0 +1,23 @@
+uuid: 73b516d5-1874-4ca8-b2ab-f53699aebb18
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_telefoonnummer
+id: contact_message.contact.field_telefoonnummer
+field_name: field_telefoonnummer
+entity_type: contact_message
+bundle: contact
+label: Telefoonnummer
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

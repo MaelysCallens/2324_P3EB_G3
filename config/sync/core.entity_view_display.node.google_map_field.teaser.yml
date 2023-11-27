@@ -1,0 +1,33 @@
+uuid: 5e5e6b1a-d60f-4038-854f-09fd0e3b196d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.google_map_field.body
+    - field.field.node.google_map_field.field_adres
+    - node.type.google_map_field
+  module:
+    - text
+    - user
+id: node.google_map_field.teaser
+targetEntityType: node
+bundle: google_map_field
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_adres: true
+  langcode: true

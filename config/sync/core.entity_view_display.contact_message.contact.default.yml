@@ -1,0 +1,60 @@
+uuid: 0ec9e5ef-5f77-49dd-a3bd-9efc7f987892
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.field.contact_message.contact.field_categorie
+    - field.field.contact_message.contact.field_e_mail
+    - field.field.contact_message.contact.field_naam
+    - field.field.contact_message.contact.field_telefoonnummer
+  module:
+    - options
+    - text
+id: contact_message.contact.default
+targetEntityType: contact_message
+bundle: contact
+mode: default
+content:
+  field_categorie:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_e_mail:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_naam:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_telefoonnummer:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

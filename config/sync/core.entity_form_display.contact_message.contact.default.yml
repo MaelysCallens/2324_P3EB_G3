@@ -1,0 +1,78 @@
+uuid: 29a264f9-9611-40ee-8a63-484687c90620
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.field.contact_message.contact.field_categorie
+    - field.field.contact_message.contact.field_e_mail
+    - field.field.contact_message.contact.field_naam
+    - field.field.contact_message.contact.field_telefoonnummer
+  module:
+    - text
+id: contact_message.contact.default
+targetEntityType: contact_message
+bundle: contact
+mode: default
+content:
+  copy:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_categorie:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_e_mail:
+    type: email_default
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_naam:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_telefoonnummer:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 12
+      placeholder: ''
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  mail: true
+  name: true
+  preview: true

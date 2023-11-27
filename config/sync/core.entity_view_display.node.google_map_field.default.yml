@@ -1,0 +1,38 @@
+uuid: 1b0a4a49-a50e-4c88-b97d-19049232eb5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.google_map_field.body
+    - field.field.node.google_map_field.field_adres
+    - node.type.google_map_field
+  module:
+    - google_map_field
+    - text
+    - user
+id: node.google_map_field.default
+targetEntityType: node
+bundle: google_map_field
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_adres:
+    type: google_map_field_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

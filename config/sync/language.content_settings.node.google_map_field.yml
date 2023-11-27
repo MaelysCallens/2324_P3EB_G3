@@ -1,0 +1,11 @@
+uuid: ae3d9237-75c4-4995-af24-8fac0711e19c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.google_map_field
+id: node.google_map_field
+target_entity_type_id: node
+target_bundle: google_map_field
+default_langcode: site_default
+language_alterable: false

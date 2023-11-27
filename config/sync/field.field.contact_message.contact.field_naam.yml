@@ -1,0 +1,24 @@
+uuid: c7e74f96-0e19-42a7-9b48-0523ae718df1
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_naam
+    - filter.format.plain_text
+  module:
+    - text
+id: contact_message.contact.field_naam
+field_name: field_naam
+entity_type: contact_message
+bundle: contact
+label: Naam
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

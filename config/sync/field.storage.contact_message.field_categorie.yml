@@ -1,0 +1,33 @@
+uuid: f804b434-d9db-4f0e-b2f2-e37765bf1deb
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_categorie
+field_name: field_categorie
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Lidmaatschappen
+      label: Lidmaatschappen
+    -
+      value: Events/teambuilding
+      label: Events/teambuilding
+    -
+      value: Businessformules
+      label: Businessformules
+    -
+      value: Andere
+      label: Andere
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

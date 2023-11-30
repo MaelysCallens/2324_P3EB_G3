@@ -11,7 +11,10 @@ full_width_containers:
   cnt_footer: 0
 full_width_content_types:
   banner_content: 0
+  body_content: 0
   drag_and_drop_page: 0
+  event: 0
+  google_map_field: 0
   nieuws_artikel: 0
   page: 0
   partner: 0
@@ -154,7 +157,7 @@ menu_border_color: ''
 menu_border_color_custom: ''
 header_mobile_height: '60'
 secondary_header_hide: hidden_none
-custom_css_site: ''
+custom_css_site: ".button{\r\ncolor: #FFFF!important;\r\ndisplay: inline-flex;\r\npadding: 5px 26px;\r\njustify-content: center;\r\nalign-items: center;\r\ngap: 10px;\r\nborder-radius: 10px;\r\nbackground: linear-gradient(90deg, #235789 0%, #1E2A42 100%);\r\nbox-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);\r\n}\r\n\r\n.grid-container {\r\n            display: grid;\r\n            grid-template-columns: repeat(2, 1fr);\r\n            grid-template-rows: repeat(3, 1fr);\r\n            gap: 10px; \r\n}\r\n\r\n.grid-item {\r\n            padding: 20px;\r\n            max-width: 100%\r\n}\r\n\r\n.grid-item img {\r\n            width: 100%;\r\n            height: 100%;\r\n            object-fit: cover;\r\n        }"
 custom_javascript_site: ''
 block_preset: ''
 block_card: ''

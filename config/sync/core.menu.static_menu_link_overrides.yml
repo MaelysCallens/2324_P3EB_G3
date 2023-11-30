@@ -9,8 +9,20 @@ definitions:
     expanded: false
     enabled: true
   standard__front_page:
-    weight: -50
     menu_name: main
     parent: ''
+    weight: -50
+    expanded: false
+    enabled: true
+  user__logout:
+    weight: -49
+    parent: 'menu_link_content:90e25e97-33b7-4476-ace0-da3cb3b0a8f6'
+    menu_name: main
+    expanded: false
+    enabled: true
+  user__page:
+    weight: -50
+    parent: 'menu_link_content:90e25e97-33b7-4476-ace0-da3cb3b0a8f6'
+    menu_name: main
     enabled: true
     expanded: false

@@ -337,7 +337,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: 'btn btn-dark'
+          element_class: button
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false

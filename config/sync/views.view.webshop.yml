@@ -173,7 +173,7 @@ display:
         type: normal
         title: Webshop
         description: ''
-        weight: 100
+        weight: -43
         expanded: false
         menu_name: main
         parent: ''

@@ -1,0 +1,26 @@
+uuid: d787ba51-5276-4440-a87f-0aa6331ab5d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - system
+  theme:
+    - dxpr_theme
+id: dxpr_theme_cart
+theme: dxpr_theme
+region: navigation_collapsible
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  label_display: '0'
+  provider: commerce_cart
+  dropdown: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /webshop

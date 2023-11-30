@@ -1,6 +1,6 @@
 uuid: 3b743285-6655-41de-b826-412d6ff08507
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.account
@@ -20,6 +20,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 0
-  expand_all_items: false
+  depth: 9
+  expand_all_items: true
 visibility: {  }

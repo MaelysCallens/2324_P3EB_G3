@@ -1,0 +1,15 @@
+commerce_recurring.configuration:
+  path: '/admin/commerce/config/subscriptions'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Subscriptions'
+  requirements:
+    _permission: 'administer commerce_subscription'
+entity.commerce_subscription.admin_form:
+  path: '/admin/commerce/config/products/subscription-types/{bundle}'
+  defaults:
+    _controller: '\Drupal\commerce_recurring\Controller\SubscriptionController::adminOverview'
+    _title: 'Subscription types'
+    bundle: ''
+  requirements:
+    _permission: 'administer commerce_subscription'

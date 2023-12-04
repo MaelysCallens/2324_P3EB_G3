@@ -1,0 +1,62 @@
+order_recurring:
+  id: order_recurring
+  group: commerce_order
+  label: 'Recurring'
+  states:
+    draft:
+      label: 'Draft'
+    needs_payment:
+      label: 'Needs payment'
+    # Set at the end of dunning.
+    failed:
+      label: 'Failed'
+    completed:
+      label: 'Completed'
+    canceled:
+      label: 'Canceled'
+  transitions:
+    place:
+      label: 'Place order'
+      from: [draft]
+      to: needs_payment
+    mark_paid:
+      label: 'Mark as paid'
+      from: [needs_payment, failed]
+      to: completed
+    mark_failed:
+      label: 'Mark as failed'
+      from: [needs_payment]
+      to: failed
+    cancel:
+      label: 'Cancel order'
+      from: [draft, needs_payment, failed]
+      to: canceled
+
+subscription_default:
+  id: subscription_default
+  group: commerce_subscription
+  label: 'Default'
+  states:
+    pending:
+      label: Pending
+    trial:
+      label: Trial
+    active:
+      label: Active
+    expired:
+      label: Expired
+    canceled:
+      label: Canceled
+  transitions:
+    activate:
+      label: Activate
+      from: [pending, trial]
+      to: active
+    expire:
+      label: Expire
+      from: [active]
+      to: expired
+    cancel:
+      label: Cancel
+      from: [trial, active]
+      to: canceled

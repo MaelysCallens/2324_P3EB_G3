@@ -1,0 +1,86 @@
+{#
+/**
+ * @file
+ * Template for subscriptions in the 'customer' view mode.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - subscription: The rendered subscription fields.
+ *   Use 'subscription' to print them all, or print a subset such as
+ *   'subscription.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ subscription|without('title') }}
+ *   @endcode
+ * - subscription_entity: The subscription entity.
+ * - current_theme_name: The machine name of the current theme.
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('commerce_recurring/subscription_form') }}
+<div class="layout-subscription-form clearfix">
+  <div class="layout-region layout-region-subscription-main">
+    {{ subscription.initial_order }}
+    {{ subscription.orders }}
+  </div>
+  <div class="layout-region layout-region-subscription-secondary">
+    <div class="entity-meta">
+      <div class="entity-meta__header">
+        <h3 class="entity-meta__title">
+          {{ subscription.state }}
+        </h3>
+        {% for key in ['created', 'trial_starts', 'trial_ends', 'starts', 'ends'] %}
+          {% if subscription[key] is defined and not subscription_entity.get(key).isEmpty %}
+            <div class="form-item">
+              {{ subscription[key] }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <details open class="{{ current_theme_name }}-details">
+        <summary role="button" class="{{ current_theme_name }}-details__summary">
+          {{ 'Subscription information'|t }}
+        </summary>
+        <div class="details-wrapper {{ current_theme_name }}-details__wrapper">
+          {% for key in ['store_id', 'uid', 'purchased_entity', 'quantity', 'unit_price'] %}
+            {% if subscription[key] is defined and subscription_entity.hasField(key) and not subscription_entity.get(key).isEmpty %}
+              {{ subscription[key] }}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </details>
+      <details open class="{{ current_theme_name }}-details">
+        <summary role="button" class="{{ current_theme_name }}-details__summary">
+          {{ 'Billing information'|t }}
+        </summary>
+        <div class="details-wrapper {{ current_theme_name }}-details__wrapper">
+          {{ subscription.payment_method }}
+          {{ subscription.billing_schedule }}
+          {{ subscription.renewed }}
+          {{ subscription.next_renewal }}
+        </div>
+      </details>
+      {% if subscription_entity.hasScheduledChanges %}
+        <details open class="{{ current_theme_name }}-details">
+          <summary role="button" class="{{ current_theme_name }}-details__summary">
+            {{ 'Scheduled changes'|t }}
+          </summary>
+          <div class="details-wrapper {{ current_theme_name }}-details__wrapper">
+            {{ subscription.scheduled_changes }}
+          </div>
+        </details>
+      {% endif %}
+      {% if additional_fields is not empty %}
+        <details open class="{{ current_theme_name }}-details">
+          <summary role="button" class="{{ current_theme_name }}-details__summary">
+            {{ 'Other'|t }}
+          </summary>
+          <div class="details-wrapper {{ current_theme_name }}-details__wrapper">
+            {{ additional_fields }}
+          </div>
+        </details>
+      {% endif %}
+    </div>
+  </div>
+</div>

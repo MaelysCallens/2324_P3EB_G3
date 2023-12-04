@@ -1,0 +1,11 @@
+{
+  "name": "drupal/commerce_paypal",
+  "type": "drupal-module",
+  "description": "Provides Commerce integration for PayPal.",
+  "homepage": "https://drupal.org/project/commerce_paypal",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/commerce": "^2.19 || ^3",
+    "sainsburys/guzzle-oauth2-plugin": "^3.0"
+  }
+}

@@ -4,6 +4,7 @@ display:
     display_options:
       fields:
         amount__number:
+          label: Betaling
           separator: ', '
         refunded_amount__number:
           separator: ', '

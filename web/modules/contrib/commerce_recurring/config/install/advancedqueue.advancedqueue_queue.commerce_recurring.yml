@@ -1,0 +1,7 @@
+id: commerce_recurring
+label: 'Commerce Recurring'
+backend: database
+backend_configuration: {}
+processor: cron
+processing_time: 180
+locked: true

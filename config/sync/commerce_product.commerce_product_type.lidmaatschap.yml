@@ -1,0 +1,14 @@
+uuid: f7983a68-7c9c-48c1-a6fe-66d69f5be714
+langcode: en
+status: true
+dependencies: {  }
+id: lidmaatschap
+label: Lidmaatschap
+traits: {  }
+locked: false
+description: ''
+variationType: lidmaatschap
+variationTypes:
+  - lidmaatschap
+multipleVariations: false
+injectVariationFields: true

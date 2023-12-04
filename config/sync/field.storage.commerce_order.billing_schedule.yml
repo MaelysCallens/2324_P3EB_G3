@@ -1,0 +1,22 @@
+uuid: c4a5da4f-3d91-4b2d-8904-91e3cdb73c9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - commerce_recurring
+_core:
+  default_config_hash: iRPlc2BG4BFVrfeRajcmvf6JztPRaKvbgK9T6R9i3bE
+id: commerce_order.billing_schedule
+field_name: billing_schedule
+entity_type: commerce_order
+type: entity_reference
+settings:
+  target_type: commerce_billing_schedule
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

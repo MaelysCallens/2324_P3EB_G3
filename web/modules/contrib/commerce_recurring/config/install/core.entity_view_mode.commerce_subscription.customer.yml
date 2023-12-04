@@ -1,0 +1,10 @@
+uuid: 1b2852f7-ab18-486e-bf35-dfee65cb5570
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_recurring
+id: commerce_subscription.customer
+label: Customer
+targetEntityType: commerce_subscription
+cache: true

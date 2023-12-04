@@ -1,0 +1,54 @@
+uuid: 85e7e80a-4f23-4608-9b7c-ef468810c28a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.hoodie
+    - field.field.commerce_product_variation.hoodie.attribute_color
+    - field.field.commerce_product_variation.hoodie.attribute_size
+    - field.field.commerce_product_variation.hoodie.field_images
+    - image.style.medium
+  module:
+    - commerce_price
+    - image
+id: commerce_product_variation.hoodie.default
+targetEntityType: commerce_product_variation
+bundle: hoodie
+mode: default
+content:
+  attribute_size:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  attribute_color: true
+  langcode: true
+  list_price: true
+  product_id: true
+  sku: true
+  title: true

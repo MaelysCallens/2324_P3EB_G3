@@ -5,8 +5,11 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.lange_broek
     - field.field.commerce_product.lange_broek.body
+    - field.field.commerce_product.lange_broek.field_images
+    - image.style.thumbnail
   module:
     - commerce
+    - image
     - path
     - text
 id: commerce_product.lange_broek.default
@@ -29,6 +32,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_images:
+    type: image_image
+    weight: 91
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   langcode:
     type: language_select

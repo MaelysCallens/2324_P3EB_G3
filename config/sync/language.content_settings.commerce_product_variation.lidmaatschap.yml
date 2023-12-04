@@ -1,0 +1,11 @@
+uuid: e0a363d0-fd04-4032-aeae-f36678e1ba4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.lidmaatschap
+id: commerce_product_variation.lidmaatschap
+target_entity_type_id: commerce_product_variation
+target_bundle: lidmaatschap
+default_langcode: site_default
+language_alterable: false

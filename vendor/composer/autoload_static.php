@@ -13,12 +13,12 @@ class ComposerStaticInitb10504d8a6758a1daeb1a84ab2a9541c
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
-        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2f69d3914119f042cca9e44442d5ce95' => __DIR__ . '/../..' . '/web/core/includes/bootstrap.inc',
@@ -71,6 +71,7 @@ class ComposerStaticInitb10504d8a6758a1daeb1a84ab2a9541c
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'SelfUpdate\\' => 11,
+            'Sainsburys\\Guzzle\\Oauth2\\' => 25,
         ),
         'R' => 
         array (
@@ -103,6 +104,10 @@ class ComposerStaticInitb10504d8a6758a1daeb1a84ab2a9541c
             'GuzzleHttp\\' => 11,
             'Grasmash\\YamlCli\\' => 17,
             'Grasmash\\Expander\\' => 18,
+        ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
         ),
         'E' => 
         array (
@@ -289,6 +294,10 @@ class ComposerStaticInitb10504d8a6758a1daeb1a84ab2a9541c
         array (
             0 => __DIR__ . '/..' . '/consolidation/self-update/src',
         ),
+        'Sainsburys\\Guzzle\\Oauth2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sainsburys/guzzle-oauth2-plugin/src',
+        ),
         'Robo\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/robo/src',
@@ -357,6 +366,10 @@ class ComposerStaticInitb10504d8a6758a1daeb1a84ab2a9541c
         'Grasmash\\Expander\\' => 
         array (
             0 => __DIR__ . '/..' . '/grasmash/expander/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

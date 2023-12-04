@@ -1,0 +1,26 @@
+services:
+  commerce_paypal.ipn_handler:
+    class: Drupal\commerce_paypal\IPNHandler
+    arguments: ['@entity_type.manager', '@logger.channel.commerce_paypal', '@http_client']
+
+  commerce_paypal.checkout_sdk_factory:
+    class: Drupal\commerce_paypal\CheckoutSdkFactory
+    arguments: ['@http_client_factory', '@http_handler_stack', '@commerce_order.adjustment_transformer', '@event_dispatcher', '@module_handler', '@state', '@datetime.time']
+
+  commerce_paypal.checkout_sdk:
+    abstract: true
+    class: Drupal\commerce_paypal\CheckoutSdk
+    factory: commerce_paypal.checkout_sdk_factory
+
+  commerce_paypal.custom_card_fields_builder:
+    class: Drupal\commerce_paypal\CustomCardFieldsBuilder
+    arguments: ['@commerce_paypal.checkout_sdk_factory', '@logger.channel.commerce_paypal']
+
+  commerce_paypal.smart_payment_buttons_builder:
+    class: Drupal\commerce_paypal\SmartPaymentButtonsBuilder
+    arguments: ['@config.factory']
+
+  logger.channel.commerce_paypal:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['commerce_paypal']

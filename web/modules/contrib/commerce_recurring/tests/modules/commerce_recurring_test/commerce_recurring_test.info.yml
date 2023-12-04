@@ -1,0 +1,11 @@
+name: 'Commerce Recurring Test'
+type: module
+description: 'Test module for Commerce Recurring.'
+package: Testing
+dependencies:
+  - commerce_recurring:commerce_recurring
+
+# Information added by Drupal.org packaging script on 2022-08-19
+version: '8.x-1.0-rc1'
+project: 'commerce_recurring'
+datestamp: 1660898450

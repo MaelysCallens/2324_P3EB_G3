@@ -1,0 +1,18 @@
+{
+  "name": "drupal/commerce_recurring",
+  "type": "drupal-module",
+  "description": "Provides recurring billing for Drupal Commerce.",
+  "homepage": "http://drupal.org/project/commerce_recurring",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/core": "^9.2 || ^10",
+    "drupal/advancedqueue": "^1.0",
+    "drupal/commerce": "^2.25 || ^3",
+    "drupal/state_machine": "^1.5"
+  },
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/commerce_recurring",
+    "source": "http://cgit.drupalcode.org/commerce_recurring"
+  },
+  "minimum-stability": "dev"
+}

@@ -1,0 +1,11 @@
+uuid: 9cd8de1e-a261-42dd-87cb-bcc4d6ff9838
+langcode: en
+status: true
+dependencies: {  }
+id: lidmaatschap
+label: Lidmaatschap
+traits:
+  - purchasable_entity_subscription
+locked: false
+orderItemType: default
+generateTitle: false

@@ -1,0 +1,17 @@
+commerce_recurring.commerce_billing_schedule:
+  label: Commerce billing schedule
+  provider: commerce_recurring
+  plugin_manager_service_id: plugin.manager.commerce_billing_schedule
+  plugin_definition_decorator_class: Drupal\plugin\PluginDefinition\ArrayPluginDefinitionDecorator
+
+commerce_recurring.subscription_type:
+  label: Commerce subscription type
+  provider: commerce_recurring
+  plugin_manager_service_id: plugin.manager.commerce_subscription_type
+  plugin_definition_decorator_class: Drupal\plugin\PluginDefinition\ArrayPluginDefinitionDecorator
+
+commerce_recurring.prorater:
+  label: Commerce prorater
+  provider: commerce_recurring
+  plugin_manager_service_id: plugin.manager.commerce_prorater
+  plugin_definition_decorator_class: Drupal\plugin\PluginDefinition\ArrayPluginDefinitionDecorator

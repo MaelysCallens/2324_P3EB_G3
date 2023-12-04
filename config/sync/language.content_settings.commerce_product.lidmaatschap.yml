@@ -1,0 +1,11 @@
+uuid: ce4f8535-7c70-4c92-ba1c-8d6efa876b24
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.lidmaatschap
+id: commerce_product.lidmaatschap
+target_entity_type_id: commerce_product
+target_bundle: lidmaatschap
+default_langcode: site_default
+language_alterable: false

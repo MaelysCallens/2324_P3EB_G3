@@ -1,0 +1,45 @@
+paypal_checkout:
+  css:
+    theme:
+      css/paypal-checkout.css: {}
+  js:
+    js/paypal-checkout.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupal.ajax
+    - core/drupal.message
+
+paypal_checkout_custom_card_fields:
+  css:
+    theme:
+      css/paypal-checkout-custom-card-fields.css: {}
+      css/paypal-checkout.css: {}
+  js:
+    js/paypal-checkout-custom-card-fields.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery
+    - core/once
+
+credit_card_icons:
+  version: VERSION
+  css:
+    theme:
+      css/commerce_paypal.credit_card_icons.css: {}
+
+paypal_payflow_link:
+  js:
+    js/paypal-payflow-link.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery
+
+paypal_payflow_link_iframe_fix:
+  header: true
+  js:
+    js/paypal-payflow-link-iframe-fix.js: { weight: -200 }

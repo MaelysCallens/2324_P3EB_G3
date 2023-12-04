@@ -1,0 +1,22 @@
+uuid: f77a3daf-663f-40ac-99e6-ea07d0eb77b4
+langcode: en
+status: true
+dependencies: {  }
+id: lidmaatschap
+label: Lidmaatschap
+displayLabel: 'lidmaatschap Billing schedule'
+billingType: prepaid
+combineSubscriptions: true
+retrySchedule:
+  - 1
+  - 3
+  - 5
+unpaidSubscriptionState: canceled
+plugin: rolling
+configuration:
+  trial_interval: {  }
+  interval:
+    number: 1
+    unit: year
+prorater: proportional
+proraterConfiguration: {  }

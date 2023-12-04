@@ -1,0 +1,43 @@
+uuid: 2f2e1e8a-7b6c-415d-b3f8-fb1f594c317a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.lidmaatschap
+    - field.field.commerce_product.lidmaatschap.body
+  module:
+    - commerce_product
+    - text
+id: commerce_product.lidmaatschap.default
+targetEntityType: commerce_product
+bundle: lidmaatschap
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  langcode: true
+  stores: true
+  uid: true

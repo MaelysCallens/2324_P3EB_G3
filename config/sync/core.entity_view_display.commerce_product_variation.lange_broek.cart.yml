@@ -1,0 +1,41 @@
+uuid: 2db4357b-28fa-44a4-92f2-090cca21a2b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.lange_broek
+    - core.entity_view_mode.commerce_product_variation.cart
+    - field.field.commerce_product_variation.lange_broek.attribute_color
+    - field.field.commerce_product_variation.lange_broek.attribute_size
+  module:
+    - commerce_price
+id: commerce_product_variation.lange_broek.cart
+targetEntityType: commerce_product_variation
+bundle: lange_broek
+mode: cart
+content:
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  attribute_color: true
+  attribute_size: true
+  langcode: true
+  product_id: true
+  sku: true
+  title: true

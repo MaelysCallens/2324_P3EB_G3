@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ *
+ * Default template for displaying credit card logos on payment method add form.
+ *
+ * Available variables:
+ * - credit_cards: List of supported credit cards.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="payment-method-icon-list">
+  {% for credit_card in credit_cards %}
+    <span class="payment-method-icon payment-method-icon--{{ credit_card }}"></span>
+  {% endfor %}
+</div>

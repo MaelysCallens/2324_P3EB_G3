@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains hook implementations for the Commerce Recurring Test module.
+ */
+
+use Drupal\commerce_recurring_test\Entity\ExceptionPaymentMethod;
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function commerce_recurring_test_entity_type_build(array &$entity_types) {
+  /** @var \Drupal\Core\Entity\EntityTypeInterface[] $entity_types */
+
+  // Change the entity class of the payment method entity so we can have it
+  // throw an exception.
+  $entity_types['commerce_payment_method']->setClass(ExceptionPaymentMethod::class);
+}

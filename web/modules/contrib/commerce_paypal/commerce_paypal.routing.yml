@@ -1,0 +1,48 @@
+commerce_paypal.checkout.create:
+  path: '/commerce-paypal/checkout-create/{commerce_payment_gateway}/{commerce_order}'
+  defaults:
+    _controller: '\Drupal\commerce_paypal\Controller\CheckoutController::onCreate'
+  requirements:
+    _entity_access: 'commerce_order.update'
+    _format: 'json'
+  options:
+    parameters:
+      commerce_payment_gateway:
+        type: entity:commerce_payment_gateway
+      commerce_order:
+        type: entity:commerce_order
+
+commerce_paypal.checkout.approve:
+  path: '/commerce-paypal/checkout-approve/{commerce_payment_gateway}/{commerce_order}'
+  defaults:
+    _controller: '\Drupal\commerce_paypal\Controller\CheckoutController::onApprove'
+  requirements:
+    _entity_access: 'commerce_order.update'
+    _module_dependencies: commerce_checkout
+    _format: 'json'
+  options:
+    parameters:
+      commerce_payment_gateway:
+        type: entity:commerce_payment_gateway
+      commerce_order:
+        type: entity:commerce_order
+
+commerce_paypal.credit_messaging_settings:
+  path: '/admin/commerce/config/payment/paypal-credit'
+  defaults:
+    _form: '\Drupal\commerce_paypal\Form\CreditMessagingForm'
+    _title: 'Paypal Credit messaging'
+  requirements:
+    _permission: 'administer commerce payment gateway'
+
+commerce_paypal.checkout.payflowlink_iframe_return:
+  path: '/checkout/{commerce_order}/{step}/payflowlink-iframe-return'
+  defaults:
+    _controller: '\Drupal\commerce_paypal\Controller\PayflowlinkIframeCheckoutController::returnPage'
+  requirements:
+    _custom_access: '\Drupal\commerce_checkout\Controller\CheckoutController::checkAccess'
+    _module_dependencies: commerce_checkout
+  options:
+    parameters:
+      commerce_order:
+        type: entity:commerce_order

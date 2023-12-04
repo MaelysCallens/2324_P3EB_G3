@@ -6,8 +6,11 @@ dependencies:
     - commerce_product.commerce_product_variation_type.hoodie
     - field.field.commerce_product_variation.hoodie.attribute_color
     - field.field.commerce_product_variation.hoodie.attribute_size
+    - field.field.commerce_product_variation.hoodie.field_images
+    - image.style.thumbnail
   module:
     - commerce_price
+    - image
 id: commerce_product_variation.hoodie.default
 targetEntityType: commerce_product_variation
 bundle: hoodie
@@ -24,6 +27,14 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_images:
+    type: image_image
+    weight: 92
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   langcode:
     type: language_select

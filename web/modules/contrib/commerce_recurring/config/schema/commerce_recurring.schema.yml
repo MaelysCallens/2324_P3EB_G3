@@ -1,0 +1,120 @@
+commerce_recurring.commerce_billing_schedule.*:
+  type: config_entity
+  label: 'Billing schedule'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    displayLabel:
+      type: label
+      label: 'Display label'
+    billingType:
+      type: string
+      label: 'Billing type'
+    combineSubscriptions:
+      type: boolean
+      label: 'Combine subscriptions into a single recurring order'
+    retrySchedule:
+      type: sequence
+      label: 'Retry schedule'
+      sequence:
+        type: integer
+        label: 'Retry days'
+    unpaidSubscriptionState:
+      type: string
+      label: 'Unpaid subscription state'
+    plugin:
+      type: string
+      label: 'Plugin'
+    configuration:
+      type: commerce_recurring.commerce_billing_schedule.plugin.[%parent.plugin]
+    prorater:
+      type: string
+      label: 'Prorater'
+    proraterConfiguration:
+      type: commerce_recurring.commerce_prorater.plugin.[%parent.prorater]
+
+commerce_recurring.commerce_billing_schedule.plugin.*:
+  type: mapping
+
+commerce_recurring.commerce_billing_schedule.plugin.fixed:
+  type: mapping
+  mapping:
+    trial_interval:
+      type: mapping
+      label: 'Trial interval'
+      mapping:
+        number:
+          type: integer
+          label: Number
+        unit:
+          type: string
+          label: Unit
+    interval:
+      type: mapping
+      label: 'Interval'
+      mapping:
+        number:
+          type: integer
+          label: Number
+        unit:
+          type: string
+          label: Unit
+    start_month:
+      type: integer
+      label: 'Start month'
+    start_day:
+      type: integer
+      label: 'Start day'
+
+commerce_recurring.commerce_billing_schedule.plugin.rolling:
+  type: mapping
+  mapping:
+    trial_interval:
+      type: mapping
+      label: 'Trial interval'
+      mapping:
+        number:
+          type: integer
+          label: Number
+        unit:
+          type: string
+          label: Unit
+    interval:
+      type: mapping
+      label: 'Interval'
+      mapping:
+        number:
+          type: integer
+          label: Number
+        unit:
+          type: string
+          label: Unit
+
+commerce_recurring.commerce_prorater.plugin.*:
+  type: mapping
+
+field.value.commerce_billing_period:
+ type: mapping
+ label: 'Default value'
+ mapping:
+   starts:
+     type: integer
+     label: 'Starts'
+   ends:
+     type: int
+     label: 'Ends'
+
+field.widget.settings.commerce_recurring_payment_method:
+  type: field.widget.settings.entity_reference_autocomplete_tags
+
+field.formatter.settings.subscription_orders:
+  type: mapping
+  label: 'Subscription orders formatter'
+  mapping:
+   view:
+      type: string
+      label: 'View'

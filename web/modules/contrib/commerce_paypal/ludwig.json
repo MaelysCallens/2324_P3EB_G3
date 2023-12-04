@@ -1,0 +1,12 @@
+{
+  "require": {
+    "sainsburys/guzzle-oauth2-plugin": {
+      "version": "v3.0.6",
+      "url": "https://github.com/Sainsburys/guzzle-oauth2-plugin/archive/v3.0.6.zip"
+    },
+    "firebase/php-jwt": {
+      "version": "v6.3.0",
+      "url": "https://github.com/firebase/php-jwt/archive/v6.3.0.zip"
+    }
+  }
+}

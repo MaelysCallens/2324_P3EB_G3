@@ -1,0 +1,11 @@
+entity.commerce_billing_schedule.add_form:
+  route_name: entity.commerce_billing_schedule.add_form
+  title: 'Add billing schedule'
+  appears_on:
+    - entity.commerce_billing_schedule.collection
+
+entity.commerce_subscription.add_page:
+  route_name: entity.commerce_subscription.add_page
+  title: 'Add subscription'
+  appears_on:
+    - entity.commerce_subscription.collection

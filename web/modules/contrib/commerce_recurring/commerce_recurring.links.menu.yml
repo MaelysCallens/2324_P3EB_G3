@@ -1,0 +1,23 @@
+commerce_recurring.configuration:
+  title: 'Subscriptions'
+  route_name: 'commerce_recurring.configuration'
+  parent: 'commerce.configuration'
+  weight: -10
+
+entity.commerce_billing_schedule.collection:
+  title: 'Billing schedules'
+  route_name: 'entity.commerce_billing_schedule.collection'
+  parent: 'commerce_recurring.configuration'
+  description: 'Configure the available billing schedules.'
+
+entity.commerce_subscription.collection:
+  title: 'Subscriptions'
+  route_name: 'entity.commerce_subscription.collection'
+  parent: 'commerce.admin_commerce'
+  description: 'Manage subscriptions.'
+
+entity.commerce_subscription.admin_form:
+  title: 'Subscription types'
+  route_name: 'entity.commerce_subscription.admin_form'
+  parent: 'commerce_recurring.configuration'
+  description: 'Manage fields, form and display settings for your subscription types.'

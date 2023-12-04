@@ -1,0 +1,11 @@
+admin:
+  version: VERSION
+  css:
+    theme:
+      css/commerce_recurring.admin.css: {}
+
+subscription_form:
+  version: VERSION
+  css:
+    theme:
+      css/subscription.form.css: {}

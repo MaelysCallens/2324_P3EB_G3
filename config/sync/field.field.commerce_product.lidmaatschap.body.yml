@@ -1,0 +1,24 @@
+uuid: 19e2d1fd-3326-4e69-9fc2-1539c1029076
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.lidmaatschap
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.lidmaatschap.body
+field_name: body
+entity_type: commerce_product
+bundle: lidmaatschap
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

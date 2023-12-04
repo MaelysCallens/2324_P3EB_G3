@@ -1,0 +1,143 @@
+commerce_payment.commerce_payment_gateway.plugin.paypal_checkout:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    payment_solution:
+      type: string
+      label: 'PayPal Payment solution'
+    client_id:
+      type: string
+      label: 'Client ID'
+    secret:
+      type: string
+      label: 'Secret'
+    intent:
+      type: string
+      label: 'Intent'
+    disable_funding:
+      type: sequence
+      label: 'Disable funding sources'
+      sequence:
+        type: string
+    disable_card:
+      type: sequence
+      label: 'Disable card types'
+      sequence:
+        type: string
+    shipping_preference:
+      type: string
+      label: 'Shipping preference'
+    update_billing_profile:
+      type: boolean
+      label: 'Update billing profile'
+    update_shipping_profile:
+      type: boolean
+      label: 'Update shipping profile'
+    style:
+      type: mapping
+      label: 'Style'
+      mapping:
+        layout:
+          type: string
+          label: 'Layout'
+        color:
+          type: string
+          label: 'Color'
+        shape:
+          type: string
+          label: 'Shape'
+        label:
+          type: string
+          label: 'Label'
+        tagline:
+          type: boolean
+          label: 'Display tagline'
+    enable_on_cart:
+      type: boolean
+      label: 'Show the Smart payment buttons on the cart page'
+    webhook_id:
+      type: string
+      label: 'The webhook ID'
+    enable_credit_card_icons:
+      type: boolean
+      label: 'Enable credit card icons'
+commerce_payment.commerce_payment_gateway.plugin.paypal_express_checkout:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    api_username:
+      type: string
+      label: 'API Username'
+    api_password:
+      type: string
+      label: 'API Password'
+    shipping_prompt:
+      type: string
+      label: 'Shipping address collection'
+    signature:
+      type: string
+      label: 'Signature'
+    solution_type:
+      type: string
+      label: 'Type of checkout flow'
+commerce_payment.commerce_payment_gateway.plugin.paypal_payflow:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    partner:
+      type: string
+      label: 'Partner'
+    vendor:
+      type: string
+      label: 'Vendor'
+    user:
+      type: string
+      label: 'User'
+    password:
+      type: string
+      label: 'Password'
+commerce_payment.commerce_payment_gateway.plugin.paypal_payflow_link:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    partner:
+      type: string
+      label: 'Partner'
+    vendor:
+      type: string
+      label: 'Vendor'
+    user:
+      type: string
+      label: 'User'
+    password:
+      type: string
+      label: 'Password'
+    trxtype:
+      type: string
+      label: 'Default transaction type'
+    redirect_mode:
+      type: string
+      label: 'Checkout redirect mode'
+    reference_transactions:
+      type: boolean
+      label: 'Enable reference transactions'
+    emailcustomer:
+      type: boolean
+      label: 'Instruct PayPal to e-mail payment receipts'
+    log:
+      type: mapping
+      label: 'Log API messages'
+      mapping:
+        request:
+          type: string
+          label: 'API request messages'
+        response:
+          type: string
+          label: 'API response messages'
+
+commerce_paypal.credit_messaging_settings:
+  type: config_object
+  label: 'PayPal Credit messaging settings'
+  mapping:
+    client_id:
+      type: string
+      label: 'Client ID'
+    add_to_cart:
+      type: boolean
+      label: 'Enable on add to cart'

@@ -1,0 +1,42 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        subscription_id:
+          separator: ', '
+        title:
+          label: Titel
+          separator: ', '
+        billing_schedule:
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        starts:
+          separator: ', '
+        ends:
+          separator: ', '
+        operations:
+          label: Operations
+      arguments:
+        uid:
+          exception:
+            title: Alle

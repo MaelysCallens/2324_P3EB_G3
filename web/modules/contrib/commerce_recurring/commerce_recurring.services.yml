@@ -1,0 +1,53 @@
+services:
+  commerce_recurring.referenceable_plugin_types_subscriber:
+    class: Drupal\commerce_recurring\EventSubscriber\ReferenceablePluginTypesSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  commerce_recurring.event_subscriber.order_subscriber:
+    class: Drupal\commerce_recurring\EventSubscriber\OrderSubscriber
+    arguments: ['@entity_type.manager', '@commerce_recurring.order_manager', '@datetime.time']
+    tags:
+      - { name: event_subscriber }
+
+  commerce_recurring.event_subscriber.dunning_subscriber:
+    class: Drupal\commerce_recurring\EventSubscriber\DunningSubscriber
+    arguments: ['@commerce_recurring.payment_declined_mail']
+    tags:
+      - { name: event_subscriber }
+
+  commerce_recurring.payment_declined_mail:
+    class: Drupal\commerce_recurring\Mail\PaymentDeclinedMail
+    arguments: ['@entity_type.manager', '@commerce.mail_handler', '@commerce_order.order_total_summary', '@datetime.time']
+
+  commerce_recurring.initial_order_processor:
+    class: Drupal\commerce_recurring\InitialOrderProcessor
+    arguments: ['@datetime.time']
+    tags:
+      - { name: commerce_order.order_processor, priority: 40, adjustment_type: subscription }
+
+  commerce_recurring.recurring_order_processor:
+    class: Drupal\commerce_recurring\RecurringOrderProcessor
+    arguments: ['@commerce_recurring.order_manager']
+    tags:
+      - { name: commerce_order.order_processor, priority: 300 }
+
+  commerce_recurring.cron:
+    class: Drupal\commerce_recurring\Cron
+    arguments: ['@entity_type.manager', '@commerce_recurring.order_manager', '@datetime.time']
+
+  commerce_recurring.order_manager:
+    class: Drupal\commerce_recurring\RecurringOrderManager
+    arguments: ['@entity_type.manager', '@datetime.time']
+
+  plugin.manager.commerce_billing_schedule:
+    class: Drupal\commerce_recurring\BillingScheduleManager
+    parent: default_plugin_manager
+
+  plugin.manager.commerce_subscription_type:
+    class: Drupal\commerce_recurring\SubscriptionTypeManager
+    parent: default_plugin_manager
+
+  plugin.manager.commerce_prorater:
+    class: Drupal\commerce_recurring\ProraterManager
+    parent: default_plugin_manager

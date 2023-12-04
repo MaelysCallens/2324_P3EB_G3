@@ -17,8 +17,11 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/advancedqueue": "^1.0@RC",
         "drupal/belgrade": "^2.0",
         "drupal/commerce": "^2.36",
+        "drupal/commerce_paypal": "^1.4",
+        "drupal/commerce_recurring": "^1.0@RC",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",

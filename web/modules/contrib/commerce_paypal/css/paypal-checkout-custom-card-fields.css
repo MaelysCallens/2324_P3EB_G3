@@ -1,0 +1,25 @@
+#commerce-paypal-checkout-custom-card-fields label {
+  margin-top: 10px;
+}
+#commerce-paypal-card-number {
+  width: 16em;
+  margin-right: 10px;
+}
+#commerce-paypal-cvv {
+  width: 60px;
+}
+#commerce-paypal-expiration-date {
+  margin-right: 10px;
+  width: 60px;
+}
+.commerce-paypal-card-fields-wrapper {
+  display: none;
+}
+.commerce-paypal-checkout-custom-card-field {
+  height: 1.2em;
+  border: 1px solid #D6D2C4;
+  margin-top: 5px;
+  padding: 4px;
+  background: #FFF;
+  box-sizing: content-box;
+}

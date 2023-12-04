@@ -1,0 +1,84 @@
+uuid: 4cbba53c-5de5-4a6c-9cf6-5854cca0e16c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.lidmaatschap
+    - field.field.commerce_product_variation.lidmaatschap.billing_schedule
+    - field.field.commerce_product_variation.lidmaatschap.field_images
+    - field.field.commerce_product_variation.lidmaatschap.subscription_type
+    - image.style.thumbnail
+  module:
+    - commerce
+    - commerce_price
+    - image
+id: commerce_product_variation.lidmaatschap.default
+targetEntityType: commerce_product_variation
+bundle: lidmaatschap
+mode: default
+content:
+  billing_schedule:
+    type: options_select
+    weight: 91
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_images:
+    type: image_image
+    weight: 92
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  list_price:
+    type: commerce_list_price
+    weight: -1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 90
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  subscription_type:
+    type: commerce_plugin_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

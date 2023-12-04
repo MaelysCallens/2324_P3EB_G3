@@ -1,0 +1,37 @@
+uuid: e9b4f9f4-4619-4676-bef2-12fcf5d6404c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.commerce_subscription.customer
+  module:
+    - commerce_recurring
+_core:
+  default_config_hash: 8-blWKI5tSwVnkh99sLd9B79zn9vCKFM4lEyf_sHed8
+id: commerce_subscription.product_variation.customer
+targetEntityType: commerce_subscription
+bundle: product_variation
+mode: customer
+content:
+  payment_method:
+    type: commerce_recurring_payment_method
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  billing_schedule: true
+  ends: true
+  purchased_entity: true
+  quantity: true
+  starts: true
+  store_id: true
+  title: true
+  trial_ends: true
+  trial_starts: true
+  uid: true
+  unit_price: true

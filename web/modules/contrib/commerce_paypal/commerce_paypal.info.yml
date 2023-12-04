@@ -1,0 +1,12 @@
+name: Commerce PayPal
+type: module
+description: 'Provides Commerce integration for PayPal Payments.'
+package: Commerce (contrib)
+core_version_requirement: ^9.3 || ^10
+dependencies:
+  - commerce:commerce_payment
+
+# Information added by Drupal.org packaging script on 2023-01-18
+version: '8.x-1.4'
+project: 'commerce_paypal'
+datestamp: 1674044190

@@ -1,0 +1,43 @@
+display:
+  default:
+    display_options:
+      fields:
+        order_id:
+          label: ID
+          separator: ', '
+        uid:
+          label: Gebruikers-ID
+          separator: ', '
+        order_number:
+          separator: ', '
+        completed:
+          separator: ', '
+        payment_method:
+          separator: ', '
+        billing_period:
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        total_price__number:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        subscription_id:
+          exception:
+            title: Alle

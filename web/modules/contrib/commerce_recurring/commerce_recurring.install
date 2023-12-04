@@ -1,0 +1,146 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the commerce_recurring module.
+ */
+
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Add the 'initial_order' field to 'commerce_subscription' entities.
+ */
+function commerce_recurring_update_8100(&$sandbox) {
+  $storage_definition = BaseFieldDefinition::create('entity_reference')
+    ->setLabel(t('Initial order'))
+    ->setDescription(t('The non-recurring order which started the subscription.'))
+    ->setSetting('target_type', 'commerce_order')
+    ->setSetting('handler', 'default')
+    ->setSetting('display_description', TRUE)
+    ->setDisplayOptions('form', [
+      'type' => 'entity_reference_autocomplete',
+      'weight' => 0,
+    ])
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  $update_manager = \Drupal::entityDefinitionUpdateManager();
+  $update_manager->installFieldStorageDefinition('initial_order', 'commerce_subscription', 'commerce_recurring', $storage_definition);
+}
+
+/**
+ * Add the 'trial_starts' and "trial_ends" fields to subscriptions.
+ */
+function commerce_recurring_update_8101(&$sandbox) {
+  $fields = [];
+  $fields['trial_starts'] = BaseFieldDefinition::create('timestamp')
+    ->setLabel(t('Trial starts'))
+    ->setDescription(t('The time when the subscription trial starts.'))
+    ->setRequired(FALSE)
+    ->setDisplayOptions('view', [
+      'label' => 'hidden',
+      'type' => 'timestamp',
+      'weight' => 0,
+    ])
+    ->setDisplayOptions('form', [
+      'type' => 'datetime_timestamp',
+      'weight' => 0,
+    ])
+    ->setDisplayConfigurable('form', TRUE);
+
+  $fields['trial_ends'] = BaseFieldDefinition::create('timestamp')
+    ->setLabel(t('Trial ends'))
+    ->setDescription(t('The time when the subscription trial ends.'))
+    ->setRequired(FALSE)
+    ->setDisplayOptions('view', [
+      'label' => 'hidden',
+      'type' => 'timestamp',
+      'weight' => 0,
+    ])
+    ->setDisplayOptions('form', [
+      'type' => 'datetime_timestamp',
+      'weight' => 0,
+    ])
+    ->setDisplayConfigurable('form', TRUE);
+
+  $update_manager = \Drupal::entityDefinitionUpdateManager();
+  foreach ($fields as $name => $storage_definition) {
+    $update_manager->installFieldStorageDefinition($name, 'commerce_subscription', 'commerce_recurring', $storage_definition);
+  }
+}
+
+/**
+ * Make the billing_schedule field required on subscriptions.
+ */
+function commerce_recurring_update_8102() {
+  $entity_definition_update = \Drupal::entityDefinitionUpdateManager();
+  $field_definition = $entity_definition_update->getFieldStorageDefinition('billing_schedule', 'commerce_subscription');
+  $field_definition->setRequired(TRUE);
+  $entity_definition_update->updateFieldStorageDefinition($field_definition);
+}
+
+/**
+ * Add the 'scheduled_changes' field to 'commerce_subscription' entities.
+ */
+function commerce_recurring_update_8103() {
+  \Drupal::service('plugin.manager.field.field_type')->clearCachedDefinitions();
+
+  $storage_definition = BaseFieldDefinition::create('commerce_scheduled_change')
+    ->setLabel(t('Scheduled changes'))
+    ->setRequired(FALSE)
+    ->setCardinality(BaseFieldDefinition::CARDINALITY_UNLIMITED)
+    ->setDisplayOptions('view', [
+      'label' => 'hidden',
+      'type' => 'commerce_scheduled_change_default',
+      'weight' => 0,
+    ])
+    ->setDisplayConfigurable('form', FALSE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  $update_manager = \Drupal::entityDefinitionUpdateManager();
+  $update_manager->installFieldStorageDefinition('scheduled_changes', 'commerce_subscription', 'commerce_recurring', $storage_definition);
+}
+
+/**
+ * Add the 'next_renewal' field to 'commerce_subscription' entities.
+ */
+function commerce_recurring_update_8104() {
+  $storage_definition = BaseFieldDefinition::create('timestamp')
+    ->setLabel(t('Next renewal'))
+    ->setDescription(t('The next renewal time.'))
+    ->setDefaultValue(0)
+    ->setDisplayOptions('view', [
+      'label' => 'hidden',
+      'type' => 'timestamp',
+      'weight' => 0,
+    ]);
+
+  $update_manager = \Drupal::entityDefinitionUpdateManager();
+  $update_manager->installFieldStorageDefinition('next_renewal', 'commerce_subscription', 'commerce_recurring', $storage_definition);
+}
+
+/**
+ * Update entity keys for subscriptions.
+ */
+function commerce_recurring_update_8105() {
+  $definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+  $uid_storage_definition = $definition_update_manager->getFieldStorageDefinition('uid', 'commerce_subscription');
+  $entity_type = $definition_update_manager->getEntityType('commerce_subscription');
+  $keys = $entity_type->getKeys();
+  $keys['owner'] = 'uid';
+  $entity_type->set('entity_keys', $keys);
+  $definition_update_manager->updateEntityType($entity_type);
+  $definition_update_manager->updateFieldStorageDefinition($uid_storage_definition);
+}
+
+/**
+ * Link to the Subscription view page from the Subscriptions admin View.
+ */
+function commerce_recurring_update_8106() {
+  $config_factory = \Drupal::configFactory();
+  $view = $config_factory->getEditable('views.view.commerce_subscriptions');
+  if ($view->get('display.default.display_options.fields.title.settings')) {
+    $view->set('display.default.display_options.fields.title.settings', ['link_to_entity' => TRUE]);
+    $view->save(TRUE);
+  }
+}

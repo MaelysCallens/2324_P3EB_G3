@@ -1,0 +1,22 @@
+uuid: 98f456b6-2edc-4f4c-9797-aad5a8f9a81f
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - commerce_recurring
+_core:
+  default_config_hash: cQtxzRMU2zMGmSRMCOzDRt0Nq60R9yTJSXw1OkKw6no
+id: commerce_order_item.subscription
+field_name: subscription
+entity_type: commerce_order_item
+type: entity_reference
+settings:
+  target_type: commerce_subscription
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

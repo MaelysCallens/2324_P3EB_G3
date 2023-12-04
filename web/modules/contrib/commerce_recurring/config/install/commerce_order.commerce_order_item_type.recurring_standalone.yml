@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_recurring
+label: 'Recurring (Standalone)'
+id: recurring_standalone
+purchasableEntityType: ''
+orderType: recurring
+traits: {  }
+locked: true

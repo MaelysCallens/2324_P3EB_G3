@@ -1,0 +1,7 @@
+administer commerce_billing_schedule:
+  title: 'Administer billing schedules'
+  'restrict access': TRUE
+
+administer commerce_subscription:
+  title: 'Administer subscriptions'
+  'restrict access': TRUE

@@ -1,0 +1,32 @@
+display:
+  default:
+    display_options:
+      fields:
+        order_id:
+          label: ID
+          separator: ', '
+        uid:
+          label: Gebruikers-ID
+          separator: ', '
+        order_number:
+          separator: ', '
+        placed:
+          separator: ', '
+        payment_method:
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        total_price__number:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        subscription_id:
+          exception:
+            title: Alle

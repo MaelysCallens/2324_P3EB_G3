@@ -1,0 +1,42 @@
+uuid: 8b9bb121-a3d6-4263-8778-1f48d03feef3
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_paypal
+id: paypal_express_checkout_jamie_
+label: 'PayPal express checkout ( jamie ) '
+weight: null
+plugin: paypal_checkout
+configuration:
+  display_label: PayPal
+  mode: test
+  payment_method_types:
+    - paypal_checkout
+  collect_billing_information: true
+  payment_solution: smart_payment_buttons
+  client_id: Ab4-Cj5yT65vec4X2Xc8CMdhBzEHaL3X6OJdVs4v-vRYlQk6j33l1VfLCZr3Uh_WGDQ-XP1nWpkWyI8U
+  secret: EHonNi70IXdClCUCLuEtdCVk18WkwlR_1Sg84YFe9F7e0RYr_u2M-38H40RRClLYaxbnzYi4MdLQcoLX
+  intent: authorize
+  disable_funding:
+    blik: blik
+    eps: eps
+    giropay: giropay
+    mercadopago: mercadopago
+    p24: p24
+    sepa: sepa
+    sofort: sofort
+  disable_card:
+    discover: discover
+    jcb: jcb
+    elo: elo
+    hiper: hiper
+  shipping_preference: get_from_file
+  update_billing_profile: true
+  update_shipping_profile: true
+  style: {  }
+  enable_on_cart: true
+  webhook_id: ''
+  enable_credit_card_icons: true
+conditions: {  }
+conditionOperator: AND

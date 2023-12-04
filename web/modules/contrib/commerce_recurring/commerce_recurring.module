@@ -1,0 +1,191 @@
+<?php
+
+/**
+ * @file
+ * Provides recurring billing for Drupal Commerce.
+ */
+
+use Drupal\Core\Entity\EntityFieldManagerInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\commerce\PurchasableEntityInterface;
+
+/**
+ * Implements hook_commerce_entity_trait_info_alter().
+ */
+function commerce_recurring_commerce_entity_trait_info_alter(array &$definitions) {
+  // Expose the purchasable entity trait for every purchasable entity type.
+  $entity_types = \Drupal::entityTypeManager()->getDefinitions();
+  $entity_types = array_filter($entity_types, function (EntityTypeInterface $entity_type) {
+    return $entity_type->entityClassImplements(PurchasableEntityInterface::class);
+  });
+  $entity_type_ids = array_keys($entity_types);
+
+  $definitions['purchasable_entity_subscription']['entity_types'] = $entity_type_ids;
+}
+
+/**
+ * Implements hook_cron().
+ */
+function commerce_recurring_cron() {
+  \Drupal::service('commerce_recurring.cron')->run();
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function commerce_recurring_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  $field_definition = $context['items']->getFieldDefinition();
+  $field_name = $field_definition->getName();
+  $widget_name = $context['widget']->getPluginId();
+  if ($field_name == 'subscription_type' && $widget_name == 'commerce_plugin_select') {
+    // The standalone subscription type is used for subscriptions not backed
+    // by a purchasable entity, so it doesn't make sense to offer it on a
+    // purchasable entity form (such as the product variation one).
+    unset($element['target_plugin_id']['#options']['standalone']);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'commerce_order_type_form'.
+ */
+function commerce_recurring_form_commerce_order_type_form_alter(array &$form, FormStateInterface $form_state) {
+  /** @var \Drupal\commerce_order\Entity\OrderTypeInterface $order_type */
+  $order_type = $form_state->getFormObject()->getEntity();
+  if ($order_type->id() != 'recurring') {
+    // The recurring workflow is only meant for the recurring order type.
+    unset($form['workflow']['#options']['Order']['order_recurring']);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'commerce_order_item_type_form'.
+ */
+function commerce_recurring_form_commerce_order_item_type_form_alter(array &$form, FormStateInterface $form_state) {
+  /** @var \Drupal\commerce_order\Entity\OrderTypeInterface $order_item_type */
+  $order_item_type = $form_state->getFormObject()->getEntity();
+  if (!in_array($order_item_type->id(), commerce_recurring_order_item_types())) {
+    // Hide the recurring order type from the dropdown, to avoid confusing
+    // merchants who are configuring non-recurring order item types.
+    unset($form['orderType']['#options']['recurring']);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'commerce_product_variation_type_form'.
+ */
+function commerce_recurring_form_commerce_product_variation_type_form_alter(array &$form, FormStateInterface $form_state) {
+  if (!isset($form['orderItemType'])) {
+    return;
+  }
+  // Recurring order item types are used by the module, they should never
+  // be selected by the merchant for a product variation type.
+  foreach ($form['orderItemType']['#options'] as $id => $label) {
+    if (in_array($id, commerce_recurring_order_item_types())) {
+      unset($form['orderItemType']['#options'][$id]);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'commerce_order_add_form'.
+ */
+function commerce_recurring_form_commerce_order_add_form_alter(array &$form, FormStateInterface $form_state) {
+  $form['type']['#after_build'] = ['commerce_recurring_order_type_after_build'];
+}
+
+/**
+ * After build callback for the order type radio buttons in the order add form.
+ */
+function commerce_recurring_order_type_after_build(array $element, FormStateInterface $form_state) {
+  // Hide the recurring order type from the radio buttons, it should never
+  // be selected by the merchant when creating an order from the admin.
+  unset($element['value']['#options']['recurring']);
+  $element['value']['recurring']['#access'] = FALSE;
+  return $element;
+}
+
+/**
+ * Gets the recurring order item types.
+ *
+ * @return string[]
+ *   The recurring order item type IDs.
+ */
+function commerce_recurring_order_item_types() {
+  return ['recurring_standalone', 'recurring_product_variation'];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_recurring_theme() {
+  return [
+    'commerce_subscription_form' => [
+      'render element' => 'form',
+    ],
+    'commerce_recurring_payment_declined' => [
+      'variables' => [
+        'order_entity' => NULL,
+        'billing_information' => NULL,
+        'shipping_information' => NULL,
+        'payment_method_link' => NULL,
+        'retry_num' => NULL,
+        'retry_days' => NULL,
+        'max_retries' => NULL,
+        'remaining_retries' => NULL,
+        'now' => NULL,
+        'totals' => NULL,
+      ],
+    ],
+    'commerce_subscription' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for subscription templates.
+ *
+ * Default template: commerce-subscription.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing rendered fields.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_commerce_subscription(array &$variables) {
+  /** @var \Drupal\commerce_recurring\Entity\SubscriptionInterface $subscription */
+  $subscription = $variables['elements']['#commerce_subscription'];
+  $variables['subscription_entity'] = $subscription;
+  $variables['subscription'] = [];
+  $entity_field_manager = \Drupal::getContainer()->get('entity_field.manager');
+  assert($entity_field_manager instanceof EntityFieldManagerInterface);
+  $fields = $entity_field_manager->getFieldStorageDefinitions('commerce_subscription');
+  // Assume fields provided by commerce_recurring are already printed in the
+  // commerce-subscription template.
+  $printed_fields = array_filter($fields, function (FieldStorageDefinitionInterface $definition) {
+    return $definition->getProvider() === 'commerce_recurring';
+  });
+  $variables['additional_fields'] = [];
+  foreach (Element::getVisibleChildren($variables['elements']) as $key) {
+    $variables['subscription'][$key] = $variables['elements'][$key];
+    // Skip fields already printed, in order for the "additional_fields" array
+    // to contain only fields that are not already explicitly rendered from the
+    // template.
+    if (isset($printed_fields[$key])) {
+      continue;
+    }
+    $variables['additional_fields'][$key] = $variables['elements'][$key];
+  }
+  $variables['current_theme_name'] = str_replace('_', '-', \Drupal::theme()->getActiveTheme()->getName());
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function commerce_recurring_views_data_alter(array &$data) {
+  $data['commerce_subscription']['store_id']['field']['id'] = 'commerce_store';
+  $data['commerce_subscription']['state']['filter']['id'] = 'state_machine_state';
+}

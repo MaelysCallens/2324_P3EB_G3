@@ -1,0 +1,19 @@
+uuid: 5acf2b72-cf92-4dd6-9633-8f744b036dcd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_voordelen
+field_name: field_voordelen
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

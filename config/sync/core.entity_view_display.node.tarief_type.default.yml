@@ -1,0 +1,37 @@
+uuid: fbf10516-dd24-43c8-aa31-2b6cec204c26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tarief_type.field_prijs
+    - field.field.node.tarief_type.field_voordelen
+    - node.type.tarief_type
+  module:
+    - text
+    - user
+id: node.tarief_type.default
+targetEntityType: node
+bundle: tarief_type
+mode: default
+content:
+  field_prijs:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_voordelen:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

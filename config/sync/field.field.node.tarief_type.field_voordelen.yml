@@ -1,0 +1,25 @@
+uuid: 6fb67155-b005-4bf2-985c-30561510a973
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_voordelen
+    - node.type.tarief_type
+  module:
+    - text
+id: node.tarief_type.field_voordelen
+field_name: field_voordelen
+entity_type: node
+bundle: tarief_type
+label: Voordelen
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '<ul><li>Voordelig tarief</li><li>14 dagen vooraf reserveren</li><li>Reserveer 3 momenten tegelijkertijd in dal en 3 in piek.</li><li>Toegang tot creditsysteem</li><li>Deelname interclub</li><li>Nieuwjaarsreceptie en familiedag</li><li>Voordeeltarief MVP tornooien en evenementen</li><li>Aansluiting Tennis Vlaanderen + verzekering</li><li>Krijg tot € 20 terug van jouw mutualiteit</li></ul>'
+    format: basic_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

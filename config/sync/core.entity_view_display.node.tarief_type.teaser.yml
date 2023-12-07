@@ -1,0 +1,25 @@
+uuid: faeaf1e6-f700-4178-b39e-642abfa2b9fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tarief_type.field_prijs
+    - field.field.node.tarief_type.field_voordelen
+    - node.type.tarief_type
+  module:
+    - user
+id: node.tarief_type.teaser
+targetEntityType: node
+bundle: tarief_type
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_prijs: true
+  field_voordelen: true
+  langcode: true

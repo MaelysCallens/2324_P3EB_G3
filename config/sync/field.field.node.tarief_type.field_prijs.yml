@@ -1,0 +1,22 @@
+uuid: fc7b0352-3b3d-439f-8e39-f5b80466b355
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prijs
+    - node.type.tarief_type
+  module:
+    - text
+id: node.tarief_type.field_prijs
+field_name: field_prijs
+entity_type: node
+bundle: tarief_type
+label: Prijs
+description: 'Zet hier die prijs per periode bijv: € 90 / Jaar'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

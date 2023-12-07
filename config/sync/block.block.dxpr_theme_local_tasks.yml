@@ -2,6 +2,8 @@ uuid: 8af97c32-487b-4ed8-8c73-de98defb66bc
 langcode: en
 status: true
 dependencies:
+  module:
+    - commerce_product
   theme:
     - dxpr_theme
 _core:
@@ -19,4 +21,11 @@ settings:
   provider: core
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  'entity_bundle:commerce_product':
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    context_mapping:
+      commerce_product: '@commerce_product.product_route_context:commerce_product'
+    bundles:
+      crawneck: crawneck

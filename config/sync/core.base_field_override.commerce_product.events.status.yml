@@ -1,0 +1,22 @@
+uuid: f8e3b01f-1d44-428a-8a49-ecfd4eeeef5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.events
+id: commerce_product.events.status
+field_name: status
+entity_type: commerce_product
+bundle: events
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

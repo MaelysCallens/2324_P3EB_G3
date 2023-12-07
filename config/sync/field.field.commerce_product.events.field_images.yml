@@ -1,0 +1,38 @@
+uuid: 14fd863e-a61e-4c57-bbca-1812dd49cff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.events
+    - field.storage.commerce_product.field_images
+  module:
+    - image
+id: commerce_product.events.field_images
+field_name: field_images
+entity_type: commerce_product
+bundle: events
+label: Images
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: event-images
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 2e83e985-42d8-4276-8b9f-d0d068445ccc
+    alt: image-event
+    title: ''
+    width: 486
+    height: 580
+field_type: image

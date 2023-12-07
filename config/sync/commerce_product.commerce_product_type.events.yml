@@ -1,0 +1,14 @@
+uuid: 5f36b558-9545-43b9-9795-36ef537137ac
+langcode: en
+status: true
+dependencies: {  }
+id: events
+label: Events
+traits: {  }
+locked: false
+description: ''
+variationType: events
+variationTypes:
+  - events
+multipleVariations: false
+injectVariationFields: true

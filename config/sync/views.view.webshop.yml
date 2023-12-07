@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.crawneck
+    - commerce_product.commerce_product_type.events
     - commerce_product.commerce_product_type.hoodie
     - commerce_product.commerce_product_type.lange_broek
     - commerce_product.commerce_product_type.lidmaatschap
@@ -215,7 +216,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_entity_view
           settings:
-            view_mode: default
+            view_mode: cart
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -572,6 +573,95 @@ display:
       menu:
         type: normal
         title: Kledij
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: 'views_view:views.webshop.page_1'
+        context: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+      tags:
+        - 'config:field.storage.commerce_product.field_images'
+  page_4:
+    id: page_4
+    display_title: 'Page 4'
+    display_plugin: page
+    position: 4
+    display_options:
+      title: Events
+      filters:
+        status:
+          id: status
+          table: commerce_product_field_data
+          field: status
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: commerce_product_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product
+          entity_field: type
+          plugin_id: commerce_entity_bundle
+          operator: in
+          value:
+            events: events
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            hide_single_bundle: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+      path: evenementen
+      menu:
+        type: normal
+        title: Evenementen
         description: ''
         weight: 0
         expanded: false

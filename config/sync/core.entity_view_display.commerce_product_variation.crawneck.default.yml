@@ -20,7 +20,7 @@ content:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
-    weight: -1
+    weight: 1
     region: content
   price:
     type: commerce_price_default
@@ -28,6 +28,14 @@ content:
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -37,4 +45,3 @@ hidden:
   langcode: true
   product_id: true
   sku: true
-  title: true

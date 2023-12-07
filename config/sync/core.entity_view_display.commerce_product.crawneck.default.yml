@@ -9,6 +9,12 @@ dependencies:
   module:
     - commerce_product
     - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: commerce_product.crawneck.default
 targetEntityType: commerce_product
 bundle: crawneck

@@ -23,4 +23,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /webshop
+    pages: "/webshop\r\n/clothing\r\n/lidmaatschap"

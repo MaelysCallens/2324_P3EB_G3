@@ -1,0 +1,18 @@
+uuid: 1727c33b-cdeb-4c18-8bf0-301116527f2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_startuur
+field_name: field_startuur
+entity_type: commerce_product
+type: timestamp
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

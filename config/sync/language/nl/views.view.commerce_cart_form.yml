@@ -9,8 +9,6 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       fields:
-        purchased_entity:
-          separator: ', '
         unit_price__number:
           separator: ', '
         remove_button:

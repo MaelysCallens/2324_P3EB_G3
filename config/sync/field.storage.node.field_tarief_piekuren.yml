@@ -1,0 +1,20 @@
+uuid: 015e25d3-790b-4694-b064-cd9c4e87ecee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tarief_piekuren
+field_name: field_tarief_piekuren
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

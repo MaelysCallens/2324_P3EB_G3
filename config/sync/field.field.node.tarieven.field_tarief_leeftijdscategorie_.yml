@@ -1,0 +1,29 @@
+uuid: 921836d2-2952-40be-a7fc-f226c422d266
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarief_leeftijdscategorie_
+    - node.type.tarieven
+    - taxonomy.vocabulary.leeftijd
+id: node.tarieven.field_tarief_leeftijdscategorie_
+field_name: field_tarief_leeftijdscategorie_
+entity_type: node
+bundle: tarieven
+label: 'tarief leeftijdscategorie '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      leeftijd: leeftijd
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

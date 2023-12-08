@@ -1,0 +1,11 @@
+uuid: 12b110dd-383c-4bc9-8573-ee587b183e1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tarieven
+id: node.tarieven
+target_entity_type_id: node
+target_bundle: tarieven
+default_langcode: site_default
+language_alterable: false

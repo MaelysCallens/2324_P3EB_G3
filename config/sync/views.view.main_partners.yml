@@ -226,7 +226,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: tekstcenter
+      css_class: 'tekstcenter allescenter'
       header: {  }
       footer: {  }
       display_extenders: {  }

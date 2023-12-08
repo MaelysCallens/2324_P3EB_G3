@@ -11,7 +11,7 @@ dependencies:
     - text
     - user
 id: tarieven
-label: Tarieven
+label: lidmaatschappen
 module: views
 description: ''
 tag: ''

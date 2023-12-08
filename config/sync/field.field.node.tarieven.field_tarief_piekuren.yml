@@ -1,0 +1,23 @@
+uuid: cb7c5ed0-cb00-4613-8f65-592eeaab3de2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarief_piekuren
+    - node.type.tarieven
+id: node.tarieven.field_tarief_piekuren
+field_name: field_tarief_piekuren
+entity_type: node
+bundle: tarieven
+label: 'tarief piekuren'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: null
+  prefix: €
+  suffix: ' per 90 min'
+field_type: decimal

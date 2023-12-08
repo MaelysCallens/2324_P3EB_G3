@@ -29,6 +29,7 @@
         "drupal/fullcalendar_view": "^5.1",
         "drupal/google_map_field": "^2.0",
         "drupal/inline_entity_form": "^1.0-RC9",
+        "drupal/views_field_view": "^1.0@beta",
         "drush/drush": "*"
     },
     "conflict": {

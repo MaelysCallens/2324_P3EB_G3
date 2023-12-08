@@ -1,0 +1,29 @@
+uuid: d6ec15f5-06e5-4c39-b97e-52850dfc5e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.tarieven_view
+  module:
+    - system
+    - views
+  theme:
+    - dxpr_theme
+id: dxpr_theme_views_block__tarieven_view_block_1
+theme: dxpr_theme
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:tarieven_view-block_1'
+settings:
+  id: 'views_block:tarieven_view-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /lidmaatschap_tarief

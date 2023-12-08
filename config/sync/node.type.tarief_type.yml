@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Tarief type'
+name: 'Lidmaatschap type'
 type: tarief_type
 description: ''
 help: ''

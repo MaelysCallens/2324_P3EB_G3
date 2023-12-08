@@ -1,0 +1,8 @@
+uuid: bff3e878-7c8d-4155-9e34-295e63f22228
+langcode: en
+status: true
+dependencies: {  }
+name: Leeftijd
+vid: leeftijd
+description: 'Leeftijdscategorieën gebruikt bij de tarieven'
+weight: 0

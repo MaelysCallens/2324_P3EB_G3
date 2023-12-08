@@ -1,0 +1,29 @@
+uuid: 1b9d62be-037b-4976-8a95-d3fed7d1a641
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarief_type
+    - node.type.tarieven
+    - taxonomy.vocabulary.lid_type
+id: node.tarieven.field_tarief_type
+field_name: field_tarief_type
+entity_type: node
+bundle: tarieven
+label: 'Tarief type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lid_type: lid_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: a9519829-a653-41df-af16-8e281ab1c0c8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Lid type'
+vid: lid_type
+description: 'De verschillende types leden zoals: basic, premium, niet lid'
+weight: 0

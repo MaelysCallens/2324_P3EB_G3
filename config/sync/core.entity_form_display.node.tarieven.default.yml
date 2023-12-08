@@ -1,0 +1,65 @@
+uuid: 55835bdb-bea0-4cb4-9401-af53308fb041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tarieven.field_tarief_daluren
+    - field.field.node.tarieven.field_tarief_leeftijdscategorie_
+    - field.field.node.tarieven.field_tarief_piekuren
+    - field.field.node.tarieven.field_tarief_type
+    - node.type.tarieven
+id: node.tarieven.default
+targetEntityType: node
+bundle: tarieven
+mode: default
+content:
+  field_tarief_daluren:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_tarief_leeftijdscategorie_:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tarief_piekuren:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_tarief_type:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

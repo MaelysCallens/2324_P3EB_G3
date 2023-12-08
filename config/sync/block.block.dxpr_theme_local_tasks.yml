@@ -11,7 +11,7 @@ _core:
 id: dxpr_theme_local_tasks
 theme: dxpr_theme
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: local_tasks_block
 settings:

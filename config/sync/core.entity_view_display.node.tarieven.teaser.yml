@@ -1,0 +1,29 @@
+uuid: 592d0ad2-a9ba-4613-81f5-f283b682bb20
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tarieven.field_tarief_daluren
+    - field.field.node.tarieven.field_tarief_leeftijdscategorie_
+    - field.field.node.tarieven.field_tarief_piekuren
+    - field.field.node.tarieven.field_tarief_type
+    - node.type.tarieven
+  module:
+    - user
+id: node.tarieven.teaser
+targetEntityType: node
+bundle: tarieven
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_tarief_daluren: true
+  field_tarief_leeftijdscategorie_: true
+  field_tarief_piekuren: true
+  field_tarief_type: true
+  langcode: true

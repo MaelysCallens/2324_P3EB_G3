@@ -35,7 +35,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 0
+            weight: 1
             additional: {  }
           e469ccac-a43d-4cbd-932d-ec391093acda:
             uuid: e469ccac-a43d-4cbd-932d-ec391093acda
@@ -75,6 +75,19 @@ third_party_settings:
                   view_mode: summary
                 third_party_settings: {  }
             weight: 2
+            additional: {  }
+          45e8976c-a901-4e2e-b8e5-5323e318795f:
+            uuid: 45e8976c-a901-4e2e-b8e5-5323e318795f
+            region: second
+            configuration:
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              provider: core
+              context_mapping: {  }
+              primary: true
+              secondary: true
+            weight: 0
             additional: {  }
         third_party_settings: {  }
       -

@@ -8,8 +8,10 @@ dependencies:
     - field.field.commerce_product_variation.lidmaatschap.billing_schedule
     - field.field.commerce_product_variation.lidmaatschap.field_images
     - field.field.commerce_product_variation.lidmaatschap.subscription_type
+    - image.style.medium
   module:
     - commerce_price
+    - image
     - layout_builder
 third_party_settings:
   layout_builder:
@@ -20,6 +22,17 @@ targetEntityType: commerce_product_variation
 bundle: lidmaatschap
 mode: cart
 content:
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
   price:
     type: commerce_price_default
     label: above
@@ -29,19 +42,11 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   billing_schedule: true
-  field_images: true
   langcode: true
   list_price: true
   product_id: true
   sku: true
   subscription_type: true
+  title: true

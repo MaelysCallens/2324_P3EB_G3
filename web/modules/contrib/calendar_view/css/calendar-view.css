@@ -1,0 +1,64 @@
+.calendar-view-table {
+  width: 100%;
+}
+
+.calendar-view-table caption {
+  line-height: 4;
+  font-weight: bold;
+}
+
+.calendar-view-table th,
+.calendar-view-table td {
+  width: calc(100% / 7);
+  vertical-align: baseline;
+}
+
+.calendar-view-table td {
+  padding: 0;
+  min-height: 99px;
+}
+
+.calendar-view-day {
+  padding: 0.5rem;
+}
+
+.calendar-view-day__rows {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.calendar-view-day__row {
+  margin: 0 auto;
+  padding: 5px;
+  background-color: white;
+}
+
+.calendar-view-day__row + .calendar-view-day__row {
+  margin-top: 5px;
+}
+
+[data-calendar-view-day]:hover .calendar-view-day__number,
+[data-calendar-view-day]:active .calendar-view-day__number,
+[data-calendar-view-day]:focus .calendar-view-day__number {
+  font-weight: bold;
+}
+
+.calendar-view-day__number {
+  margin-bottom: 5px;
+}
+
+.calendar-view-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-view-pager__reset {
+  text-align: center;
+}
+
+.view > .calendar-view-pager__reset {
+  margin-block-end: 0;
+}

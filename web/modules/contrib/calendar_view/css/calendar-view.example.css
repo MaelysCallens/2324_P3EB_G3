@@ -1,0 +1,34 @@
+/**
+ * Custom calendar skin.
+ *
+ * Add this to a library in your module or theme.
+ *
+ * @code
+ * mycalendarskin:
+ *   version: VERSION
+ *   css:
+ *    component:
+ *      # Weight not necessary but it makes sure this
+ *      # stylesheet is loaded after defaults.
+ *      css/calendar-view.gin.css: { weight: 1 }
+ * @endcode
+ *
+ * Create your own template views-view-calendar.html.twig
+ * and attach your library.
+ *
+ * @code
+ * {% extends "views-view-calendar.html.twig" %}
+ * {% block libraries %}
+ *   {{ attach_library ('mytheme/mycalendarskin') }}
+ * {% endblock %}
+ * @endcode
+ */
+.calendar-view-table {
+  --calendar-view-columns: 7;
+  --calendar-view-color-white: #fff;
+  --calendar-view-color-light: #f4f4f4;
+  --calendar-view-color-grey: #ccc;
+  --calendar-view-color-gray: #555;
+  --calendar-view-color-evil: #666;
+  --calendar-view-color-dark: #333;
+}

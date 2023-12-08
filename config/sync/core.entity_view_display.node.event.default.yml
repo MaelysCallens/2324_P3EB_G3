@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_image
     - field.field.node.event.field_st
     - node.type.event
   module:
     - datetime
+    - image
     - text
     - user
 id: node.event.default
@@ -31,6 +33,17 @@ content:
       format_type: medium
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_event_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 104
     region: content
   field_st:
     type: datetime_default

@@ -1,0 +1,37 @@
+/**
+ * Multiple days event styling.
+ */
+
+/** Desktop (e.g. 48rem = 768px) **/
+@media(min-width: 48rem) {
+  /** Multi-day events **/
+  .calendar-view-day__row.is-multi {
+    --calendar-view-day-multi-offset: calc(-1rem - 1px);
+    padding-left: calc(var(--calendar-view-day-multi-offset) * -1);
+  }
+
+  .calendar-view-day__row.is-multi:not(.is-multi--first) > * {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .calendar-view-day__row.is-multi--first {
+    margin-right: var(--calendar-view-day-multi-offset);
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .calendar-view-day__row.is-multi--middle {
+    margin-right: var(--calendar-view-day-multi-offset);
+    margin-left: var(--calendar-view-day-multi-offset);
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+  }
+  .calendar-view-day__row.is-multi--last {
+    margin-left: var(--calendar-view-day-multi-offset);
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

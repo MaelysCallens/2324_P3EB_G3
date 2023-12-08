@@ -1,0 +1,6 @@
+calendar:
+  version: VERSION
+  css:
+    component:
+      css/calendar-view.css: {}
+      css/calendar-view.default.css: {}

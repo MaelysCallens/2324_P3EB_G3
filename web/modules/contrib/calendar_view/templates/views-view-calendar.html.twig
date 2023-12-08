@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view in a Calendar style.
+ *
+ * Default available variables :
+ * - title: The title of this group of rows. May be empty.
+ * - calendar: The calendar created in template preprocess.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: tells if default classes should be used on rows.
+ * - options: custom variables from Calendar style settings.
+ *   - filters: The date fields selected for this Calendar.
+ *   - weekday_start: The day to start a calendar row.
+ *   - display_rows: Wether or not to display default View results.
+ *
+ * @see template_preprocess_views_view_calendar()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{# Default skin/styles. #}
+{{ attach_library ('calendar_view/calendar') }}
+
+{#
+/**
+  * Use this block in your own theme to use your own library.
+  * @see web/modules/custom/calendar_view/css/calendar-view.example.css
+  *
+  * @code
+  * {% extends "views-view-calendar.html.twig" %}
+  * {% block libraries %}
+  *   {{ attach_library ('mytheme/calendar') }}
+  * {% endblock %}
+  * @endcode
+  */
+#}
+{% block libraries %}
+{% endblock %}
+
+{% block calendars %}
+  <div class="view-calendar">
+    {{ calendars }}
+  </div>
+{% endblock %}
+
+{% block rows %}
+  {% if options.display_rows %}
+    <div class="view-results">
+      {% for row in rows %}
+        {% set row_classes = [ default_row_class ? 'views-row'] %}
+        <div{{ row.attributes.addClass(row_classes) }}>
+          {{- row.content -}}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}

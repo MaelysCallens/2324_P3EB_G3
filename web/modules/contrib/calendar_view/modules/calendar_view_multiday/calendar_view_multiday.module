@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks and preprocess for the calendar_view_multiday module.
+ */
+
+/**
+ * Implements template_preprocess_views_view_calendar().
+ */
+function calendar_view_multiday_preprocess_views_view_calendar(array &$variables) {
+  $variables['#attached']['library'][] = 'calendar_view_multiday/multiday';
+}
+
+/**
+ * Implements template_preprocess_calendar_view_day().
+ */
+function calendar_view_multiday_preprocess_calendar_view_day(array &$variables) {
+  $rows = $variables['rows'] ?? [];
+  foreach ($rows as &$row) {
+    $values = $row['#values'] ?? [];
+
+    // Helpful information for multiday events (e.g. multiday.js)
+    $row_instance = $values['instance'] ?? 0;
+    $row_instance_total = $values['instances'] ?? 0;
+    $row['attributes']->setAttribute('data-calendar-view-instance', $row_instance);
+    $row['attributes']->setAttribute('data-calendar-view-instances', $row_instance_total);
+
+    $row_instance_classes = [];
+    if ($row_instance_total > 0) {
+      $row_instance_classes[] = 'is-multi';
+      if ($row_instance == 0) {
+        $row_instance_classes[] = 'is-multi--first';
+      } elseif ($row_instance == $row_instance_total) {
+        $row_instance_classes[] = 'is-multi--last';
+      } else {
+        $row_instance_classes[] = 'is-multi--middle';
+      }
+      $row['attributes']->addClass($row_instance_classes);
+    }
+  }
+}

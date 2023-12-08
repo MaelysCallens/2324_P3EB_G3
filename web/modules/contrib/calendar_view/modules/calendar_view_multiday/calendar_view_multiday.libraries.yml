@@ -1,0 +1,10 @@
+multiday:
+  version: VERSION
+  css:
+    component:
+      css/multiday.css: {}
+  js:
+    js/multiday.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

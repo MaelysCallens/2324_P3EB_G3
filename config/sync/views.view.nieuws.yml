@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_artikel_teaser_image
+    - image.style.medium
     - node.type.nieuws_artikel
     - system.menu.main
   module:
@@ -285,7 +286,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: ''
+            image_style: medium
             image_loading:
               attribute: lazy
           group_column: ''

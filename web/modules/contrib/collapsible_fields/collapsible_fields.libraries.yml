@@ -1,0 +1,6 @@
+form-error:
+  version: VERSION
+  js:
+    js/form-error-open.js: { }
+  dependencies:
+    - core/drupal

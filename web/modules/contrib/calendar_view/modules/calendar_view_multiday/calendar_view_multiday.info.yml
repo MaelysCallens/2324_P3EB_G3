@@ -1,0 +1,12 @@
+name: Calendar View - Multiday
+description: Improve rendering of events spanning on multiple days.
+type: module
+package: Calendar View
+core_version_requirement: ^9.2 || ^10
+dependencies:
+  - calendar_view:calendar_view
+
+# Information added by Drupal.org packaging script on 2023-09-29
+version: '2.1.6'
+project: 'calendar_view'
+datestamp: 1695962122

@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Calendar View (demo) module.
+ */
+
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_install().
+ */
+function calendar_view_demo_install() {
+  $messenger = \Drupal::messenger();
+  $views = ['content_calendar', 'editorial_calendar', 'user_registration'];
+  foreach ($views as $view_id) {
+    try {
+      $view_url = Url::fromRoute("view.$view_id.page_1", [], [
+        'absolute' => TRUE,
+      ]);
+
+      if (!$view_url instanceof Url) {
+        throw new \Exception(t('@view could not be installed', [
+          '@view' => $view_id,
+        ]));
+      }
+      $messenger->addStatus(t('@view imported successfully: @link', [
+        '@view' => $view_id,
+        '@link' => Link::fromTextAndUrl(t('View'), $view_url)->toString(),
+      ]));
+    }
+    catch (\Exception $e) {
+      $messenger->addWarning($e->getMessage());
+    }
+  }
+}

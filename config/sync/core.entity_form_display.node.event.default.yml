@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_image
     - field.field.node.event.field_st
+    - image.style.thumbnail
     - node.type.event
   module:
     - datetime
+    - image
     - path
     - text
 id: node.event.default
@@ -37,6 +40,14 @@ content:
     weight: 123
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_event_image:
+    type: image_image
+    weight: 124
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_st:
     type: datetime_default

@@ -1,0 +1,4 @@
+services:
+  logger.channel.calendar_view:
+    parent: logger.channel_base
+    arguments: ['calendar_view']

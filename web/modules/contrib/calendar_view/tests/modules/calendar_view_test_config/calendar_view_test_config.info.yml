@@ -1,0 +1,12 @@
+name: 'Calendar View Test Config'
+type: module
+description: 'Provides default views for testing the calendar_view module.'
+package: Testing
+# version: VERSION
+dependencies:
+  - calendar_view:calendar_view
+
+# Information added by Drupal.org packaging script on 2023-09-29
+version: '2.1.6'
+project: 'calendar_view'
+datestamp: 1695962122

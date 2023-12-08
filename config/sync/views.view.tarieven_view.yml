@@ -63,7 +63,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h3
+          element_type: h4
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -178,7 +178,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: h4
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -282,8 +282,8 @@ display:
           grouping:
             -
               field: field_tarief_type
-              rendered: true
-              rendered_strip: false
+              rendered: false
+              rendered_strip: true
           columns: 4
           cell_min_width: 100
           grid_gutter: 10
@@ -299,7 +299,20 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<br><\\br>\r\n<h3>Tarieven<\\h3>\r\n<br><\\br>"
+            format: full_html
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:

@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: ''
+      title: 'Lidmaatschappen & Tarieven'
       fields:
         title:
           id: title
@@ -65,7 +65,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h2
+          element_type: h4
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -128,7 +128,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h3
+          element_type: h4
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -290,7 +290,20 @@ display:
           query_tags: {  }
       relationships: {  }
       css_class: tekstcenter
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<h3>Lidmaatschappen <\\h3>\r\n<br> <\\br>\r\n"
+            format: full_html
+          tokenize: false
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -305,11 +318,13 @@ display:
         - 'config:field.storage.node.field_voordelen'
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Lidmaatschappen
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
+      block_description: ''
     cache_metadata:
       max-age: -1
       contexts:

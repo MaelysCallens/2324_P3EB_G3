@@ -23,8 +23,10 @@ module:
   commerce_paypal: 0
   commerce_price: 0
   commerce_product: 0
+  commerce_promotion: 0
   commerce_recurring: 0
   commerce_store: 0
+  commerce_tax: 0
   config: 0
   contact: 0
   contextual: 0

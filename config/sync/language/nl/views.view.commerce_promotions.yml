@@ -1,0 +1,54 @@
+display:
+  default:
+    display_title: Default
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Toepassen
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        name:
+          label: Naam
+          separator: ', '
+        offer__target_plugin_id:
+          separator: ', '
+        usage_limit:
+          separator: ', '
+        usage_limit_customer:
+          separator: ', '
+        start_date:
+          label: Begindatum
+          separator: ', '
+        end_date:
+          label: Einddatum
+          separator: ', '
+        operations:
+          label: Operations
+      filters:
+        name:
+          expose:
+            label: Naam
+        status:
+          expose:
+            label: Status
+  admin:
+    display_title: Page
+    display_options:
+      menu:
+        title: List
+      tab_options:
+        title: List

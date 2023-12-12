@@ -7,10 +7,7 @@ dependencies:
     - field.field.commerce_product_variation.hoodie.attribute_color
     - field.field.commerce_product_variation.hoodie.attribute_size
     - field.field.commerce_product_variation.hoodie.field_images
-    - image.style.medium
   module:
-    - commerce_price
-    - image
     - layout_builder
 third_party_settings:
   layout_builder:
@@ -21,26 +18,6 @@ targetEntityType: commerce_product_variation
 bundle: hoodie
 mode: default
 content:
-  field_images:
-    type: image
-    label: hidden
-    settings:
-      image_link: content
-      image_style: medium
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  price:
-    type: commerce_price_default
-    label: above
-    settings:
-      strip_trailing_zeroes: false
-      currency_display: symbol
-    third_party_settings: {  }
-    weight: 2
-    region: content
   title:
     type: string
     label: hidden
@@ -52,7 +29,9 @@ content:
 hidden:
   attribute_color: true
   attribute_size: true
+  field_images: true
   langcode: true
   list_price: true
+  price: true
   product_id: true
   sku: true

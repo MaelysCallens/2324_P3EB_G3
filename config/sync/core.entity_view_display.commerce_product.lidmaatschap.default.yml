@@ -5,8 +5,11 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.lidmaatschap
     - field.field.commerce_product.lidmaatschap.body
+    - field.field.commerce_product.lidmaatschap.field_images
+    - field.field.commerce_product_variation.lidmaatschap.field_images
   module:
     - commerce_product
+    - image
     - layout_builder
     - layout_discovery
     - text
@@ -57,25 +60,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 1
             additional: {  }
-          1f7ea186-e99f-408e-aefb-17dc6593d0e0:
-            uuid: 1f7ea186-e99f-408e-aefb-17dc6593d0e0
-            region: first
-            configuration:
-              id: 'field_block:commerce_product:lidmaatschap:variations'
-              label: Variations
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: summary
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
           45e8976c-a901-4e2e-b8e5-5323e318795f:
             uuid: 45e8976c-a901-4e2e-b8e5-5323e318795f
             region: second
@@ -87,6 +71,104 @@ third_party_settings:
               context_mapping: {  }
               primary: true
               secondary: true
+            weight: 0
+            additional: {  }
+          215fe33a-00c7-459d-bda3-528fbe96da67:
+            uuid: 215fe33a-00c7-459d-bda3-528fbe96da67
+            region: second
+            configuration:
+              id: 'field_block:commerce_product:lidmaatschap:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_add_to_cart
+                label: hidden
+                settings:
+                  combine: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          7c594e7f-a32e-40a7-88eb-711ec1e3ec75:
+            uuid: 7c594e7f-a32e-40a7-88eb-711ec1e3ec75
+            region: first
+            configuration:
+              id: 'field_block:commerce_product_variation:lidmaatschap:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          c3af6fc4-261c-411f-8dc2-53e2b29aa130:
+            uuid: c3af6fc4-261c-411f-8dc2-53e2b29aa130
+            region: first
+            configuration:
+              id: 'field_block:commerce_product_variation:lidmaatschap:field_images'
+              label: Images
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          b373a88b-f0d0-4229-892b-7ca100e8f71f:
+            uuid: b373a88b-f0d0-4229-892b-7ca100e8f71f
+            region: first
+            configuration:
+              id: 'field_block:commerce_product_variation:lidmaatschap:price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: commerce_price_default
+                label: above
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          c0e8f252-a1e1-438d-9ea2-5df49d1a0266:
+            uuid: c0e8f252-a1e1-438d-9ea2-5df49d1a0266
+            region: content
+            configuration:
+              id: 'field_block:commerce_product:lidmaatschap:field_images'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
             weight: 0
             additional: {  }
         third_party_settings: {  }
@@ -105,6 +187,17 @@ content:
     type: text_default
     label: hidden
     settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 1
     region: content

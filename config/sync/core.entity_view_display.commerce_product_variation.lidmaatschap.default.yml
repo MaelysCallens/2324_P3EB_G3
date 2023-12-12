@@ -7,35 +7,11 @@ dependencies:
     - field.field.commerce_product_variation.lidmaatschap.billing_schedule
     - field.field.commerce_product_variation.lidmaatschap.field_images
     - field.field.commerce_product_variation.lidmaatschap.subscription_type
-    - image.style.large
-  module:
-    - commerce_price
-    - image
 id: commerce_product_variation.lidmaatschap.default
 targetEntityType: commerce_product_variation
 bundle: lidmaatschap
 mode: default
 content:
-  field_images:
-    type: image
-    label: hidden
-    settings:
-      image_link: content
-      image_style: large
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  price:
-    type: commerce_price_default
-    label: above
-    settings:
-      strip_trailing_zeroes: false
-      currency_display: symbol
-    third_party_settings: {  }
-    weight: 2
-    region: content
   title:
     type: string
     label: hidden
@@ -46,8 +22,10 @@ content:
     region: content
 hidden:
   billing_schedule: true
+  field_images: true
   langcode: true
   list_price: true
+  price: true
   product_id: true
   sku: true
   subscription_type: true

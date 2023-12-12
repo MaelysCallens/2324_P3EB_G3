@@ -9,6 +9,100 @@ dependencies:
   module:
     - commerce_product
     - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          cb6716f1-ff54-4790-818e-309dc13ad212:
+            uuid: cb6716f1-ff54-4790-818e-309dc13ad212
+            region: first
+            configuration:
+              id: 'field_block:commerce_product:lange_broek:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          d9279cb3-2ffa-4583-bb8e-59b1ea894893:
+            uuid: d9279cb3-2ffa-4583-bb8e-59b1ea894893
+            region: first
+            configuration:
+              id: 'field_block:commerce_product:lange_broek:field_images'
+              label: Images
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          4b3cc592-3417-4b9b-af93-23a5d61037cd:
+            uuid: 4b3cc592-3417-4b9b-af93-23a5d61037cd
+            region: first
+            configuration:
+              id: 'field_block:commerce_product_variation:lange_broek:price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: commerce_price_default
+                label: above
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          263fb19b-9872-431a-a247-10f4d8890959:
+            uuid: 263fb19b-9872-431a-a247-10f4d8890959
+            region: second
+            configuration:
+              id: 'field_block:commerce_product:lange_broek:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_add_to_cart
+                label: hidden
+                settings:
+                  combine: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: commerce_product.lange_broek.default
 targetEntityType: commerce_product
 bundle: lange_broek

@@ -10,11 +10,99 @@ dependencies:
     - commerce_product
     - image
     - layout_builder
-    - layout_discovery
 third_party_settings:
   layout_builder:
-    enabled: false
+    enabled: true
     allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          201292b9-7d08-4391-9f18-9f4c597421f7:
+            uuid: 201292b9-7d08-4391-9f18-9f4c597421f7
+            region: first
+            configuration:
+              id: 'field_block:commerce_product:hoodie:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          88d879b0-a788-44bc-9ad0-0f4ecd625953:
+            uuid: 88d879b0-a788-44bc-9ad0-0f4ecd625953
+            region: first
+            configuration:
+              id: 'field_block:commerce_product:hoodie:field_images'
+              label: Images
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          511028c2-925e-46b6-b550-24cc6d7abd38:
+            uuid: 511028c2-925e-46b6-b550-24cc6d7abd38
+            region: second
+            configuration:
+              id: 'field_block:commerce_product:hoodie:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_add_to_cart
+                label: hidden
+                settings:
+                  combine: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          ddd4418b-8d75-4b6f-9b35-c3b207378238:
+            uuid: ddd4418b-8d75-4b6f-9b35-c3b207378238
+            region: first
+            configuration:
+              id: 'field_block:commerce_product_variation:hoodie:price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: commerce_price_default
+                label: above
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 id: commerce_product.hoodie.default
 targetEntityType: commerce_product
 bundle: hoodie

@@ -7,14 +7,101 @@ dependencies:
     - field.field.commerce_product.crawneck.body
     - field.field.commerce_product.crawneck.field_images
   module:
-    - commerce_product
     - image
     - layout_builder
-    - layout_discovery
 third_party_settings:
   layout_builder:
-    enabled: false
+    enabled: true
     allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          616fcba4-4dcc-492d-95e0-395b6bc679d6:
+            uuid: 616fcba4-4dcc-492d-95e0-395b6bc679d6
+            region: first
+            configuration:
+              id: 'field_block:commerce_product:crawneck:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          1b9e86b5-97d6-42cf-ac2b-d1ec3a118837:
+            uuid: 1b9e86b5-97d6-42cf-ac2b-d1ec3a118837
+            region: first
+            configuration:
+              id: 'field_block:commerce_product:crawneck:field_images'
+              label: Images
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          0ff29d52-cf50-4e39-a813-c9a00385d48a:
+            uuid: 0ff29d52-cf50-4e39-a813-c9a00385d48a
+            region: second
+            configuration:
+              id: 'field_block:commerce_product:crawneck:variations'
+              label: Variations
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: commerce_add_to_cart
+                label: hidden
+                settings:
+                  combine: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          93042349-72f5-4d7e-b8dc-200ea53c9c3c:
+            uuid: 93042349-72f5-4d7e-b8dc-200ea53c9c3c
+            region: first
+            configuration:
+              id: 'field_block:commerce_product_variation:crawneck:price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
+                view_mode: view_mode
+              formatter:
+                type: commerce_price_default
+                label: hidden
+                settings:
+                  strip_trailing_zeroes: false
+                  currency_display: symbol
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 id: commerce_product.crawneck.default
 targetEntityType: commerce_product
 bundle: crawneck
@@ -39,17 +126,10 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  variations:
-    type: commerce_add_to_cart
-    label: hidden
-    settings:
-      combine: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
 hidden:
   body: true
   created: true
   langcode: true
   stores: true
   uid: true
+  variations: true

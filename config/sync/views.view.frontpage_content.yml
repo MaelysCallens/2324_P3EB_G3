@@ -357,7 +357,13 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: default
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 1
+          cell_min_width: 100
+          grid_gutter: 10
+          alignment: horizontal
       row:
         type: 'entity:node'
         options:

@@ -156,25 +156,6 @@ third_party_settings:
               secondary: true
             weight: 0
             additional: {  }
-          05df9838-2783-4fac-afd7-d974eb94dd3b:
-            uuid: 05df9838-2783-4fac-afd7-d974eb94dd3b
-            region: first
-            configuration:
-              id: 'field_block:commerce_product:events:variations'
-              label: Variations
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: cart
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol

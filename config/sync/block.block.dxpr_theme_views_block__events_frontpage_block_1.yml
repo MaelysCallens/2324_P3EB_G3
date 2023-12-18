@@ -1,0 +1,29 @@
+uuid: 75695412-9931-4594-ab09-b7a5c7e20263
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events_frontpage
+  module:
+    - system
+    - views
+  theme:
+    - dxpr_theme
+id: dxpr_theme_views_block__events_frontpage_block_1
+theme: dxpr_theme
+region: content_bottom
+weight: -8
+provider: null
+plugin: 'views_block:events_frontpage-block_1'
+settings:
+  id: 'views_block:events_frontpage-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

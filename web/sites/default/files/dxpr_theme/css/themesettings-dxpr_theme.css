@@ -114,6 +114,23 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 .tekstcenter {
  text-align: center;
 justify-content: center;
+}
+
+.field--name-title{
+   font-size: 42px!important;
+}
+.kleineshoppingcarttitel{
+font-size: 16px!important;
+}
+.views-field-title{
+color: #000000;
+}
+.photo-center{
+display: flex;
+  justify-content: center;
+text-align:center;
+padding: 10px;
+font-size: 24px;
 }.page-title-full-width-container .breadcrumb { right: 60px; left: auto; } 
 
 #page-title { text-align:  left } 

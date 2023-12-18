@@ -17,7 +17,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   attribute_color: true

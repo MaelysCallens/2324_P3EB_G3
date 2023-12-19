@@ -6,6 +6,7 @@ dependencies:
     - commerce_product.commerce_product_type.events
     - field.storage.commerce_product.body
     - field.storage.commerce_product.field_images
+    - image.style.large
   module:
     - commerce
     - commerce_product
@@ -66,8 +67,8 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: h4
+          element_class: nieuws-title
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -192,7 +193,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: nieuws-image
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -207,7 +208,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: ''
+            image_style: large
             image_loading:
               attribute: lazy
           group_column: ''
@@ -331,13 +332,16 @@ display:
           value:
             events: events
       style:
-        type: grid_responsive
+        type: grid
         options:
           grouping: {  }
           columns: 3
-          cell_min_width: 150
-          grid_gutter: 20
+          automatic_width: true
           alignment: horizontal
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: nieuws-container
+          col_class_default: true
       row:
         type: fields
       query:

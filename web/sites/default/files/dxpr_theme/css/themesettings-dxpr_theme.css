@@ -135,6 +135,40 @@ font-size: 24px;
 .body-content{
 padding-top: 20px;
 padding-bottom: 20px;
+}
+.nieuws-image{
+position: absolute;
+top: 0px;
+left: 0px;
+z-index:-1;
+} 
+.nieuws-image img{
+height: 450px;
+width: 300px;
+}
+.nieuws-container{
+position: relative;
+overflow:hidden;
+height: 450px;
+width: 300px!important;
+margin-right: 15px;
+padding:10px;
+color:white;
+background: linear-gradient(179deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 13, 38, 0.50) 54.4%, rgba(0, 13, 38, 0.78) 68.23%);
+}
+.nieuws-title{
+color:white!important;
+}
+.nieuws-title a{
+color:white!important;
+}
+.nieuws-button{
+position: absolute;
+bottom: 10px;
+left: 10px;
+}
+.nieuws-button a{
+color: white!important;
 }.page-title-full-width-container .breadcrumb { right: 60px; left: auto; } 
 
 #page-title { text-align:  left } 

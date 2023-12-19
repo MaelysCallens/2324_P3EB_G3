@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_artikel_teaser_image
-    - image.style.medium
+    - image.style.large
     - node.type.nieuws_artikel
   module:
     - image
@@ -67,8 +67,8 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: h4
+          element_class: nieuws-title
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -131,7 +131,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: nieuws-image
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -146,7 +146,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: medium
+            image_style: large
             image_loading:
               attribute: lazy
           group_column: ''
@@ -302,7 +302,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 3
       exposed_form:
         type: basic
         options:
@@ -361,13 +361,16 @@ display:
           value:
             nieuws_artikel: nieuws_artikel
       style:
-        type: grid_responsive
+        type: grid
         options:
           grouping: {  }
           columns: 3
-          cell_min_width: 150
-          grid_gutter: 20
+          automatic_width: true
           alignment: horizontal
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: nieuws-container
+          col_class_default: true
       row:
         type: fields
       query:

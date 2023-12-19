@@ -131,6 +131,10 @@ display: flex;
 text-align:center;
 padding: 10px;
 font-size: 24px;
+}
+.body-content{
+padding-top: 20px;
+padding-bottom: 20px;
 }.page-title-full-width-container .breadcrumb { right: 60px; left: auto; } 
 
 #page-title { text-align:  left } 

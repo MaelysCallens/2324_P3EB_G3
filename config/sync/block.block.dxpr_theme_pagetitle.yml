@@ -1,0 +1,18 @@
+uuid: fc1f9775-dbc6-4fc8-ab76-23f838b22164
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dxpr_theme
+id: dxpr_theme_pagetitle
+theme: dxpr_theme
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

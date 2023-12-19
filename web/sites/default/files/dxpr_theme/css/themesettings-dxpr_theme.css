@@ -179,6 +179,8 @@ color: white!important;
 
 .page-title-full-width-container:after { background-position: center center; }
 
+.page-title-full-width-container:after { background-image: url('/2324_P3EB_G3/web/sites/default/files/dxpr_theme/images/banner-maker-1-e1627627940498.png'); }
+
 body, p, .lead { line-height:  1.6 } 
 body { font-size:  16px } 
 .dxpr-theme-header--top #dxpr-theme-main-menu .nav > li > a, .dxpr-theme-header--top #dxpr-theme-main-menu .nav > li > span, .dxpr-theme-header--side #dxpr-theme-main-menu .nav a, .dxpr-theme-header--side #dxpr-theme-main-menu .nav span, .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav .dropdown-menu li>a, .body--dxpr-theme-nav-desktop .dxpr-theme-header--top .nav .dropdown-menu li>span { font-size:  16px } 

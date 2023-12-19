@@ -1,0 +1,14 @@
+uuid: 3187cfff-2bda-4dbd-9ce0-52771ae1e8bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sales_manager
+  module:
+    - user
+id: user_remove_role_action.sales_manager
+label: 'Remove the Sales manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sales_manager

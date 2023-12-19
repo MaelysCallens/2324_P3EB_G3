@@ -99,7 +99,7 @@ divider_position: '1'
 divider_color: ''
 divider_color_custom: '#eeeeee'
 page_title_breadcrumbs: 0
-page_title_home_hide: 0
+page_title_home_hide: 1
 page_title_align: left
 page_title_height: '120'
 page_title_animate: '0'
@@ -227,7 +227,7 @@ title_type:
   uppercase: 0
   bold: 0
   italic: 0
-page_title_image_path: ''
+page_title_image_path: 'public://dxpr_theme/images/banner-maker-1-e1627627940498.png'
 second_header_sticky: 0
 mark_menu_with_children: 1
 dropdown_width: '160'

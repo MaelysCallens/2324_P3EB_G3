@@ -1,0 +1,25 @@
+uuid: b946da7a-f69c-416e-b3d7-da7f56fad32d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:0888980c-154a-4564-acf7-4bc6e4f0504d'
+  module:
+    - block_content
+  theme:
+    - dxpr_theme
+id: dxpr_theme_footer
+theme: dxpr_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:0888980c-154a-4564-acf7-4bc6e4f0504d'
+settings:
+  id: 'block_content:0888980c-154a-4564-acf7-4bc6e4f0504d'
+  label: Footer
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

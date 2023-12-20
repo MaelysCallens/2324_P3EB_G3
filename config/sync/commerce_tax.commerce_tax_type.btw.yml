@@ -1,0 +1,29 @@
+uuid: 468aeb44-4f89-453b-80ac-9721e75e407b
+langcode: en
+status: true
+dependencies: {  }
+id: btw
+label: Btw
+plugin: custom
+configuration:
+  display_inclusive: true
+  display_label: vat
+  round: true
+  rates:
+    -
+      id: 5855f999-c696-426a-87f7-e895230a44d2
+      label: BTW
+      percentage: '0.21'
+  territories:
+    -
+      country_code: BE
+      administrative_area: null
+      locality: null
+      dependent_locality: null
+conditions:
+  -
+    plugin: order_store
+    configuration:
+      stores:
+        - f876a258-42c2-49fc-aa76-8f9f6f577f3d
+conditionOperator: OR

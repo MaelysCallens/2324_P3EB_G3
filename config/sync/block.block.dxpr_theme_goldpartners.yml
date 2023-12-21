@@ -1,0 +1,25 @@
+uuid: fdf3f586-62a4-4d37-b821-72dfdb9f5fac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:9d93e5ca-e50e-46d9-b72b-9641e918edec'
+  module:
+    - block_content
+  theme:
+    - dxpr_theme
+id: dxpr_theme_goldpartners
+theme: dxpr_theme
+region: content_bottom
+weight: -4
+provider: null
+plugin: 'block_content:9d93e5ca-e50e-46d9-b72b-9641e918edec'
+settings:
+  id: 'block_content:9d93e5ca-e50e-46d9-b72b-9641e918edec'
+  label: 'Gold Partners'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

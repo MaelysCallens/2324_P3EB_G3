@@ -12,7 +12,7 @@ dependencies:
 id: dxpr_theme_views_block__events_frontpage_block_1
 theme: dxpr_theme
 region: content_bottom
-weight: -7
+weight: -8
 provider: null
 plugin: 'views_block:events_frontpage-block_1'
 settings:

@@ -1,0 +1,36 @@
+uuid: 4ca7a4ef-1446-4494-bd79-093bd687f390
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lid_type
+id: taxonomy_term.lid_type.default
+targetEntityType: taxonomy_term
+bundle: lid_type
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

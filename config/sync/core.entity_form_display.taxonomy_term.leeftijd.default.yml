@@ -1,0 +1,36 @@
+uuid: de491f20-0f94-45dc-8dbe-d85ab40fdff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.leeftijd
+id: taxonomy_term.leeftijd.default
+targetEntityType: taxonomy_term
+bundle: leeftijd
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

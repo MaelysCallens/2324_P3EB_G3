@@ -1,0 +1,30 @@
+uuid: 7af025d1-ece2-4b6c-b535-31454e1e630e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:drag_and_drop_block:c4ad018d-f9f4-4605-85d2-c73267c74cc9'
+  module:
+    - block_content
+    - system
+  theme:
+    - dxpr_theme
+id: dxpr_theme_faq
+theme: dxpr_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:c4ad018d-f9f4-4605-85d2-c73267c74cc9'
+settings:
+  id: 'block_content:c4ad018d-f9f4-4605-85d2-c73267c74cc9'
+  label: Faq
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /faq

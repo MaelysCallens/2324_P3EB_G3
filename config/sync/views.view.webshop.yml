@@ -11,10 +11,15 @@ dependencies:
     - field.storage.commerce_product.field_images
     - image.style.medium
     - system.menu.main
+    - user.role.administrator
+    - user.role.authenticated
+    - user.role.content_editor
+    - user.role.sales_manager
   module:
     - commerce
     - commerce_product
     - image
+    - user
 id: webshop
 label: Webshop
 module: views
@@ -231,7 +236,7 @@ display:
         type: mini
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 12
           total_pages: null
           id: 0
           tags:
@@ -256,8 +261,13 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: none
-        options: {  }
+        type: role
+        options:
+          role:
+            authenticated: authenticated
+            content_editor: content_editor
+            administrator: administrator
+            sales_manager: sales_manager
       cache:
         type: tag
         options: {  }
@@ -357,6 +367,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.commerce_product.field_images'
   page_1:
@@ -403,6 +414,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.commerce_product.field_images'
   page_2:
@@ -492,6 +504,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.commerce_product.field_images'
   page_3:
@@ -520,6 +533,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.commerce_product.field_images'
   page_4:
@@ -609,5 +623,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.commerce_product.field_images'
